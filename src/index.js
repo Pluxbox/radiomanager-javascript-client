@@ -17,7 +17,7 @@
 (function(factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['radiomanager/ApiClient', 'radiomanager/radiomanagermodels/Block', 'radiomanager/radiomanagermodels/BlockRelations', 'radiomanager/radiomanagermodels/BlockRelationsBroadcast', 'radiomanager/radiomanagermodels/BlockRelationsBroadcastParams', 'radiomanager/radiomanagermodels/BlockRelationsItems', 'radiomanager/radiomanagermodels/BlockRelationsItemsParams', 'radiomanager/radiomanagermodels/BlockRelationsProgram', 'radiomanager/radiomanagermodels/BlockResults', 'radiomanager/radiomanagermodels/Broadcast', 'radiomanager/radiomanagermodels/BroadcastFieldValues', 'radiomanager/radiomanagermodels/BroadcastInputOnly', 'radiomanager/radiomanagermodels/BroadcastOutputOnly', 'radiomanager/radiomanagermodels/BroadcastRelations', 'radiomanager/radiomanagermodels/BroadcastRelationsBlocks', 'radiomanager/radiomanagermodels/BroadcastRelationsItems', 'radiomanager/radiomanagermodels/BroadcastRelationsItemsParams', 'radiomanager/radiomanagermodels/BroadcastRelationsModelType', 'radiomanager/radiomanagermodels/BroadcastRelationsPresenters', 'radiomanager/radiomanagermodels/BroadcastRelationsTags', 'radiomanager/radiomanagermodels/BroadcastResults', 'radiomanager/radiomanagermodels/Campaign', 'radiomanager/radiomanagermodels/CampaignOutputOnly', 'radiomanager/radiomanagermodels/CampaignRelations', 'radiomanager/radiomanagermodels/CampaignRelationsItems', 'radiomanager/radiomanagermodels/CampaignRelationsItemsParams', 'radiomanager/radiomanagermodels/CampaignResults', 'radiomanager/radiomanagermodels/Contact', 'radiomanager/radiomanagermodels/ContactFieldValues', 'radiomanager/radiomanagermodels/ContactOutputOnly', 'radiomanager/radiomanagermodels/ContactRelations', 'radiomanager/radiomanagermodels/ContactRelationsItems', 'radiomanager/radiomanagermodels/ContactRelationsTags', 'radiomanager/radiomanagermodels/ContactRelationsTagsParams', 'radiomanager/radiomanagermodels/ContactResults', 'radiomanager/radiomanagermodels/Data', 'radiomanager/radiomanagermodels/Data1', 'radiomanager/radiomanagermodels/EPGBroadcast', 'radiomanager/radiomanagermodels/ExternalMessageQueueData', 'radiomanager/radiomanagermodels/Forbidden', 'radiomanager/radiomanagermodels/Genre', 'radiomanager/radiomanagermodels/GenreOutputOnly', 'radiomanager/radiomanagermodels/GenreRelations', 'radiomanager/radiomanagermodels/GenreRelationsBroadcasts', 'radiomanager/radiomanagermodels/GenreRelationsBroadcastsParams', 'radiomanager/radiomanagermodels/GenreRelationsPrograms', 'radiomanager/radiomanagermodels/GenreResults', 'radiomanager/radiomanagermodels/ImportItem', 'radiomanager/radiomanagermodels/ImportItemFieldValues', 'radiomanager/radiomanagermodels/InlineResponse202', 'radiomanager/radiomanagermodels/InternalServerError', 'radiomanager/radiomanagermodels/InviteUserData', 'radiomanager/radiomanagermodels/InviteUserSuccess', 'radiomanager/radiomanagermodels/Item', 'radiomanager/radiomanagermodels/ItemInputOnly', 'radiomanager/radiomanagermodels/ItemOutputOnly', 'radiomanager/radiomanagermodels/ItemRelations', 'radiomanager/radiomanagermodels/ItemRelationsBlock', 'radiomanager/radiomanagermodels/ItemRelationsCampaign', 'radiomanager/radiomanagermodels/ItemRelationsContacts', 'radiomanager/radiomanagermodels/ItemRelationsContactsParams', 'radiomanager/radiomanagermodels/ItemRelationsProgram', 'radiomanager/radiomanagermodels/ItemRelationsTags', 'radiomanager/radiomanagermodels/ItemResults', 'radiomanager/radiomanagermodels/ModelType', 'radiomanager/radiomanagermodels/ModelTypeOptions', 'radiomanager/radiomanagermodels/ModelTypeOutputOnly', 'radiomanager/radiomanagermodels/ModelTypeRelations', 'radiomanager/radiomanagermodels/ModelTypeRelationsBroadcasts', 'radiomanager/radiomanagermodels/ModelTypeRelationsCampaigns', 'radiomanager/radiomanagermodels/ModelTypeRelationsCampaignsParams', 'radiomanager/radiomanagermodels/ModelTypeRelationsContacts', 'radiomanager/radiomanagermodels/ModelTypeRelationsItems', 'radiomanager/radiomanagermodels/ModelTypeRelationsPresenters', 'radiomanager/radiomanagermodels/ModelTypeRelationsPrograms', 'radiomanager/radiomanagermodels/ModelTypeResults', 'radiomanager/radiomanagermodels/NotFound', 'radiomanager/radiomanagermodels/PostSuccess', 'radiomanager/radiomanagermodels/Presenter', 'radiomanager/radiomanagermodels/PresenterOutputOnly', 'radiomanager/radiomanagermodels/PresenterRelations', 'radiomanager/radiomanagermodels/PresenterRelationsBroadcasts', 'radiomanager/radiomanagermodels/PresenterRelationsPrograms', 'radiomanager/radiomanagermodels/PresenterRelationsProgramsParams', 'radiomanager/radiomanagermodels/PresenterResults', 'radiomanager/radiomanagermodels/Program', 'radiomanager/radiomanagermodels/ProgramFieldValues', 'radiomanager/radiomanagermodels/ProgramInputOnly', 'radiomanager/radiomanagermodels/ProgramOutputOnly', 'radiomanager/radiomanagermodels/ProgramRelations', 'radiomanager/radiomanagermodels/ProgramRelationsBlocks', 'radiomanager/radiomanagermodels/ProgramRelationsBroadcasts', 'radiomanager/radiomanagermodels/ProgramRelationsItems', 'radiomanager/radiomanagermodels/ProgramRelationsItemsParams', 'radiomanager/radiomanagermodels/ProgramRelationsPresenters', 'radiomanager/radiomanagermodels/ProgramRelationsTags', 'radiomanager/radiomanagermodels/ProgramResults', 'radiomanager/radiomanagermodels/ReadOnly', 'radiomanager/radiomanagermodels/RelationsPlaceholder', 'radiomanager/radiomanagermodels/Success', 'radiomanager/radiomanagermodels/Tag', 'radiomanager/radiomanagermodels/TagOutputOnly', 'radiomanager/radiomanagermodels/TagRelations', 'radiomanager/radiomanagermodels/TagRelationsBroadcasts', 'radiomanager/radiomanagermodels/TagRelationsBroadcastsParams', 'radiomanager/radiomanagermodels/TagRelationsContacts', 'radiomanager/radiomanagermodels/TagRelationsItems', 'radiomanager/radiomanagermodels/TagRelationsPrograms', 'radiomanager/radiomanagermodels/TagResults', 'radiomanager/radiomanagermodels/TextString', 'radiomanager/radiomanagermodels/TooManyRequests', 'radiomanager/radiomanagermodels/UnprocessableEntity', 'radiomanager/radiomanagermodels/UserResult', 'radiomanager/radiomanagermodels/UserResultSettings', 'radiomanager/radiomanagermodels/UserResults', 'radiomanager/radiomanagermodels/VisualResult', 'radiomanager/radiomanagermodels/BlockResult', 'radiomanager/radiomanagermodels/BroadcastDataInput', 'radiomanager/radiomanagermodels/BroadcastResult', 'radiomanager/radiomanagermodels/CampaignDataInput', 'radiomanager/radiomanagermodels/CampaignResult', 'radiomanager/radiomanagermodels/ContactDataInput', 'radiomanager/radiomanagermodels/ContactResult', 'radiomanager/radiomanagermodels/GenreResult', 'radiomanager/radiomanagermodels/ItemDataInput', 'radiomanager/radiomanagermodels/ItemResult', 'radiomanager/radiomanagermodels/ModelTypeResult', 'radiomanager/radiomanagermodels/PresenterDataInput', 'radiomanager/radiomanagermodels/PresenterResult', 'radiomanager/radiomanagermodels/ProgramDataInput', 'radiomanager/radiomanagermodels/ProgramResult', 'radiomanager/radiomanagermodels/TagDataInput', 'radiomanager/radiomanagermodels/TagResult', 'radiomanager/radiomanagerclient/BlockApi', 'radiomanager/radiomanagerclient/BroadcastApi', 'radiomanager/radiomanagerclient/CampaignApi', 'radiomanager/radiomanagerclient/ContactApi', 'radiomanager/radiomanagerclient/ExternalMessageApi', 'radiomanager/radiomanagerclient/GenreApi', 'radiomanager/radiomanagerclient/ItemApi', 'radiomanager/radiomanagerclient/ModelTypeApi', 'radiomanager/radiomanagerclient/PresenterApi', 'radiomanager/radiomanagerclient/ProgramApi', 'radiomanager/radiomanagerclient/StringApi', 'radiomanager/radiomanagerclient/TagApi', 'radiomanager/radiomanagerclient/UserApi', 'radiomanager/radiomanagerclient/VisualSlideApi'], factory);
+    define(['ApiClient', 'radiomanagermodels/Block', 'radiomanagermodels/BlockRelations', 'radiomanagermodels/BlockRelationsBroadcast', 'radiomanagermodels/BlockRelationsBroadcastParams', 'radiomanagermodels/BlockRelationsItems', 'radiomanagermodels/BlockRelationsItemsParams', 'radiomanagermodels/BlockRelationsProgram', 'radiomanagermodels/BlockResults', 'radiomanagermodels/Broadcast', 'radiomanagermodels/BroadcastFieldValues', 'radiomanagermodels/BroadcastInputOnly', 'radiomanagermodels/BroadcastOutputOnly', 'radiomanagermodels/BroadcastRelations', 'radiomanagermodels/BroadcastRelationsBlocks', 'radiomanagermodels/BroadcastRelationsItems', 'radiomanagermodels/BroadcastRelationsItemsParams', 'radiomanagermodels/BroadcastRelationsModelType', 'radiomanagermodels/BroadcastRelationsPresenters', 'radiomanagermodels/BroadcastRelationsTags', 'radiomanagermodels/BroadcastResults', 'radiomanagermodels/Campaign', 'radiomanagermodels/CampaignOutputOnly', 'radiomanagermodels/CampaignRelations', 'radiomanagermodels/CampaignRelationsItems', 'radiomanagermodels/CampaignRelationsItemsParams', 'radiomanagermodels/CampaignResults', 'radiomanagermodels/Contact', 'radiomanagermodels/ContactFieldValues', 'radiomanagermodels/ContactOutputOnly', 'radiomanagermodels/ContactRelations', 'radiomanagermodels/ContactRelationsItems', 'radiomanagermodels/ContactRelationsTags', 'radiomanagermodels/ContactRelationsTagsParams', 'radiomanagermodels/ContactResults', 'radiomanagermodels/Data', 'radiomanagermodels/Data1', 'radiomanagermodels/EPGBroadcast', 'radiomanagermodels/ExternalMessageQueueData', 'radiomanagermodels/Forbidden', 'radiomanagermodels/Genre', 'radiomanagermodels/GenreOutputOnly', 'radiomanagermodels/GenreRelations', 'radiomanagermodels/GenreRelationsBroadcasts', 'radiomanagermodels/GenreRelationsBroadcastsParams', 'radiomanagermodels/GenreRelationsPrograms', 'radiomanagermodels/GenreResults', 'radiomanagermodels/ImportItem', 'radiomanagermodels/ImportItemFieldValues', 'radiomanagermodels/InlineResponse202', 'radiomanagermodels/InternalServerError', 'radiomanagermodels/InviteUserData', 'radiomanagermodels/InviteUserSuccess', 'radiomanagermodels/Item', 'radiomanagermodels/ItemInputOnly', 'radiomanagermodels/ItemOutputOnly', 'radiomanagermodels/ItemRelations', 'radiomanagermodels/ItemRelationsBlock', 'radiomanagermodels/ItemRelationsCampaign', 'radiomanagermodels/ItemRelationsContacts', 'radiomanagermodels/ItemRelationsContactsParams', 'radiomanagermodels/ItemRelationsProgram', 'radiomanagermodels/ItemRelationsTags', 'radiomanagermodels/ItemResults', 'radiomanagermodels/ModelType', 'radiomanagermodels/ModelTypeOptions', 'radiomanagermodels/ModelTypeOutputOnly', 'radiomanagermodels/ModelTypeRelations', 'radiomanagermodels/ModelTypeRelationsBroadcasts', 'radiomanagermodels/ModelTypeRelationsCampaigns', 'radiomanagermodels/ModelTypeRelationsCampaignsParams', 'radiomanagermodels/ModelTypeRelationsContacts', 'radiomanagermodels/ModelTypeRelationsItems', 'radiomanagermodels/ModelTypeRelationsPresenters', 'radiomanagermodels/ModelTypeRelationsPrograms', 'radiomanagermodels/ModelTypeResults', 'radiomanagermodels/NotFound', 'radiomanagermodels/PostSuccess', 'radiomanagermodels/Presenter', 'radiomanagermodels/PresenterOutputOnly', 'radiomanagermodels/PresenterRelations', 'radiomanagermodels/PresenterRelationsBroadcasts', 'radiomanagermodels/PresenterRelationsPrograms', 'radiomanagermodels/PresenterRelationsProgramsParams', 'radiomanagermodels/PresenterResults', 'radiomanagermodels/Program', 'radiomanagermodels/ProgramFieldValues', 'radiomanagermodels/ProgramInputOnly', 'radiomanagermodels/ProgramOutputOnly', 'radiomanagermodels/ProgramRelations', 'radiomanagermodels/ProgramRelationsBlocks', 'radiomanagermodels/ProgramRelationsBroadcasts', 'radiomanagermodels/ProgramRelationsItems', 'radiomanagermodels/ProgramRelationsItemsParams', 'radiomanagermodels/ProgramRelationsPresenters', 'radiomanagermodels/ProgramRelationsTags', 'radiomanagermodels/ProgramResults', 'radiomanagermodels/ReadOnly', 'radiomanagermodels/RelationsPlaceholder', 'radiomanagermodels/Success', 'radiomanagermodels/Tag', 'radiomanagermodels/TagOutputOnly', 'radiomanagermodels/TagRelations', 'radiomanagermodels/TagRelationsBroadcasts', 'radiomanagermodels/TagRelationsBroadcastsParams', 'radiomanagermodels/TagRelationsContacts', 'radiomanagermodels/TagRelationsItems', 'radiomanagermodels/TagRelationsPrograms', 'radiomanagermodels/TagResults', 'radiomanagermodels/TextString', 'radiomanagermodels/TooManyRequests', 'radiomanagermodels/UnprocessableEntity', 'radiomanagermodels/UserResult', 'radiomanagermodels/UserResultSettings', 'radiomanagermodels/UserResults', 'radiomanagermodels/VisualResult', 'radiomanagermodels/BlockResult', 'radiomanagermodels/BroadcastDataInput', 'radiomanagermodels/BroadcastResult', 'radiomanagermodels/CampaignDataInput', 'radiomanagermodels/CampaignResult', 'radiomanagermodels/ContactDataInput', 'radiomanagermodels/ContactResult', 'radiomanagermodels/GenreResult', 'radiomanagermodels/ItemDataInput', 'radiomanagermodels/ItemResult', 'radiomanagermodels/ModelTypeResult', 'radiomanagermodels/PresenterDataInput', 'radiomanagermodels/PresenterResult', 'radiomanagermodels/ProgramDataInput', 'radiomanagermodels/ProgramResult', 'radiomanagermodels/TagDataInput', 'radiomanagermodels/TagResult', 'radiomanagerclient/BlockApi', 'radiomanagerclient/BroadcastApi', 'radiomanagerclient/CampaignApi', 'radiomanagerclient/ContactApi', 'radiomanagerclient/ExternalMessageApi', 'radiomanagerclient/GenreApi', 'radiomanagerclient/ItemApi', 'radiomanagerclient/ModelTypeApi', 'radiomanagerclient/PresenterApi', 'radiomanagerclient/ProgramApi', 'radiomanagerclient/StringApi', 'radiomanagerclient/TagApi', 'radiomanagerclient/UserApi', 'radiomanagerclient/VisualSlideApi'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
     module.exports = factory(require('./ApiClient'), require('./radiomanagermodels/Block'), require('./radiomanagermodels/BlockRelations'), require('./radiomanagermodels/BlockRelationsBroadcast'), require('./radiomanagermodels/BlockRelationsBroadcastParams'), require('./radiomanagermodels/BlockRelationsItems'), require('./radiomanagermodels/BlockRelationsItemsParams'), require('./radiomanagermodels/BlockRelationsProgram'), require('./radiomanagermodels/BlockResults'), require('./radiomanagermodels/Broadcast'), require('./radiomanagermodels/BroadcastFieldValues'), require('./radiomanagermodels/BroadcastInputOnly'), require('./radiomanagermodels/BroadcastOutputOnly'), require('./radiomanagermodels/BroadcastRelations'), require('./radiomanagermodels/BroadcastRelationsBlocks'), require('./radiomanagermodels/BroadcastRelationsItems'), require('./radiomanagermodels/BroadcastRelationsItemsParams'), require('./radiomanagermodels/BroadcastRelationsModelType'), require('./radiomanagermodels/BroadcastRelationsPresenters'), require('./radiomanagermodels/BroadcastRelationsTags'), require('./radiomanagermodels/BroadcastResults'), require('./radiomanagermodels/Campaign'), require('./radiomanagermodels/CampaignOutputOnly'), require('./radiomanagermodels/CampaignRelations'), require('./radiomanagermodels/CampaignRelationsItems'), require('./radiomanagermodels/CampaignRelationsItemsParams'), require('./radiomanagermodels/CampaignResults'), require('./radiomanagermodels/Contact'), require('./radiomanagermodels/ContactFieldValues'), require('./radiomanagermodels/ContactOutputOnly'), require('./radiomanagermodels/ContactRelations'), require('./radiomanagermodels/ContactRelationsItems'), require('./radiomanagermodels/ContactRelationsTags'), require('./radiomanagermodels/ContactRelationsTagsParams'), require('./radiomanagermodels/ContactResults'), require('./radiomanagermodels/Data'), require('./radiomanagermodels/Data1'), require('./radiomanagermodels/EPGBroadcast'), require('./radiomanagermodels/ExternalMessageQueueData'), require('./radiomanagermodels/Forbidden'), require('./radiomanagermodels/Genre'), require('./radiomanagermodels/GenreOutputOnly'), require('./radiomanagermodels/GenreRelations'), require('./radiomanagermodels/GenreRelationsBroadcasts'), require('./radiomanagermodels/GenreRelationsBroadcastsParams'), require('./radiomanagermodels/GenreRelationsPrograms'), require('./radiomanagermodels/GenreResults'), require('./radiomanagermodels/ImportItem'), require('./radiomanagermodels/ImportItemFieldValues'), require('./radiomanagermodels/InlineResponse202'), require('./radiomanagermodels/InternalServerError'), require('./radiomanagermodels/InviteUserData'), require('./radiomanagermodels/InviteUserSuccess'), require('./radiomanagermodels/Item'), require('./radiomanagermodels/ItemInputOnly'), require('./radiomanagermodels/ItemOutputOnly'), require('./radiomanagermodels/ItemRelations'), require('./radiomanagermodels/ItemRelationsBlock'), require('./radiomanagermodels/ItemRelationsCampaign'), require('./radiomanagermodels/ItemRelationsContacts'), require('./radiomanagermodels/ItemRelationsContactsParams'), require('./radiomanagermodels/ItemRelationsProgram'), require('./radiomanagermodels/ItemRelationsTags'), require('./radiomanagermodels/ItemResults'), require('./radiomanagermodels/ModelType'), require('./radiomanagermodels/ModelTypeOptions'), require('./radiomanagermodels/ModelTypeOutputOnly'), require('./radiomanagermodels/ModelTypeRelations'), require('./radiomanagermodels/ModelTypeRelationsBroadcasts'), require('./radiomanagermodels/ModelTypeRelationsCampaigns'), require('./radiomanagermodels/ModelTypeRelationsCampaignsParams'), require('./radiomanagermodels/ModelTypeRelationsContacts'), require('./radiomanagermodels/ModelTypeRelationsItems'), require('./radiomanagermodels/ModelTypeRelationsPresenters'), require('./radiomanagermodels/ModelTypeRelationsPrograms'), require('./radiomanagermodels/ModelTypeResults'), require('./radiomanagermodels/NotFound'), require('./radiomanagermodels/PostSuccess'), require('./radiomanagermodels/Presenter'), require('./radiomanagermodels/PresenterOutputOnly'), require('./radiomanagermodels/PresenterRelations'), require('./radiomanagermodels/PresenterRelationsBroadcasts'), require('./radiomanagermodels/PresenterRelationsPrograms'), require('./radiomanagermodels/PresenterRelationsProgramsParams'), require('./radiomanagermodels/PresenterResults'), require('./radiomanagermodels/Program'), require('./radiomanagermodels/ProgramFieldValues'), require('./radiomanagermodels/ProgramInputOnly'), require('./radiomanagermodels/ProgramOutputOnly'), require('./radiomanagermodels/ProgramRelations'), require('./radiomanagermodels/ProgramRelationsBlocks'), require('./radiomanagermodels/ProgramRelationsBroadcasts'), require('./radiomanagermodels/ProgramRelationsItems'), require('./radiomanagermodels/ProgramRelationsItemsParams'), require('./radiomanagermodels/ProgramRelationsPresenters'), require('./radiomanagermodels/ProgramRelationsTags'), require('./radiomanagermodels/ProgramResults'), require('./radiomanagermodels/ReadOnly'), require('./radiomanagermodels/RelationsPlaceholder'), require('./radiomanagermodels/Success'), require('./radiomanagermodels/Tag'), require('./radiomanagermodels/TagOutputOnly'), require('./radiomanagermodels/TagRelations'), require('./radiomanagermodels/TagRelationsBroadcasts'), require('./radiomanagermodels/TagRelationsBroadcastsParams'), require('./radiomanagermodels/TagRelationsContacts'), require('./radiomanagermodels/TagRelationsItems'), require('./radiomanagermodels/TagRelationsPrograms'), require('./radiomanagermodels/TagResults'), require('./radiomanagermodels/TextString'), require('./radiomanagermodels/TooManyRequests'), require('./radiomanagermodels/UnprocessableEntity'), require('./radiomanagermodels/UserResult'), require('./radiomanagermodels/UserResultSettings'), require('./radiomanagermodels/UserResults'), require('./radiomanagermodels/VisualResult'), require('./radiomanagermodels/BlockResult'), require('./radiomanagermodels/BroadcastDataInput'), require('./radiomanagermodels/BroadcastResult'), require('./radiomanagermodels/CampaignDataInput'), require('./radiomanagermodels/CampaignResult'), require('./radiomanagermodels/ContactDataInput'), require('./radiomanagermodels/ContactResult'), require('./radiomanagermodels/GenreResult'), require('./radiomanagermodels/ItemDataInput'), require('./radiomanagermodels/ItemResult'), require('./radiomanagermodels/ModelTypeResult'), require('./radiomanagermodels/PresenterDataInput'), require('./radiomanagermodels/PresenterResult'), require('./radiomanagermodels/ProgramDataInput'), require('./radiomanagermodels/ProgramResult'), require('./radiomanagermodels/TagDataInput'), require('./radiomanagermodels/TagResult'), require('./radiomanagerclient/BlockApi'), require('./radiomanagerclient/BroadcastApi'), require('./radiomanagerclient/CampaignApi'), require('./radiomanagerclient/ContactApi'), require('./radiomanagerclient/ExternalMessageApi'), require('./radiomanagerclient/GenreApi'), require('./radiomanagerclient/ItemApi'), require('./radiomanagerclient/ModelTypeApi'), require('./radiomanagerclient/PresenterApi'), require('./radiomanagerclient/ProgramApi'), require('./radiomanagerclient/StringApi'), require('./radiomanagerclient/TagApi'), require('./radiomanagerclient/UserApi'), require('./radiomanagerclient/VisualSlideApi'));
@@ -31,7 +31,7 @@
    * <p>
    * An AMD (recommended!) or CommonJS application will generally do something equivalent to the following:
    * <pre>
-   * var radiomanager = require('radiomanager/index'); // See note below*.
+   * var radiomanager = require('index'); // See note below*.
    * var xxxSvc = new radiomanager.XxxApi(); // Allocate the API class we're going to use.
    * var yyyModel = new radiomanager.Yyy(); // Construct a model instance.
    * yyyModel.someProperty = 'someValue';
@@ -39,7 +39,7 @@
    * var zzz = xxxSvc.doSomething(yyyModel); // Invoke the service.
    * ...
    * </pre>
-   * <em>*NOTE: For a top-level AMD script, use require(['radiomanager/index'], function(){...})
+   * <em>*NOTE: For a top-level AMD script, use require(['index'], function(){...})
    * and put the application logic within the callback function.</em>
    * </p>
    * <p>
@@ -53,743 +53,743 @@
    * ...
    * </pre>
    * </p>
-   * @module radiomanager/index
+   * @module index
    * @version 2.0
    */
   var exports = {
     /**
      * The ApiClient constructor.
-     * @property {module:radiomanager/ApiClient}
+     * @property {module:ApiClient}
      */
     ApiClient: ApiClient,
     /**
      * The Block model constructor.
-     * @property {module:radiomanager/radiomanagermodels/Block}
+     * @property {module:radiomanagermodels/Block}
      */
     Block: Block,
     /**
      * The BlockRelations model constructor.
-     * @property {module:radiomanager/radiomanagermodels/BlockRelations}
+     * @property {module:radiomanagermodels/BlockRelations}
      */
     BlockRelations: BlockRelations,
     /**
      * The BlockRelationsBroadcast model constructor.
-     * @property {module:radiomanager/radiomanagermodels/BlockRelationsBroadcast}
+     * @property {module:radiomanagermodels/BlockRelationsBroadcast}
      */
     BlockRelationsBroadcast: BlockRelationsBroadcast,
     /**
      * The BlockRelationsBroadcastParams model constructor.
-     * @property {module:radiomanager/radiomanagermodels/BlockRelationsBroadcastParams}
+     * @property {module:radiomanagermodels/BlockRelationsBroadcastParams}
      */
     BlockRelationsBroadcastParams: BlockRelationsBroadcastParams,
     /**
      * The BlockRelationsItems model constructor.
-     * @property {module:radiomanager/radiomanagermodels/BlockRelationsItems}
+     * @property {module:radiomanagermodels/BlockRelationsItems}
      */
     BlockRelationsItems: BlockRelationsItems,
     /**
      * The BlockRelationsItemsParams model constructor.
-     * @property {module:radiomanager/radiomanagermodels/BlockRelationsItemsParams}
+     * @property {module:radiomanagermodels/BlockRelationsItemsParams}
      */
     BlockRelationsItemsParams: BlockRelationsItemsParams,
     /**
      * The BlockRelationsProgram model constructor.
-     * @property {module:radiomanager/radiomanagermodels/BlockRelationsProgram}
+     * @property {module:radiomanagermodels/BlockRelationsProgram}
      */
     BlockRelationsProgram: BlockRelationsProgram,
     /**
      * The BlockResults model constructor.
-     * @property {module:radiomanager/radiomanagermodels/BlockResults}
+     * @property {module:radiomanagermodels/BlockResults}
      */
     BlockResults: BlockResults,
     /**
      * The Broadcast model constructor.
-     * @property {module:radiomanager/radiomanagermodels/Broadcast}
+     * @property {module:radiomanagermodels/Broadcast}
      */
     Broadcast: Broadcast,
     /**
      * The BroadcastFieldValues model constructor.
-     * @property {module:radiomanager/radiomanagermodels/BroadcastFieldValues}
+     * @property {module:radiomanagermodels/BroadcastFieldValues}
      */
     BroadcastFieldValues: BroadcastFieldValues,
     /**
      * The BroadcastInputOnly model constructor.
-     * @property {module:radiomanager/radiomanagermodels/BroadcastInputOnly}
+     * @property {module:radiomanagermodels/BroadcastInputOnly}
      */
     BroadcastInputOnly: BroadcastInputOnly,
     /**
      * The BroadcastOutputOnly model constructor.
-     * @property {module:radiomanager/radiomanagermodels/BroadcastOutputOnly}
+     * @property {module:radiomanagermodels/BroadcastOutputOnly}
      */
     BroadcastOutputOnly: BroadcastOutputOnly,
     /**
      * The BroadcastRelations model constructor.
-     * @property {module:radiomanager/radiomanagermodels/BroadcastRelations}
+     * @property {module:radiomanagermodels/BroadcastRelations}
      */
     BroadcastRelations: BroadcastRelations,
     /**
      * The BroadcastRelationsBlocks model constructor.
-     * @property {module:radiomanager/radiomanagermodels/BroadcastRelationsBlocks}
+     * @property {module:radiomanagermodels/BroadcastRelationsBlocks}
      */
     BroadcastRelationsBlocks: BroadcastRelationsBlocks,
     /**
      * The BroadcastRelationsItems model constructor.
-     * @property {module:radiomanager/radiomanagermodels/BroadcastRelationsItems}
+     * @property {module:radiomanagermodels/BroadcastRelationsItems}
      */
     BroadcastRelationsItems: BroadcastRelationsItems,
     /**
      * The BroadcastRelationsItemsParams model constructor.
-     * @property {module:radiomanager/radiomanagermodels/BroadcastRelationsItemsParams}
+     * @property {module:radiomanagermodels/BroadcastRelationsItemsParams}
      */
     BroadcastRelationsItemsParams: BroadcastRelationsItemsParams,
     /**
      * The BroadcastRelationsModelType model constructor.
-     * @property {module:radiomanager/radiomanagermodels/BroadcastRelationsModelType}
+     * @property {module:radiomanagermodels/BroadcastRelationsModelType}
      */
     BroadcastRelationsModelType: BroadcastRelationsModelType,
     /**
      * The BroadcastRelationsPresenters model constructor.
-     * @property {module:radiomanager/radiomanagermodels/BroadcastRelationsPresenters}
+     * @property {module:radiomanagermodels/BroadcastRelationsPresenters}
      */
     BroadcastRelationsPresenters: BroadcastRelationsPresenters,
     /**
      * The BroadcastRelationsTags model constructor.
-     * @property {module:radiomanager/radiomanagermodels/BroadcastRelationsTags}
+     * @property {module:radiomanagermodels/BroadcastRelationsTags}
      */
     BroadcastRelationsTags: BroadcastRelationsTags,
     /**
      * The BroadcastResults model constructor.
-     * @property {module:radiomanager/radiomanagermodels/BroadcastResults}
+     * @property {module:radiomanagermodels/BroadcastResults}
      */
     BroadcastResults: BroadcastResults,
     /**
      * The Campaign model constructor.
-     * @property {module:radiomanager/radiomanagermodels/Campaign}
+     * @property {module:radiomanagermodels/Campaign}
      */
     Campaign: Campaign,
     /**
      * The CampaignOutputOnly model constructor.
-     * @property {module:radiomanager/radiomanagermodels/CampaignOutputOnly}
+     * @property {module:radiomanagermodels/CampaignOutputOnly}
      */
     CampaignOutputOnly: CampaignOutputOnly,
     /**
      * The CampaignRelations model constructor.
-     * @property {module:radiomanager/radiomanagermodels/CampaignRelations}
+     * @property {module:radiomanagermodels/CampaignRelations}
      */
     CampaignRelations: CampaignRelations,
     /**
      * The CampaignRelationsItems model constructor.
-     * @property {module:radiomanager/radiomanagermodels/CampaignRelationsItems}
+     * @property {module:radiomanagermodels/CampaignRelationsItems}
      */
     CampaignRelationsItems: CampaignRelationsItems,
     /**
      * The CampaignRelationsItemsParams model constructor.
-     * @property {module:radiomanager/radiomanagermodels/CampaignRelationsItemsParams}
+     * @property {module:radiomanagermodels/CampaignRelationsItemsParams}
      */
     CampaignRelationsItemsParams: CampaignRelationsItemsParams,
     /**
      * The CampaignResults model constructor.
-     * @property {module:radiomanager/radiomanagermodels/CampaignResults}
+     * @property {module:radiomanagermodels/CampaignResults}
      */
     CampaignResults: CampaignResults,
     /**
      * The Contact model constructor.
-     * @property {module:radiomanager/radiomanagermodels/Contact}
+     * @property {module:radiomanagermodels/Contact}
      */
     Contact: Contact,
     /**
      * The ContactFieldValues model constructor.
-     * @property {module:radiomanager/radiomanagermodels/ContactFieldValues}
+     * @property {module:radiomanagermodels/ContactFieldValues}
      */
     ContactFieldValues: ContactFieldValues,
     /**
      * The ContactOutputOnly model constructor.
-     * @property {module:radiomanager/radiomanagermodels/ContactOutputOnly}
+     * @property {module:radiomanagermodels/ContactOutputOnly}
      */
     ContactOutputOnly: ContactOutputOnly,
     /**
      * The ContactRelations model constructor.
-     * @property {module:radiomanager/radiomanagermodels/ContactRelations}
+     * @property {module:radiomanagermodels/ContactRelations}
      */
     ContactRelations: ContactRelations,
     /**
      * The ContactRelationsItems model constructor.
-     * @property {module:radiomanager/radiomanagermodels/ContactRelationsItems}
+     * @property {module:radiomanagermodels/ContactRelationsItems}
      */
     ContactRelationsItems: ContactRelationsItems,
     /**
      * The ContactRelationsTags model constructor.
-     * @property {module:radiomanager/radiomanagermodels/ContactRelationsTags}
+     * @property {module:radiomanagermodels/ContactRelationsTags}
      */
     ContactRelationsTags: ContactRelationsTags,
     /**
      * The ContactRelationsTagsParams model constructor.
-     * @property {module:radiomanager/radiomanagermodels/ContactRelationsTagsParams}
+     * @property {module:radiomanagermodels/ContactRelationsTagsParams}
      */
     ContactRelationsTagsParams: ContactRelationsTagsParams,
     /**
      * The ContactResults model constructor.
-     * @property {module:radiomanager/radiomanagermodels/ContactResults}
+     * @property {module:radiomanagermodels/ContactResults}
      */
     ContactResults: ContactResults,
     /**
      * The Data model constructor.
-     * @property {module:radiomanager/radiomanagermodels/Data}
+     * @property {module:radiomanagermodels/Data}
      */
     Data: Data,
     /**
      * The Data1 model constructor.
-     * @property {module:radiomanager/radiomanagermodels/Data1}
+     * @property {module:radiomanagermodels/Data1}
      */
     Data1: Data1,
     /**
      * The EPGBroadcast model constructor.
-     * @property {module:radiomanager/radiomanagermodels/EPGBroadcast}
+     * @property {module:radiomanagermodels/EPGBroadcast}
      */
     EPGBroadcast: EPGBroadcast,
     /**
      * The ExternalMessageQueueData model constructor.
-     * @property {module:radiomanager/radiomanagermodels/ExternalMessageQueueData}
+     * @property {module:radiomanagermodels/ExternalMessageQueueData}
      */
     ExternalMessageQueueData: ExternalMessageQueueData,
     /**
      * The Forbidden model constructor.
-     * @property {module:radiomanager/radiomanagermodels/Forbidden}
+     * @property {module:radiomanagermodels/Forbidden}
      */
     Forbidden: Forbidden,
     /**
      * The Genre model constructor.
-     * @property {module:radiomanager/radiomanagermodels/Genre}
+     * @property {module:radiomanagermodels/Genre}
      */
     Genre: Genre,
     /**
      * The GenreOutputOnly model constructor.
-     * @property {module:radiomanager/radiomanagermodels/GenreOutputOnly}
+     * @property {module:radiomanagermodels/GenreOutputOnly}
      */
     GenreOutputOnly: GenreOutputOnly,
     /**
      * The GenreRelations model constructor.
-     * @property {module:radiomanager/radiomanagermodels/GenreRelations}
+     * @property {module:radiomanagermodels/GenreRelations}
      */
     GenreRelations: GenreRelations,
     /**
      * The GenreRelationsBroadcasts model constructor.
-     * @property {module:radiomanager/radiomanagermodels/GenreRelationsBroadcasts}
+     * @property {module:radiomanagermodels/GenreRelationsBroadcasts}
      */
     GenreRelationsBroadcasts: GenreRelationsBroadcasts,
     /**
      * The GenreRelationsBroadcastsParams model constructor.
-     * @property {module:radiomanager/radiomanagermodels/GenreRelationsBroadcastsParams}
+     * @property {module:radiomanagermodels/GenreRelationsBroadcastsParams}
      */
     GenreRelationsBroadcastsParams: GenreRelationsBroadcastsParams,
     /**
      * The GenreRelationsPrograms model constructor.
-     * @property {module:radiomanager/radiomanagermodels/GenreRelationsPrograms}
+     * @property {module:radiomanagermodels/GenreRelationsPrograms}
      */
     GenreRelationsPrograms: GenreRelationsPrograms,
     /**
      * The GenreResults model constructor.
-     * @property {module:radiomanager/radiomanagermodels/GenreResults}
+     * @property {module:radiomanagermodels/GenreResults}
      */
     GenreResults: GenreResults,
     /**
      * The ImportItem model constructor.
-     * @property {module:radiomanager/radiomanagermodels/ImportItem}
+     * @property {module:radiomanagermodels/ImportItem}
      */
     ImportItem: ImportItem,
     /**
      * The ImportItemFieldValues model constructor.
-     * @property {module:radiomanager/radiomanagermodels/ImportItemFieldValues}
+     * @property {module:radiomanagermodels/ImportItemFieldValues}
      */
     ImportItemFieldValues: ImportItemFieldValues,
     /**
      * The InlineResponse202 model constructor.
-     * @property {module:radiomanager/radiomanagermodels/InlineResponse202}
+     * @property {module:radiomanagermodels/InlineResponse202}
      */
     InlineResponse202: InlineResponse202,
     /**
      * The InternalServerError model constructor.
-     * @property {module:radiomanager/radiomanagermodels/InternalServerError}
+     * @property {module:radiomanagermodels/InternalServerError}
      */
     InternalServerError: InternalServerError,
     /**
      * The InviteUserData model constructor.
-     * @property {module:radiomanager/radiomanagermodels/InviteUserData}
+     * @property {module:radiomanagermodels/InviteUserData}
      */
     InviteUserData: InviteUserData,
     /**
      * The InviteUserSuccess model constructor.
-     * @property {module:radiomanager/radiomanagermodels/InviteUserSuccess}
+     * @property {module:radiomanagermodels/InviteUserSuccess}
      */
     InviteUserSuccess: InviteUserSuccess,
     /**
      * The Item model constructor.
-     * @property {module:radiomanager/radiomanagermodels/Item}
+     * @property {module:radiomanagermodels/Item}
      */
     Item: Item,
     /**
      * The ItemInputOnly model constructor.
-     * @property {module:radiomanager/radiomanagermodels/ItemInputOnly}
+     * @property {module:radiomanagermodels/ItemInputOnly}
      */
     ItemInputOnly: ItemInputOnly,
     /**
      * The ItemOutputOnly model constructor.
-     * @property {module:radiomanager/radiomanagermodels/ItemOutputOnly}
+     * @property {module:radiomanagermodels/ItemOutputOnly}
      */
     ItemOutputOnly: ItemOutputOnly,
     /**
      * The ItemRelations model constructor.
-     * @property {module:radiomanager/radiomanagermodels/ItemRelations}
+     * @property {module:radiomanagermodels/ItemRelations}
      */
     ItemRelations: ItemRelations,
     /**
      * The ItemRelationsBlock model constructor.
-     * @property {module:radiomanager/radiomanagermodels/ItemRelationsBlock}
+     * @property {module:radiomanagermodels/ItemRelationsBlock}
      */
     ItemRelationsBlock: ItemRelationsBlock,
     /**
      * The ItemRelationsCampaign model constructor.
-     * @property {module:radiomanager/radiomanagermodels/ItemRelationsCampaign}
+     * @property {module:radiomanagermodels/ItemRelationsCampaign}
      */
     ItemRelationsCampaign: ItemRelationsCampaign,
     /**
      * The ItemRelationsContacts model constructor.
-     * @property {module:radiomanager/radiomanagermodels/ItemRelationsContacts}
+     * @property {module:radiomanagermodels/ItemRelationsContacts}
      */
     ItemRelationsContacts: ItemRelationsContacts,
     /**
      * The ItemRelationsContactsParams model constructor.
-     * @property {module:radiomanager/radiomanagermodels/ItemRelationsContactsParams}
+     * @property {module:radiomanagermodels/ItemRelationsContactsParams}
      */
     ItemRelationsContactsParams: ItemRelationsContactsParams,
     /**
      * The ItemRelationsProgram model constructor.
-     * @property {module:radiomanager/radiomanagermodels/ItemRelationsProgram}
+     * @property {module:radiomanagermodels/ItemRelationsProgram}
      */
     ItemRelationsProgram: ItemRelationsProgram,
     /**
      * The ItemRelationsTags model constructor.
-     * @property {module:radiomanager/radiomanagermodels/ItemRelationsTags}
+     * @property {module:radiomanagermodels/ItemRelationsTags}
      */
     ItemRelationsTags: ItemRelationsTags,
     /**
      * The ItemResults model constructor.
-     * @property {module:radiomanager/radiomanagermodels/ItemResults}
+     * @property {module:radiomanagermodels/ItemResults}
      */
     ItemResults: ItemResults,
     /**
      * The ModelType model constructor.
-     * @property {module:radiomanager/radiomanagermodels/ModelType}
+     * @property {module:radiomanagermodels/ModelType}
      */
     ModelType: ModelType,
     /**
      * The ModelTypeOptions model constructor.
-     * @property {module:radiomanager/radiomanagermodels/ModelTypeOptions}
+     * @property {module:radiomanagermodels/ModelTypeOptions}
      */
     ModelTypeOptions: ModelTypeOptions,
     /**
      * The ModelTypeOutputOnly model constructor.
-     * @property {module:radiomanager/radiomanagermodels/ModelTypeOutputOnly}
+     * @property {module:radiomanagermodels/ModelTypeOutputOnly}
      */
     ModelTypeOutputOnly: ModelTypeOutputOnly,
     /**
      * The ModelTypeRelations model constructor.
-     * @property {module:radiomanager/radiomanagermodels/ModelTypeRelations}
+     * @property {module:radiomanagermodels/ModelTypeRelations}
      */
     ModelTypeRelations: ModelTypeRelations,
     /**
      * The ModelTypeRelationsBroadcasts model constructor.
-     * @property {module:radiomanager/radiomanagermodels/ModelTypeRelationsBroadcasts}
+     * @property {module:radiomanagermodels/ModelTypeRelationsBroadcasts}
      */
     ModelTypeRelationsBroadcasts: ModelTypeRelationsBroadcasts,
     /**
      * The ModelTypeRelationsCampaigns model constructor.
-     * @property {module:radiomanager/radiomanagermodels/ModelTypeRelationsCampaigns}
+     * @property {module:radiomanagermodels/ModelTypeRelationsCampaigns}
      */
     ModelTypeRelationsCampaigns: ModelTypeRelationsCampaigns,
     /**
      * The ModelTypeRelationsCampaignsParams model constructor.
-     * @property {module:radiomanager/radiomanagermodels/ModelTypeRelationsCampaignsParams}
+     * @property {module:radiomanagermodels/ModelTypeRelationsCampaignsParams}
      */
     ModelTypeRelationsCampaignsParams: ModelTypeRelationsCampaignsParams,
     /**
      * The ModelTypeRelationsContacts model constructor.
-     * @property {module:radiomanager/radiomanagermodels/ModelTypeRelationsContacts}
+     * @property {module:radiomanagermodels/ModelTypeRelationsContacts}
      */
     ModelTypeRelationsContacts: ModelTypeRelationsContacts,
     /**
      * The ModelTypeRelationsItems model constructor.
-     * @property {module:radiomanager/radiomanagermodels/ModelTypeRelationsItems}
+     * @property {module:radiomanagermodels/ModelTypeRelationsItems}
      */
     ModelTypeRelationsItems: ModelTypeRelationsItems,
     /**
      * The ModelTypeRelationsPresenters model constructor.
-     * @property {module:radiomanager/radiomanagermodels/ModelTypeRelationsPresenters}
+     * @property {module:radiomanagermodels/ModelTypeRelationsPresenters}
      */
     ModelTypeRelationsPresenters: ModelTypeRelationsPresenters,
     /**
      * The ModelTypeRelationsPrograms model constructor.
-     * @property {module:radiomanager/radiomanagermodels/ModelTypeRelationsPrograms}
+     * @property {module:radiomanagermodels/ModelTypeRelationsPrograms}
      */
     ModelTypeRelationsPrograms: ModelTypeRelationsPrograms,
     /**
      * The ModelTypeResults model constructor.
-     * @property {module:radiomanager/radiomanagermodels/ModelTypeResults}
+     * @property {module:radiomanagermodels/ModelTypeResults}
      */
     ModelTypeResults: ModelTypeResults,
     /**
      * The NotFound model constructor.
-     * @property {module:radiomanager/radiomanagermodels/NotFound}
+     * @property {module:radiomanagermodels/NotFound}
      */
     NotFound: NotFound,
     /**
      * The PostSuccess model constructor.
-     * @property {module:radiomanager/radiomanagermodels/PostSuccess}
+     * @property {module:radiomanagermodels/PostSuccess}
      */
     PostSuccess: PostSuccess,
     /**
      * The Presenter model constructor.
-     * @property {module:radiomanager/radiomanagermodels/Presenter}
+     * @property {module:radiomanagermodels/Presenter}
      */
     Presenter: Presenter,
     /**
      * The PresenterOutputOnly model constructor.
-     * @property {module:radiomanager/radiomanagermodels/PresenterOutputOnly}
+     * @property {module:radiomanagermodels/PresenterOutputOnly}
      */
     PresenterOutputOnly: PresenterOutputOnly,
     /**
      * The PresenterRelations model constructor.
-     * @property {module:radiomanager/radiomanagermodels/PresenterRelations}
+     * @property {module:radiomanagermodels/PresenterRelations}
      */
     PresenterRelations: PresenterRelations,
     /**
      * The PresenterRelationsBroadcasts model constructor.
-     * @property {module:radiomanager/radiomanagermodels/PresenterRelationsBroadcasts}
+     * @property {module:radiomanagermodels/PresenterRelationsBroadcasts}
      */
     PresenterRelationsBroadcasts: PresenterRelationsBroadcasts,
     /**
      * The PresenterRelationsPrograms model constructor.
-     * @property {module:radiomanager/radiomanagermodels/PresenterRelationsPrograms}
+     * @property {module:radiomanagermodels/PresenterRelationsPrograms}
      */
     PresenterRelationsPrograms: PresenterRelationsPrograms,
     /**
      * The PresenterRelationsProgramsParams model constructor.
-     * @property {module:radiomanager/radiomanagermodels/PresenterRelationsProgramsParams}
+     * @property {module:radiomanagermodels/PresenterRelationsProgramsParams}
      */
     PresenterRelationsProgramsParams: PresenterRelationsProgramsParams,
     /**
      * The PresenterResults model constructor.
-     * @property {module:radiomanager/radiomanagermodels/PresenterResults}
+     * @property {module:radiomanagermodels/PresenterResults}
      */
     PresenterResults: PresenterResults,
     /**
      * The Program model constructor.
-     * @property {module:radiomanager/radiomanagermodels/Program}
+     * @property {module:radiomanagermodels/Program}
      */
     Program: Program,
     /**
      * The ProgramFieldValues model constructor.
-     * @property {module:radiomanager/radiomanagermodels/ProgramFieldValues}
+     * @property {module:radiomanagermodels/ProgramFieldValues}
      */
     ProgramFieldValues: ProgramFieldValues,
     /**
      * The ProgramInputOnly model constructor.
-     * @property {module:radiomanager/radiomanagermodels/ProgramInputOnly}
+     * @property {module:radiomanagermodels/ProgramInputOnly}
      */
     ProgramInputOnly: ProgramInputOnly,
     /**
      * The ProgramOutputOnly model constructor.
-     * @property {module:radiomanager/radiomanagermodels/ProgramOutputOnly}
+     * @property {module:radiomanagermodels/ProgramOutputOnly}
      */
     ProgramOutputOnly: ProgramOutputOnly,
     /**
      * The ProgramRelations model constructor.
-     * @property {module:radiomanager/radiomanagermodels/ProgramRelations}
+     * @property {module:radiomanagermodels/ProgramRelations}
      */
     ProgramRelations: ProgramRelations,
     /**
      * The ProgramRelationsBlocks model constructor.
-     * @property {module:radiomanager/radiomanagermodels/ProgramRelationsBlocks}
+     * @property {module:radiomanagermodels/ProgramRelationsBlocks}
      */
     ProgramRelationsBlocks: ProgramRelationsBlocks,
     /**
      * The ProgramRelationsBroadcasts model constructor.
-     * @property {module:radiomanager/radiomanagermodels/ProgramRelationsBroadcasts}
+     * @property {module:radiomanagermodels/ProgramRelationsBroadcasts}
      */
     ProgramRelationsBroadcasts: ProgramRelationsBroadcasts,
     /**
      * The ProgramRelationsItems model constructor.
-     * @property {module:radiomanager/radiomanagermodels/ProgramRelationsItems}
+     * @property {module:radiomanagermodels/ProgramRelationsItems}
      */
     ProgramRelationsItems: ProgramRelationsItems,
     /**
      * The ProgramRelationsItemsParams model constructor.
-     * @property {module:radiomanager/radiomanagermodels/ProgramRelationsItemsParams}
+     * @property {module:radiomanagermodels/ProgramRelationsItemsParams}
      */
     ProgramRelationsItemsParams: ProgramRelationsItemsParams,
     /**
      * The ProgramRelationsPresenters model constructor.
-     * @property {module:radiomanager/radiomanagermodels/ProgramRelationsPresenters}
+     * @property {module:radiomanagermodels/ProgramRelationsPresenters}
      */
     ProgramRelationsPresenters: ProgramRelationsPresenters,
     /**
      * The ProgramRelationsTags model constructor.
-     * @property {module:radiomanager/radiomanagermodels/ProgramRelationsTags}
+     * @property {module:radiomanagermodels/ProgramRelationsTags}
      */
     ProgramRelationsTags: ProgramRelationsTags,
     /**
      * The ProgramResults model constructor.
-     * @property {module:radiomanager/radiomanagermodels/ProgramResults}
+     * @property {module:radiomanagermodels/ProgramResults}
      */
     ProgramResults: ProgramResults,
     /**
      * The ReadOnly model constructor.
-     * @property {module:radiomanager/radiomanagermodels/ReadOnly}
+     * @property {module:radiomanagermodels/ReadOnly}
      */
     ReadOnly: ReadOnly,
     /**
      * The RelationsPlaceholder model constructor.
-     * @property {module:radiomanager/radiomanagermodels/RelationsPlaceholder}
+     * @property {module:radiomanagermodels/RelationsPlaceholder}
      */
     RelationsPlaceholder: RelationsPlaceholder,
     /**
      * The Success model constructor.
-     * @property {module:radiomanager/radiomanagermodels/Success}
+     * @property {module:radiomanagermodels/Success}
      */
     Success: Success,
     /**
      * The Tag model constructor.
-     * @property {module:radiomanager/radiomanagermodels/Tag}
+     * @property {module:radiomanagermodels/Tag}
      */
     Tag: Tag,
     /**
      * The TagOutputOnly model constructor.
-     * @property {module:radiomanager/radiomanagermodels/TagOutputOnly}
+     * @property {module:radiomanagermodels/TagOutputOnly}
      */
     TagOutputOnly: TagOutputOnly,
     /**
      * The TagRelations model constructor.
-     * @property {module:radiomanager/radiomanagermodels/TagRelations}
+     * @property {module:radiomanagermodels/TagRelations}
      */
     TagRelations: TagRelations,
     /**
      * The TagRelationsBroadcasts model constructor.
-     * @property {module:radiomanager/radiomanagermodels/TagRelationsBroadcasts}
+     * @property {module:radiomanagermodels/TagRelationsBroadcasts}
      */
     TagRelationsBroadcasts: TagRelationsBroadcasts,
     /**
      * The TagRelationsBroadcastsParams model constructor.
-     * @property {module:radiomanager/radiomanagermodels/TagRelationsBroadcastsParams}
+     * @property {module:radiomanagermodels/TagRelationsBroadcastsParams}
      */
     TagRelationsBroadcastsParams: TagRelationsBroadcastsParams,
     /**
      * The TagRelationsContacts model constructor.
-     * @property {module:radiomanager/radiomanagermodels/TagRelationsContacts}
+     * @property {module:radiomanagermodels/TagRelationsContacts}
      */
     TagRelationsContacts: TagRelationsContacts,
     /**
      * The TagRelationsItems model constructor.
-     * @property {module:radiomanager/radiomanagermodels/TagRelationsItems}
+     * @property {module:radiomanagermodels/TagRelationsItems}
      */
     TagRelationsItems: TagRelationsItems,
     /**
      * The TagRelationsPrograms model constructor.
-     * @property {module:radiomanager/radiomanagermodels/TagRelationsPrograms}
+     * @property {module:radiomanagermodels/TagRelationsPrograms}
      */
     TagRelationsPrograms: TagRelationsPrograms,
     /**
      * The TagResults model constructor.
-     * @property {module:radiomanager/radiomanagermodels/TagResults}
+     * @property {module:radiomanagermodels/TagResults}
      */
     TagResults: TagResults,
     /**
      * The TextString model constructor.
-     * @property {module:radiomanager/radiomanagermodels/TextString}
+     * @property {module:radiomanagermodels/TextString}
      */
     TextString: TextString,
     /**
      * The TooManyRequests model constructor.
-     * @property {module:radiomanager/radiomanagermodels/TooManyRequests}
+     * @property {module:radiomanagermodels/TooManyRequests}
      */
     TooManyRequests: TooManyRequests,
     /**
      * The UnprocessableEntity model constructor.
-     * @property {module:radiomanager/radiomanagermodels/UnprocessableEntity}
+     * @property {module:radiomanagermodels/UnprocessableEntity}
      */
     UnprocessableEntity: UnprocessableEntity,
     /**
      * The UserResult model constructor.
-     * @property {module:radiomanager/radiomanagermodels/UserResult}
+     * @property {module:radiomanagermodels/UserResult}
      */
     UserResult: UserResult,
     /**
      * The UserResultSettings model constructor.
-     * @property {module:radiomanager/radiomanagermodels/UserResultSettings}
+     * @property {module:radiomanagermodels/UserResultSettings}
      */
     UserResultSettings: UserResultSettings,
     /**
      * The UserResults model constructor.
-     * @property {module:radiomanager/radiomanagermodels/UserResults}
+     * @property {module:radiomanagermodels/UserResults}
      */
     UserResults: UserResults,
     /**
      * The VisualResult model constructor.
-     * @property {module:radiomanager/radiomanagermodels/VisualResult}
+     * @property {module:radiomanagermodels/VisualResult}
      */
     VisualResult: VisualResult,
     /**
      * The BlockResult model constructor.
-     * @property {module:radiomanager/radiomanagermodels/BlockResult}
+     * @property {module:radiomanagermodels/BlockResult}
      */
     BlockResult: BlockResult,
     /**
      * The BroadcastDataInput model constructor.
-     * @property {module:radiomanager/radiomanagermodels/BroadcastDataInput}
+     * @property {module:radiomanagermodels/BroadcastDataInput}
      */
     BroadcastDataInput: BroadcastDataInput,
     /**
      * The BroadcastResult model constructor.
-     * @property {module:radiomanager/radiomanagermodels/BroadcastResult}
+     * @property {module:radiomanagermodels/BroadcastResult}
      */
     BroadcastResult: BroadcastResult,
     /**
      * The CampaignDataInput model constructor.
-     * @property {module:radiomanager/radiomanagermodels/CampaignDataInput}
+     * @property {module:radiomanagermodels/CampaignDataInput}
      */
     CampaignDataInput: CampaignDataInput,
     /**
      * The CampaignResult model constructor.
-     * @property {module:radiomanager/radiomanagermodels/CampaignResult}
+     * @property {module:radiomanagermodels/CampaignResult}
      */
     CampaignResult: CampaignResult,
     /**
      * The ContactDataInput model constructor.
-     * @property {module:radiomanager/radiomanagermodels/ContactDataInput}
+     * @property {module:radiomanagermodels/ContactDataInput}
      */
     ContactDataInput: ContactDataInput,
     /**
      * The ContactResult model constructor.
-     * @property {module:radiomanager/radiomanagermodels/ContactResult}
+     * @property {module:radiomanagermodels/ContactResult}
      */
     ContactResult: ContactResult,
     /**
      * The GenreResult model constructor.
-     * @property {module:radiomanager/radiomanagermodels/GenreResult}
+     * @property {module:radiomanagermodels/GenreResult}
      */
     GenreResult: GenreResult,
     /**
      * The ItemDataInput model constructor.
-     * @property {module:radiomanager/radiomanagermodels/ItemDataInput}
+     * @property {module:radiomanagermodels/ItemDataInput}
      */
     ItemDataInput: ItemDataInput,
     /**
      * The ItemResult model constructor.
-     * @property {module:radiomanager/radiomanagermodels/ItemResult}
+     * @property {module:radiomanagermodels/ItemResult}
      */
     ItemResult: ItemResult,
     /**
      * The ModelTypeResult model constructor.
-     * @property {module:radiomanager/radiomanagermodels/ModelTypeResult}
+     * @property {module:radiomanagermodels/ModelTypeResult}
      */
     ModelTypeResult: ModelTypeResult,
     /**
      * The PresenterDataInput model constructor.
-     * @property {module:radiomanager/radiomanagermodels/PresenterDataInput}
+     * @property {module:radiomanagermodels/PresenterDataInput}
      */
     PresenterDataInput: PresenterDataInput,
     /**
      * The PresenterResult model constructor.
-     * @property {module:radiomanager/radiomanagermodels/PresenterResult}
+     * @property {module:radiomanagermodels/PresenterResult}
      */
     PresenterResult: PresenterResult,
     /**
      * The ProgramDataInput model constructor.
-     * @property {module:radiomanager/radiomanagermodels/ProgramDataInput}
+     * @property {module:radiomanagermodels/ProgramDataInput}
      */
     ProgramDataInput: ProgramDataInput,
     /**
      * The ProgramResult model constructor.
-     * @property {module:radiomanager/radiomanagermodels/ProgramResult}
+     * @property {module:radiomanagermodels/ProgramResult}
      */
     ProgramResult: ProgramResult,
     /**
      * The TagDataInput model constructor.
-     * @property {module:radiomanager/radiomanagermodels/TagDataInput}
+     * @property {module:radiomanagermodels/TagDataInput}
      */
     TagDataInput: TagDataInput,
     /**
      * The TagResult model constructor.
-     * @property {module:radiomanager/radiomanagermodels/TagResult}
+     * @property {module:radiomanagermodels/TagResult}
      */
     TagResult: TagResult,
     /**
      * The BlockApi service constructor.
-     * @property {module:radiomanager/radiomanagerclient/BlockApi}
+     * @property {module:radiomanagerclient/BlockApi}
      */
     BlockApi: BlockApi,
     /**
      * The BroadcastApi service constructor.
-     * @property {module:radiomanager/radiomanagerclient/BroadcastApi}
+     * @property {module:radiomanagerclient/BroadcastApi}
      */
     BroadcastApi: BroadcastApi,
     /**
      * The CampaignApi service constructor.
-     * @property {module:radiomanager/radiomanagerclient/CampaignApi}
+     * @property {module:radiomanagerclient/CampaignApi}
      */
     CampaignApi: CampaignApi,
     /**
      * The ContactApi service constructor.
-     * @property {module:radiomanager/radiomanagerclient/ContactApi}
+     * @property {module:radiomanagerclient/ContactApi}
      */
     ContactApi: ContactApi,
     /**
      * The ExternalMessageApi service constructor.
-     * @property {module:radiomanager/radiomanagerclient/ExternalMessageApi}
+     * @property {module:radiomanagerclient/ExternalMessageApi}
      */
     ExternalMessageApi: ExternalMessageApi,
     /**
      * The GenreApi service constructor.
-     * @property {module:radiomanager/radiomanagerclient/GenreApi}
+     * @property {module:radiomanagerclient/GenreApi}
      */
     GenreApi: GenreApi,
     /**
      * The ItemApi service constructor.
-     * @property {module:radiomanager/radiomanagerclient/ItemApi}
+     * @property {module:radiomanagerclient/ItemApi}
      */
     ItemApi: ItemApi,
     /**
      * The ModelTypeApi service constructor.
-     * @property {module:radiomanager/radiomanagerclient/ModelTypeApi}
+     * @property {module:radiomanagerclient/ModelTypeApi}
      */
     ModelTypeApi: ModelTypeApi,
     /**
      * The PresenterApi service constructor.
-     * @property {module:radiomanager/radiomanagerclient/PresenterApi}
+     * @property {module:radiomanagerclient/PresenterApi}
      */
     PresenterApi: PresenterApi,
     /**
      * The ProgramApi service constructor.
-     * @property {module:radiomanager/radiomanagerclient/ProgramApi}
+     * @property {module:radiomanagerclient/ProgramApi}
      */
     ProgramApi: ProgramApi,
     /**
      * The StringApi service constructor.
-     * @property {module:radiomanager/radiomanagerclient/StringApi}
+     * @property {module:radiomanagerclient/StringApi}
      */
     StringApi: StringApi,
     /**
      * The TagApi service constructor.
-     * @property {module:radiomanager/radiomanagerclient/TagApi}
+     * @property {module:radiomanagerclient/TagApi}
      */
     TagApi: TagApi,
     /**
      * The UserApi service constructor.
-     * @property {module:radiomanager/radiomanagerclient/UserApi}
+     * @property {module:radiomanagerclient/UserApi}
      */
     UserApi: UserApi,
     /**
      * The VisualSlideApi service constructor.
-     * @property {module:radiomanager/radiomanagerclient/VisualSlideApi}
+     * @property {module:radiomanagerclient/VisualSlideApi}
      */
     VisualSlideApi: VisualSlideApi
   };

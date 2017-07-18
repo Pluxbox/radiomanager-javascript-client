@@ -32,7 +32,7 @@
   'use strict';
 
   /**
-   * @module radiomanager/ApiClient
+   * @module ApiClient
    * @version 2.0
    */
 
@@ -40,7 +40,7 @@
    * Manages low level client-server communications, parameter marshalling, etc. There should not be any need for an
    * application to use this class directly - the *Api and model classes provide the public API for the service. The
    * contents of this file should be regarded as internal but are documented for completeness.
-   * @alias module:radiomanager/ApiClient
+   * @alias module:ApiClient
    * @class
    */
   var exports = function() {
@@ -258,7 +258,7 @@
   /**
    * Builds a string representation of an array-type actual parameter, according to the given collection format.
    * @param {Array} param An array parameter.
-   * @param {module:radiomanager/ApiClient.CollectionFormatEnum} collectionFormat The array element separator strategy.
+   * @param {module:ApiClient.CollectionFormatEnum} collectionFormat The array element separator strategy.
    * @returns {String|Array} A string representation of the supplied collection, using the specified delimiter. Returns
    * <code>param</code> as is if <code>collectionFormat</code> is <code>multi</code>.
    */
@@ -549,7 +549,7 @@
 
   /**
    * The default API client implementation.
-   * @type {module:radiomanager/ApiClient}
+   * @type {module:ApiClient}
    */
   exports.instance = new exports();
 

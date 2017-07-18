@@ -1,9 +1,9 @@
 {
   "name": "radiomanager",
-  "version": "1.0.83",
+  "version": "1.0.85",
   "description": "Pluxbox Radiomanager Client",
   "license": "MIT",
-  "main": "src/radiomanager/index.js",
+  "main": "src/index.js",
   "scripts": {
     "test": "./node_modules/mocha/bin/mocha --recursive"
   },
