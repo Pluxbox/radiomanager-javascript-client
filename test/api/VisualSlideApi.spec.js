@@ -51,16 +51,6 @@
   }
 
   describe('VisualSlideApi', function() {
-    describe('downloadVisualSlide', function() {
-      it('should call downloadVisualSlide successfully', function(done) {
-        //uncomment below and update the code to test downloadVisualSlide
-        //instance.downloadVisualSlide(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
     describe('getVisualSlide', function() {
       it('should call getVisualSlide successfully', function(done) {
         //uncomment below and update the code to test getVisualSlide
