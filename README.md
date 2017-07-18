@@ -21,16 +21,6 @@ Then install it via:
 npm install radiomanager --save
 ```
 
-#### git
-#
-If the library is hosted at a git repository, e.g.
-https://github.com/GIT_USER_ID/GIT_REPO_ID
-then install it via:
-
-```shell
-    npm install pluxbox/radiomanager-javascript-client --save
-```
-
 ### For browser
 
 The library also works in the browser environment via npm and [browserify](http://browserify.org/). After following
