@@ -1,6 +1,6 @@
 /**
- * Pluxbox Radiomanager Client
- * Pluxbox RadioManager gives you the power, flexibility and speed you always wanted in a lightweight and easy-to-use web-based radio solution. With Pluxbox RadioManager you can organise your radio workflow and automate your omnichannel communication with your listeners. We offer wide range specialised services for the radio and connections like Hybrid Radio, Visual Radio, your website and social media without losing focus on your broadcast. For more information visit https://pluxbox.com
+ * RadioManager
+ * RadioManager
  *
  * OpenAPI spec version: 2.0
  * Contact: support@pluxbox.com
@@ -86,14 +86,14 @@
   exports.prototype['2016-01-11'] = undefined;
   /**
    * @member {String} next_page_url
-   * @default 'http://radiomanager/pb/api/v1/broadcasts/epg/{identifier}/2016-01-12'
+   * @default 'https://raidiomanager.pluxbox.com/api/v1/broadcasts/epg/{identifier}/2016-01-12'
    */
-  exports.prototype['next_page_url'] = 'http://radiomanager/pb/api/v1/broadcasts/epg/{identifier}/2016-01-12';
+  exports.prototype['next_page_url'] = 'https://raidiomanager.pluxbox.com/api/v1/broadcasts/epg/{identifier}/2016-01-12';
   /**
    * @member {String} prev_page_url
-   * @default 'http://radiomanager/pb/api/v1/broadcasts/epg/{identifier}/2016-01-10'
+   * @default 'https://raidiomanager.pluxbox.com/pb/api/v1/broadcasts/epg/{identifier}/2016-01-10'
    */
-  exports.prototype['prev_page_url'] = 'http://radiomanager/pb/api/v1/broadcasts/epg/{identifier}/2016-01-10';
+  exports.prototype['prev_page_url'] = 'https://raidiomanager.pluxbox.com/pb/api/v1/broadcasts/epg/{identifier}/2016-01-10';
 
 
   /**

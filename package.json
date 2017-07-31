@@ -1,7 +1,7 @@
 {
   "name": "radiomanager",
-  "version": "1.0.87",
-  "description": "Pluxbox Radiomanager Client",
+  "version": "1.0.89",
+  "description": "RadioManager",
   "license": "MIT",
   "main": "src/index.js",
   "scripts": {
