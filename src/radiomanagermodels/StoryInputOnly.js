@@ -26,7 +26,7 @@
     if (!root.radiomanager) {
       root.radiomanager = {};
     }
-    root.radiomanager.TagRelationsBroadcastsParams = factory(root.radiomanager.ApiClient);
+    root.radiomanager.StoryInputOnly = factory(root.radiomanager.ApiClient);
   }
 }(this, function(ApiClient) {
   'use strict';
@@ -35,14 +35,14 @@
 
 
   /**
-   * The TagRelationsBroadcastsParams model module.
-   * @module radiomanagermodels/TagRelationsBroadcastsParams
+   * The StoryInputOnly model module.
+   * @module radiomanagermodels/StoryInputOnly
    * @version 2.0
    */
 
   /**
-   * Constructs a new <code>TagRelationsBroadcastsParams</code>.
-   * @alias module:radiomanagermodels/TagRelationsBroadcastsParams
+   * Constructs a new <code>StoryInputOnly</code>.
+   * @alias module:radiomanagermodels/StoryInputOnly
    * @class
    */
   var exports = function() {
@@ -52,41 +52,41 @@
   };
 
   /**
-   * Constructs a <code>TagRelationsBroadcastsParams</code> from a plain JavaScript object, optionally creating a new instance.
+   * Constructs a <code>StoryInputOnly</code> from a plain JavaScript object, optionally creating a new instance.
    * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
    * @param {Object} data The plain JavaScript object bearing properties of interest.
-   * @param {module:radiomanagermodels/TagRelationsBroadcastsParams} obj Optional instance to populate.
-   * @return {module:radiomanagermodels/TagRelationsBroadcastsParams} The populated <code>TagRelationsBroadcastsParams</code> instance.
+   * @param {module:radiomanagermodels/StoryInputOnly} obj Optional instance to populate.
+   * @return {module:radiomanagermodels/StoryInputOnly} The populated <code>StoryInputOnly</code> instance.
    */
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
 
-      if (data.hasOwnProperty('tag_id')) {
-        obj['tag_id'] = ApiClient.convertToType(data['tag_id'], 'Number');
+      if (data.hasOwnProperty('tags')) {
+        obj['tags'] = ApiClient.convertToType(data['tags'], ['Number']);
       }
     }
     return obj;
   }
 
   /**
-   * @member {Number} tag_id
+   * @member {Array.<Number>} tags
    */
-  exports.prototype['tag_id'] = undefined;
+  exports.prototype['tags'] = undefined;
 
 
   /**
-   * @return {Number}
+   * @return {Array.<Number>}
    */
-  exports.prototype.getTagId = function() {
-    return this['tag_id'];
+  exports.prototype.getTags = function() {
+    return this['tags'];
   }
 
   /**
-   * @param {Number} tagId
+   * @param {Array.<Number>} tags
    */
-  exports.prototype.setTagId = function(tagId) {
-    this['tag_id'] = tagId;
+  exports.prototype.setTags = function(tags) {
+    this['tags'] = tags;
   }
 
 

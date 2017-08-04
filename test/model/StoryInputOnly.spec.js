@@ -31,7 +31,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new radiomanager.TagRelationsBroadcastsParams();
+    instance = new radiomanager.StoryInputOnly();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,16 +50,16 @@
       object[property] = value;
   }
 
-  describe('TagRelationsBroadcastsParams', function() {
-    it('should create an instance of TagRelationsBroadcastsParams', function() {
-      // uncomment below and update the code to test TagRelationsBroadcastsParams
-      //var instane = new radiomanager.TagRelationsBroadcastsParams();
-      //expect(instance).to.be.a(radiomanager.TagRelationsBroadcastsParams);
+  describe('StoryInputOnly', function() {
+    it('should create an instance of StoryInputOnly', function() {
+      // uncomment below and update the code to test StoryInputOnly
+      //var instane = new radiomanager.StoryInputOnly();
+      //expect(instance).to.be.a(radiomanager.StoryInputOnly);
     });
 
-    it('should have the property tagId (base name: "tag_id")', function() {
-      // uncomment below and update the code to test the property tagId
-      //var instane = new radiomanager.TagRelationsBroadcastsParams();
+    it('should have the property tags (base name: "tags")', function() {
+      // uncomment below and update the code to test the property tags
+      //var instane = new radiomanager.StoryInputOnly();
       //expect(instance).to.be();
     });
 

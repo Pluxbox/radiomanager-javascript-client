@@ -23,7 +23,7 @@ Name | Type | Description | Notes
 **repetitionType** | **String** |  | [optional] 
 **repetitionEnd** | **Date** |  | [optional] 
 **repetitionStart** | **Date** |  | [optional] 
-**repetitionDays** | **[Boolean]** |  | [optional] 
+**repetitionDays** | **String** |  | [optional] 
 **ptyCodeId** | **Number** |  | [optional] 
 
 
