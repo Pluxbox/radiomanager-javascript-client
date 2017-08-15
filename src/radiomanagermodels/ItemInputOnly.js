@@ -64,8 +64,8 @@
     if (data) {
       obj = obj || new exports();
 
-      if (data.hasOwnProperty('previous_id')) {
-        obj['previous_id'] = ApiClient.convertToType(data['previous_id'], 'Number');
+      if (data.hasOwnProperty('_previous_id')) {
+        obj['_previous_id'] = ApiClient.convertToType(data['_previous_id'], 'Number');
       }
       if (data.hasOwnProperty('contacts')) {
         obj['contacts'] = ApiClient.convertToType(data['contacts'], ['Number']);
@@ -78,9 +78,9 @@
   }
 
   /**
-   * @member {Number} previous_id
+   * @member {Number} _previous_id
    */
-  exports.prototype['previous_id'] = undefined;
+  exports.prototype['_previous_id'] = undefined;
   /**
    * @member {Array.<Number>} contacts
    */
@@ -95,14 +95,14 @@
    * @return {Number}
    */
   exports.prototype.getPreviousId = function() {
-    return this['previous_id'];
+    return this['_previous_id'];
   }
 
   /**
    * @param {Number} previousId
    */
   exports.prototype.setPreviousId = function(previousId) {
-    this['previous_id'] = previousId;
+    this['_previous_id'] = previousId;
   }
 
 

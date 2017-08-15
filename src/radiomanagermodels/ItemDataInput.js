@@ -157,9 +157,9 @@ exports.prototype['details'] = undefined;
 
   // Implement ItemInputOnly interface:
   /**
-   * @member {Number} previous_id
+   * @member {Number} _previous_id
    */
-exports.prototype['previous_id'] = undefined;
+exports.prototype['_previous_id'] = undefined;
 
   /**
    * @member {Array.<Number>} contacts
