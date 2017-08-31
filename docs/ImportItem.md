@@ -4,7 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **modelTypeId** | **Number** |  | 
-**externalId** | **Number** |  | 
+**externalId** | **String** |  | 
 **fieldValues** | [**ImportItemFieldValues**](ImportItemFieldValues.md) |  | [optional] 
 **title** | **String** |  | [optional] 
 **duration** | **Number** |  | [optional] 

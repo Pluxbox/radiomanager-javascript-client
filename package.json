@@ -1,6 +1,6 @@
 {
   "name": "radiomanager",
-  "version": "1.0.97",
+  "version": "1.0.99",
   "description": "RadioManager",
   "license": "MIT",
   "main": "src/index.js",

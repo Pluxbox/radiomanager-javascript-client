@@ -45,7 +45,7 @@
    * @alias module:radiomanagermodels/ImportItem
    * @class
    * @param modelTypeId {Number} 
-   * @param externalId {Number} 
+   * @param externalId {String} 
    */
   var exports = function(modelTypeId, externalId) {
     var _this = this;
@@ -78,7 +78,7 @@
         obj['model_type_id'] = ApiClient.convertToType(data['model_type_id'], 'Number');
       }
       if (data.hasOwnProperty('external_id')) {
-        obj['external_id'] = ApiClient.convertToType(data['external_id'], 'Number');
+        obj['external_id'] = ApiClient.convertToType(data['external_id'], 'String');
       }
       if (data.hasOwnProperty('field_values')) {
         obj['field_values'] = ImportItemFieldValues.constructFromObject(data['field_values']);
@@ -116,7 +116,7 @@
    */
   exports.prototype['model_type_id'] = undefined;
   /**
-   * @member {Number} external_id
+   * @member {String} external_id
    */
   exports.prototype['external_id'] = undefined;
   /**
@@ -173,14 +173,14 @@
 
 
   /**
-   * @return {Number}
+   * @return {String}
    */
   exports.prototype.getExternalId = function() {
     return this['external_id'];
   }
 
   /**
-   * @param {Number} externalId
+   * @param {String} externalId
    */
   exports.prototype.setExternalId = function(externalId) {
     this['external_id'] = externalId;

@@ -45,14 +45,13 @@
    * @alias module:radiomanagermodels/Item
    * @class
    * @param modelTypeId {Number} 
-   * @param externalId {Number} 
    */
-  var exports = function(modelTypeId, externalId) {
+  var exports = function(modelTypeId) {
     var _this = this;
 
     _this['model_type_id'] = modelTypeId;
 
-    _this['external_id'] = externalId;
+
 
 
 
@@ -86,7 +85,7 @@
         obj['block_id'] = ApiClient.convertToType(data['block_id'], 'Number');
       }
       if (data.hasOwnProperty('external_id')) {
-        obj['external_id'] = ApiClient.convertToType(data['external_id'], 'Number');
+        obj['external_id'] = ApiClient.convertToType(data['external_id'], 'String');
       }
       if (data.hasOwnProperty('field_values')) {
         obj['field_values'] = ImportItemFieldValues.constructFromObject(data['field_values']);
@@ -140,7 +139,7 @@
    */
   exports.prototype['block_id'] = undefined;
   /**
-   * @member {Number} external_id
+   * @member {String} external_id
    */
   exports.prototype['external_id'] = undefined;
   /**
@@ -228,14 +227,14 @@
 
 
   /**
-   * @return {Number}
+   * @return {String}
    */
   exports.prototype.getExternalId = function() {
     return this['external_id'];
   }
 
   /**
-   * @param {Number} externalId
+   * @param {String} externalId
    */
   exports.prototype.setExternalId = function(externalId) {
     this['external_id'] = externalId;

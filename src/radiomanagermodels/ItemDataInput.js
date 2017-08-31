@@ -47,12 +47,11 @@
    * @implements module:radiomanagermodels/Item
    * @implements module:radiomanagermodels/ItemInputOnly
    * @param modelTypeId {Number} 
-   * @param externalId {Number} 
    */
-  var exports = function(modelTypeId, externalId) {
+  var exports = function(modelTypeId) {
     var _this = this;
 
-    Item.call(_this, modelTypeId, externalId);
+    Item.call(_this, modelTypeId);
     ItemInputOnly.call(_this);
   };
 
@@ -86,7 +85,7 @@ exports.prototype['model_type_id'] = undefined;
 exports.prototype['block_id'] = undefined;
 
   /**
-   * @member {Number} external_id
+   * @member {String} external_id
    */
 exports.prototype['external_id'] = undefined;
 
