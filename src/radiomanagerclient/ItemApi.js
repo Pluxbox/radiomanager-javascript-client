@@ -306,23 +306,24 @@
      * Get a list of all the items currently in your station. This feature supports pagination and will give a maximum results of 50 items back.
      * @param {Object} opts Optional parameters
      * @param {Number} opts.page Current page *(Optional)*
-     * @param {String} opts.orderBy Field to order the results *(Optional)*
-     * @param {module:radiomanagermodels/String} opts.orderDirection Direction of ordering *(Optional)*
+     * @param {Number} opts.blockId Search on Block ID *(Optional)* &#x60;(Relation)&#x60;
+     * @param {Number} opts.broadcastId Search on Broadcast ID *(Optional)* &#x60;(Relation)&#x60;
+     * @param {Number} opts.modelTypeId Search on ModelType ID *(Optional)* &#x60;(Relation)&#x60;
+     * @param {Number} opts.tagId Search on Tag ID *(Optional)* &#x60;(Relation)&#x60;
+     * @param {Number} opts.campaignId Search on Campaign ID *(Optional)* &#x60;(Relation)&#x60;
+     * @param {Number} opts.contactId Search on Contact ID *(Optional)* &#x60;(Relation)&#x60;
+     * @param {Number} opts.programDraftId Search on Program Draft ID *(Optional)*
+     * @param {Number} opts.userDraftId Search on User Draft ID *(Optional)*
+     * @param {Number} opts.stationDraftId Search on Station Draft ID *(Optional)*
+     * @param {Number} opts.programId Search on Program ID *(Optional)* &#x60;(Relation)&#x60;
      * @param {Date} opts.startMin Minimum start date *(Optional)*
      * @param {Date} opts.startMax Maximum start date *(Optional)*
      * @param {Number} opts.durationMin Minimum duration (seconds) *(Optional)*
      * @param {Number} opts.durationMax Maximum duration (seconds) *(Optional)*
      * @param {module:radiomanagermodels/String} opts.status Play Status of item *(Optional)*
-     * @param {Number} opts.modelTypeId Search on ModelType ID *(Optional)*
-     * @param {Number} opts.programDraftId Search on Program Draft ID *(Optional)*
-     * @param {Number} opts.userDraftId Search on User Draft ID *(Optional)*
-     * @param {Number} opts.stationDraftId Search on Station Draft ID *(Optional)*
-     * @param {Number} opts.blockId Search on Block ID *(Optional)* &#x60;(Relation)&#x60;
-     * @param {Number} opts.broadcastId Search on Broadcast ID *(Optional)* &#x60;(Relation)&#x60;
-     * @param {Number} opts.campaignId Search on Campaign ID *(Optional)* &#x60;(Relation)&#x60;
-     * @param {Number} opts.contactId Search on Contact ID *(Optional)* &#x60;(Relation)&#x60;
-     * @param {Number} opts.programId Search on Program ID *(Optional)* &#x60;(Relation)&#x60;
-     * @param {Number} opts.tagId Search on Tag ID *(Optional)* &#x60;(Relation)&#x60;
+     * @param {Number} opts.limit Results per page *(Optional)*
+     * @param {String} opts.orderBy Field to order the results *(Optional)*
+     * @param {module:radiomanagermodels/String} opts.orderDirection Direction of ordering *(Optional)*
      * @param {Number} opts.externalStationId Query on a different (content providing) station *(Optional)*
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:radiomanagermodels/ItemResults} and HTTP response
      */
@@ -335,23 +336,24 @@
       };
       var queryParams = {
         'page': opts['page'],
-        'order-by': opts['orderBy'],
-        'order-direction': opts['orderDirection'],
+        'block_id': opts['blockId'],
+        'broadcast_id': opts['broadcastId'],
+        'model_type_id': opts['modelTypeId'],
+        'tag_id': opts['tagId'],
+        'campaign_id': opts['campaignId'],
+        'contact_id': opts['contactId'],
+        'program_draft_id': opts['programDraftId'],
+        'user_draft_id': opts['userDraftId'],
+        'station_draft_id': opts['stationDraftId'],
+        'program_id': opts['programId'],
         'start-min': opts['startMin'],
         'start-max': opts['startMax'],
         'duration-min': opts['durationMin'],
         'duration-max': opts['durationMax'],
         'status': opts['status'],
-        'model_type_id': opts['modelTypeId'],
-        'program_draft_id': opts['programDraftId'],
-        'user_draft_id': opts['userDraftId'],
-        'station_draft_id': opts['stationDraftId'],
-        'block_id': opts['blockId'],
-        'broadcast_id': opts['broadcastId'],
-        'campaign_id': opts['campaignId'],
-        'contact_id': opts['contactId'],
-        'program_id': opts['programId'],
-        'tag_id': opts['tagId'],
+        'limit': opts['limit'],
+        'order-by': opts['orderBy'],
+        'order-direction': opts['orderDirection'],
         '_external_station_id': opts['externalStationId']
       };
       var headerParams = {
@@ -376,23 +378,24 @@
      * Get a list of all the items currently in your station. This feature supports pagination and will give a maximum results of 50 items back.
      * @param {Object} opts Optional parameters
      * @param {Number} opts.page Current page *(Optional)*
-     * @param {String} opts.orderBy Field to order the results *(Optional)*
-     * @param {module:radiomanagermodels/String} opts.orderDirection Direction of ordering *(Optional)*
+     * @param {Number} opts.blockId Search on Block ID *(Optional)* &#x60;(Relation)&#x60;
+     * @param {Number} opts.broadcastId Search on Broadcast ID *(Optional)* &#x60;(Relation)&#x60;
+     * @param {Number} opts.modelTypeId Search on ModelType ID *(Optional)* &#x60;(Relation)&#x60;
+     * @param {Number} opts.tagId Search on Tag ID *(Optional)* &#x60;(Relation)&#x60;
+     * @param {Number} opts.campaignId Search on Campaign ID *(Optional)* &#x60;(Relation)&#x60;
+     * @param {Number} opts.contactId Search on Contact ID *(Optional)* &#x60;(Relation)&#x60;
+     * @param {Number} opts.programDraftId Search on Program Draft ID *(Optional)*
+     * @param {Number} opts.userDraftId Search on User Draft ID *(Optional)*
+     * @param {Number} opts.stationDraftId Search on Station Draft ID *(Optional)*
+     * @param {Number} opts.programId Search on Program ID *(Optional)* &#x60;(Relation)&#x60;
      * @param {Date} opts.startMin Minimum start date *(Optional)*
      * @param {Date} opts.startMax Maximum start date *(Optional)*
      * @param {Number} opts.durationMin Minimum duration (seconds) *(Optional)*
      * @param {Number} opts.durationMax Maximum duration (seconds) *(Optional)*
      * @param {module:radiomanagermodels/String} opts.status Play Status of item *(Optional)*
-     * @param {Number} opts.modelTypeId Search on ModelType ID *(Optional)*
-     * @param {Number} opts.programDraftId Search on Program Draft ID *(Optional)*
-     * @param {Number} opts.userDraftId Search on User Draft ID *(Optional)*
-     * @param {Number} opts.stationDraftId Search on Station Draft ID *(Optional)*
-     * @param {Number} opts.blockId Search on Block ID *(Optional)* &#x60;(Relation)&#x60;
-     * @param {Number} opts.broadcastId Search on Broadcast ID *(Optional)* &#x60;(Relation)&#x60;
-     * @param {Number} opts.campaignId Search on Campaign ID *(Optional)* &#x60;(Relation)&#x60;
-     * @param {Number} opts.contactId Search on Contact ID *(Optional)* &#x60;(Relation)&#x60;
-     * @param {Number} opts.programId Search on Program ID *(Optional)* &#x60;(Relation)&#x60;
-     * @param {Number} opts.tagId Search on Tag ID *(Optional)* &#x60;(Relation)&#x60;
+     * @param {Number} opts.limit Results per page *(Optional)*
+     * @param {String} opts.orderBy Field to order the results *(Optional)*
+     * @param {module:radiomanagermodels/String} opts.orderDirection Direction of ordering *(Optional)*
      * @param {Number} opts.externalStationId Query on a different (content providing) station *(Optional)*
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:radiomanagermodels/ItemResults}
      */

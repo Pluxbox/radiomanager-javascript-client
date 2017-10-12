@@ -207,6 +207,9 @@
      * @param {Object} opts Optional parameters
      * @param {Number} opts.page Current page *(Optional)* (default to 1)
      * @param {Number} opts.roleId Search on Role ID *(Optional)*
+     * @param {Number} opts.limit Results per page *(Optional)*
+     * @param {String} opts.orderBy Field to order the results *(Optional)*
+     * @param {module:radiomanagermodels/String} opts.orderDirection Direction of ordering *(Optional)*
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:radiomanagermodels/UserResults} and HTTP response
      */
     this.listUsersWithHttpInfo = function(opts) {
@@ -218,7 +221,10 @@
       };
       var queryParams = {
         'page': opts['page'],
-        'role_id': opts['roleId']
+        'role_id': opts['roleId'],
+        'limit': opts['limit'],
+        'order-by': opts['orderBy'],
+        'order-direction': opts['orderDirection']
       };
       var headerParams = {
       };
@@ -243,6 +249,9 @@
      * @param {Object} opts Optional parameters
      * @param {Number} opts.page Current page *(Optional)* (default to 1)
      * @param {Number} opts.roleId Search on Role ID *(Optional)*
+     * @param {Number} opts.limit Results per page *(Optional)*
+     * @param {String} opts.orderBy Field to order the results *(Optional)*
+     * @param {module:radiomanagermodels/String} opts.orderDirection Direction of ordering *(Optional)*
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:radiomanagermodels/UserResults}
      */
     this.listUsers = function(opts) {

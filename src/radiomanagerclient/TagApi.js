@@ -216,6 +216,9 @@
      * @param {Number} opts.itemId Search on Item ID *(Optional)* &#x60;(Relation)&#x60;
      * @param {Number} opts.broadcastId Search on Broadcast ID *(Optional)* &#x60;(Relation)&#x60;
      * @param {Number} opts.contactId Search on Contact ID *(Optional)* &#x60;(Relation)&#x60;
+     * @param {Number} opts.limit Results per page *(Optional)*
+     * @param {String} opts.orderBy Field to order the results *(Optional)*
+     * @param {module:radiomanagermodels/String} opts.orderDirection Direction of ordering *(Optional)*
      * @param {Number} opts.externalStationId Query on a different (content providing) station *(Optional)*
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:radiomanagermodels/TagResults} and HTTP response
      */
@@ -232,6 +235,9 @@
         'item_id': opts['itemId'],
         'broadcast_id': opts['broadcastId'],
         'contact_id': opts['contactId'],
+        'limit': opts['limit'],
+        'order-by': opts['orderBy'],
+        'order-direction': opts['orderDirection'],
         '_external_station_id': opts['externalStationId']
       };
       var headerParams = {
@@ -260,6 +266,9 @@
      * @param {Number} opts.itemId Search on Item ID *(Optional)* &#x60;(Relation)&#x60;
      * @param {Number} opts.broadcastId Search on Broadcast ID *(Optional)* &#x60;(Relation)&#x60;
      * @param {Number} opts.contactId Search on Contact ID *(Optional)* &#x60;(Relation)&#x60;
+     * @param {Number} opts.limit Results per page *(Optional)*
+     * @param {String} opts.orderBy Field to order the results *(Optional)*
+     * @param {module:radiomanagermodels/String} opts.orderDirection Direction of ordering *(Optional)*
      * @param {Number} opts.externalStationId Query on a different (content providing) station *(Optional)*
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:radiomanagermodels/TagResults}
      */

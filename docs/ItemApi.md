@@ -1,6 +1,6 @@
 # radiomanager.ItemApi
 
-All URIs are relative to *https://staging.radiomanager.pluxbox.com/api/v2*
+All URIs are relative to *https://radiomanager.pb/api/v2*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -295,23 +295,24 @@ var apiInstance = new radiomanager.ItemApi();
 
 var opts = { 
   'page': 789, // Number | Current page *(Optional)*
-  'orderBy': "orderBy_example", // String | Field to order the results *(Optional)*
-  'orderDirection': "orderDirection_example", // String | Direction of ordering *(Optional)*
+  'blockId': 789, // Number | Search on Block ID *(Optional)* `(Relation)`
+  'broadcastId': 789, // Number | Search on Broadcast ID *(Optional)* `(Relation)`
+  'modelTypeId': 789, // Number | Search on ModelType ID *(Optional)* `(Relation)`
+  'tagId': 789, // Number | Search on Tag ID *(Optional)* `(Relation)`
+  'campaignId': 789, // Number | Search on Campaign ID *(Optional)* `(Relation)`
+  'contactId': 789, // Number | Search on Contact ID *(Optional)* `(Relation)`
+  'programDraftId': 789, // Number | Search on Program Draft ID *(Optional)*
+  'userDraftId': 789, // Number | Search on User Draft ID *(Optional)*
+  'stationDraftId': 789, // Number | Search on Station Draft ID *(Optional)*
+  'programId': 789, // Number | Search on Program ID *(Optional)* `(Relation)`
   'startMin': new Date("2013-10-20T19:20:30+01:00"), // Date | Minimum start date *(Optional)*
   'startMax': new Date("2013-10-20T19:20:30+01:00"), // Date | Maximum start date *(Optional)*
   'durationMin': 56, // Number | Minimum duration (seconds) *(Optional)*
   'durationMax': 56, // Number | Maximum duration (seconds) *(Optional)*
   'status': "status_example", // String | Play Status of item *(Optional)*
-  'modelTypeId': 789, // Number | Search on ModelType ID *(Optional)*
-  'programDraftId': 789, // Number | Search on Program Draft ID *(Optional)*
-  'userDraftId': 789, // Number | Search on User Draft ID *(Optional)*
-  'stationDraftId': 789, // Number | Search on Station Draft ID *(Optional)*
-  'blockId': 789, // Number | Search on Block ID *(Optional)* `(Relation)`
-  'broadcastId': 789, // Number | Search on Broadcast ID *(Optional)* `(Relation)`
-  'campaignId': 789, // Number | Search on Campaign ID *(Optional)* `(Relation)`
-  'contactId': 789, // Number | Search on Contact ID *(Optional)* `(Relation)`
-  'programId': 789, // Number | Search on Program ID *(Optional)* `(Relation)`
-  'tagId': 789, // Number | Search on Tag ID *(Optional)* `(Relation)`
+  'limit': 789, // Number | Results per page *(Optional)*
+  'orderBy': "orderBy_example", // String | Field to order the results *(Optional)*
+  'orderDirection': "orderDirection_example", // String | Direction of ordering *(Optional)*
   'externalStationId': 789 // Number | Query on a different (content providing) station *(Optional)*
 };
 apiInstance.listItems(opts).then(function(data) {
@@ -327,23 +328,24 @@ apiInstance.listItems(opts).then(function(data) {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **page** | **Number**| Current page *(Optional)* | [optional] 
- **orderBy** | **String**| Field to order the results *(Optional)* | [optional] 
- **orderDirection** | **String**| Direction of ordering *(Optional)* | [optional] 
+ **blockId** | **Number**| Search on Block ID *(Optional)* &#x60;(Relation)&#x60; | [optional] 
+ **broadcastId** | **Number**| Search on Broadcast ID *(Optional)* &#x60;(Relation)&#x60; | [optional] 
+ **modelTypeId** | **Number**| Search on ModelType ID *(Optional)* &#x60;(Relation)&#x60; | [optional] 
+ **tagId** | **Number**| Search on Tag ID *(Optional)* &#x60;(Relation)&#x60; | [optional] 
+ **campaignId** | **Number**| Search on Campaign ID *(Optional)* &#x60;(Relation)&#x60; | [optional] 
+ **contactId** | **Number**| Search on Contact ID *(Optional)* &#x60;(Relation)&#x60; | [optional] 
+ **programDraftId** | **Number**| Search on Program Draft ID *(Optional)* | [optional] 
+ **userDraftId** | **Number**| Search on User Draft ID *(Optional)* | [optional] 
+ **stationDraftId** | **Number**| Search on Station Draft ID *(Optional)* | [optional] 
+ **programId** | **Number**| Search on Program ID *(Optional)* &#x60;(Relation)&#x60; | [optional] 
  **startMin** | **Date**| Minimum start date *(Optional)* | [optional] 
  **startMax** | **Date**| Maximum start date *(Optional)* | [optional] 
  **durationMin** | **Number**| Minimum duration (seconds) *(Optional)* | [optional] 
  **durationMax** | **Number**| Maximum duration (seconds) *(Optional)* | [optional] 
  **status** | **String**| Play Status of item *(Optional)* | [optional] 
- **modelTypeId** | **Number**| Search on ModelType ID *(Optional)* | [optional] 
- **programDraftId** | **Number**| Search on Program Draft ID *(Optional)* | [optional] 
- **userDraftId** | **Number**| Search on User Draft ID *(Optional)* | [optional] 
- **stationDraftId** | **Number**| Search on Station Draft ID *(Optional)* | [optional] 
- **blockId** | **Number**| Search on Block ID *(Optional)* &#x60;(Relation)&#x60; | [optional] 
- **broadcastId** | **Number**| Search on Broadcast ID *(Optional)* &#x60;(Relation)&#x60; | [optional] 
- **campaignId** | **Number**| Search on Campaign ID *(Optional)* &#x60;(Relation)&#x60; | [optional] 
- **contactId** | **Number**| Search on Contact ID *(Optional)* &#x60;(Relation)&#x60; | [optional] 
- **programId** | **Number**| Search on Program ID *(Optional)* &#x60;(Relation)&#x60; | [optional] 
- **tagId** | **Number**| Search on Tag ID *(Optional)* &#x60;(Relation)&#x60; | [optional] 
+ **limit** | **Number**| Results per page *(Optional)* | [optional] 
+ **orderBy** | **String**| Field to order the results *(Optional)* | [optional] 
+ **orderDirection** | **String**| Direction of ordering *(Optional)* | [optional] 
  **externalStationId** | **Number**| Query on a different (content providing) station *(Optional)* | [optional] 
 
 ### Return type

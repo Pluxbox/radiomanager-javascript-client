@@ -1,6 +1,6 @@
 # radiomanager.BlockApi
 
-All URIs are relative to *https://staging.radiomanager.pluxbox.com/api/v2*
+All URIs are relative to *https://radiomanager.pb/api/v2*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -175,11 +175,14 @@ var apiInstance = new radiomanager.BlockApi();
 
 var opts = { 
   'page': 1, // Number | Current page *(Optional)*
+  'broadcastId': 789, // Number | Search on Broadcast ID *(Optional)* `(Relation)`
+  'itemId': 789, // Number | Search on Item ID *(Optional)* `(Relation)`
+  'programId': 789, // Number | Search on Program ID *(Optional)* `(Relation)`
   'startMin': new Date("2013-10-20T19:20:30+01:00"), // Date | Minimum start date *(Optional)*
   'startMax': new Date("2013-10-20T19:20:30+01:00"), // Date | Maximum start date *(Optional)*
-  'broadcastId': 789, // Number | Search on Broadcast ID *(Optional)* `(Relation)`
-  'programId': 789, // Number | Search on Program ID *(Optional)* `(Relation)`
-  'itemId': 789, // Number | Search on Item ID *(Optional)* `(Relation)`
+  'limit': 789, // Number | Results per page *(Optional)*
+  'orderBy': "orderBy_example", // String | Field to order the results *(Optional)*
+  'orderDirection': "orderDirection_example", // String | Direction of ordering *(Optional)*
   'externalStationId': 789 // Number | Query on a different (content providing) station *(Optional)*
 };
 apiInstance.listBlocks(opts).then(function(data) {
@@ -195,11 +198,14 @@ apiInstance.listBlocks(opts).then(function(data) {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **page** | **Number**| Current page *(Optional)* | [optional] [default to 1]
+ **broadcastId** | **Number**| Search on Broadcast ID *(Optional)* &#x60;(Relation)&#x60; | [optional] 
+ **itemId** | **Number**| Search on Item ID *(Optional)* &#x60;(Relation)&#x60; | [optional] 
+ **programId** | **Number**| Search on Program ID *(Optional)* &#x60;(Relation)&#x60; | [optional] 
  **startMin** | **Date**| Minimum start date *(Optional)* | [optional] 
  **startMax** | **Date**| Maximum start date *(Optional)* | [optional] 
- **broadcastId** | **Number**| Search on Broadcast ID *(Optional)* &#x60;(Relation)&#x60; | [optional] 
- **programId** | **Number**| Search on Program ID *(Optional)* &#x60;(Relation)&#x60; | [optional] 
- **itemId** | **Number**| Search on Item ID *(Optional)* &#x60;(Relation)&#x60; | [optional] 
+ **limit** | **Number**| Results per page *(Optional)* | [optional] 
+ **orderBy** | **String**| Field to order the results *(Optional)* | [optional] 
+ **orderDirection** | **String**| Direction of ordering *(Optional)* | [optional] 
  **externalStationId** | **Number**| Query on a different (content providing) station *(Optional)* | [optional] 
 
 ### Return type

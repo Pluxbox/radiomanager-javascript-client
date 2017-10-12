@@ -1,6 +1,6 @@
 # radiomanager.UserApi
 
-All URIs are relative to *https://staging.radiomanager.pluxbox.com/api/v2*
+All URIs are relative to *https://radiomanager.pb/api/v2*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -183,7 +183,10 @@ var apiInstance = new radiomanager.UserApi();
 
 var opts = { 
   'page': 1, // Number | Current page *(Optional)*
-  'roleId': 789 // Number | Search on Role ID *(Optional)*
+  'roleId': 789, // Number | Search on Role ID *(Optional)*
+  'limit': 789, // Number | Results per page *(Optional)*
+  'orderBy': "orderBy_example", // String | Field to order the results *(Optional)*
+  'orderDirection': "orderDirection_example" // String | Direction of ordering *(Optional)*
 };
 apiInstance.listUsers(opts).then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
@@ -199,6 +202,9 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **page** | **Number**| Current page *(Optional)* | [optional] [default to 1]
  **roleId** | **Number**| Search on Role ID *(Optional)* | [optional] 
+ **limit** | **Number**| Results per page *(Optional)* | [optional] 
+ **orderBy** | **String**| Field to order the results *(Optional)* | [optional] 
+ **orderDirection** | **String**| Direction of ordering *(Optional)* | [optional] 
 
 ### Return type
 

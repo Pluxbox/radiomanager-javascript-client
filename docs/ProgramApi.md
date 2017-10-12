@@ -1,6 +1,6 @@
 # radiomanager.ProgramApi
 
-All URIs are relative to *https://staging.radiomanager.pluxbox.com/api/v2*
+All URIs are relative to *https://radiomanager.pb/api/v2*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -188,13 +188,16 @@ var apiInstance = new radiomanager.ProgramApi();
 
 var opts = { 
   'page': 789, // Number | Current page *(Optional)*
-  'genreId': 789, // Number | Search on Genre ID *(Optional)*
-  'modelTypeId': 789, // Number | Search on ModelType ID *(Optional)*
-  'presenterId': 789, // Number | Search on Presenter ID *(Optional)* `(Relation)`
-  'tagId': 789, // Number | Search on Tag ID *(Optional)* `(Relation)`
   'broadcastId': 789, // Number | Search on Broadcast ID *(Optional)* `(Relation)`
-  'itemId': 789, // Number | Search on Item ID *(Optional)* `(Relation)`
+  'modelTypeId': 789, // Number | Search on ModelType ID *(Optional)* `(Relation)`
+  'tagId': 789, // Number | Search on Tag ID *(Optional)* `(Relation)`
+  'presenterId': 789, // Number | Search on Presenter ID *(Optional)* `(Relation)`
+  'genreId': 789, // Number | Search on Genre ID *(Optional)*
   'blockId': 789, // Number | Search on Block ID *(Optional)* `(Relation)`
+  'itemId': 789, // Number | Search on Item ID *(Optional)* `(Relation)`
+  'limit': 789, // Number | Results per page *(Optional)*
+  'orderBy': "orderBy_example", // String | Field to order the results *(Optional)*
+  'orderDirection': "orderDirection_example", // String | Direction of ordering *(Optional)*
   'externalStationId': 789 // Number | Query on a different (content providing) station *(Optional)*
 };
 apiInstance.listPrograms(opts).then(function(data) {
@@ -210,13 +213,16 @@ apiInstance.listPrograms(opts).then(function(data) {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **page** | **Number**| Current page *(Optional)* | [optional] 
- **genreId** | **Number**| Search on Genre ID *(Optional)* | [optional] 
- **modelTypeId** | **Number**| Search on ModelType ID *(Optional)* | [optional] 
- **presenterId** | **Number**| Search on Presenter ID *(Optional)* &#x60;(Relation)&#x60; | [optional] 
- **tagId** | **Number**| Search on Tag ID *(Optional)* &#x60;(Relation)&#x60; | [optional] 
  **broadcastId** | **Number**| Search on Broadcast ID *(Optional)* &#x60;(Relation)&#x60; | [optional] 
- **itemId** | **Number**| Search on Item ID *(Optional)* &#x60;(Relation)&#x60; | [optional] 
+ **modelTypeId** | **Number**| Search on ModelType ID *(Optional)* &#x60;(Relation)&#x60; | [optional] 
+ **tagId** | **Number**| Search on Tag ID *(Optional)* &#x60;(Relation)&#x60; | [optional] 
+ **presenterId** | **Number**| Search on Presenter ID *(Optional)* &#x60;(Relation)&#x60; | [optional] 
+ **genreId** | **Number**| Search on Genre ID *(Optional)* | [optional] 
  **blockId** | **Number**| Search on Block ID *(Optional)* &#x60;(Relation)&#x60; | [optional] 
+ **itemId** | **Number**| Search on Item ID *(Optional)* &#x60;(Relation)&#x60; | [optional] 
+ **limit** | **Number**| Results per page *(Optional)* | [optional] 
+ **orderBy** | **String**| Field to order the results *(Optional)* | [optional] 
+ **orderDirection** | **String**| Direction of ordering *(Optional)* | [optional] 
  **externalStationId** | **Number**| Query on a different (content providing) station *(Optional)* | [optional] 
 
 ### Return type

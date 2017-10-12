@@ -1,6 +1,6 @@
 # radiomanager.BroadcastApi
 
-All URIs are relative to *https://staging.radiomanager.pluxbox.com/api/v2*
+All URIs are relative to *https://radiomanager.pb/api/v2*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -237,7 +237,8 @@ API Key.apiKey = 'YOUR API KEY';
 var apiInstance = new radiomanager.BroadcastApi();
 
 var opts = { 
-  '_date': new Date("2013-10-20T19:20:30+01:00") // Date | Date *(Optional)*
+  '_date': new Date("2013-10-20T19:20:30+01:00"), // Date | Date *(Optional)*
+  'withunpublished': true // Boolean | Show Unpublished *(Optional)*
 };
 apiInstance.getDailyEPG(opts).then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
@@ -252,6 +253,7 @@ apiInstance.getDailyEPG(opts).then(function(data) {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **_date** | **Date**| Date *(Optional)* | [optional] 
+ **withunpublished** | **Boolean**| Show Unpublished *(Optional)* | [optional] 
 
 ### Return type
 
@@ -288,7 +290,8 @@ API Key.apiKey = 'YOUR API KEY';
 var apiInstance = new radiomanager.BroadcastApi();
 
 var opts = { 
-  '_date': new Date("2013-10-20T19:20:30+01:00") // Date | Date *(Optional)*
+  '_date': new Date("2013-10-20T19:20:30+01:00"), // Date | Date *(Optional)*
+  'withunpublished': true // Boolean | Show Unpublished *(Optional)*
 };
 apiInstance.getEPGByDate(opts).then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
@@ -303,6 +306,7 @@ apiInstance.getEPGByDate(opts).then(function(data) {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **_date** | **Date**| Date *(Optional)* | [optional] 
+ **withunpublished** | **Boolean**| Show Unpublished *(Optional)* | [optional] 
 
 ### Return type
 
@@ -383,7 +387,8 @@ API Key.apiKey = 'YOUR API KEY';
 var apiInstance = new radiomanager.BroadcastApi();
 
 var opts = { 
-  '_date': "_date_example" // String | Date *(Optional)*
+  '_date': "_date_example", // String | Date *(Optional)*
+  'withunpublished': true // Boolean | Show Unpublished *(Optional)*
 };
 apiInstance.getWeeklyEPG(opts).then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
@@ -398,6 +403,7 @@ apiInstance.getWeeklyEPG(opts).then(function(data) {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **_date** | **String**| Date *(Optional)* | [optional] 
+ **withunpublished** | **Boolean**| Show Unpublished *(Optional)* | [optional] 
 
 ### Return type
 
@@ -435,15 +441,18 @@ var apiInstance = new radiomanager.BroadcastApi();
 
 var opts = { 
   'page': 1, // Number | Current page *(Optional)*
-  'startMin': new Date("2013-10-20T19:20:30+01:00"), // Date | Minimum start date *(Optional)*
-  'startMax': new Date("2013-10-20T19:20:30+01:00"), // Date | Maximum start date *(Optional)*
-  'modelTypeId': 789, // Number | Search on ModelType ID *(Optional)*
+  'programId': 789, // Number | Search on Program ID *(Optional)* `(Relation)`
+  'blockId': 789, // Number | Search on Block ID *(Optional)* `(Relation)`
+  'modelTypeId': 789, // Number | Search on ModelType ID *(Optional)* `(Relation)`
   'tagId': 789, // Number | Search on Tag ID *(Optional)* `(Relation)`
   'presenterId': 789, // Number | Search on Presenter ID *(Optional)* `(Relation)`
-  'itemId': 789, // Number | Search on Item ID *(Optional)* `(Relation)`
-  'blockId': 789, // Number | Search on Block ID *(Optional)* `(Relation)`
   'genreId': 789, // Number | Search on Genre ID *(Optional)* `(Relation)`
-  'programId': 789, // Number | Search on Program ID *(Optional)* `(Relation)`
+  'itemId': 789, // Number | Search on Item ID *(Optional)* `(Relation)`
+  'startMin': new Date("2013-10-20T19:20:30+01:00"), // Date | Minimum start date *(Optional)*
+  'startMax': new Date("2013-10-20T19:20:30+01:00"), // Date | Maximum start date *(Optional)*
+  'limit': 789, // Number | Results per page *(Optional)*
+  'orderBy': "orderBy_example", // String | Field to order the results *(Optional)*
+  'orderDirection': "orderDirection_example", // String | Direction of ordering *(Optional)*
   'externalStationId': 789 // Number | Query on a different (content providing) station *(Optional)*
 };
 apiInstance.listBroadcasts(opts).then(function(data) {
@@ -459,15 +468,18 @@ apiInstance.listBroadcasts(opts).then(function(data) {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **page** | **Number**| Current page *(Optional)* | [optional] [default to 1]
- **startMin** | **Date**| Minimum start date *(Optional)* | [optional] 
- **startMax** | **Date**| Maximum start date *(Optional)* | [optional] 
- **modelTypeId** | **Number**| Search on ModelType ID *(Optional)* | [optional] 
+ **programId** | **Number**| Search on Program ID *(Optional)* &#x60;(Relation)&#x60; | [optional] 
+ **blockId** | **Number**| Search on Block ID *(Optional)* &#x60;(Relation)&#x60; | [optional] 
+ **modelTypeId** | **Number**| Search on ModelType ID *(Optional)* &#x60;(Relation)&#x60; | [optional] 
  **tagId** | **Number**| Search on Tag ID *(Optional)* &#x60;(Relation)&#x60; | [optional] 
  **presenterId** | **Number**| Search on Presenter ID *(Optional)* &#x60;(Relation)&#x60; | [optional] 
- **itemId** | **Number**| Search on Item ID *(Optional)* &#x60;(Relation)&#x60; | [optional] 
- **blockId** | **Number**| Search on Block ID *(Optional)* &#x60;(Relation)&#x60; | [optional] 
  **genreId** | **Number**| Search on Genre ID *(Optional)* &#x60;(Relation)&#x60; | [optional] 
- **programId** | **Number**| Search on Program ID *(Optional)* &#x60;(Relation)&#x60; | [optional] 
+ **itemId** | **Number**| Search on Item ID *(Optional)* &#x60;(Relation)&#x60; | [optional] 
+ **startMin** | **Date**| Minimum start date *(Optional)* | [optional] 
+ **startMax** | **Date**| Maximum start date *(Optional)* | [optional] 
+ **limit** | **Number**| Results per page *(Optional)* | [optional] 
+ **orderBy** | **String**| Field to order the results *(Optional)* | [optional] 
+ **orderDirection** | **String**| Direction of ordering *(Optional)* | [optional] 
  **externalStationId** | **Number**| Query on a different (content providing) station *(Optional)* | [optional] 
 
 ### Return type

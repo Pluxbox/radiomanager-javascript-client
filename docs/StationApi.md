@@ -1,19 +1,19 @@
-# radiomanager.ExternalMessageApi
+# radiomanager.StationApi
 
 All URIs are relative to *https://radiomanager.pb/api/v2*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**queueExternalMessage**](ExternalMessageApi.md#queueExternalMessage) | **POST** /externalmessagequeue | Queue External Message.
+[**getStation**](StationApi.md#getStation) | **GET** /station | Get own station only
 
 
-<a name="queueExternalMessage"></a>
-# **queueExternalMessage**
-> Object queueExternalMessage(message)
+<a name="getStation"></a>
+# **getStation**
+> StationResult getStation()
 
-Queue External Message.
+Get own station only
 
-Queue External Message.
+Get own station only
 
 ### Example
 ```javascript
@@ -26,11 +26,8 @@ API Key.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //API Key.apiKeyPrefix = 'Token';
 
-var apiInstance = new radiomanager.ExternalMessageApi();
-
-var message = new radiomanager.ExternalMessageQueueData(); // ExternalMessageQueueData | Data **(Required)**
-
-apiInstance.queueExternalMessage(message).then(function(data) {
+var apiInstance = new radiomanager.StationApi();
+apiInstance.getStation().then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
 }, function(error) {
   console.error(error);
@@ -39,14 +36,11 @@ apiInstance.queueExternalMessage(message).then(function(data) {
 ```
 
 ### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **message** | [**ExternalMessageQueueData**](ExternalMessageQueueData.md)| Data **(Required)** | 
+This endpoint does not need any parameter.
 
 ### Return type
 
-**Object**
+[**StationResult**](StationResult.md)
 
 ### Authorization
 
