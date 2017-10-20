@@ -197,11 +197,14 @@
      * Get a list of all blocks currently in your station. This feature supports pagination and will give a maximum of 50 blocks back.
      * @param {Object} opts Optional parameters
      * @param {Number} opts.page Current page *(Optional)* (default to 1)
+     * @param {Number} opts.broadcastId Search on Broadcast ID *(Optional)* &#x60;(Relation)&#x60;
+     * @param {Number} opts.itemId Search on Item ID *(Optional)* &#x60;(Relation)&#x60;
+     * @param {Number} opts.programId Search on Program ID *(Optional)* &#x60;(Relation)&#x60;
      * @param {Date} opts.startMin Minimum start date *(Optional)*
      * @param {Date} opts.startMax Maximum start date *(Optional)*
-     * @param {Number} opts.broadcastId Search on Broadcast ID *(Optional)* &#x60;(Relation)&#x60;
-     * @param {Number} opts.programId Search on Program ID *(Optional)* &#x60;(Relation)&#x60;
-     * @param {Number} opts.itemId Search on Item ID *(Optional)* &#x60;(Relation)&#x60;
+     * @param {Number} opts.limit Results per page *(Optional)*
+     * @param {String} opts.orderBy Field to order the results *(Optional)*
+     * @param {module:radiomanagermodels/String} opts.orderDirection Direction of ordering *(Optional)*
      * @param {Number} opts.externalStationId Query on a different (content providing) station *(Optional)*
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:radiomanagermodels/BlockResults} and HTTP response
      */
@@ -214,11 +217,14 @@
       };
       var queryParams = {
         'page': opts['page'],
+        'broadcast_id': opts['broadcastId'],
+        'item_id': opts['itemId'],
+        'program_id': opts['programId'],
         'start-min': opts['startMin'],
         'start-max': opts['startMax'],
-        'broadcast_id': opts['broadcastId'],
-        'program_id': opts['programId'],
-        'item_id': opts['itemId'],
+        'limit': opts['limit'],
+        'order-by': opts['orderBy'],
+        'order-direction': opts['orderDirection'],
         '_external_station_id': opts['externalStationId']
       };
       var headerParams = {
@@ -243,11 +249,14 @@
      * Get a list of all blocks currently in your station. This feature supports pagination and will give a maximum of 50 blocks back.
      * @param {Object} opts Optional parameters
      * @param {Number} opts.page Current page *(Optional)* (default to 1)
+     * @param {Number} opts.broadcastId Search on Broadcast ID *(Optional)* &#x60;(Relation)&#x60;
+     * @param {Number} opts.itemId Search on Item ID *(Optional)* &#x60;(Relation)&#x60;
+     * @param {Number} opts.programId Search on Program ID *(Optional)* &#x60;(Relation)&#x60;
      * @param {Date} opts.startMin Minimum start date *(Optional)*
      * @param {Date} opts.startMax Maximum start date *(Optional)*
-     * @param {Number} opts.broadcastId Search on Broadcast ID *(Optional)* &#x60;(Relation)&#x60;
-     * @param {Number} opts.programId Search on Program ID *(Optional)* &#x60;(Relation)&#x60;
-     * @param {Number} opts.itemId Search on Item ID *(Optional)* &#x60;(Relation)&#x60;
+     * @param {Number} opts.limit Results per page *(Optional)*
+     * @param {String} opts.orderBy Field to order the results *(Optional)*
+     * @param {module:radiomanagermodels/String} opts.orderDirection Direction of ordering *(Optional)*
      * @param {Number} opts.externalStationId Query on a different (content providing) station *(Optional)*
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:radiomanagermodels/BlockResults}
      */

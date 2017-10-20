@@ -31,7 +31,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new radiomanager.ItemInputOnly();
+    instance = new radiomanager.BroadcastEPGRelations();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,28 +50,46 @@
       object[property] = value;
   }
 
-  describe('ItemInputOnly', function() {
-    it('should create an instance of ItemInputOnly', function() {
-      // uncomment below and update the code to test ItemInputOnly
-      //var instane = new radiomanager.ItemInputOnly();
-      //expect(instance).to.be.a(radiomanager.ItemInputOnly);
+  describe('BroadcastEPGRelations', function() {
+    it('should create an instance of BroadcastEPGRelations', function() {
+      // uncomment below and update the code to test BroadcastEPGRelations
+      //var instane = new radiomanager.BroadcastEPGRelations();
+      //expect(instance).to.be.a(radiomanager.BroadcastEPGRelations);
     });
 
-    it('should have the property previousId (base name: "previous_id")', function() {
-      // uncomment below and update the code to test the property previousId
-      //var instane = new radiomanager.ItemInputOnly();
+    it('should have the property items (base name: "items")', function() {
+      // uncomment below and update the code to test the property items
+      //var instane = new radiomanager.BroadcastEPGRelations();
       //expect(instance).to.be();
     });
 
-    it('should have the property contacts (base name: "contacts")', function() {
-      // uncomment below and update the code to test the property contacts
-      //var instane = new radiomanager.ItemInputOnly();
+    it('should have the property blocks (base name: "blocks")', function() {
+      // uncomment below and update the code to test the property blocks
+      //var instane = new radiomanager.BroadcastEPGRelations();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property program (base name: "program")', function() {
+      // uncomment below and update the code to test the property program
+      //var instane = new radiomanager.BroadcastEPGRelations();
       //expect(instance).to.be();
     });
 
     it('should have the property tags (base name: "tags")', function() {
       // uncomment below and update the code to test the property tags
-      //var instane = new radiomanager.ItemInputOnly();
+      //var instane = new radiomanager.BroadcastEPGRelations();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property presenters (base name: "presenters")', function() {
+      // uncomment below and update the code to test the property presenters
+      //var instane = new radiomanager.BroadcastEPGRelations();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property modelType (base name: "model_type")', function() {
+      // uncomment below and update the code to test the property modelType
+      //var instane = new radiomanager.BroadcastEPGRelations();
       //expect(instance).to.be();
     });
 

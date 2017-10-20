@@ -31,7 +31,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new radiomanager.ItemInputOnly();
+    instance = new radiomanager.EPGResults();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,28 +50,28 @@
       object[property] = value;
   }
 
-  describe('ItemInputOnly', function() {
-    it('should create an instance of ItemInputOnly', function() {
-      // uncomment below and update the code to test ItemInputOnly
-      //var instane = new radiomanager.ItemInputOnly();
-      //expect(instance).to.be.a(radiomanager.ItemInputOnly);
+  describe('EPGResults', function() {
+    it('should create an instance of EPGResults', function() {
+      // uncomment below and update the code to test EPGResults
+      //var instane = new radiomanager.EPGResults();
+      //expect(instance).to.be.a(radiomanager.EPGResults);
     });
 
-    it('should have the property previousId (base name: "previous_id")', function() {
-      // uncomment below and update the code to test the property previousId
-      //var instane = new radiomanager.ItemInputOnly();
+    it('should have the property days (base name: "days")', function() {
+      // uncomment below and update the code to test the property days
+      //var instane = new radiomanager.EPGResults();
       //expect(instance).to.be();
     });
 
-    it('should have the property contacts (base name: "contacts")', function() {
-      // uncomment below and update the code to test the property contacts
-      //var instane = new radiomanager.ItemInputOnly();
+    it('should have the property nextPageUrl (base name: "next_page_url")', function() {
+      // uncomment below and update the code to test the property nextPageUrl
+      //var instane = new radiomanager.EPGResults();
       //expect(instance).to.be();
     });
 
-    it('should have the property tags (base name: "tags")', function() {
-      // uncomment below and update the code to test the property tags
-      //var instane = new radiomanager.ItemInputOnly();
+    it('should have the property prevPageUrl (base name: "prev_page_url")', function() {
+      // uncomment below and update the code to test the property prevPageUrl
+      //var instane = new radiomanager.EPGResults();
       //expect(instance).to.be();
     });
 

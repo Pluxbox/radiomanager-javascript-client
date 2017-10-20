@@ -31,7 +31,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new radiomanager.ItemInputOnly();
+    instance = new radiomanager.StationResult();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,28 +50,16 @@
       object[property] = value;
   }
 
-  describe('ItemInputOnly', function() {
-    it('should create an instance of ItemInputOnly', function() {
-      // uncomment below and update the code to test ItemInputOnly
-      //var instane = new radiomanager.ItemInputOnly();
-      //expect(instance).to.be.a(radiomanager.ItemInputOnly);
+  describe('StationResult', function() {
+    it('should create an instance of StationResult', function() {
+      // uncomment below and update the code to test StationResult
+      //var instane = new radiomanager.StationResult();
+      //expect(instance).to.be.a(radiomanager.StationResult);
     });
 
-    it('should have the property previousId (base name: "previous_id")', function() {
-      // uncomment below and update the code to test the property previousId
-      //var instane = new radiomanager.ItemInputOnly();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property contacts (base name: "contacts")', function() {
-      // uncomment below and update the code to test the property contacts
-      //var instane = new radiomanager.ItemInputOnly();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property tags (base name: "tags")', function() {
-      // uncomment below and update the code to test the property tags
-      //var instane = new radiomanager.ItemInputOnly();
+    it('should have the property station (base name: "station")', function() {
+      // uncomment below and update the code to test the property station
+      //var instane = new radiomanager.StationResult();
       //expect(instance).to.be();
     });
 

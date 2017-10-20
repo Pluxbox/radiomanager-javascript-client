@@ -212,10 +212,13 @@
      * List all campaigns.
      * @param {Object} opts Optional parameters
      * @param {Number} opts.page Current page *(Optional)*
-     * @param {Number} opts.modelTypeId Search on ModelType ID *(Optional)*
      * @param {Number} opts.itemId Search on Item ID *(Optional)* &#x60;(Relation)&#x60;
+     * @param {Number} opts.modelTypeId Search on ModelType ID *(Optional)* &#x60;(Relation)&#x60;
      * @param {Date} opts.startMin Minimum start date *(Optional)*
      * @param {Date} opts.startMax Maximum start date *(Optional)*
+     * @param {Number} opts.limit Results per page *(Optional)*
+     * @param {String} opts.orderBy Field to order the results *(Optional)*
+     * @param {module:radiomanagermodels/String} opts.orderDirection Direction of ordering *(Optional)*
      * @param {Number} opts.externalStationId Query on a different (content providing) station *(Optional)*
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:radiomanagermodels/CampaignResults} and HTTP response
      */
@@ -228,10 +231,13 @@
       };
       var queryParams = {
         'page': opts['page'],
-        'model_type_id': opts['modelTypeId'],
         'item_id': opts['itemId'],
+        'model_type_id': opts['modelTypeId'],
         'start-min': opts['startMin'],
         'start-max': opts['startMax'],
+        'limit': opts['limit'],
+        'order-by': opts['orderBy'],
+        'order-direction': opts['orderDirection'],
         '_external_station_id': opts['externalStationId']
       };
       var headerParams = {
@@ -256,10 +262,13 @@
      * List all campaigns.
      * @param {Object} opts Optional parameters
      * @param {Number} opts.page Current page *(Optional)*
-     * @param {Number} opts.modelTypeId Search on ModelType ID *(Optional)*
      * @param {Number} opts.itemId Search on Item ID *(Optional)* &#x60;(Relation)&#x60;
+     * @param {Number} opts.modelTypeId Search on ModelType ID *(Optional)* &#x60;(Relation)&#x60;
      * @param {Date} opts.startMin Minimum start date *(Optional)*
      * @param {Date} opts.startMax Maximum start date *(Optional)*
+     * @param {Number} opts.limit Results per page *(Optional)*
+     * @param {String} opts.orderBy Field to order the results *(Optional)*
+     * @param {module:radiomanagermodels/String} opts.orderDirection Direction of ordering *(Optional)*
      * @param {Number} opts.externalStationId Query on a different (content providing) station *(Optional)*
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:radiomanagermodels/CampaignResults}
      */

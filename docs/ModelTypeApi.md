@@ -1,6 +1,6 @@
 # radiomanager.ModelTypeApi
 
-All URIs are relative to *https://staging.radiomanager.pluxbox.com/api/v2*
+All URIs are relative to *https://staging.radiomanager.io/api/v2*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -85,13 +85,16 @@ var apiInstance = new radiomanager.ModelTypeApi();
 
 var opts = { 
   'page': 789, // Number | Current page *(Optional)*
-  'model': "model_example", // String | 
   'programId': 789, // Number | Search on Program ID *(Optional)*
   'broadcastId': 789, // Number | Search on Broadcast ID *(Optional)*
   'itemId': 789, // Number | Search on Item ID *(Optional)*
   'campaignId': 789, // Number | Search on Campaign ID *(Optional)*
   'presenterId': 789, // Number | Search on Presenter ID *(Optional)*
   'contactId': 789, // Number | Search on Contact ID *(Optional)*
+  'model': "model_example", // String | Search Modeltypes for certain Model *(Optional)*
+  'limit': 789, // Number | Results per page *(Optional)*
+  'orderBy': "orderBy_example", // String | Field to order the results *(Optional)*
+  'orderDirection': "orderDirection_example", // String | Direction of ordering *(Optional)*
   'externalStationId': 789 // Number | Query on a different (content providing) station *(Optional)*
 };
 apiInstance.listModelTypes(opts).then(function(data) {
@@ -107,13 +110,16 @@ apiInstance.listModelTypes(opts).then(function(data) {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **page** | **Number**| Current page *(Optional)* | [optional] 
- **model** | **String**|  | [optional] 
  **programId** | **Number**| Search on Program ID *(Optional)* | [optional] 
  **broadcastId** | **Number**| Search on Broadcast ID *(Optional)* | [optional] 
  **itemId** | **Number**| Search on Item ID *(Optional)* | [optional] 
  **campaignId** | **Number**| Search on Campaign ID *(Optional)* | [optional] 
  **presenterId** | **Number**| Search on Presenter ID *(Optional)* | [optional] 
  **contactId** | **Number**| Search on Contact ID *(Optional)* | [optional] 
+ **model** | **String**| Search Modeltypes for certain Model *(Optional)* | [optional] 
+ **limit** | **Number**| Results per page *(Optional)* | [optional] 
+ **orderBy** | **String**| Field to order the results *(Optional)* | [optional] 
+ **orderDirection** | **String**| Direction of ordering *(Optional)* | [optional] 
  **externalStationId** | **Number**| Query on a different (content providing) station *(Optional)* | [optional] 
 
 ### Return type

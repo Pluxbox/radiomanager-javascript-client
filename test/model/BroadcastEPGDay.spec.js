@@ -31,7 +31,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new radiomanager.ItemInputOnly();
+    instance = new radiomanager.BroadcastEPGDay();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,28 +50,22 @@
       object[property] = value;
   }
 
-  describe('ItemInputOnly', function() {
-    it('should create an instance of ItemInputOnly', function() {
-      // uncomment below and update the code to test ItemInputOnly
-      //var instane = new radiomanager.ItemInputOnly();
-      //expect(instance).to.be.a(radiomanager.ItemInputOnly);
+  describe('BroadcastEPGDay', function() {
+    it('should create an instance of BroadcastEPGDay', function() {
+      // uncomment below and update the code to test BroadcastEPGDay
+      //var instane = new radiomanager.BroadcastEPGDay();
+      //expect(instance).to.be.a(radiomanager.BroadcastEPGDay);
     });
 
-    it('should have the property previousId (base name: "previous_id")', function() {
-      // uncomment below and update the code to test the property previousId
-      //var instane = new radiomanager.ItemInputOnly();
+    it('should have the property day (base name: "day")', function() {
+      // uncomment below and update the code to test the property day
+      //var instane = new radiomanager.BroadcastEPGDay();
       //expect(instance).to.be();
     });
 
-    it('should have the property contacts (base name: "contacts")', function() {
-      // uncomment below and update the code to test the property contacts
-      //var instane = new radiomanager.ItemInputOnly();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property tags (base name: "tags")', function() {
-      // uncomment below and update the code to test the property tags
-      //var instane = new radiomanager.ItemInputOnly();
+    it('should have the property results (base name: "results")', function() {
+      // uncomment below and update the code to test the property results
+      //var instane = new radiomanager.BroadcastEPGDay();
       //expect(instance).to.be();
     });
 

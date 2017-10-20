@@ -1,6 +1,6 @@
 # radiomanager.PresenterApi
 
-All URIs are relative to *https://staging.radiomanager.pluxbox.com/api/v2*
+All URIs are relative to *https://staging.radiomanager.io/api/v2*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -188,9 +188,12 @@ var apiInstance = new radiomanager.PresenterApi();
 
 var opts = { 
   'page': 789, // Number | Current page *(Optional)*
-  'modelTypeId': 789, // Number | Search on ModelType ID (Optional)
   'programId': 789, // Number | Search on Program ID *(Optional)* `(Relation)`
   'broadcastId': 789, // Number | Search on Broadcast ID *(Optional)* `(Relation)`
+  'modelTypeId': 789, // Number | Search on ModelType ID (Optional)
+  'limit': 789, // Number | Results per page *(Optional)*
+  'orderBy': "orderBy_example", // String | Field to order the results *(Optional)*
+  'orderDirection': "orderDirection_example", // String | Direction of ordering *(Optional)*
   'externalStationId': 789 // Number | Query on a different (content providing) station *(Optional)*
 };
 apiInstance.listPresenters(opts).then(function(data) {
@@ -206,9 +209,12 @@ apiInstance.listPresenters(opts).then(function(data) {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **page** | **Number**| Current page *(Optional)* | [optional] 
- **modelTypeId** | **Number**| Search on ModelType ID (Optional) | [optional] 
  **programId** | **Number**| Search on Program ID *(Optional)* &#x60;(Relation)&#x60; | [optional] 
  **broadcastId** | **Number**| Search on Broadcast ID *(Optional)* &#x60;(Relation)&#x60; | [optional] 
+ **modelTypeId** | **Number**| Search on ModelType ID (Optional) | [optional] 
+ **limit** | **Number**| Results per page *(Optional)* | [optional] 
+ **orderBy** | **String**| Field to order the results *(Optional)* | [optional] 
+ **orderDirection** | **String**| Direction of ordering *(Optional)* | [optional] 
  **externalStationId** | **Number**| Query on a different (content providing) station *(Optional)* | [optional] 
 
 ### Return type

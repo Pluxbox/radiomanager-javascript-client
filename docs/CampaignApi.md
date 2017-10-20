@@ -1,6 +1,6 @@
 # radiomanager.CampaignApi
 
-All URIs are relative to *https://staging.radiomanager.pluxbox.com/api/v2*
+All URIs are relative to *https://staging.radiomanager.io/api/v2*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -188,10 +188,13 @@ var apiInstance = new radiomanager.CampaignApi();
 
 var opts = { 
   'page': 789, // Number | Current page *(Optional)*
-  'modelTypeId': 789, // Number | Search on ModelType ID *(Optional)*
   'itemId': 789, // Number | Search on Item ID *(Optional)* `(Relation)`
+  'modelTypeId': 789, // Number | Search on ModelType ID *(Optional)* `(Relation)`
   'startMin': new Date("2013-10-20T19:20:30+01:00"), // Date | Minimum start date *(Optional)*
   'startMax': new Date("2013-10-20T19:20:30+01:00"), // Date | Maximum start date *(Optional)*
+  'limit': 789, // Number | Results per page *(Optional)*
+  'orderBy': "orderBy_example", // String | Field to order the results *(Optional)*
+  'orderDirection': "orderDirection_example", // String | Direction of ordering *(Optional)*
   'externalStationId': 789 // Number | Query on a different (content providing) station *(Optional)*
 };
 apiInstance.listCampaigns(opts).then(function(data) {
@@ -207,10 +210,13 @@ apiInstance.listCampaigns(opts).then(function(data) {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **page** | **Number**| Current page *(Optional)* | [optional] 
- **modelTypeId** | **Number**| Search on ModelType ID *(Optional)* | [optional] 
  **itemId** | **Number**| Search on Item ID *(Optional)* &#x60;(Relation)&#x60; | [optional] 
+ **modelTypeId** | **Number**| Search on ModelType ID *(Optional)* &#x60;(Relation)&#x60; | [optional] 
  **startMin** | **Date**| Minimum start date *(Optional)* | [optional] 
  **startMax** | **Date**| Maximum start date *(Optional)* | [optional] 
+ **limit** | **Number**| Results per page *(Optional)* | [optional] 
+ **orderBy** | **String**| Field to order the results *(Optional)* | [optional] 
+ **orderDirection** | **String**| Direction of ordering *(Optional)* | [optional] 
  **externalStationId** | **Number**| Query on a different (content providing) station *(Optional)* | [optional] 
 
 ### Return type

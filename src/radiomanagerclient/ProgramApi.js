@@ -212,13 +212,16 @@
      * List all programs.
      * @param {Object} opts Optional parameters
      * @param {Number} opts.page Current page *(Optional)*
-     * @param {Number} opts.genreId Search on Genre ID *(Optional)*
-     * @param {Number} opts.modelTypeId Search on ModelType ID *(Optional)*
-     * @param {Number} opts.presenterId Search on Presenter ID *(Optional)* &#x60;(Relation)&#x60;
-     * @param {Number} opts.tagId Search on Tag ID *(Optional)* &#x60;(Relation)&#x60;
      * @param {Number} opts.broadcastId Search on Broadcast ID *(Optional)* &#x60;(Relation)&#x60;
-     * @param {Number} opts.itemId Search on Item ID *(Optional)* &#x60;(Relation)&#x60;
+     * @param {Number} opts.modelTypeId Search on ModelType ID *(Optional)* &#x60;(Relation)&#x60;
+     * @param {Number} opts.tagId Search on Tag ID *(Optional)* &#x60;(Relation)&#x60;
+     * @param {Number} opts.presenterId Search on Presenter ID *(Optional)* &#x60;(Relation)&#x60;
+     * @param {Number} opts.genreId Search on Genre ID *(Optional)*
      * @param {Number} opts.blockId Search on Block ID *(Optional)* &#x60;(Relation)&#x60;
+     * @param {Number} opts.itemId Search on Item ID *(Optional)* &#x60;(Relation)&#x60;
+     * @param {Number} opts.limit Results per page *(Optional)*
+     * @param {String} opts.orderBy Field to order the results *(Optional)*
+     * @param {module:radiomanagermodels/String} opts.orderDirection Direction of ordering *(Optional)*
      * @param {Number} opts.externalStationId Query on a different (content providing) station *(Optional)*
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:radiomanagermodels/ProgramResults} and HTTP response
      */
@@ -231,13 +234,16 @@
       };
       var queryParams = {
         'page': opts['page'],
-        'genre_id': opts['genreId'],
-        'model_type_id': opts['modelTypeId'],
-        'presenter_id': opts['presenterId'],
-        'tag_id': opts['tagId'],
         'broadcast_id': opts['broadcastId'],
-        'item_id': opts['itemId'],
+        'model_type_id': opts['modelTypeId'],
+        'tag_id': opts['tagId'],
+        'presenter_id': opts['presenterId'],
+        'genre_id': opts['genreId'],
         'block_id': opts['blockId'],
+        'item_id': opts['itemId'],
+        'limit': opts['limit'],
+        'order-by': opts['orderBy'],
+        'order-direction': opts['orderDirection'],
         '_external_station_id': opts['externalStationId']
       };
       var headerParams = {
@@ -262,13 +268,16 @@
      * List all programs.
      * @param {Object} opts Optional parameters
      * @param {Number} opts.page Current page *(Optional)*
-     * @param {Number} opts.genreId Search on Genre ID *(Optional)*
-     * @param {Number} opts.modelTypeId Search on ModelType ID *(Optional)*
-     * @param {Number} opts.presenterId Search on Presenter ID *(Optional)* &#x60;(Relation)&#x60;
-     * @param {Number} opts.tagId Search on Tag ID *(Optional)* &#x60;(Relation)&#x60;
      * @param {Number} opts.broadcastId Search on Broadcast ID *(Optional)* &#x60;(Relation)&#x60;
-     * @param {Number} opts.itemId Search on Item ID *(Optional)* &#x60;(Relation)&#x60;
+     * @param {Number} opts.modelTypeId Search on ModelType ID *(Optional)* &#x60;(Relation)&#x60;
+     * @param {Number} opts.tagId Search on Tag ID *(Optional)* &#x60;(Relation)&#x60;
+     * @param {Number} opts.presenterId Search on Presenter ID *(Optional)* &#x60;(Relation)&#x60;
+     * @param {Number} opts.genreId Search on Genre ID *(Optional)*
      * @param {Number} opts.blockId Search on Block ID *(Optional)* &#x60;(Relation)&#x60;
+     * @param {Number} opts.itemId Search on Item ID *(Optional)* &#x60;(Relation)&#x60;
+     * @param {Number} opts.limit Results per page *(Optional)*
+     * @param {String} opts.orderBy Field to order the results *(Optional)*
+     * @param {module:radiomanagermodels/String} opts.orderDirection Direction of ordering *(Optional)*
      * @param {Number} opts.externalStationId Query on a different (content providing) station *(Optional)*
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:radiomanagermodels/ProgramResults}
      */

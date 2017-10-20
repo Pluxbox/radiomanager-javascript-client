@@ -1,19 +1,19 @@
-# radiomanager.StringApi
+# radiomanager.StationApi
 
 All URIs are relative to *https://staging.radiomanager.io/api/v2*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**getStringsByName**](StringApi.md#getStringsByName) | **GET** /strings/{name} | Get Strings (formatted)
+[**getStation**](StationApi.md#getStation) | **GET** /station | Get own station only
 
 
-<a name="getStringsByName"></a>
-# **getStringsByName**
-> TextString getStringsByName(name, fullModel)
+<a name="getStation"></a>
+# **getStation**
+> StationResult getStation()
 
-Get Strings (formatted)
+Get own station only
 
-Get Strings (formatted)
+Get own station only
 
 ### Example
 ```javascript
@@ -26,13 +26,8 @@ API Key.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //API Key.apiKeyPrefix = 'Token';
 
-var apiInstance = new radiomanager.StringApi();
-
-var name = "name_example"; // String | Name of Strings **(Required)**
-
-var fullModel = true; // Boolean | Full model or content only **(Required)**
-
-apiInstance.getStringsByName(name, fullModel).then(function(data) {
+var apiInstance = new radiomanager.StationApi();
+apiInstance.getStation().then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
 }, function(error) {
   console.error(error);
@@ -41,15 +36,11 @@ apiInstance.getStringsByName(name, fullModel).then(function(data) {
 ```
 
 ### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **name** | **String**| Name of Strings **(Required)** | 
- **fullModel** | **Boolean**| Full model or content only **(Required)** | [default to true]
+This endpoint does not need any parameter.
 
 ### Return type
 
-[**TextString**](TextString.md)
+[**StationResult**](StationResult.md)
 
 ### Authorization
 

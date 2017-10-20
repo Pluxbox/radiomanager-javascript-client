@@ -17,18 +17,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'radiomanagermodels/Broadcast', 'radiomanagermodels/BroadcastDataInput', 'radiomanagermodels/BroadcastResult', 'radiomanagermodels/BroadcastResults', 'radiomanagermodels/EPGBroadcast', 'radiomanagermodels/Forbidden', 'radiomanagermodels/NotFound', 'radiomanagermodels/PostSuccess', 'radiomanagermodels/Success', 'radiomanagermodels/TooManyRequests', 'radiomanagermodels/UnprocessableEntity'], factory);
+    define(['ApiClient', 'radiomanagermodels/Broadcast', 'radiomanagermodels/BroadcastDataInput', 'radiomanagermodels/BroadcastResult', 'radiomanagermodels/BroadcastResults', 'radiomanagermodels/EPGResults', 'radiomanagermodels/Forbidden', 'radiomanagermodels/NotFound', 'radiomanagermodels/PostSuccess', 'radiomanagermodels/Success', 'radiomanagermodels/TooManyRequests', 'radiomanagermodels/UnprocessableEntity'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../radiomanagermodels/Broadcast'), require('../radiomanagermodels/BroadcastDataInput'), require('../radiomanagermodels/BroadcastResult'), require('../radiomanagermodels/BroadcastResults'), require('../radiomanagermodels/EPGBroadcast'), require('../radiomanagermodels/Forbidden'), require('../radiomanagermodels/NotFound'), require('../radiomanagermodels/PostSuccess'), require('../radiomanagermodels/Success'), require('../radiomanagermodels/TooManyRequests'), require('../radiomanagermodels/UnprocessableEntity'));
+    module.exports = factory(require('../ApiClient'), require('../radiomanagermodels/Broadcast'), require('../radiomanagermodels/BroadcastDataInput'), require('../radiomanagermodels/BroadcastResult'), require('../radiomanagermodels/BroadcastResults'), require('../radiomanagermodels/EPGResults'), require('../radiomanagermodels/Forbidden'), require('../radiomanagermodels/NotFound'), require('../radiomanagermodels/PostSuccess'), require('../radiomanagermodels/Success'), require('../radiomanagermodels/TooManyRequests'), require('../radiomanagermodels/UnprocessableEntity'));
   } else {
     // Browser globals (root is window)
     if (!root.radiomanager) {
       root.radiomanager = {};
     }
-    root.radiomanager.BroadcastApi = factory(root.radiomanager.ApiClient, root.radiomanager.Broadcast, root.radiomanager.BroadcastDataInput, root.radiomanager.BroadcastResult, root.radiomanager.BroadcastResults, root.radiomanager.EPGBroadcast, root.radiomanager.Forbidden, root.radiomanager.NotFound, root.radiomanager.PostSuccess, root.radiomanager.Success, root.radiomanager.TooManyRequests, root.radiomanager.UnprocessableEntity);
+    root.radiomanager.BroadcastApi = factory(root.radiomanager.ApiClient, root.radiomanager.Broadcast, root.radiomanager.BroadcastDataInput, root.radiomanager.BroadcastResult, root.radiomanager.BroadcastResults, root.radiomanager.EPGResults, root.radiomanager.Forbidden, root.radiomanager.NotFound, root.radiomanager.PostSuccess, root.radiomanager.Success, root.radiomanager.TooManyRequests, root.radiomanager.UnprocessableEntity);
   }
-}(this, function(ApiClient, Broadcast, BroadcastDataInput, BroadcastResult, BroadcastResults, EPGBroadcast, Forbidden, NotFound, PostSuccess, Success, TooManyRequests, UnprocessableEntity) {
+}(this, function(ApiClient, Broadcast, BroadcastDataInput, BroadcastResult, BroadcastResults, EPGResults, Forbidden, NotFound, PostSuccess, Success, TooManyRequests, UnprocessableEntity) {
   'use strict';
 
   /**
@@ -255,7 +255,8 @@
      * Get current Broadcast
      * @param {Object} opts Optional parameters
      * @param {Date} opts._date Date *(Optional)*
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:radiomanagermodels/EPGBroadcast} and HTTP response
+     * @param {Boolean} opts.withunpublished Show Unpublished *(Optional)*
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:radiomanagermodels/EPGResults} and HTTP response
      */
     this.getDailyEPGWithHttpInfo = function(opts) {
       opts = opts || {};
@@ -265,7 +266,8 @@
       var pathParams = {
       };
       var queryParams = {
-        'date': opts['_date']
+        'date': opts['_date'],
+        'withunpublished': opts['withunpublished']
       };
       var headerParams = {
       };
@@ -275,7 +277,7 @@
       var authNames = ['API Key'];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
-      var returnType = EPGBroadcast;
+      var returnType = EPGResults;
 
       return this.apiClient.callApi(
         '/broadcasts/epg/daily', 'GET',
@@ -289,7 +291,8 @@
      * Get current Broadcast
      * @param {Object} opts Optional parameters
      * @param {Date} opts._date Date *(Optional)*
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:radiomanagermodels/EPGBroadcast}
+     * @param {Boolean} opts.withunpublished Show Unpublished *(Optional)*
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:radiomanagermodels/EPGResults}
      */
     this.getDailyEPG = function(opts) {
       return this.getDailyEPGWithHttpInfo(opts)
@@ -304,7 +307,8 @@
      * Get EPG by date
      * @param {Object} opts Optional parameters
      * @param {Date} opts._date Date *(Optional)*
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:radiomanagermodels/EPGBroadcast} and HTTP response
+     * @param {Boolean} opts.withunpublished Show Unpublished *(Optional)*
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:radiomanagermodels/EPGResults} and HTTP response
      */
     this.getEPGByDateWithHttpInfo = function(opts) {
       opts = opts || {};
@@ -314,7 +318,8 @@
       var pathParams = {
       };
       var queryParams = {
-        'date': opts['_date']
+        'date': opts['_date'],
+        'withunpublished': opts['withunpublished']
       };
       var headerParams = {
       };
@@ -324,7 +329,7 @@
       var authNames = ['API Key'];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
-      var returnType = EPGBroadcast;
+      var returnType = EPGResults;
 
       return this.apiClient.callApi(
         '/broadcasts/epg', 'GET',
@@ -338,7 +343,8 @@
      * Get EPG by date
      * @param {Object} opts Optional parameters
      * @param {Date} opts._date Date *(Optional)*
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:radiomanagermodels/EPGBroadcast}
+     * @param {Boolean} opts.withunpublished Show Unpublished *(Optional)*
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:radiomanagermodels/EPGResults}
      */
     this.getEPGByDate = function(opts) {
       return this.getEPGByDateWithHttpInfo(opts)
@@ -396,7 +402,8 @@
      * Get weekly EPG
      * @param {Object} opts Optional parameters
      * @param {String} opts._date Date *(Optional)*
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:radiomanagermodels/EPGBroadcast} and HTTP response
+     * @param {Boolean} opts.withunpublished Show Unpublished *(Optional)*
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:radiomanagermodels/EPGResults} and HTTP response
      */
     this.getWeeklyEPGWithHttpInfo = function(opts) {
       opts = opts || {};
@@ -406,7 +413,8 @@
       var pathParams = {
       };
       var queryParams = {
-        'date': opts['_date']
+        'date': opts['_date'],
+        'withunpublished': opts['withunpublished']
       };
       var headerParams = {
       };
@@ -416,7 +424,7 @@
       var authNames = ['API Key'];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
-      var returnType = EPGBroadcast;
+      var returnType = EPGResults;
 
       return this.apiClient.callApi(
         '/broadcasts/epg/weekly', 'GET',
@@ -430,7 +438,8 @@
      * Get weekly EPG
      * @param {Object} opts Optional parameters
      * @param {String} opts._date Date *(Optional)*
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:radiomanagermodels/EPGBroadcast}
+     * @param {Boolean} opts.withunpublished Show Unpublished *(Optional)*
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:radiomanagermodels/EPGResults}
      */
     this.getWeeklyEPG = function(opts) {
       return this.getWeeklyEPGWithHttpInfo(opts)
@@ -445,15 +454,18 @@
      * List all broadcasts.
      * @param {Object} opts Optional parameters
      * @param {Number} opts.page Current page *(Optional)* (default to 1)
-     * @param {Date} opts.startMin Minimum start date *(Optional)*
-     * @param {Date} opts.startMax Maximum start date *(Optional)*
-     * @param {Number} opts.modelTypeId Search on ModelType ID *(Optional)*
+     * @param {Number} opts.programId Search on Program ID *(Optional)* &#x60;(Relation)&#x60;
+     * @param {Number} opts.blockId Search on Block ID *(Optional)* &#x60;(Relation)&#x60;
+     * @param {Number} opts.modelTypeId Search on ModelType ID *(Optional)* &#x60;(Relation)&#x60;
      * @param {Number} opts.tagId Search on Tag ID *(Optional)* &#x60;(Relation)&#x60;
      * @param {Number} opts.presenterId Search on Presenter ID *(Optional)* &#x60;(Relation)&#x60;
-     * @param {Number} opts.itemId Search on Item ID *(Optional)* &#x60;(Relation)&#x60;
-     * @param {Number} opts.blockId Search on Block ID *(Optional)* &#x60;(Relation)&#x60;
      * @param {Number} opts.genreId Search on Genre ID *(Optional)* &#x60;(Relation)&#x60;
-     * @param {Number} opts.programId Search on Program ID *(Optional)* &#x60;(Relation)&#x60;
+     * @param {Number} opts.itemId Search on Item ID *(Optional)* &#x60;(Relation)&#x60;
+     * @param {Date} opts.startMin Minimum start date *(Optional)*
+     * @param {Date} opts.startMax Maximum start date *(Optional)*
+     * @param {Number} opts.limit Results per page *(Optional)*
+     * @param {String} opts.orderBy Field to order the results *(Optional)*
+     * @param {module:radiomanagermodels/String} opts.orderDirection Direction of ordering *(Optional)*
      * @param {Number} opts.externalStationId Query on a different (content providing) station *(Optional)*
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:radiomanagermodels/BroadcastResults} and HTTP response
      */
@@ -466,15 +478,18 @@
       };
       var queryParams = {
         'page': opts['page'],
-        'start-min': opts['startMin'],
-        'start-max': opts['startMax'],
+        'program_id': opts['programId'],
+        'block_id': opts['blockId'],
         'model_type_id': opts['modelTypeId'],
         'tag_id': opts['tagId'],
         'presenter_id': opts['presenterId'],
-        'item_id': opts['itemId'],
-        'block_id': opts['blockId'],
         'genre_id': opts['genreId'],
-        'program_id': opts['programId'],
+        'item_id': opts['itemId'],
+        'start-min': opts['startMin'],
+        'start-max': opts['startMax'],
+        'limit': opts['limit'],
+        'order-by': opts['orderBy'],
+        'order-direction': opts['orderDirection'],
         '_external_station_id': opts['externalStationId']
       };
       var headerParams = {
@@ -499,15 +514,18 @@
      * List all broadcasts.
      * @param {Object} opts Optional parameters
      * @param {Number} opts.page Current page *(Optional)* (default to 1)
-     * @param {Date} opts.startMin Minimum start date *(Optional)*
-     * @param {Date} opts.startMax Maximum start date *(Optional)*
-     * @param {Number} opts.modelTypeId Search on ModelType ID *(Optional)*
+     * @param {Number} opts.programId Search on Program ID *(Optional)* &#x60;(Relation)&#x60;
+     * @param {Number} opts.blockId Search on Block ID *(Optional)* &#x60;(Relation)&#x60;
+     * @param {Number} opts.modelTypeId Search on ModelType ID *(Optional)* &#x60;(Relation)&#x60;
      * @param {Number} opts.tagId Search on Tag ID *(Optional)* &#x60;(Relation)&#x60;
      * @param {Number} opts.presenterId Search on Presenter ID *(Optional)* &#x60;(Relation)&#x60;
-     * @param {Number} opts.itemId Search on Item ID *(Optional)* &#x60;(Relation)&#x60;
-     * @param {Number} opts.blockId Search on Block ID *(Optional)* &#x60;(Relation)&#x60;
      * @param {Number} opts.genreId Search on Genre ID *(Optional)* &#x60;(Relation)&#x60;
-     * @param {Number} opts.programId Search on Program ID *(Optional)* &#x60;(Relation)&#x60;
+     * @param {Number} opts.itemId Search on Item ID *(Optional)* &#x60;(Relation)&#x60;
+     * @param {Date} opts.startMin Minimum start date *(Optional)*
+     * @param {Date} opts.startMax Maximum start date *(Optional)*
+     * @param {Number} opts.limit Results per page *(Optional)*
+     * @param {String} opts.orderBy Field to order the results *(Optional)*
+     * @param {module:radiomanagermodels/String} opts.orderDirection Direction of ordering *(Optional)*
      * @param {Number} opts.externalStationId Query on a different (content providing) station *(Optional)*
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:radiomanagermodels/BroadcastResults}
      */
@@ -527,7 +545,7 @@
      * @param {Number} opts.programId Search on Program ID *(Optional)* &#x60;(Relation)&#x60;
      * @param {Number} opts.presenterId Search on Presenter ID *(Optional)* &#x60;(Relation)&#x60;
      * @param {Number} opts.tagId Search on Tag ID *(Optional)* &#x60;(Relation)&#x60;
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:radiomanagermodels/EPGBroadcast} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:radiomanagermodels/EPGResults} and HTTP response
      */
     this.printBroadcastByIdWithHttpInfo = function(id, opts) {
       opts = opts || {};
@@ -555,7 +573,7 @@
       var authNames = ['API Key'];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
-      var returnType = EPGBroadcast;
+      var returnType = EPGResults;
 
       return this.apiClient.callApi(
         '/broadcasts/print/{id}', 'GET',
@@ -572,7 +590,7 @@
      * @param {Number} opts.programId Search on Program ID *(Optional)* &#x60;(Relation)&#x60;
      * @param {Number} opts.presenterId Search on Presenter ID *(Optional)* &#x60;(Relation)&#x60;
      * @param {Number} opts.tagId Search on Tag ID *(Optional)* &#x60;(Relation)&#x60;
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:radiomanagermodels/EPGBroadcast}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:radiomanagermodels/EPGResults}
      */
     this.printBroadcastById = function(id, opts) {
       return this.printBroadcastByIdWithHttpInfo(id, opts)
