@@ -1,10 +1,11 @@
-# Pluxbox RadioManager Client
+# radiomanager
 
-JavaScript client for Pluxbox RadioManager
-Pluxbox RadioManager gives you the power, flexibility and speed you always wanted in a lightweight and easy-to-use web-based radio solution. With Pluxbox RadioManager you can organise your radio workflow and automate your omnichannel communication with your listeners. We offer wide range specialised services for the radio and connections like Hybrid Radio, Visual Radio, your website and social media without losing focus on your broadcast. For more information visit https://pluxbox.com
+Pluxbox RadioManager gives you the power, flexibility and speed you always wanted in a lightweight and easy-to-use web-based radio solution. With Pluxbox RadioManager you can organise your radio workflow and automate your omnichannel communication with your listeners. We offer wide range specialised services for the radio and connections like Hybrid Radio, Visual Radio, your website and social media without losing focus on your broadcast. For more information visit: pluxbox.com
 
 - API version: 2.0
-- For more information, please visit [https://pluxbox.com](https://pluxbox.com)
+- Package version: 1.1.1
+- Build package: io.swagger.codegen.languages.JavascriptClientCodegen
+For more information, please visit [https://pluxbox.com](https://pluxbox.com)
 
 ## Installation
 
@@ -21,11 +22,46 @@ Then install it via:
 npm install radiomanager --save
 ```
 
+##### Local development
+
+To use the library locally without publishing to a remote npm registry, first install the dependencies by changing 
+into the directory containing `package.json` (and this README). Let's call this `JAVASCRIPT_CLIENT_DIR`. Then run:
+
+```shell
+npm install
+```
+
+Next, [link](https://docs.npmjs.com/cli/link) it globally in npm with the following, also from `JAVASCRIPT_CLIENT_DIR`:
+
+```shell
+npm link
+```
+
+Finally, switch to the directory you want to use your radiomanager from, and run:
+
+```shell
+npm link /path/to/<JAVASCRIPT_CLIENT_DIR>
+```
+
+You should now be able to `require('radiomanager')` in javascript files from the directory you ran the last 
+command above from.
+
+#### git
+#
+If the library is hosted at a git repository, e.g.
+https://github.com/GIT_USER_ID/GIT_REPO_ID
+then install it via:
+
+```shell
+    npm install GIT_USER_ID/GIT_REPO_ID --save
+```
+
 ### For browser
 
 The library also works in the browser environment via npm and [browserify](http://browserify.org/). After following
 the above steps with Node.js and installing browserify with `npm install -g browserify`,
-perform the following (assuming *main.js* is your entry file):
+perform the following (assuming *main.js* is your entry file, that's to say your javascript file where you actually 
+use this library):
 
 ```shell
 browserify main.js > bundle.js
@@ -84,7 +120,7 @@ api.getBlockById(id, opts).then(function(data) {
 
 ## Documentation for API Endpoints
 
-All URIs are relative to *https://staging.radiomanager.pluxbox.com/api/v2*
+All URIs are relative to *https://radiomanager.io/api/v2*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
@@ -113,7 +149,6 @@ Class | Method | HTTP request | Description
 *radiomanager.ContactApi* | [**getContactById**](docs/ContactApi.md#getContactById) | **GET** /contacts/{id} | Get contact by id
 *radiomanager.ContactApi* | [**listContacts**](docs/ContactApi.md#listContacts) | **GET** /contacts | Get all contacts.
 *radiomanager.ContactApi* | [**updateContactByID**](docs/ContactApi.md#updateContactByID) | **PATCH** /contacts/{id} | Update contact by id
-*radiomanager.ExternalMessageApi* | [**queueExternalMessage**](docs/ExternalMessageApi.md#queueExternalMessage) | **POST** /externalmessagequeue | Queue External Message.
 *radiomanager.GenreApi* | [**getGenreById**](docs/GenreApi.md#getGenreById) | **GET** /genres/{id} | Get genre by id
 *radiomanager.GenreApi* | [**listGenres**](docs/GenreApi.md#listGenres) | **GET** /genres | List all genres.
 *radiomanager.ItemApi* | [**createItem**](docs/ItemApi.md#createItem) | **POST** /items | Create an new item.
@@ -137,6 +172,12 @@ Class | Method | HTTP request | Description
 *radiomanager.ProgramApi* | [**getProgramById**](docs/ProgramApi.md#getProgramById) | **GET** /programs/{id} | Get program by id
 *radiomanager.ProgramApi* | [**listPrograms**](docs/ProgramApi.md#listPrograms) | **GET** /programs | Get all programs.
 *radiomanager.ProgramApi* | [**updateProgramByID**](docs/ProgramApi.md#updateProgramByID) | **PATCH** /programs/{id} | Update program by id
+*radiomanager.StationApi* | [**getStation**](docs/StationApi.md#getStation) | **GET** /station | Get own station only
+*radiomanager.StoryApi* | [**createStory**](docs/StoryApi.md#createStory) | **POST** /stories | Create story.
+*radiomanager.StoryApi* | [**deleteStoryById**](docs/StoryApi.md#deleteStoryById) | **DELETE** /stories/{id} | Delete story by id
+*radiomanager.StoryApi* | [**getStoryById**](docs/StoryApi.md#getStoryById) | **GET** /stories/{id} | Get story by id
+*radiomanager.StoryApi* | [**listStories**](docs/StoryApi.md#listStories) | **GET** /stories | Get all stories.
+*radiomanager.StoryApi* | [**updateStoryByID**](docs/StoryApi.md#updateStoryByID) | **PATCH** /stories/{id} | Update story by id
 *radiomanager.StringApi* | [**getStringsByName**](docs/StringApi.md#getStringsByName) | **GET** /strings/{name} | Get Strings (formatted)
 *radiomanager.TagApi* | [**createTag**](docs/TagApi.md#createTag) | **POST** /tags | Create tag.
 *radiomanager.TagApi* | [**deleteTagById**](docs/TagApi.md#deleteTagById) | **DELETE** /tags/{id} | Delete tag by id
@@ -147,7 +188,6 @@ Class | Method | HTTP request | Description
 *radiomanager.UserApi* | [**getUserById**](docs/UserApi.md#getUserById) | **GET** /users/{id} | Get user by id
 *radiomanager.UserApi* | [**inviteUserByMail**](docs/UserApi.md#inviteUserByMail) | **POST** /users/invite | Invite user by mail
 *radiomanager.UserApi* | [**listUsers**](docs/UserApi.md#listUsers) | **GET** /users | Get all users.
-*radiomanager.VisualSlideApi* | [**downloadVisualSlide**](docs/VisualSlideApi.md#downloadVisualSlide) | **GET** /visual/image | Get Visual Slide Image as JPEG
 *radiomanager.VisualSlideApi* | [**getVisualSlide**](docs/VisualSlideApi.md#getVisualSlide) | **GET** /visual | Get Visual Slide Image as Base64
 
 
@@ -162,7 +202,8 @@ Class | Method | HTTP request | Description
  - [radiomanager.BlockRelationsProgram](docs/BlockRelationsProgram.md)
  - [radiomanager.BlockResults](docs/BlockResults.md)
  - [radiomanager.Broadcast](docs/Broadcast.md)
- - [radiomanager.BroadcastFieldValues](docs/BroadcastFieldValues.md)
+ - [radiomanager.BroadcastEPGDay](docs/BroadcastEPGDay.md)
+ - [radiomanager.BroadcastEPGRelations](docs/BroadcastEPGRelations.md)
  - [radiomanager.BroadcastInputOnly](docs/BroadcastInputOnly.md)
  - [radiomanager.BroadcastOutputOnly](docs/BroadcastOutputOnly.md)
  - [radiomanager.BroadcastRelations](docs/BroadcastRelations.md)
@@ -180,7 +221,6 @@ Class | Method | HTTP request | Description
  - [radiomanager.CampaignRelationsItemsParams](docs/CampaignRelationsItemsParams.md)
  - [radiomanager.CampaignResults](docs/CampaignResults.md)
  - [radiomanager.Contact](docs/Contact.md)
- - [radiomanager.ContactFieldValues](docs/ContactFieldValues.md)
  - [radiomanager.ContactOutputOnly](docs/ContactOutputOnly.md)
  - [radiomanager.ContactRelations](docs/ContactRelations.md)
  - [radiomanager.ContactRelationsItems](docs/ContactRelationsItems.md)
@@ -189,8 +229,7 @@ Class | Method | HTTP request | Description
  - [radiomanager.ContactResults](docs/ContactResults.md)
  - [radiomanager.Data](docs/Data.md)
  - [radiomanager.Data1](docs/Data1.md)
- - [radiomanager.EPGBroadcast](docs/EPGBroadcast.md)
- - [radiomanager.ExternalMessageQueueData](docs/ExternalMessageQueueData.md)
+ - [radiomanager.EPGResults](docs/EPGResults.md)
  - [radiomanager.Forbidden](docs/Forbidden.md)
  - [radiomanager.Genre](docs/Genre.md)
  - [radiomanager.GenreOutputOnly](docs/GenreOutputOnly.md)
@@ -200,7 +239,6 @@ Class | Method | HTTP request | Description
  - [radiomanager.GenreRelationsPrograms](docs/GenreRelationsPrograms.md)
  - [radiomanager.GenreResults](docs/GenreResults.md)
  - [radiomanager.ImportItem](docs/ImportItem.md)
- - [radiomanager.ImportItemFieldValues](docs/ImportItemFieldValues.md)
  - [radiomanager.InlineResponse202](docs/InlineResponse202.md)
  - [radiomanager.InternalServerError](docs/InternalServerError.md)
  - [radiomanager.InviteUserData](docs/InviteUserData.md)
@@ -238,7 +276,6 @@ Class | Method | HTTP request | Description
  - [radiomanager.PresenterRelationsProgramsParams](docs/PresenterRelationsProgramsParams.md)
  - [radiomanager.PresenterResults](docs/PresenterResults.md)
  - [radiomanager.Program](docs/Program.md)
- - [radiomanager.ProgramFieldValues](docs/ProgramFieldValues.md)
  - [radiomanager.ProgramInputOnly](docs/ProgramInputOnly.md)
  - [radiomanager.ProgramOutputOnly](docs/ProgramOutputOnly.md)
  - [radiomanager.ProgramRelations](docs/ProgramRelations.md)
@@ -251,6 +288,16 @@ Class | Method | HTTP request | Description
  - [radiomanager.ProgramResults](docs/ProgramResults.md)
  - [radiomanager.ReadOnly](docs/ReadOnly.md)
  - [radiomanager.RelationsPlaceholder](docs/RelationsPlaceholder.md)
+ - [radiomanager.StationResult](docs/StationResult.md)
+ - [radiomanager.StationResultStation](docs/StationResultStation.md)
+ - [radiomanager.Story](docs/Story.md)
+ - [radiomanager.StoryInputOnly](docs/StoryInputOnly.md)
+ - [radiomanager.StoryOutputOnly](docs/StoryOutputOnly.md)
+ - [radiomanager.StoryRelations](docs/StoryRelations.md)
+ - [radiomanager.StoryRelationsItems](docs/StoryRelationsItems.md)
+ - [radiomanager.StoryRelationsTags](docs/StoryRelationsTags.md)
+ - [radiomanager.StoryRelationsTagsParams](docs/StoryRelationsTagsParams.md)
+ - [radiomanager.StoryResults](docs/StoryResults.md)
  - [radiomanager.Success](docs/Success.md)
  - [radiomanager.Tag](docs/Tag.md)
  - [radiomanager.TagOutputOnly](docs/TagOutputOnly.md)
@@ -270,6 +317,7 @@ Class | Method | HTTP request | Description
  - [radiomanager.VisualResult](docs/VisualResult.md)
  - [radiomanager.BlockResult](docs/BlockResult.md)
  - [radiomanager.BroadcastDataInput](docs/BroadcastDataInput.md)
+ - [radiomanager.BroadcastEPGResult](docs/BroadcastEPGResult.md)
  - [radiomanager.BroadcastResult](docs/BroadcastResult.md)
  - [radiomanager.CampaignDataInput](docs/CampaignDataInput.md)
  - [radiomanager.CampaignResult](docs/CampaignResult.md)
@@ -280,9 +328,12 @@ Class | Method | HTTP request | Description
  - [radiomanager.ItemResult](docs/ItemResult.md)
  - [radiomanager.ModelTypeResult](docs/ModelTypeResult.md)
  - [radiomanager.PresenterDataInput](docs/PresenterDataInput.md)
+ - [radiomanager.PresenterEPGResult](docs/PresenterEPGResult.md)
  - [radiomanager.PresenterResult](docs/PresenterResult.md)
  - [radiomanager.ProgramDataInput](docs/ProgramDataInput.md)
  - [radiomanager.ProgramResult](docs/ProgramResult.md)
+ - [radiomanager.StoryDataInput](docs/StoryDataInput.md)
+ - [radiomanager.StoryResult](docs/StoryResult.md)
  - [radiomanager.TagDataInput](docs/TagDataInput.md)
  - [radiomanager.TagResult](docs/TagResult.md)
 
