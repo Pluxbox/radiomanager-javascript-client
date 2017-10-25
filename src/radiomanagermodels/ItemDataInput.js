@@ -17,18 +17,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'radiomanagermodels/ImportItemFieldValues', 'radiomanagermodels/Item', 'radiomanagermodels/ItemInputOnly'], factory);
+    define(['ApiClient', 'radiomanagermodels/Item', 'radiomanagermodels/ItemInputOnly'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./ImportItemFieldValues'), require('./Item'), require('./ItemInputOnly'));
+    module.exports = factory(require('../ApiClient'), require('./Item'), require('./ItemInputOnly'));
   } else {
     // Browser globals (root is window)
     if (!root.radiomanager) {
       root.radiomanager = {};
     }
-    root.radiomanager.ItemDataInput = factory(root.radiomanager.ApiClient, root.radiomanager.ImportItemFieldValues, root.radiomanager.Item, root.radiomanager.ItemInputOnly);
+    root.radiomanager.ItemDataInput = factory(root.radiomanager.ApiClient, root.radiomanager.Item, root.radiomanager.ItemInputOnly);
   }
-}(this, function(ApiClient, ImportItemFieldValues, Item, ItemInputOnly) {
+}(this, function(ApiClient, Item, ItemInputOnly) {
   'use strict';
 
 
@@ -90,7 +90,7 @@ exports.prototype['block_id'] = undefined;
 exports.prototype['external_id'] = undefined;
 
   /**
-   * @member {module:radiomanagermodels/ImportItemFieldValues} field_values
+   * @member {Object} field_values
    */
 exports.prototype['field_values'] = undefined;
 

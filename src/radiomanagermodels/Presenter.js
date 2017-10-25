@@ -72,7 +72,7 @@
         obj['model_type_id'] = ApiClient.convertToType(data['model_type_id'], 'Number');
       }
       if (data.hasOwnProperty('field_values')) {
-        obj['field_values'] = ApiClient.convertToType(data['field_values'], [Object]);
+        obj['field_values'] = ApiClient.convertToType(data['field_values'], Object);
       }
       if (data.hasOwnProperty('firstname')) {
         obj['firstname'] = ApiClient.convertToType(data['firstname'], 'String');
@@ -95,7 +95,7 @@
    */
   exports.prototype['model_type_id'] = undefined;
   /**
-   * @member {Array.<Object>} field_values
+   * @member {Object} field_values
    */
   exports.prototype['field_values'] = undefined;
   /**
@@ -132,14 +132,14 @@
 
 
   /**
-   * @return {Array.<Object>}
+   * @return {Object}
    */
   exports.prototype.getFieldValues = function() {
     return this['field_values'];
   }
 
   /**
-   * @param {Array.<Object>} fieldValues
+   * @param {Object} fieldValues
    */
   exports.prototype.setFieldValues = function(fieldValues) {
     this['field_values'] = fieldValues;

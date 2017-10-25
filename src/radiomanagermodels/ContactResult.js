@@ -17,18 +17,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'radiomanagermodels/BroadcastRelationsModelType', 'radiomanagermodels/Contact', 'radiomanagermodels/ContactFieldValues', 'radiomanagermodels/ContactOutputOnly', 'radiomanagermodels/ContactRelations', 'radiomanagermodels/ContactRelationsItems', 'radiomanagermodels/ContactRelationsTags'], factory);
+    define(['ApiClient', 'radiomanagermodels/BroadcastRelationsModelType', 'radiomanagermodels/Contact', 'radiomanagermodels/ContactOutputOnly', 'radiomanagermodels/ContactRelations', 'radiomanagermodels/ContactRelationsItems', 'radiomanagermodels/ContactRelationsTags'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./BroadcastRelationsModelType'), require('./Contact'), require('./ContactFieldValues'), require('./ContactOutputOnly'), require('./ContactRelations'), require('./ContactRelationsItems'), require('./ContactRelationsTags'));
+    module.exports = factory(require('../ApiClient'), require('./BroadcastRelationsModelType'), require('./Contact'), require('./ContactOutputOnly'), require('./ContactRelations'), require('./ContactRelationsItems'), require('./ContactRelationsTags'));
   } else {
     // Browser globals (root is window)
     if (!root.radiomanager) {
       root.radiomanager = {};
     }
-    root.radiomanager.ContactResult = factory(root.radiomanager.ApiClient, root.radiomanager.BroadcastRelationsModelType, root.radiomanager.Contact, root.radiomanager.ContactFieldValues, root.radiomanager.ContactOutputOnly, root.radiomanager.ContactRelations, root.radiomanager.ContactRelationsItems, root.radiomanager.ContactRelationsTags);
+    root.radiomanager.ContactResult = factory(root.radiomanager.ApiClient, root.radiomanager.BroadcastRelationsModelType, root.radiomanager.Contact, root.radiomanager.ContactOutputOnly, root.radiomanager.ContactRelations, root.radiomanager.ContactRelationsItems, root.radiomanager.ContactRelationsTags);
   }
-}(this, function(ApiClient, BroadcastRelationsModelType, Contact, ContactFieldValues, ContactOutputOnly, ContactRelations, ContactRelationsItems, ContactRelationsTags) {
+}(this, function(ApiClient, BroadcastRelationsModelType, Contact, ContactOutputOnly, ContactRelations, ContactRelationsItems, ContactRelationsTags) {
   'use strict';
 
 
@@ -111,7 +111,7 @@ exports.prototype['_external_station_id'] = undefined;
 exports.prototype['model_type_id'] = undefined;
 
   /**
-   * @member {module:radiomanagermodels/ContactFieldValues} field_values
+   * @member {Object} field_values
    */
 exports.prototype['field_values'] = undefined;
 

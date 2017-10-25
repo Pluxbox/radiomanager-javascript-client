@@ -17,18 +17,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'radiomanagermodels/ContactFieldValues'], factory);
+    define(['ApiClient'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./ContactFieldValues'));
+    module.exports = factory(require('../ApiClient'));
   } else {
     // Browser globals (root is window)
     if (!root.radiomanager) {
       root.radiomanager = {};
     }
-    root.radiomanager.Contact = factory(root.radiomanager.ApiClient, root.radiomanager.ContactFieldValues);
+    root.radiomanager.Contact = factory(root.radiomanager.ApiClient);
   }
-}(this, function(ApiClient, ContactFieldValues) {
+}(this, function(ApiClient) {
   'use strict';
 
 
@@ -75,7 +75,7 @@
         obj['model_type_id'] = ApiClient.convertToType(data['model_type_id'], 'Number');
       }
       if (data.hasOwnProperty('field_values')) {
-        obj['field_values'] = ContactFieldValues.constructFromObject(data['field_values']);
+        obj['field_values'] = ApiClient.convertToType(data['field_values'], Object);
       }
       if (data.hasOwnProperty('email')) {
         obj['email'] = ApiClient.convertToType(data['email'], 'String');
@@ -98,7 +98,7 @@
    */
   exports.prototype['model_type_id'] = undefined;
   /**
-   * @member {module:radiomanagermodels/ContactFieldValues} field_values
+   * @member {Object} field_values
    */
   exports.prototype['field_values'] = undefined;
   /**
@@ -135,14 +135,14 @@
 
 
   /**
-   * @return {module:radiomanagermodels/ContactFieldValues}
+   * @return {Object}
    */
   exports.prototype.getFieldValues = function() {
     return this['field_values'];
   }
 
   /**
-   * @param {module:radiomanagermodels/ContactFieldValues} fieldValues
+   * @param {Object} fieldValues
    */
   exports.prototype.setFieldValues = function(fieldValues) {
     this['field_values'] = fieldValues;

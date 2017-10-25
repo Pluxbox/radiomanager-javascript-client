@@ -120,7 +120,7 @@ exports.prototype['_external_station_id'] = undefined;
 exports.prototype['model_type_id'] = undefined;
 
   /**
-   * @member {Array.<Object>} field_values
+   * @member {Object} field_values
    */
 exports.prototype['field_values'] = undefined;
 
