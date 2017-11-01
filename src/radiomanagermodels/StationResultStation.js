@@ -73,6 +73,7 @@
 
 
 
+
   };
 
   /**
@@ -114,7 +115,7 @@
         obj['email'] = ApiClient.convertToType(data['email'], 'String');
       }
       if (data.hasOwnProperty('keywords')) {
-        obj['keywords'] = ApiClient.convertToType(data['keywords'], 'String');
+        obj['keywords'] = ApiClient.convertToType(data['keywords'], ['String']);
       }
       if (data.hasOwnProperty('description')) {
         obj['description'] = ApiClient.convertToType(data['description'], 'String');
@@ -157,6 +158,9 @@
       }
       if (data.hasOwnProperty('station_key')) {
         obj['station_key'] = ApiClient.convertToType(data['station_key'], 'String');
+      }
+      if (data.hasOwnProperty('timezone')) {
+        obj['timezone'] = ApiClient.convertToType(data['timezone'], 'String');
       }
       if (data.hasOwnProperty('trial_date')) {
         obj['trial_date'] = ApiClient.convertToType(data['trial_date'], 'Date');
@@ -202,7 +206,7 @@
    */
   exports.prototype['email'] = undefined;
   /**
-   * @member {String} keywords
+   * @member {Array.<String>} keywords
    */
   exports.prototype['keywords'] = undefined;
   /**
@@ -261,6 +265,10 @@
    * @member {String} station_key
    */
   exports.prototype['station_key'] = undefined;
+  /**
+   * @member {String} timezone
+   */
+  exports.prototype['timezone'] = undefined;
   /**
    * @member {Date} trial_date
    */
@@ -403,14 +411,14 @@
 
 
   /**
-   * @return {String}
+   * @return {Array.<String>}
    */
   exports.prototype.getKeywords = function() {
     return this['keywords'];
   }
 
   /**
-   * @param {String} keywords
+   * @param {Array.<String>} keywords
    */
   exports.prototype.setKeywords = function(keywords) {
     this['keywords'] = keywords;
@@ -624,6 +632,21 @@
    */
   exports.prototype.setStationKey = function(stationKey) {
     this['station_key'] = stationKey;
+  }
+
+
+  /**
+   * @return {String}
+   */
+  exports.prototype.getTimezone = function() {
+    return this['timezone'];
+  }
+
+  /**
+   * @param {String} timezone
+   */
+  exports.prototype.setTimezone = function(timezone) {
+    this['timezone'] = timezone;
   }
 
 

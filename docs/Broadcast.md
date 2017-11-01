@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 **programId** | **Number** |  | [optional] 
 **modelTypeId** | **Number** |  | [optional] 
 **stationId** | **Number** |  | [optional] 
-**fieldValues** | [**BroadcastFieldValues**](BroadcastFieldValues.md) |  | [optional] 
+**fieldValues** | **Object** |  | [optional] 
 **title** | **String** |  | [optional] 
 **start** | **Date** |  | [optional] 
 **stop** | **Date** |  | [optional] 

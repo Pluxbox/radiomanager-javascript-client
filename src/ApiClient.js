@@ -47,9 +47,9 @@
     /**
      * The base URL against which to resolve every API call's (relative) path.
      * @type {String}
-     * @default https://radiomanager.pb/api/v2
+     * @default https://staging.radiomanager.io/api/v2
      */
-    this.basePath = 'https://radiomanager.pb/api/v2'.replace(/\/+$/, '');
+    this.basePath = 'https://staging.radiomanager.io/api/v2'.replace(/\/+$/, '');
 
     /**
      * The authentication methods to be included for all API calls.

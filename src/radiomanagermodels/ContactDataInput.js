@@ -17,18 +17,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'radiomanagermodels/Contact', 'radiomanagermodels/ContactFieldValues'], factory);
+    define(['ApiClient', 'radiomanagermodels/Contact'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./Contact'), require('./ContactFieldValues'));
+    module.exports = factory(require('../ApiClient'), require('./Contact'));
   } else {
     // Browser globals (root is window)
     if (!root.radiomanager) {
       root.radiomanager = {};
     }
-    root.radiomanager.ContactDataInput = factory(root.radiomanager.ApiClient, root.radiomanager.Contact, root.radiomanager.ContactFieldValues);
+    root.radiomanager.ContactDataInput = factory(root.radiomanager.ApiClient, root.radiomanager.Contact);
   }
-}(this, function(ApiClient, Contact, ContactFieldValues) {
+}(this, function(ApiClient, Contact) {
   'use strict';
 
 
@@ -79,7 +79,7 @@
 exports.prototype['model_type_id'] = undefined;
 
   /**
-   * @member {module:radiomanagermodels/ContactFieldValues} field_values
+   * @member {Object} field_values
    */
 exports.prototype['field_values'] = undefined;
 

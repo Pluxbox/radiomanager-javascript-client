@@ -17,36 +17,36 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'radiomanagermodels/BlockRelationsProgram', 'radiomanagermodels/Broadcast', 'radiomanagermodels/BroadcastOutputOnly', 'radiomanagermodels/BroadcastRelations', 'radiomanagermodels/BroadcastRelationsBlocks', 'radiomanagermodels/BroadcastRelationsItems', 'radiomanagermodels/BroadcastRelationsModelType', 'radiomanagermodels/BroadcastRelationsPresenters', 'radiomanagermodels/BroadcastRelationsTags'], factory);
+    define(['ApiClient', 'radiomanagermodels/BlockRelationsProgram', 'radiomanagermodels/Broadcast', 'radiomanagermodels/BroadcastEPGRelations', 'radiomanagermodels/BroadcastOutputOnly', 'radiomanagermodels/BroadcastRelationsBlocks', 'radiomanagermodels/BroadcastRelationsItems', 'radiomanagermodels/BroadcastRelationsModelType', 'radiomanagermodels/BroadcastRelationsTags', 'radiomanagermodels/PresenterEPGResult'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./BlockRelationsProgram'), require('./Broadcast'), require('./BroadcastOutputOnly'), require('./BroadcastRelations'), require('./BroadcastRelationsBlocks'), require('./BroadcastRelationsItems'), require('./BroadcastRelationsModelType'), require('./BroadcastRelationsPresenters'), require('./BroadcastRelationsTags'));
+    module.exports = factory(require('../ApiClient'), require('./BlockRelationsProgram'), require('./Broadcast'), require('./BroadcastEPGRelations'), require('./BroadcastOutputOnly'), require('./BroadcastRelationsBlocks'), require('./BroadcastRelationsItems'), require('./BroadcastRelationsModelType'), require('./BroadcastRelationsTags'), require('./PresenterEPGResult'));
   } else {
     // Browser globals (root is window)
     if (!root.radiomanager) {
       root.radiomanager = {};
     }
-    root.radiomanager.BroadcastResult = factory(root.radiomanager.ApiClient, root.radiomanager.BlockRelationsProgram, root.radiomanager.Broadcast, root.radiomanager.BroadcastOutputOnly, root.radiomanager.BroadcastRelations, root.radiomanager.BroadcastRelationsBlocks, root.radiomanager.BroadcastRelationsItems, root.radiomanager.BroadcastRelationsModelType, root.radiomanager.BroadcastRelationsPresenters, root.radiomanager.BroadcastRelationsTags);
+    root.radiomanager.BroadcastEPGResult = factory(root.radiomanager.ApiClient, root.radiomanager.BlockRelationsProgram, root.radiomanager.Broadcast, root.radiomanager.BroadcastEPGRelations, root.radiomanager.BroadcastOutputOnly, root.radiomanager.BroadcastRelationsBlocks, root.radiomanager.BroadcastRelationsItems, root.radiomanager.BroadcastRelationsModelType, root.radiomanager.BroadcastRelationsTags, root.radiomanager.PresenterEPGResult);
   }
-}(this, function(ApiClient, BlockRelationsProgram, Broadcast, BroadcastOutputOnly, BroadcastRelations, BroadcastRelationsBlocks, BroadcastRelationsItems, BroadcastRelationsModelType, BroadcastRelationsPresenters, BroadcastRelationsTags) {
+}(this, function(ApiClient, BlockRelationsProgram, Broadcast, BroadcastEPGRelations, BroadcastOutputOnly, BroadcastRelationsBlocks, BroadcastRelationsItems, BroadcastRelationsModelType, BroadcastRelationsTags, PresenterEPGResult) {
   'use strict';
 
 
 
 
   /**
-   * The BroadcastResult model module.
-   * @module radiomanagermodels/BroadcastResult
+   * The BroadcastEPGResult model module.
+   * @module radiomanagermodels/BroadcastEPGResult
    * @version 2.0
    */
 
   /**
-   * Constructs a new <code>BroadcastResult</code>.
-   * @alias module:radiomanagermodels/BroadcastResult
+   * Constructs a new <code>BroadcastEPGResult</code>.
+   * @alias module:radiomanagermodels/BroadcastEPGResult
    * @class
    * @implements module:radiomanagermodels/BroadcastOutputOnly
    * @implements module:radiomanagermodels/Broadcast
-   * @implements module:radiomanagermodels/BroadcastRelations
+   * @implements module:radiomanagermodels/BroadcastEPGRelations
    * @param id {Number} 
    * @param updatedAt {Date} 
    * @param createdAt {Date} 
@@ -57,15 +57,15 @@
 
     BroadcastOutputOnly.call(_this, id, updatedAt, createdAt, deletedAt);
     Broadcast.call(_this);
-    BroadcastRelations.call(_this);
+    BroadcastEPGRelations.call(_this);
   };
 
   /**
-   * Constructs a <code>BroadcastResult</code> from a plain JavaScript object, optionally creating a new instance.
+   * Constructs a <code>BroadcastEPGResult</code> from a plain JavaScript object, optionally creating a new instance.
    * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
    * @param {Object} data The plain JavaScript object bearing properties of interest.
-   * @param {module:radiomanagermodels/BroadcastResult} obj Optional instance to populate.
-   * @return {module:radiomanagermodels/BroadcastResult} The populated <code>BroadcastResult</code> instance.
+   * @param {module:radiomanagermodels/BroadcastEPGResult} obj Optional instance to populate.
+   * @return {module:radiomanagermodels/BroadcastEPGResult} The populated <code>BroadcastEPGResult</code> instance.
    */
   exports.constructFromObject = function(data, obj) {
     if (data) {
@@ -73,7 +73,7 @@
 
       BroadcastOutputOnly.constructFromObject(data, obj);
       Broadcast.constructFromObject(data, obj);
-      BroadcastRelations.constructFromObject(data, obj);
+      BroadcastEPGRelations.constructFromObject(data, obj);
     }
     return obj;
   }
@@ -216,7 +216,7 @@ exports.prototype['repetition_days'] = undefined;
    */
 exports.prototype['pty_code_id'] = undefined;
 
-  // Implement BroadcastRelations interface:
+  // Implement BroadcastEPGRelations interface:
   /**
    * @member {module:radiomanagermodels/BroadcastRelationsItems} items
    */
@@ -238,7 +238,7 @@ exports.prototype['program'] = undefined;
 exports.prototype['tags'] = undefined;
 
   /**
-   * @member {module:radiomanagermodels/BroadcastRelationsPresenters} presenters
+   * @member {Array.<module:radiomanagermodels/PresenterEPGResult>} presenters
    */
 exports.prototype['presenters'] = undefined;
 

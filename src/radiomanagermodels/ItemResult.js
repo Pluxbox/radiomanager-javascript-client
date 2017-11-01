@@ -17,18 +17,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'radiomanagermodels/BlockRelationsBroadcast', 'radiomanagermodels/BroadcastRelationsModelType', 'radiomanagermodels/ImportItemFieldValues', 'radiomanagermodels/Item', 'radiomanagermodels/ItemOutputOnly', 'radiomanagermodels/ItemRelations', 'radiomanagermodels/ItemRelationsBlock', 'radiomanagermodels/ItemRelationsCampaign', 'radiomanagermodels/ItemRelationsContacts', 'radiomanagermodels/ItemRelationsProgram', 'radiomanagermodels/ItemRelationsTags'], factory);
+    define(['ApiClient', 'radiomanagermodels/BlockRelationsBroadcast', 'radiomanagermodels/BroadcastRelationsModelType', 'radiomanagermodels/Item', 'radiomanagermodels/ItemOutputOnly', 'radiomanagermodels/ItemRelations', 'radiomanagermodels/ItemRelationsBlock', 'radiomanagermodels/ItemRelationsCampaign', 'radiomanagermodels/ItemRelationsContacts', 'radiomanagermodels/ItemRelationsProgram', 'radiomanagermodels/ItemRelationsTags'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./BlockRelationsBroadcast'), require('./BroadcastRelationsModelType'), require('./ImportItemFieldValues'), require('./Item'), require('./ItemOutputOnly'), require('./ItemRelations'), require('./ItemRelationsBlock'), require('./ItemRelationsCampaign'), require('./ItemRelationsContacts'), require('./ItemRelationsProgram'), require('./ItemRelationsTags'));
+    module.exports = factory(require('../ApiClient'), require('./BlockRelationsBroadcast'), require('./BroadcastRelationsModelType'), require('./Item'), require('./ItemOutputOnly'), require('./ItemRelations'), require('./ItemRelationsBlock'), require('./ItemRelationsCampaign'), require('./ItemRelationsContacts'), require('./ItemRelationsProgram'), require('./ItemRelationsTags'));
   } else {
     // Browser globals (root is window)
     if (!root.radiomanager) {
       root.radiomanager = {};
     }
-    root.radiomanager.ItemResult = factory(root.radiomanager.ApiClient, root.radiomanager.BlockRelationsBroadcast, root.radiomanager.BroadcastRelationsModelType, root.radiomanager.ImportItemFieldValues, root.radiomanager.Item, root.radiomanager.ItemOutputOnly, root.radiomanager.ItemRelations, root.radiomanager.ItemRelationsBlock, root.radiomanager.ItemRelationsCampaign, root.radiomanager.ItemRelationsContacts, root.radiomanager.ItemRelationsProgram, root.radiomanager.ItemRelationsTags);
+    root.radiomanager.ItemResult = factory(root.radiomanager.ApiClient, root.radiomanager.BlockRelationsBroadcast, root.radiomanager.BroadcastRelationsModelType, root.radiomanager.Item, root.radiomanager.ItemOutputOnly, root.radiomanager.ItemRelations, root.radiomanager.ItemRelationsBlock, root.radiomanager.ItemRelationsCampaign, root.radiomanager.ItemRelationsContacts, root.radiomanager.ItemRelationsProgram, root.radiomanager.ItemRelationsTags);
   }
-}(this, function(ApiClient, BlockRelationsBroadcast, BroadcastRelationsModelType, ImportItemFieldValues, Item, ItemOutputOnly, ItemRelations, ItemRelationsBlock, ItemRelationsCampaign, ItemRelationsContacts, ItemRelationsProgram, ItemRelationsTags) {
+}(this, function(ApiClient, BlockRelationsBroadcast, BroadcastRelationsModelType, Item, ItemOutputOnly, ItemRelations, ItemRelationsBlock, ItemRelationsCampaign, ItemRelationsContacts, ItemRelationsProgram, ItemRelationsTags) {
   'use strict';
 
 
@@ -139,7 +139,7 @@ exports.prototype['block_id'] = undefined;
 exports.prototype['external_id'] = undefined;
 
   /**
-   * @member {module:radiomanagermodels/ImportItemFieldValues} field_values
+   * @member {Object} field_values
    */
 exports.prototype['field_values'] = undefined;
 

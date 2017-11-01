@@ -17,18 +17,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'radiomanagermodels/BroadcastRelationsModelType', 'radiomanagermodels/Program', 'radiomanagermodels/ProgramFieldValues', 'radiomanagermodels/ProgramOutputOnly', 'radiomanagermodels/ProgramRelations', 'radiomanagermodels/ProgramRelationsBlocks', 'radiomanagermodels/ProgramRelationsBroadcasts', 'radiomanagermodels/ProgramRelationsItems', 'radiomanagermodels/ProgramRelationsPresenters', 'radiomanagermodels/ProgramRelationsTags'], factory);
+    define(['ApiClient', 'radiomanagermodels/BroadcastRelationsModelType', 'radiomanagermodels/Program', 'radiomanagermodels/ProgramOutputOnly', 'radiomanagermodels/ProgramRelations', 'radiomanagermodels/ProgramRelationsBlocks', 'radiomanagermodels/ProgramRelationsBroadcasts', 'radiomanagermodels/ProgramRelationsItems', 'radiomanagermodels/ProgramRelationsPresenters', 'radiomanagermodels/ProgramRelationsTags'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./BroadcastRelationsModelType'), require('./Program'), require('./ProgramFieldValues'), require('./ProgramOutputOnly'), require('./ProgramRelations'), require('./ProgramRelationsBlocks'), require('./ProgramRelationsBroadcasts'), require('./ProgramRelationsItems'), require('./ProgramRelationsPresenters'), require('./ProgramRelationsTags'));
+    module.exports = factory(require('../ApiClient'), require('./BroadcastRelationsModelType'), require('./Program'), require('./ProgramOutputOnly'), require('./ProgramRelations'), require('./ProgramRelationsBlocks'), require('./ProgramRelationsBroadcasts'), require('./ProgramRelationsItems'), require('./ProgramRelationsPresenters'), require('./ProgramRelationsTags'));
   } else {
     // Browser globals (root is window)
     if (!root.radiomanager) {
       root.radiomanager = {};
     }
-    root.radiomanager.ProgramResult = factory(root.radiomanager.ApiClient, root.radiomanager.BroadcastRelationsModelType, root.radiomanager.Program, root.radiomanager.ProgramFieldValues, root.radiomanager.ProgramOutputOnly, root.radiomanager.ProgramRelations, root.radiomanager.ProgramRelationsBlocks, root.radiomanager.ProgramRelationsBroadcasts, root.radiomanager.ProgramRelationsItems, root.radiomanager.ProgramRelationsPresenters, root.radiomanager.ProgramRelationsTags);
+    root.radiomanager.ProgramResult = factory(root.radiomanager.ApiClient, root.radiomanager.BroadcastRelationsModelType, root.radiomanager.Program, root.radiomanager.ProgramOutputOnly, root.radiomanager.ProgramRelations, root.radiomanager.ProgramRelationsBlocks, root.radiomanager.ProgramRelationsBroadcasts, root.radiomanager.ProgramRelationsItems, root.radiomanager.ProgramRelationsPresenters, root.radiomanager.ProgramRelationsTags);
   }
-}(this, function(ApiClient, BroadcastRelationsModelType, Program, ProgramFieldValues, ProgramOutputOnly, ProgramRelations, ProgramRelationsBlocks, ProgramRelationsBroadcasts, ProgramRelationsItems, ProgramRelationsPresenters, ProgramRelationsTags) {
+}(this, function(ApiClient, BroadcastRelationsModelType, Program, ProgramOutputOnly, ProgramRelations, ProgramRelationsBlocks, ProgramRelationsBroadcasts, ProgramRelationsItems, ProgramRelationsPresenters, ProgramRelationsTags) {
   'use strict';
 
 
@@ -114,7 +114,7 @@ exports.prototype['_external_station_id'] = undefined;
 exports.prototype['model_type_id'] = undefined;
 
   /**
-   * @member {module:radiomanagermodels/ProgramFieldValues} field_values
+   * @member {Object} field_values
    */
 exports.prototype['field_values'] = undefined;
 

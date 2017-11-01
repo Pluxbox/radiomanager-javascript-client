@@ -17,54 +17,61 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'radiomanagermodels/Presenter'], factory);
+    define(['ApiClient', 'radiomanagermodels/Presenter', 'radiomanagermodels/PresenterOutputOnly'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./Presenter'));
+    module.exports = factory(require('../ApiClient'), require('./Presenter'), require('./PresenterOutputOnly'));
   } else {
     // Browser globals (root is window)
     if (!root.radiomanager) {
       root.radiomanager = {};
     }
-    root.radiomanager.PresenterDataInput = factory(root.radiomanager.ApiClient, root.radiomanager.Presenter);
+    root.radiomanager.PresenterEPGResult = factory(root.radiomanager.ApiClient, root.radiomanager.Presenter, root.radiomanager.PresenterOutputOnly);
   }
-}(this, function(ApiClient, Presenter) {
+}(this, function(ApiClient, Presenter, PresenterOutputOnly) {
   'use strict';
 
 
 
 
   /**
-   * The PresenterDataInput model module.
-   * @module radiomanagermodels/PresenterDataInput
+   * The PresenterEPGResult model module.
+   * @module radiomanagermodels/PresenterEPGResult
    * @version 2.0
    */
 
   /**
-   * Constructs a new <code>PresenterDataInput</code>.
-   * @alias module:radiomanagermodels/PresenterDataInput
+   * Constructs a new <code>PresenterEPGResult</code>.
+   * @alias module:radiomanagermodels/PresenterEPGResult
    * @class
    * @implements module:radiomanagermodels/Presenter
+   * @implements module:radiomanagermodels/PresenterOutputOnly
    * @param modelTypeId {Number} 
+   * @param id {Number} 
+   * @param updatedAt {Date} 
+   * @param createdAt {Date} 
+   * @param deletedAt {Date} 
    */
-  var exports = function(modelTypeId) {
+  var exports = function(modelTypeId, id, updatedAt, createdAt, deletedAt) {
     var _this = this;
 
     Presenter.call(_this, modelTypeId);
+    PresenterOutputOnly.call(_this, id, updatedAt, createdAt, deletedAt);
   };
 
   /**
-   * Constructs a <code>PresenterDataInput</code> from a plain JavaScript object, optionally creating a new instance.
+   * Constructs a <code>PresenterEPGResult</code> from a plain JavaScript object, optionally creating a new instance.
    * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
    * @param {Object} data The plain JavaScript object bearing properties of interest.
-   * @param {module:radiomanagermodels/PresenterDataInput} obj Optional instance to populate.
-   * @return {module:radiomanagermodels/PresenterDataInput} The populated <code>PresenterDataInput</code> instance.
+   * @param {module:radiomanagermodels/PresenterEPGResult} obj Optional instance to populate.
+   * @return {module:radiomanagermodels/PresenterEPGResult} The populated <code>PresenterEPGResult</code> instance.
    */
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
 
       Presenter.constructFromObject(data, obj);
+      PresenterOutputOnly.constructFromObject(data, obj);
     }
     return obj;
   }
@@ -100,6 +107,32 @@ exports.prototype['active'] = undefined;
    * @member {String} name
    */
 exports.prototype['name'] = undefined;
+
+  // Implement PresenterOutputOnly interface:
+  /**
+   * @member {Number} id
+   */
+exports.prototype['id'] = undefined;
+
+  /**
+   * @member {Date} updated_at
+   */
+exports.prototype['updated_at'] = undefined;
+
+  /**
+   * @member {Date} created_at
+   */
+exports.prototype['created_at'] = undefined;
+
+  /**
+   * @member {Date} deleted_at
+   */
+exports.prototype['deleted_at'] = undefined;
+
+  /**
+   * @member {Number} _external_station_id
+   */
+exports.prototype['_external_station_id'] = undefined;
 
 
 

@@ -4,7 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **modelTypeId** | **Number** |  | 
-**fieldValues** | [**ContactFieldValues**](ContactFieldValues.md) |  | [optional] 
+**fieldValues** | **Object** |  | [optional] 
 **email** | **String** |  | [optional] 
 **firstname** | **String** |  | 
 **lastname** | **String** |  | 
