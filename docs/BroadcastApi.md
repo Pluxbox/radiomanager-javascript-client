@@ -173,7 +173,7 @@ Name | Type | Description  | Notes
 
 <a name="getCurrentBroadcast"></a>
 # **getCurrentBroadcast**
-> Broadcast getCurrentBroadcast()
+> BroadcastResult getCurrentBroadcast(opts)
 
 Get current Broadcast
 
@@ -191,7 +191,11 @@ API Key.apiKey = 'YOUR API KEY';
 //API Key.apiKeyPrefix = 'Token';
 
 var apiInstance = new radiomanager.BroadcastApi();
-apiInstance.getCurrentBroadcast().then(function(data) {
+
+var opts = { 
+  'withunpublished': true // Boolean | Show Unpublished *(Optional)*
+};
+apiInstance.getCurrentBroadcast(opts).then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
 }, function(error) {
   console.error(error);
@@ -200,11 +204,14 @@ apiInstance.getCurrentBroadcast().then(function(data) {
 ```
 
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **withunpublished** | **Boolean**| Show Unpublished *(Optional)* | [optional] 
 
 ### Return type
 
-[**Broadcast**](Broadcast.md)
+[**BroadcastResult**](BroadcastResult.md)
 
 ### Authorization
 
@@ -323,7 +330,7 @@ Name | Type | Description  | Notes
 
 <a name="getNextBroadcast"></a>
 # **getNextBroadcast**
-> Broadcast getNextBroadcast()
+> BroadcastResult getNextBroadcast(opts)
 
 Get next Broadcast
 
@@ -341,7 +348,11 @@ API Key.apiKey = 'YOUR API KEY';
 //API Key.apiKeyPrefix = 'Token';
 
 var apiInstance = new radiomanager.BroadcastApi();
-apiInstance.getNextBroadcast().then(function(data) {
+
+var opts = { 
+  'withunpublished': true // Boolean | Show Unpublished *(Optional)*
+};
+apiInstance.getNextBroadcast(opts).then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
 }, function(error) {
   console.error(error);
@@ -350,11 +361,14 @@ apiInstance.getNextBroadcast().then(function(data) {
 ```
 
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **withunpublished** | **Boolean**| Show Unpublished *(Optional)* | [optional] 
 
 ### Return type
 
-[**Broadcast**](Broadcast.md)
+[**BroadcastResult**](BroadcastResult.md)
 
 ### Authorization
 

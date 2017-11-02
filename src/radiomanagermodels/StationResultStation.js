@@ -115,7 +115,7 @@
         obj['email'] = ApiClient.convertToType(data['email'], 'String');
       }
       if (data.hasOwnProperty('keywords')) {
-        obj['keywords'] = ApiClient.convertToType(data['keywords'], 'String');
+        obj['keywords'] = ApiClient.convertToType(data['keywords'], ['String']);
       }
       if (data.hasOwnProperty('description')) {
         obj['description'] = ApiClient.convertToType(data['description'], 'String');
@@ -206,7 +206,7 @@
    */
   exports.prototype['email'] = undefined;
   /**
-   * @member {String} keywords
+   * @member {Array.<String>} keywords
    */
   exports.prototype['keywords'] = undefined;
   /**
@@ -411,14 +411,14 @@
 
 
   /**
-   * @return {String}
+   * @return {Array.<String>}
    */
   exports.prototype.getKeywords = function() {
     return this['keywords'];
   }
 
   /**
-   * @param {String} keywords
+   * @param {Array.<String>} keywords
    */
   exports.prototype.setKeywords = function(keywords) {
     this['keywords'] = keywords;

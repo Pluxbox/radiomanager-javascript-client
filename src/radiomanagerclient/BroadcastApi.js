@@ -17,18 +17,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'radiomanagermodels/Broadcast', 'radiomanagermodels/BroadcastDataInput', 'radiomanagermodels/BroadcastResult', 'radiomanagermodels/BroadcastResults', 'radiomanagermodels/EPGResults', 'radiomanagermodels/Forbidden', 'radiomanagermodels/NotFound', 'radiomanagermodels/PostSuccess', 'radiomanagermodels/Success', 'radiomanagermodels/TooManyRequests', 'radiomanagermodels/UnprocessableEntity'], factory);
+    define(['ApiClient', 'radiomanagermodels/BroadcastDataInput', 'radiomanagermodels/BroadcastResult', 'radiomanagermodels/BroadcastResults', 'radiomanagermodels/EPGResults', 'radiomanagermodels/Forbidden', 'radiomanagermodels/NotFound', 'radiomanagermodels/PostSuccess', 'radiomanagermodels/Success', 'radiomanagermodels/TooManyRequests', 'radiomanagermodels/UnprocessableEntity'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../radiomanagermodels/Broadcast'), require('../radiomanagermodels/BroadcastDataInput'), require('../radiomanagermodels/BroadcastResult'), require('../radiomanagermodels/BroadcastResults'), require('../radiomanagermodels/EPGResults'), require('../radiomanagermodels/Forbidden'), require('../radiomanagermodels/NotFound'), require('../radiomanagermodels/PostSuccess'), require('../radiomanagermodels/Success'), require('../radiomanagermodels/TooManyRequests'), require('../radiomanagermodels/UnprocessableEntity'));
+    module.exports = factory(require('../ApiClient'), require('../radiomanagermodels/BroadcastDataInput'), require('../radiomanagermodels/BroadcastResult'), require('../radiomanagermodels/BroadcastResults'), require('../radiomanagermodels/EPGResults'), require('../radiomanagermodels/Forbidden'), require('../radiomanagermodels/NotFound'), require('../radiomanagermodels/PostSuccess'), require('../radiomanagermodels/Success'), require('../radiomanagermodels/TooManyRequests'), require('../radiomanagermodels/UnprocessableEntity'));
   } else {
     // Browser globals (root is window)
     if (!root.radiomanager) {
       root.radiomanager = {};
     }
-    root.radiomanager.BroadcastApi = factory(root.radiomanager.ApiClient, root.radiomanager.Broadcast, root.radiomanager.BroadcastDataInput, root.radiomanager.BroadcastResult, root.radiomanager.BroadcastResults, root.radiomanager.EPGResults, root.radiomanager.Forbidden, root.radiomanager.NotFound, root.radiomanager.PostSuccess, root.radiomanager.Success, root.radiomanager.TooManyRequests, root.radiomanager.UnprocessableEntity);
+    root.radiomanager.BroadcastApi = factory(root.radiomanager.ApiClient, root.radiomanager.BroadcastDataInput, root.radiomanager.BroadcastResult, root.radiomanager.BroadcastResults, root.radiomanager.EPGResults, root.radiomanager.Forbidden, root.radiomanager.NotFound, root.radiomanager.PostSuccess, root.radiomanager.Success, root.radiomanager.TooManyRequests, root.radiomanager.UnprocessableEntity);
   }
-}(this, function(ApiClient, Broadcast, BroadcastDataInput, BroadcastResult, BroadcastResults, EPGResults, Forbidden, NotFound, PostSuccess, Success, TooManyRequests, UnprocessableEntity) {
+}(this, function(ApiClient, BroadcastDataInput, BroadcastResult, BroadcastResults, EPGResults, Forbidden, NotFound, PostSuccess, Success, TooManyRequests, UnprocessableEntity) {
   'use strict';
 
   /**
@@ -210,15 +210,19 @@
     /**
      * Get current Broadcast
      * Get current Broadcast
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:radiomanagermodels/Broadcast} and HTTP response
+     * @param {Object} opts Optional parameters
+     * @param {Boolean} opts.withunpublished Show Unpublished *(Optional)*
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:radiomanagermodels/BroadcastResult} and HTTP response
      */
-    this.getCurrentBroadcastWithHttpInfo = function() {
+    this.getCurrentBroadcastWithHttpInfo = function(opts) {
+      opts = opts || {};
       var postBody = null;
 
 
       var pathParams = {
       };
       var queryParams = {
+        'withunpublished': opts['withunpublished']
       };
       var headerParams = {
       };
@@ -228,7 +232,7 @@
       var authNames = ['API Key'];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
-      var returnType = Broadcast;
+      var returnType = BroadcastResult;
 
       return this.apiClient.callApi(
         '/broadcasts/current', 'GET',
@@ -240,10 +244,12 @@
     /**
      * Get current Broadcast
      * Get current Broadcast
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:radiomanagermodels/Broadcast}
+     * @param {Object} opts Optional parameters
+     * @param {Boolean} opts.withunpublished Show Unpublished *(Optional)*
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:radiomanagermodels/BroadcastResult}
      */
-    this.getCurrentBroadcast = function() {
-      return this.getCurrentBroadcastWithHttpInfo()
+    this.getCurrentBroadcast = function(opts) {
+      return this.getCurrentBroadcastWithHttpInfo(opts)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -357,15 +363,19 @@
     /**
      * Get next Broadcast
      * Get next Broadcast
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:radiomanagermodels/Broadcast} and HTTP response
+     * @param {Object} opts Optional parameters
+     * @param {Boolean} opts.withunpublished Show Unpublished *(Optional)*
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:radiomanagermodels/BroadcastResult} and HTTP response
      */
-    this.getNextBroadcastWithHttpInfo = function() {
+    this.getNextBroadcastWithHttpInfo = function(opts) {
+      opts = opts || {};
       var postBody = null;
 
 
       var pathParams = {
       };
       var queryParams = {
+        'withunpublished': opts['withunpublished']
       };
       var headerParams = {
       };
@@ -375,7 +385,7 @@
       var authNames = ['API Key'];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
-      var returnType = Broadcast;
+      var returnType = BroadcastResult;
 
       return this.apiClient.callApi(
         '/broadcasts/next', 'GET',
@@ -387,10 +397,12 @@
     /**
      * Get next Broadcast
      * Get next Broadcast
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:radiomanagermodels/Broadcast}
+     * @param {Object} opts Optional parameters
+     * @param {Boolean} opts.withunpublished Show Unpublished *(Optional)*
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:radiomanagermodels/BroadcastResult}
      */
-    this.getNextBroadcast = function() {
-      return this.getNextBroadcastWithHttpInfo()
+    this.getNextBroadcast = function(opts) {
+      return this.getNextBroadcastWithHttpInfo(opts)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
