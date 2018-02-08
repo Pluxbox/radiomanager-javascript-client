@@ -63,8 +63,8 @@
       //expect(instance).to.be();
     });
 
-    it('should have the property roleId (base name: "role_id")', function() {
-      // uncomment below and update the code to test the property roleId
+    it('should have the property roleIds (base name: "role_ids")', function() {
+      // uncomment below and update the code to test the property roleIds
       //var instane = new radiomanager.InviteUserData();
       //expect(instance).to.be();
     });
