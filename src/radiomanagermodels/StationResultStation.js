@@ -73,7 +73,6 @@
 
 
 
-
   };
 
   /**
@@ -161,9 +160,6 @@
       }
       if (data.hasOwnProperty('timezone')) {
         obj['timezone'] = ApiClient.convertToType(data['timezone'], 'String');
-      }
-      if (data.hasOwnProperty('trial_date')) {
-        obj['trial_date'] = ApiClient.convertToType(data['trial_date'], 'Date');
       }
     }
     return obj;
@@ -269,10 +265,6 @@
    * @member {String} timezone
    */
   exports.prototype['timezone'] = undefined;
-  /**
-   * @member {Date} trial_date
-   */
-  exports.prototype['trial_date'] = undefined;
 
 
   /**
@@ -647,21 +639,6 @@
    */
   exports.prototype.setTimezone = function(timezone) {
     this['timezone'] = timezone;
-  }
-
-
-  /**
-   * @return {Date}
-   */
-  exports.prototype.getTrialDate = function() {
-    return this['trial_date'];
-  }
-
-  /**
-   * @param {Date} trialDate
-   */
-  exports.prototype.setTrialDate = function(trialDate) {
-    this['trial_date'] = trialDate;
   }
 
 

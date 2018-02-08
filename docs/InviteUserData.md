@@ -4,6 +4,6 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **email** | **String** |  | 
-**roleId** | **Number** |  | 
+**roleIds** | **[Number]** |  | 
 
 

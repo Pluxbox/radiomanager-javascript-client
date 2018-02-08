@@ -63,6 +63,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property subBroadcast (base name: "subBroadcast")', function() {
+      // uncomment below and update the code to test the property subBroadcast
+      //var instane = new radiomanager.ModelTypeOptions();
+      //expect(instance).to.be();
+    });
+
   });
 
 }));

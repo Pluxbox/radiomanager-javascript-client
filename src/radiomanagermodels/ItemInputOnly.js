@@ -51,6 +51,7 @@
 
 
 
+
   };
 
   /**
@@ -67,6 +68,9 @@
       if (data.hasOwnProperty('_previous_id')) {
         obj['_previous_id'] = ApiClient.convertToType(data['_previous_id'], 'Number');
       }
+      if (data.hasOwnProperty('_before_id')) {
+        obj['_before_id'] = ApiClient.convertToType(data['_before_id'], 'Number');
+      }
       if (data.hasOwnProperty('contacts')) {
         obj['contacts'] = ApiClient.convertToType(data['contacts'], ['Number']);
       }
@@ -81,6 +85,10 @@
    * @member {Number} _previous_id
    */
   exports.prototype['_previous_id'] = undefined;
+  /**
+   * @member {Number} _before_id
+   */
+  exports.prototype['_before_id'] = undefined;
   /**
    * @member {Array.<Number>} contacts
    */
@@ -103,6 +111,21 @@
    */
   exports.prototype.setPreviousId = function(previousId) {
     this['_previous_id'] = previousId;
+  }
+
+
+  /**
+   * @return {Number}
+   */
+  exports.prototype.getBeforeId = function() {
+    return this['_before_id'];
+  }
+
+  /**
+   * @param {Number} beforeId
+   */
+  exports.prototype.setBeforeId = function(beforeId) {
+    this['_before_id'] = beforeId;
   }
 
 

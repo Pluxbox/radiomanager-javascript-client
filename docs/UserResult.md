@@ -14,6 +14,6 @@ Name | Type | Description | Notes
 **settings** | [**UserResultSettings**](UserResultSettings.md) |  | [optional] 
 **language** | **Boolean** |  | [optional] 
 **activeExternalStationId** | **Number** |  | [optional] 
-**roleId** | **Number** |  | [optional] 
+**roles** | [**[UserResultRoles]**](UserResultRoles.md) |  | [optional] 
 
 

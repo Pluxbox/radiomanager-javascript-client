@@ -31,7 +31,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new radiomanager.BroadcastFieldValues();
+    instance = new radiomanager.UserResultRoles();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,16 +50,34 @@
       object[property] = value;
   }
 
-  describe('BroadcastFieldValues', function() {
-    it('should create an instance of BroadcastFieldValues', function() {
-      // uncomment below and update the code to test BroadcastFieldValues
-      //var instane = new radiomanager.BroadcastFieldValues();
-      //expect(instance).to.be.a(radiomanager.BroadcastFieldValues);
+  describe('UserResultRoles', function() {
+    it('should create an instance of UserResultRoles', function() {
+      // uncomment below and update the code to test UserResultRoles
+      //var instane = new radiomanager.UserResultRoles();
+      //expect(instance).to.be.a(radiomanager.UserResultRoles);
     });
 
-    it('should have the property image (base name: "image")', function() {
-      // uncomment below and update the code to test the property image
-      //var instane = new radiomanager.BroadcastFieldValues();
+    it('should have the property href (base name: "href")', function() {
+      // uncomment below and update the code to test the property href
+      //var instane = new radiomanager.UserResultRoles();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property model (base name: "model")', function() {
+      // uncomment below and update the code to test the property model
+      //var instane = new radiomanager.UserResultRoles();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property operation (base name: "operation")', function() {
+      // uncomment below and update the code to test the property operation
+      //var instane = new radiomanager.UserResultRoles();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property params (base name: "params")', function() {
+      // uncomment below and update the code to test the property params
+      //var instane = new radiomanager.UserResultRoles();
       //expect(instance).to.be();
     });
 

@@ -3,7 +3,7 @@
 Pluxbox RadioManager gives you the power, flexibility and speed you always wanted in a lightweight and easy-to-use web-based radio solution. With Pluxbox RadioManager you can organise your radio workflow and automate your omnichannel communication with your listeners. We offer wide range specialised services for the radio and connections like Hybrid Radio, Visual Radio, your website and social media without losing focus on your broadcast. For more information visit: pluxbox.com
 
 - API version: 2.0
-- Package version: 1.1.2
+- Package version: 1.1.6
 - Build package: io.swagger.codegen.languages.JavascriptClientCodegen
 For more information, please visit [https://pluxbox.com](https://pluxbox.com)
 
@@ -126,7 +126,7 @@ Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
 *radiomanager.BlockApi* | [**getBlockById**](docs/BlockApi.md#getBlockById) | **GET** /blocks/{id} | Get block by id
 *radiomanager.BlockApi* | [**getCurrentBlock**](docs/BlockApi.md#getCurrentBlock) | **GET** /blocks/current | Get current Block
-*radiomanager.BlockApi* | [**getNextBlock**](docs/BlockApi.md#getNextBlock) | **GET** /blocks/next | Get next Block
+*radiomanager.BlockApi* | [**getNextBlock**](docs/BlockApi.md#getNextBlock) | **GET** /blocks/next | Get upcoming Block
 *radiomanager.BlockApi* | [**listBlocks**](docs/BlockApi.md#listBlocks) | **GET** /blocks | Get a list of all blocks currently in your station.
 *radiomanager.BroadcastApi* | [**createBroadcast**](docs/BroadcastApi.md#createBroadcast) | **POST** /broadcasts | Create broadcast.
 *radiomanager.BroadcastApi* | [**deleteBroadcastById**](docs/BroadcastApi.md#deleteBroadcastById) | **DELETE** /broadcasts/{id} | Delete broadcast by id
@@ -312,6 +312,7 @@ Class | Method | HTTP request | Description
  - [radiomanager.TooManyRequests](docs/TooManyRequests.md)
  - [radiomanager.UnprocessableEntity](docs/UnprocessableEntity.md)
  - [radiomanager.UserResult](docs/UserResult.md)
+ - [radiomanager.UserResultRoles](docs/UserResultRoles.md)
  - [radiomanager.UserResultSettings](docs/UserResultSettings.md)
  - [radiomanager.UserResults](docs/UserResults.md)
  - [radiomanager.VisualResult](docs/VisualResult.md)

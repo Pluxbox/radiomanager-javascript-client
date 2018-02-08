@@ -487,7 +487,7 @@ var apiInstance = new radiomanager.ItemApi();
 var id = 789; // Number | ID of Item **(Required)**
 
 var opts = { 
-  'data': new radiomanager.Item() // Item | Data *(Optional)*
+  'data': new radiomanager.ItemDataInput() // ItemDataInput | Data *(Optional)*
 };
 apiInstance.updateItemById(id, opts).then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
@@ -502,7 +502,7 @@ apiInstance.updateItemById(id, opts).then(function(data) {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Number**| ID of Item **(Required)** | 
- **data** | [**Item**](Item.md)| Data *(Optional)* | [optional] 
+ **data** | [**ItemDataInput**](ItemDataInput.md)| Data *(Optional)* | [optional] 
 
 ### Return type
 

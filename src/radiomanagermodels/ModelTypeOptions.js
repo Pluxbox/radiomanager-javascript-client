@@ -49,6 +49,7 @@
     var _this = this;
 
 
+
   };
 
   /**
@@ -65,6 +66,9 @@
       if (data.hasOwnProperty('color')) {
         obj['color'] = ApiClient.convertToType(data['color'], 'String');
       }
+      if (data.hasOwnProperty('subBroadcast')) {
+        obj['subBroadcast'] = ApiClient.convertToType(data['subBroadcast'], 'Boolean');
+      }
     }
     return obj;
   }
@@ -73,6 +77,10 @@
    * @member {String} color
    */
   exports.prototype['color'] = undefined;
+  /**
+   * @member {Boolean} subBroadcast
+   */
+  exports.prototype['subBroadcast'] = undefined;
 
 
   /**
@@ -87,6 +95,21 @@
    */
   exports.prototype.setColor = function(color) {
     this['color'] = color;
+  }
+
+
+  /**
+   * @return {Boolean}
+   */
+  exports.prototype.getSubBroadcast = function() {
+    return this['subBroadcast'];
+  }
+
+  /**
+   * @param {Boolean} subBroadcast
+   */
+  exports.prototype.setSubBroadcast = function(subBroadcast) {
+    this['subBroadcast'] = subBroadcast;
   }
 
 

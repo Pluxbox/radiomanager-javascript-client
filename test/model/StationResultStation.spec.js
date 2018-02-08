@@ -201,8 +201,8 @@
       //expect(instance).to.be();
     });
 
-    it('should have the property trialDate (base name: "trial_date")', function() {
-      // uncomment below and update the code to test the property trialDate
+    it('should have the property timezone (base name: "timezone")', function() {
+      // uncomment below and update the code to test the property timezone
       //var instane = new radiomanager.StationResultStation();
       //expect(instance).to.be();
     });

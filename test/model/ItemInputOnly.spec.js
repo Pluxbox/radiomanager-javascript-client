@@ -57,8 +57,14 @@
       //expect(instance).to.be.a(radiomanager.ItemInputOnly);
     });
 
-    it('should have the property previousId (base name: "previous_id")', function() {
+    it('should have the property previousId (base name: "_previous_id")', function() {
       // uncomment below and update the code to test the property previousId
+      //var instane = new radiomanager.ItemInputOnly();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property beforeId (base name: "_before_id")', function() {
+      // uncomment below and update the code to test the property beforeId
       //var instane = new radiomanager.ItemInputOnly();
       //expect(instance).to.be();
     });

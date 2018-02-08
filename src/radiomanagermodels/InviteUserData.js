@@ -45,13 +45,13 @@
    * @alias module:radiomanagermodels/InviteUserData
    * @class
    * @param email {String} 
-   * @param roleId {Number} 
+   * @param roleIds {Array.<Number>} 
    */
-  var exports = function(email, roleId) {
+  var exports = function(email, roleIds) {
     var _this = this;
 
     _this['email'] = email;
-    _this['role_id'] = roleId;
+    _this['role_ids'] = roleIds;
   };
 
   /**
@@ -68,8 +68,8 @@
       if (data.hasOwnProperty('email')) {
         obj['email'] = ApiClient.convertToType(data['email'], 'String');
       }
-      if (data.hasOwnProperty('role_id')) {
-        obj['role_id'] = ApiClient.convertToType(data['role_id'], 'Number');
+      if (data.hasOwnProperty('role_ids')) {
+        obj['role_ids'] = ApiClient.convertToType(data['role_ids'], ['Number']);
       }
     }
     return obj;
@@ -80,9 +80,9 @@
    */
   exports.prototype['email'] = undefined;
   /**
-   * @member {Number} role_id
+   * @member {Array.<Number>} role_ids
    */
-  exports.prototype['role_id'] = undefined;
+  exports.prototype['role_ids'] = undefined;
 
 
   /**
@@ -101,17 +101,17 @@
 
 
   /**
-   * @return {Number}
+   * @return {Array.<Number>}
    */
-  exports.prototype.getRoleId = function() {
-    return this['role_id'];
+  exports.prototype.getRoleIds = function() {
+    return this['role_ids'];
   }
 
   /**
-   * @param {Number} roleId
+   * @param {Array.<Number>} roleIds
    */
-  exports.prototype.setRoleId = function(roleId) {
-    this['role_id'] = roleId;
+  exports.prototype.setRoleIds = function(roleIds) {
+    this['role_ids'] = roleIds;
   }
 
 
