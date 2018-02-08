@@ -161,6 +161,11 @@ exports.prototype['details'] = undefined;
 exports.prototype['_previous_id'] = undefined;
 
   /**
+   * @member {Number} _before_id
+   */
+exports.prototype['_before_id'] = undefined;
+
+  /**
    * @member {Array.<Number>} contacts
    */
 exports.prototype['contacts'] = undefined;

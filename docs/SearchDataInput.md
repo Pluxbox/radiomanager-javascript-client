@@ -1,9 +1,7 @@
-# radiomanager.InviteUserData
+# radiomanager.SearchDataInput
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**email** | **String** |  | 
-**roleIds** | **[Number]** |  | 
 
 

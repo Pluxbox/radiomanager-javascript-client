@@ -17,18 +17,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'radiomanagermodels/UserResultSettings'], factory);
+    define(['ApiClient', 'radiomanagermodels/UserResultRoles', 'radiomanagermodels/UserResultSettings'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./UserResultSettings'));
+    module.exports = factory(require('../ApiClient'), require('./UserResultRoles'), require('./UserResultSettings'));
   } else {
     // Browser globals (root is window)
     if (!root.radiomanager) {
       root.radiomanager = {};
     }
-    root.radiomanager.UserResult = factory(root.radiomanager.ApiClient, root.radiomanager.UserResultSettings);
+    root.radiomanager.UserResult = factory(root.radiomanager.ApiClient, root.radiomanager.UserResultRoles, root.radiomanager.UserResultSettings);
   }
-}(this, function(ApiClient, UserResultSettings) {
+}(this, function(ApiClient, UserResultRoles, UserResultSettings) {
   'use strict';
 
 
@@ -110,8 +110,8 @@
       if (data.hasOwnProperty('active_external_station_id')) {
         obj['active_external_station_id'] = ApiClient.convertToType(data['active_external_station_id'], 'Number');
       }
-      if (data.hasOwnProperty('role_id')) {
-        obj['role_id'] = ApiClient.convertToType(data['role_id'], 'Number');
+      if (data.hasOwnProperty('roles')) {
+        obj['roles'] = ApiClient.convertToType(data['roles'], [UserResultRoles]);
       }
     }
     return obj;
@@ -162,9 +162,9 @@
    */
   exports.prototype['active_external_station_id'] = undefined;
   /**
-   * @member {Number} role_id
+   * @member {Array.<module:radiomanagermodels/UserResultRoles>} roles
    */
-  exports.prototype['role_id'] = undefined;
+  exports.prototype['roles'] = undefined;
 
 
   /**
@@ -333,17 +333,17 @@
 
 
   /**
-   * @return {Number}
+   * @return {Array.<module:radiomanagermodels/UserResultRoles>}
    */
-  exports.prototype.getRoleId = function() {
-    return this['role_id'];
+  exports.prototype.getRoles = function() {
+    return this['roles'];
   }
 
   /**
-   * @param {Number} roleId
+   * @param {Array.<module:radiomanagermodels/UserResultRoles>} roles
    */
-  exports.prototype.setRoleId = function(roleId) {
-    this['role_id'] = roleId;
+  exports.prototype.setRoles = function(roles) {
+    this['roles'] = roles;
   }
 
 
