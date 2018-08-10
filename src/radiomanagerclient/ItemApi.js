@@ -245,6 +245,55 @@
 
 
     /**
+     * Get current Item
+     * Get current Item
+     * @param {Object} opts Optional parameters
+     * @param {Boolean} opts.lastplayed Show last played item if there is no current item*(Optional)*
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:radiomanagermodels/ItemResult} and HTTP response
+     */
+    this.getCurrentItemWithHttpInfo = function(opts) {
+      opts = opts || {};
+      var postBody = null;
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+        'lastplayed': opts['lastplayed']
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['API Key'];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = ItemResult;
+
+      return this.apiClient.callApi(
+        '/items/current', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType
+      );
+    }
+
+    /**
+     * Get current Item
+     * Get current Item
+     * @param {Object} opts Optional parameters
+     * @param {Boolean} opts.lastplayed Show last played item if there is no current item*(Optional)*
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:radiomanagermodels/ItemResult}
+     */
+    this.getCurrentItem = function(opts) {
+      return this.getCurrentItemWithHttpInfo(opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
+
+    /**
      * Get extended item details by ID.
      * Read item by id.
      * @param {Number} id ID of Item **(Required)**
@@ -316,6 +365,7 @@
      * @param {Number} opts.userDraftId Search on User Draft ID *(Optional)*
      * @param {Number} opts.stationDraftId Search on Station Draft ID *(Optional)*
      * @param {Number} opts.programId Search on Program ID *(Optional)* &#x60;(Relation)&#x60;
+     * @param {String} opts.externalId Search on External ID *(Optional)*
      * @param {Date} opts.startMin Minimum start date *(Optional)*
      * @param {Date} opts.startMax Maximum start date *(Optional)*
      * @param {Number} opts.durationMin Minimum duration (seconds) *(Optional)*
@@ -346,6 +396,7 @@
         'user_draft_id': opts['userDraftId'],
         'station_draft_id': opts['stationDraftId'],
         'program_id': opts['programId'],
+        'external_id': opts['externalId'],
         'start-min': opts['startMin'],
         'start-max': opts['startMax'],
         'duration-min': opts['durationMin'],
@@ -388,6 +439,7 @@
      * @param {Number} opts.userDraftId Search on User Draft ID *(Optional)*
      * @param {Number} opts.stationDraftId Search on Station Draft ID *(Optional)*
      * @param {Number} opts.programId Search on Program ID *(Optional)* &#x60;(Relation)&#x60;
+     * @param {String} opts.externalId Search on External ID *(Optional)*
      * @param {Date} opts.startMin Minimum start date *(Optional)*
      * @param {Date} opts.startMax Maximum start date *(Optional)*
      * @param {Number} opts.durationMin Minimum duration (seconds) *(Optional)*

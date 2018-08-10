@@ -559,7 +559,6 @@
 
 
   /**
-   * minimum: 1
    * @return {Number}
    */
   exports.prototype.getPtyCodeId = function() {

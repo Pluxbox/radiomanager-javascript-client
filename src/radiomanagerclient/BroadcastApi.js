@@ -550,13 +550,11 @@
 
 
     /**
-     * Print Broadcast by id
-     * Print Broadcast by id
+     * Print broadcast by id with template
+     * Print broadcast by id with template
      * @param {Number} id ID of Broadcast **(Required)**
      * @param {Object} opts Optional parameters
-     * @param {Number} opts.programId Search on Program ID *(Optional)* &#x60;(Relation)&#x60;
-     * @param {Number} opts.presenterId Search on Presenter ID *(Optional)* &#x60;(Relation)&#x60;
-     * @param {Number} opts.tagId Search on Tag ID *(Optional)* &#x60;(Relation)&#x60;
+     * @param {Number} opts.templateId Search on template ID *(Optional)*
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:radiomanagermodels/EPGResults} and HTTP response
      */
     this.printBroadcastByIdWithHttpInfo = function(id, opts) {
@@ -573,9 +571,7 @@
         'id': id
       };
       var queryParams = {
-        'program_id': opts['programId'],
-        'presenter_id': opts['presenterId'],
-        'tag_id': opts['tagId']
+        'template_id': opts['templateId']
       };
       var headerParams = {
       };
@@ -595,13 +591,11 @@
     }
 
     /**
-     * Print Broadcast by id
-     * Print Broadcast by id
+     * Print broadcast by id with template
+     * Print broadcast by id with template
      * @param {Number} id ID of Broadcast **(Required)**
      * @param {Object} opts Optional parameters
-     * @param {Number} opts.programId Search on Program ID *(Optional)* &#x60;(Relation)&#x60;
-     * @param {Number} opts.presenterId Search on Presenter ID *(Optional)* &#x60;(Relation)&#x60;
-     * @param {Number} opts.tagId Search on Tag ID *(Optional)* &#x60;(Relation)&#x60;
+     * @param {Number} opts.templateId Search on template ID *(Optional)*
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:radiomanagermodels/EPGResults}
      */
     this.printBroadcastById = function(id, opts) {
