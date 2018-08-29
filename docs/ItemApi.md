@@ -8,6 +8,7 @@ Method | HTTP request | Description
 [**currentItemPostStructure**](ItemApi.md#currentItemPostStructure) | **POST** /items/current/structure | Post a current playing item, keep structure
 [**currentItemPostTiming**](ItemApi.md#currentItemPostTiming) | **POST** /items/current/timing | Post a current playing item
 [**deleteItemById**](ItemApi.md#deleteItemById) | **DELETE** /items/{id} | Delete item by ID.
+[**getCurrentItem**](ItemApi.md#getCurrentItem) | **GET** /items/current | Get current Item
 [**getItemById**](ItemApi.md#getItemById) | **GET** /items/{id} | Get extended item details by ID.
 [**listItems**](ItemApi.md#listItems) | **GET** /items | Get a list of all the items currently in your station.
 [**playlistPostStructure**](ItemApi.md#playlistPostStructure) | **POST** /items/playlist/structure | Post a playlist, keep current structure
@@ -218,6 +219,57 @@ Name | Type | Description  | Notes
  - **Content-Type**: application/json
  - **Accept**: application/json
 
+<a name="getCurrentItem"></a>
+# **getCurrentItem**
+> ItemResult getCurrentItem(opts)
+
+Get current Item
+
+Get current Item
+
+### Example
+```javascript
+var radiomanager = require('radiomanager');
+var defaultClient = radiomanager.ApiClient.instance;
+
+// Configure API key authorization: API Key
+var API Key = defaultClient.authentications['API Key'];
+API Key.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//API Key.apiKeyPrefix = 'Token';
+
+var apiInstance = new radiomanager.ItemApi();
+
+var opts = { 
+  'lastplayed': true // Boolean | Show last played item if there is no current item*(Optional)*
+};
+apiInstance.getCurrentItem(opts).then(function(data) {
+  console.log('API called successfully. Returned data: ' + data);
+}, function(error) {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **lastplayed** | **Boolean**| Show last played item if there is no current item*(Optional)* | [optional] 
+
+### Return type
+
+[**ItemResult**](ItemResult.md)
+
+### Authorization
+
+[API Key](../README.md#API Key)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
 <a name="getItemById"></a>
 # **getItemById**
 > ItemResult getItemById(id, opts)
@@ -305,6 +357,7 @@ var opts = {
   'userDraftId': 789, // Number | Search on User Draft ID *(Optional)*
   'stationDraftId': 789, // Number | Search on Station Draft ID *(Optional)*
   'programId': 789, // Number | Search on Program ID *(Optional)* `(Relation)`
+  'externalId': "externalId_example", // String | Search on External ID *(Optional)*
   'startMin': new Date("2013-10-20T19:20:30+01:00"), // Date | Minimum start date *(Optional)*
   'startMax': new Date("2013-10-20T19:20:30+01:00"), // Date | Maximum start date *(Optional)*
   'durationMin': 56, // Number | Minimum duration (seconds) *(Optional)*
@@ -338,6 +391,7 @@ Name | Type | Description  | Notes
  **userDraftId** | **Number**| Search on User Draft ID *(Optional)* | [optional] 
  **stationDraftId** | **Number**| Search on Station Draft ID *(Optional)* | [optional] 
  **programId** | **Number**| Search on Program ID *(Optional)* &#x60;(Relation)&#x60; | [optional] 
+ **externalId** | **String**| Search on External ID *(Optional)* | [optional] 
  **startMin** | **Date**| Minimum start date *(Optional)* | [optional] 
  **startMax** | **Date**| Maximum start date *(Optional)* | [optional] 
  **durationMin** | **Number**| Minimum duration (seconds) *(Optional)* | [optional] 
