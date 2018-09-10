@@ -511,7 +511,7 @@ Name | Type | Description  | Notes
 
 <a name="printBroadcastById"></a>
 # **printBroadcastById**
-> EPGResults printBroadcastById(id, opts)
+> &#39;String&#39; printBroadcastById(id, opts)
 
 Print broadcast by id with template
 
@@ -552,7 +552,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**EPGResults**](EPGResults.md)
+**&#39;String&#39;**
 
 ### Authorization
 
