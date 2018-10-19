@@ -104,7 +104,7 @@ exports.prototype['created_at'] = undefined;
 exports.prototype['deleted_at'] = undefined;
 
   /**
-   * @member {Array.<module:radiomanagermodels/Item>} item
+   * @member {module:radiomanagermodels/Item} item
    */
 exports.prototype['item'] = undefined;
 

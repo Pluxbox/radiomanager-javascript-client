@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 **updatedAt** | **Date** |  | 
 **createdAt** | **Date** |  | 
 **deletedAt** | **Date** |  | 
-**item** | [**[Item]**](Item.md) |  | [optional] 
+**item** | [**Item**](Item.md) |  | [optional] 
 **externalStationId** | **Number** |  | [optional] 
 
 

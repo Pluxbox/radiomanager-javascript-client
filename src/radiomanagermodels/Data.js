@@ -50,6 +50,7 @@
 
 
 
+
   };
 
   /**
@@ -66,6 +67,9 @@
       if (data.hasOwnProperty('start')) {
         obj['start'] = ApiClient.convertToType(data['start'], 'Date');
       }
+      if (data.hasOwnProperty('allow_playlist_past')) {
+        obj['allow_playlist_past'] = ApiClient.convertToType(data['allow_playlist_past'], 'Number');
+      }
       if (data.hasOwnProperty('items')) {
         obj['items'] = ApiClient.convertToType(data['items'], [ImportItem]);
       }
@@ -77,6 +81,10 @@
    * @member {Date} start
    */
   exports.prototype['start'] = undefined;
+  /**
+   * @member {Number} allow_playlist_past
+   */
+  exports.prototype['allow_playlist_past'] = undefined;
   /**
    * @member {Array.<module:radiomanagermodels/ImportItem>} items
    */
@@ -95,6 +103,21 @@
    */
   exports.prototype.setStart = function(start) {
     this['start'] = start;
+  }
+
+
+  /**
+   * @return {Number}
+   */
+  exports.prototype.getAllowPlaylistPast = function() {
+    return this['allow_playlist_past'];
+  }
+
+  /**
+   * @param {Number} allowPlaylistPast
+   */
+  exports.prototype.setAllowPlaylistPast = function(allowPlaylistPast) {
+    this['allow_playlist_past'] = allowPlaylistPast;
   }
 
 

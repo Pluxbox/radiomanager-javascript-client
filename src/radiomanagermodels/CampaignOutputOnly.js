@@ -84,7 +84,7 @@
         obj['deleted_at'] = ApiClient.convertToType(data['deleted_at'], 'Date');
       }
       if (data.hasOwnProperty('item')) {
-        obj['item'] = ApiClient.convertToType(data['item'], [Item]);
+        obj['item'] = Item.constructFromObject(data['item']);
       }
       if (data.hasOwnProperty('_external_station_id')) {
         obj['_external_station_id'] = ApiClient.convertToType(data['_external_station_id'], 'Number');
@@ -110,7 +110,7 @@
    */
   exports.prototype['deleted_at'] = undefined;
   /**
-   * @member {Array.<module:radiomanagermodels/Item>} item
+   * @member {module:radiomanagermodels/Item} item
    */
   exports.prototype['item'] = undefined;
   /**
@@ -180,14 +180,14 @@
 
 
   /**
-   * @return {Array.<module:radiomanagermodels/Item>}
+   * @return {module:radiomanagermodels/Item}
    */
   exports.prototype.getItem = function() {
     return this['item'];
   }
 
   /**
-   * @param {Array.<module:radiomanagermodels/Item>} item
+   * @param {module:radiomanagermodels/Item} item
    */
   exports.prototype.setItem = function(item) {
     this['item'] = item;
