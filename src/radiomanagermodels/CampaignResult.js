@@ -17,18 +17,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'radiomanagermodels/BroadcastRelationsModelType', 'radiomanagermodels/Campaign', 'radiomanagermodels/CampaignOutputOnly', 'radiomanagermodels/CampaignRelations', 'radiomanagermodels/CampaignRelationsItems', 'radiomanagermodels/Item'], factory);
+    define(['ApiClient', 'radiomanagermodels/BroadcastRelationsModelType', 'radiomanagermodels/Campaign', 'radiomanagermodels/CampaignOutputOnly', 'radiomanagermodels/CampaignRelations', 'radiomanagermodels/CampaignRelationsItems', 'radiomanagermodels/CampaignTemplateItem'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./BroadcastRelationsModelType'), require('./Campaign'), require('./CampaignOutputOnly'), require('./CampaignRelations'), require('./CampaignRelationsItems'), require('./Item'));
+    module.exports = factory(require('../ApiClient'), require('./BroadcastRelationsModelType'), require('./Campaign'), require('./CampaignOutputOnly'), require('./CampaignRelations'), require('./CampaignRelationsItems'), require('./CampaignTemplateItem'));
   } else {
     // Browser globals (root is window)
     if (!root.radiomanager) {
       root.radiomanager = {};
     }
-    root.radiomanager.CampaignResult = factory(root.radiomanager.ApiClient, root.radiomanager.BroadcastRelationsModelType, root.radiomanager.Campaign, root.radiomanager.CampaignOutputOnly, root.radiomanager.CampaignRelations, root.radiomanager.CampaignRelationsItems, root.radiomanager.Item);
+    root.radiomanager.CampaignResult = factory(root.radiomanager.ApiClient, root.radiomanager.BroadcastRelationsModelType, root.radiomanager.Campaign, root.radiomanager.CampaignOutputOnly, root.radiomanager.CampaignRelations, root.radiomanager.CampaignRelationsItems, root.radiomanager.CampaignTemplateItem);
   }
-}(this, function(ApiClient, BroadcastRelationsModelType, Campaign, CampaignOutputOnly, CampaignRelations, CampaignRelationsItems, Item) {
+}(this, function(ApiClient, BroadcastRelationsModelType, Campaign, CampaignOutputOnly, CampaignRelations, CampaignRelationsItems, CampaignTemplateItem) {
   'use strict';
 
 
@@ -104,7 +104,7 @@ exports.prototype['created_at'] = undefined;
 exports.prototype['deleted_at'] = undefined;
 
   /**
-   * @member {module:radiomanagermodels/Item} item
+   * @member {module:radiomanagermodels/CampaignTemplateItem} item
    */
 exports.prototype['item'] = undefined;
 

@@ -17,18 +17,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'radiomanagermodels/Item'], factory);
+    define(['ApiClient', 'radiomanagermodels/CampaignTemplateItem'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./Item'));
+    module.exports = factory(require('../ApiClient'), require('./CampaignTemplateItem'));
   } else {
     // Browser globals (root is window)
     if (!root.radiomanager) {
       root.radiomanager = {};
     }
-    root.radiomanager.CampaignOutputOnly = factory(root.radiomanager.ApiClient, root.radiomanager.Item);
+    root.radiomanager.CampaignOutputOnly = factory(root.radiomanager.ApiClient, root.radiomanager.CampaignTemplateItem);
   }
-}(this, function(ApiClient, Item) {
+}(this, function(ApiClient, CampaignTemplateItem) {
   'use strict';
 
 
@@ -84,7 +84,7 @@
         obj['deleted_at'] = ApiClient.convertToType(data['deleted_at'], 'Date');
       }
       if (data.hasOwnProperty('item')) {
-        obj['item'] = Item.constructFromObject(data['item']);
+        obj['item'] = CampaignTemplateItem.constructFromObject(data['item']);
       }
       if (data.hasOwnProperty('_external_station_id')) {
         obj['_external_station_id'] = ApiClient.convertToType(data['_external_station_id'], 'Number');
@@ -110,7 +110,7 @@
    */
   exports.prototype['deleted_at'] = undefined;
   /**
-   * @member {module:radiomanagermodels/Item} item
+   * @member {module:radiomanagermodels/CampaignTemplateItem} item
    */
   exports.prototype['item'] = undefined;
   /**
@@ -180,14 +180,14 @@
 
 
   /**
-   * @return {module:radiomanagermodels/Item}
+   * @return {module:radiomanagermodels/CampaignTemplateItem}
    */
   exports.prototype.getItem = function() {
     return this['item'];
   }
 
   /**
-   * @param {module:radiomanagermodels/Item} item
+   * @param {module:radiomanagermodels/CampaignTemplateItem} item
    */
   exports.prototype.setItem = function(item) {
     this['item'] = item;
