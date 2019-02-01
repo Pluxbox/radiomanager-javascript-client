@@ -17,18 +17,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'radiomanagermodels/Data', 'radiomanagermodels/Data1', 'radiomanagermodels/Forbidden', 'radiomanagermodels/ImportItem', 'radiomanagermodels/InlineResponse202', 'radiomanagermodels/ItemDataInput', 'radiomanagermodels/ItemResult', 'radiomanagermodels/ItemResults', 'radiomanagermodels/NotFound', 'radiomanagermodels/PostSuccess', 'radiomanagermodels/Success', 'radiomanagermodels/TooManyRequests', 'radiomanagermodels/UnprocessableEntity'], factory);
+    define(['ApiClient', 'radiomanagermodels/Data', 'radiomanagermodels/Data1', 'radiomanagermodels/Data2', 'radiomanagermodels/Data3', 'radiomanagermodels/Forbidden', 'radiomanagermodels/ImportItem', 'radiomanagermodels/InlineResponse202', 'radiomanagermodels/ItemDataInput', 'radiomanagermodels/ItemResult', 'radiomanagermodels/ItemResults', 'radiomanagermodels/NotFound', 'radiomanagermodels/PostSuccess', 'radiomanagermodels/Success', 'radiomanagermodels/TooManyRequests', 'radiomanagermodels/UnprocessableEntity'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../radiomanagermodels/Data'), require('../radiomanagermodels/Data1'), require('../radiomanagermodels/Forbidden'), require('../radiomanagermodels/ImportItem'), require('../radiomanagermodels/InlineResponse202'), require('../radiomanagermodels/ItemDataInput'), require('../radiomanagermodels/ItemResult'), require('../radiomanagermodels/ItemResults'), require('../radiomanagermodels/NotFound'), require('../radiomanagermodels/PostSuccess'), require('../radiomanagermodels/Success'), require('../radiomanagermodels/TooManyRequests'), require('../radiomanagermodels/UnprocessableEntity'));
+    module.exports = factory(require('../ApiClient'), require('../radiomanagermodels/Data'), require('../radiomanagermodels/Data1'), require('../radiomanagermodels/Data2'), require('../radiomanagermodels/Data3'), require('../radiomanagermodels/Forbidden'), require('../radiomanagermodels/ImportItem'), require('../radiomanagermodels/InlineResponse202'), require('../radiomanagermodels/ItemDataInput'), require('../radiomanagermodels/ItemResult'), require('../radiomanagermodels/ItemResults'), require('../radiomanagermodels/NotFound'), require('../radiomanagermodels/PostSuccess'), require('../radiomanagermodels/Success'), require('../radiomanagermodels/TooManyRequests'), require('../radiomanagermodels/UnprocessableEntity'));
   } else {
     // Browser globals (root is window)
     if (!root.radiomanager) {
       root.radiomanager = {};
     }
-    root.radiomanager.ItemApi = factory(root.radiomanager.ApiClient, root.radiomanager.Data, root.radiomanager.Data1, root.radiomanager.Forbidden, root.radiomanager.ImportItem, root.radiomanager.InlineResponse202, root.radiomanager.ItemDataInput, root.radiomanager.ItemResult, root.radiomanager.ItemResults, root.radiomanager.NotFound, root.radiomanager.PostSuccess, root.radiomanager.Success, root.radiomanager.TooManyRequests, root.radiomanager.UnprocessableEntity);
+    root.radiomanager.ItemApi = factory(root.radiomanager.ApiClient, root.radiomanager.Data, root.radiomanager.Data1, root.radiomanager.Data2, root.radiomanager.Data3, root.radiomanager.Forbidden, root.radiomanager.ImportItem, root.radiomanager.InlineResponse202, root.radiomanager.ItemDataInput, root.radiomanager.ItemResult, root.radiomanager.ItemResults, root.radiomanager.NotFound, root.radiomanager.PostSuccess, root.radiomanager.Success, root.radiomanager.TooManyRequests, root.radiomanager.UnprocessableEntity);
   }
-}(this, function(ApiClient, Data, Data1, Forbidden, ImportItem, InlineResponse202, ItemDataInput, ItemResult, ItemResults, NotFound, PostSuccess, Success, TooManyRequests, UnprocessableEntity) {
+}(this, function(ApiClient, Data, Data1, Data2, Data3, Forbidden, ImportItem, InlineResponse202, ItemDataInput, ItemResult, ItemResults, NotFound, PostSuccess, Success, TooManyRequests, UnprocessableEntity) {
   'use strict';
 
   /**
@@ -474,6 +474,56 @@
 
 
     /**
+     * Post a playlist, do not remove previously imported items
+     * Post a playlist, do not remove previously imported items
+     * @param {Object} opts Optional parameters
+     * @param {module:radiomanagermodels/Data2} opts.data Data *(Optional)*
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:radiomanagermodels/InlineResponse202} and HTTP response
+     */
+    this.playlistPostMergeWithHttpInfo = function(opts) {
+      opts = opts || {};
+      var postBody = opts['data'];
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['API Key'];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = InlineResponse202;
+
+      return this.apiClient.callApi(
+        '/items/playlist/merge', 'POST',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType
+      );
+    }
+
+    /**
+     * Post a playlist, do not remove previously imported items
+     * Post a playlist, do not remove previously imported items
+     * @param {Object} opts Optional parameters
+     * @param {module:radiomanagermodels/Data2} opts.data Data *(Optional)*
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:radiomanagermodels/InlineResponse202}
+     */
+    this.playlistPostMerge = function(opts) {
+      return this.playlistPostMergeWithHttpInfo(opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
+
+    /**
      * Post a playlist, keep current structure
      * Post a playlist, keep current structure
      * @param {Object} opts Optional parameters
@@ -567,6 +617,56 @@
      */
     this.playlistPostTiming = function(opts) {
       return this.playlistPostTimingWithHttpInfo(opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
+
+    /**
+     * Stop an Item
+     * Set a current playing or specific item on played
+     * @param {Object} opts Optional parameters
+     * @param {module:radiomanagermodels/Data3} opts.data Data *(Optional)*
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:radiomanagermodels/Success} and HTTP response
+     */
+    this.stopCurrentItemWithHttpInfo = function(opts) {
+      opts = opts || {};
+      var postBody = opts['data'];
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['API Key'];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = Success;
+
+      return this.apiClient.callApi(
+        '/items/stopcurrent', 'POST',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType
+      );
+    }
+
+    /**
+     * Stop an Item
+     * Set a current playing or specific item on played
+     * @param {Object} opts Optional parameters
+     * @param {module:radiomanagermodels/Data3} opts.data Data *(Optional)*
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:radiomanagermodels/Success}
+     */
+    this.stopCurrentItem = function(opts) {
+      return this.stopCurrentItemWithHttpInfo(opts)
         .then(function(response_and_data) {
           return response_and_data.data;
         });

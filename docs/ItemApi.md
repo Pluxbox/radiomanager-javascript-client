@@ -11,8 +11,10 @@ Method | HTTP request | Description
 [**getCurrentItem**](ItemApi.md#getCurrentItem) | **GET** /items/current | Get current Item
 [**getItemById**](ItemApi.md#getItemById) | **GET** /items/{id} | Get extended item details by ID.
 [**listItems**](ItemApi.md#listItems) | **GET** /items | Get a list of all the items currently in your station.
+[**playlistPostMerge**](ItemApi.md#playlistPostMerge) | **POST** /items/playlist/merge | Post a playlist, do not remove previously imported items
 [**playlistPostStructure**](ItemApi.md#playlistPostStructure) | **POST** /items/playlist/structure | Post a playlist, keep current structure
 [**playlistPostTiming**](ItemApi.md#playlistPostTiming) | **POST** /items/playlist/timing | Post a playlist
+[**stopCurrentItem**](ItemApi.md#stopCurrentItem) | **POST** /items/stopcurrent | Stop an Item
 [**updateItemById**](ItemApi.md#updateItemById) | **PATCH** /items/{id} | Update extended item details by ID.
 
 
@@ -415,6 +417,57 @@ Name | Type | Description  | Notes
  - **Content-Type**: application/json
  - **Accept**: application/json
 
+<a name="playlistPostMerge"></a>
+# **playlistPostMerge**
+> InlineResponse202 playlistPostMerge(opts)
+
+Post a playlist, do not remove previously imported items
+
+Post a playlist, do not remove previously imported items
+
+### Example
+```javascript
+var radiomanager = require('radiomanager');
+var defaultClient = radiomanager.ApiClient.instance;
+
+// Configure API key authorization: API Key
+var API Key = defaultClient.authentications['API Key'];
+API Key.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//API Key.apiKeyPrefix = 'Token';
+
+var apiInstance = new radiomanager.ItemApi();
+
+var opts = { 
+  'data': new radiomanager.Data2() // Data2 | Data *(Optional)*
+};
+apiInstance.playlistPostMerge(opts).then(function(data) {
+  console.log('API called successfully. Returned data: ' + data);
+}, function(error) {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **data** | [**Data2**](Data2.md)| Data *(Optional)* | [optional] 
+
+### Return type
+
+[**InlineResponse202**](InlineResponse202.md)
+
+### Authorization
+
+[API Key](../README.md#API Key)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
 <a name="playlistPostStructure"></a>
 # **playlistPostStructure**
 > InlineResponse202 playlistPostStructure(opts)
@@ -507,6 +560,57 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**InlineResponse202**](InlineResponse202.md)
+
+### Authorization
+
+[API Key](../README.md#API Key)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a name="stopCurrentItem"></a>
+# **stopCurrentItem**
+> Success stopCurrentItem(opts)
+
+Stop an Item
+
+Set a current playing or specific item on played
+
+### Example
+```javascript
+var radiomanager = require('radiomanager');
+var defaultClient = radiomanager.ApiClient.instance;
+
+// Configure API key authorization: API Key
+var API Key = defaultClient.authentications['API Key'];
+API Key.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//API Key.apiKeyPrefix = 'Token';
+
+var apiInstance = new radiomanager.ItemApi();
+
+var opts = { 
+  'data': new radiomanager.Data3() // Data3 | Data *(Optional)*
+};
+apiInstance.stopCurrentItem(opts).then(function(data) {
+  console.log('API called successfully. Returned data: ' + data);
+}, function(error) {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **data** | [**Data3**](Data3.md)| Data *(Optional)* | [optional] 
+
+### Return type
+
+[**Success**](Success.md)
 
 ### Authorization
 
