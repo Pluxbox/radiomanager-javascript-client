@@ -3,7 +3,7 @@
 Pluxbox RadioManager gives you the power, flexibility and speed you always wanted in a lightweight and easy-to-use web-based radio solution. With Pluxbox RadioManager you can organise your radio workflow and automate your omnichannel communication with your listeners. We offer wide range specialised services for the radio and connections like Hybrid Radio, Visual Radio, your website and social media without losing focus on your broadcast. For more information visit: pluxbox.com
 
 - API version: 2.0
-- Package version: 1.1.7
+- Package version: 1.1.12
 - Build package: io.swagger.codegen.languages.JavascriptClientCodegen
 For more information, please visit [https://pluxbox.com](https://pluxbox.com)
 
@@ -56,37 +56,6 @@ then install it via:
     npm install GIT_USER_ID/GIT_REPO_ID --save
 ```
 
-### For browser
-
-The library also works in the browser environment via npm and [browserify](http://browserify.org/). After following
-the above steps with Node.js and installing browserify with `npm install -g browserify`,
-perform the following (assuming *main.js* is your entry file, that's to say your javascript file where you actually 
-use this library):
-
-```shell
-browserify main.js > bundle.js
-```
-
-Then include *bundle.js* in the HTML pages.
-
-### Webpack Configuration
-
-Using Webpack you may encounter the following error: "Module not found: Error:
-Cannot resolve module", most certainly you should disable AMD loader. Add/merge
-the following section to your webpack config:
-
-```javascript
-module: {
-  rules: [
-    {
-      parser: {
-        amd: false
-      }
-    }
-  ]
-}
-```
-
 ## Getting Started
 
 Please follow the [installation](#installation) instruction and execute the following JS code:
@@ -137,7 +106,7 @@ Class | Method | HTTP request | Description
 *radiomanager.BroadcastApi* | [**getNextBroadcast**](docs/BroadcastApi.md#getNextBroadcast) | **GET** /broadcasts/next | Get next Broadcast
 *radiomanager.BroadcastApi* | [**getWeeklyEPG**](docs/BroadcastApi.md#getWeeklyEPG) | **GET** /broadcasts/epg/weekly | Get weekly EPG
 *radiomanager.BroadcastApi* | [**listBroadcasts**](docs/BroadcastApi.md#listBroadcasts) | **GET** /broadcasts | Get all broadcasts.
-*radiomanager.BroadcastApi* | [**printBroadcastById**](docs/BroadcastApi.md#printBroadcastById) | **GET** /broadcasts/print/{id} | Print Broadcast by id
+*radiomanager.BroadcastApi* | [**printBroadcastById**](docs/BroadcastApi.md#printBroadcastById) | **GET** /broadcasts/print/{id} | Print broadcast by id with template
 *radiomanager.BroadcastApi* | [**updateBroadcastByID**](docs/BroadcastApi.md#updateBroadcastByID) | **PATCH** /broadcasts/{id} | Update broadcast by id
 *radiomanager.CampaignApi* | [**createCampaign**](docs/CampaignApi.md#createCampaign) | **POST** /campaigns | Create campaign.
 *radiomanager.CampaignApi* | [**deleteCampaignById**](docs/CampaignApi.md#deleteCampaignById) | **DELETE** /campaigns/{id} | Delete campaign by id
@@ -158,8 +127,10 @@ Class | Method | HTTP request | Description
 *radiomanager.ItemApi* | [**getCurrentItem**](docs/ItemApi.md#getCurrentItem) | **GET** /items/current | Get current Item
 *radiomanager.ItemApi* | [**getItemById**](docs/ItemApi.md#getItemById) | **GET** /items/{id} | Get extended item details by ID.
 *radiomanager.ItemApi* | [**listItems**](docs/ItemApi.md#listItems) | **GET** /items | Get a list of all the items currently in your station.
+*radiomanager.ItemApi* | [**playlistPostMerge**](docs/ItemApi.md#playlistPostMerge) | **POST** /items/playlist/merge | Post a playlist, do not remove previously imported items
 *radiomanager.ItemApi* | [**playlistPostStructure**](docs/ItemApi.md#playlistPostStructure) | **POST** /items/playlist/structure | Post a playlist, keep current structure
 *radiomanager.ItemApi* | [**playlistPostTiming**](docs/ItemApi.md#playlistPostTiming) | **POST** /items/playlist/timing | Post a playlist
+*radiomanager.ItemApi* | [**stopCurrentItem**](docs/ItemApi.md#stopCurrentItem) | **POST** /items/stopcurrent | Stop an Item
 *radiomanager.ItemApi* | [**updateItemById**](docs/ItemApi.md#updateItemById) | **PATCH** /items/{id} | Update extended item details by ID.
 *radiomanager.ModelTypeApi* | [**getModelTypeById**](docs/ModelTypeApi.md#getModelTypeById) | **GET** /model_types/{id} | Get modelType by id
 *radiomanager.ModelTypeApi* | [**listModelTypes**](docs/ModelTypeApi.md#listModelTypes) | **GET** /model_types | Get all modelTypes.
@@ -209,6 +180,7 @@ Class | Method | HTTP request | Description
  - [radiomanager.BroadcastOutputOnly](docs/BroadcastOutputOnly.md)
  - [radiomanager.BroadcastRelations](docs/BroadcastRelations.md)
  - [radiomanager.BroadcastRelationsBlocks](docs/BroadcastRelationsBlocks.md)
+ - [radiomanager.BroadcastRelationsGenre](docs/BroadcastRelationsGenre.md)
  - [radiomanager.BroadcastRelationsItems](docs/BroadcastRelationsItems.md)
  - [radiomanager.BroadcastRelationsItemsParams](docs/BroadcastRelationsItemsParams.md)
  - [radiomanager.BroadcastRelationsModelType](docs/BroadcastRelationsModelType.md)
@@ -221,6 +193,7 @@ Class | Method | HTTP request | Description
  - [radiomanager.CampaignRelationsItems](docs/CampaignRelationsItems.md)
  - [radiomanager.CampaignRelationsItemsParams](docs/CampaignRelationsItemsParams.md)
  - [radiomanager.CampaignResults](docs/CampaignResults.md)
+ - [radiomanager.CampaignTemplateItem](docs/CampaignTemplateItem.md)
  - [radiomanager.Contact](docs/Contact.md)
  - [radiomanager.ContactOutputOnly](docs/ContactOutputOnly.md)
  - [radiomanager.ContactRelations](docs/ContactRelations.md)
@@ -230,6 +203,8 @@ Class | Method | HTTP request | Description
  - [radiomanager.ContactResults](docs/ContactResults.md)
  - [radiomanager.Data](docs/Data.md)
  - [radiomanager.Data1](docs/Data1.md)
+ - [radiomanager.Data2](docs/Data2.md)
+ - [radiomanager.Data3](docs/Data3.md)
  - [radiomanager.EPGResults](docs/EPGResults.md)
  - [radiomanager.Forbidden](docs/Forbidden.md)
  - [radiomanager.Genre](docs/Genre.md)
@@ -291,6 +266,7 @@ Class | Method | HTTP request | Description
  - [radiomanager.RelationsPlaceholder](docs/RelationsPlaceholder.md)
  - [radiomanager.StationResult](docs/StationResult.md)
  - [radiomanager.StationResultStation](docs/StationResultStation.md)
+ - [radiomanager.StationResultStationStartDays](docs/StationResultStationStartDays.md)
  - [radiomanager.Story](docs/Story.md)
  - [radiomanager.StoryInputOnly](docs/StoryInputOnly.md)
  - [radiomanager.StoryOutputOnly](docs/StoryOutputOnly.md)

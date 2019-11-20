@@ -195,6 +195,7 @@ var opts = {
   'genreId': 789, // Number | Search on Genre ID *(Optional)*
   'blockId': 789, // Number | Search on Block ID *(Optional)* `(Relation)`
   'itemId': 789, // Number | Search on Item ID *(Optional)* `(Relation)`
+  'disabled': 56, // Number | Search on Disabled status *(Optional)*
   'limit': 789, // Number | Results per page *(Optional)*
   'orderBy': "orderBy_example", // String | Field to order the results *(Optional)*
   'orderDirection': "orderDirection_example", // String | Direction of ordering *(Optional)*
@@ -220,6 +221,7 @@ Name | Type | Description  | Notes
  **genreId** | **Number**| Search on Genre ID *(Optional)* | [optional] 
  **blockId** | **Number**| Search on Block ID *(Optional)* &#x60;(Relation)&#x60; | [optional] 
  **itemId** | **Number**| Search on Item ID *(Optional)* &#x60;(Relation)&#x60; | [optional] 
+ **disabled** | **Number**| Search on Disabled status *(Optional)* | [optional] 
  **limit** | **Number**| Results per page *(Optional)* | [optional] 
  **orderBy** | **String**| Field to order the results *(Optional)* | [optional] 
  **orderDirection** | **String**| Direction of ordering *(Optional)* | [optional] 

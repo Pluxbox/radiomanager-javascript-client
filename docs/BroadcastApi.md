@@ -13,7 +13,7 @@ Method | HTTP request | Description
 [**getNextBroadcast**](BroadcastApi.md#getNextBroadcast) | **GET** /broadcasts/next | Get next Broadcast
 [**getWeeklyEPG**](BroadcastApi.md#getWeeklyEPG) | **GET** /broadcasts/epg/weekly | Get weekly EPG
 [**listBroadcasts**](BroadcastApi.md#listBroadcasts) | **GET** /broadcasts | Get all broadcasts.
-[**printBroadcastById**](BroadcastApi.md#printBroadcastById) | **GET** /broadcasts/print/{id} | Print Broadcast by id
+[**printBroadcastById**](BroadcastApi.md#printBroadcastById) | **GET** /broadcasts/print/{id} | Print broadcast by id with template
 [**updateBroadcastByID**](BroadcastApi.md#updateBroadcastByID) | **PATCH** /broadcasts/{id} | Update broadcast by id
 
 
@@ -511,11 +511,11 @@ Name | Type | Description  | Notes
 
 <a name="printBroadcastById"></a>
 # **printBroadcastById**
-> EPGResults printBroadcastById(id, opts)
+> &#39;String&#39; printBroadcastById(id, opts)
 
-Print Broadcast by id
+Print broadcast by id with template
 
-Print Broadcast by id
+Print broadcast by id with template
 
 ### Example
 ```javascript
@@ -533,9 +533,7 @@ var apiInstance = new radiomanager.BroadcastApi();
 var id = 789; // Number | ID of Broadcast **(Required)**
 
 var opts = { 
-  'programId': 789, // Number | Search on Program ID *(Optional)* `(Relation)`
-  'presenterId': 789, // Number | Search on Presenter ID *(Optional)* `(Relation)`
-  'tagId': 789 // Number | Search on Tag ID *(Optional)* `(Relation)`
+  'templateId': 789 // Number | Search on template ID *(Optional)*
 };
 apiInstance.printBroadcastById(id, opts).then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
@@ -550,13 +548,11 @@ apiInstance.printBroadcastById(id, opts).then(function(data) {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Number**| ID of Broadcast **(Required)** | 
- **programId** | **Number**| Search on Program ID *(Optional)* &#x60;(Relation)&#x60; | [optional] 
- **presenterId** | **Number**| Search on Presenter ID *(Optional)* &#x60;(Relation)&#x60; | [optional] 
- **tagId** | **Number**| Search on Tag ID *(Optional)* &#x60;(Relation)&#x60; | [optional] 
+ **templateId** | **Number**| Search on template ID *(Optional)* | [optional] 
 
 ### Return type
 
-[**EPGResults**](EPGResults.md)
+**&#39;String&#39;**
 
 ### Authorization
 

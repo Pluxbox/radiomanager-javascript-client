@@ -33,9 +33,9 @@ Name | Type | Description | Notes
 
 * `1 week` (value: `"1 week"`)
 
-* `2 weeks` (value: `"2 weeks"`)
+* `2 week` (value: `"2 week"`)
 
-* `4 weeks` (value: `"4 weeks"`)
+* `4 week` (value: `"4 week"`)
 
 * `1 month` (value: `"1 month"`)
 
