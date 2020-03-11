@@ -1,6 +1,7 @@
 # radiomanager.StationResultStation
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **Number** |  | [optional] 
@@ -28,6 +29,8 @@ Name | Type | Description | Notes
 **ptyType** | **String** |  | [optional] 
 **stationKey** | **String** |  | [optional] 
 **timezone** | **String** |  | [optional] 
+**metadataradioOrganisation** | **String** |  | [optional] 
+**metadataradioStationId** | **String** |  | [optional] 
 **startDays** | [**StationResultStationStartDays**](StationResultStationStartDays.md) |  | [optional] 
 
 

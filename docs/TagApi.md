@@ -1,6 +1,6 @@
 # radiomanager.TagApi
 
-All URIs are relative to *https://staging.radiomanager.io/api/v2*
+All URIs are relative to *https://radiomanager.io/api/v2*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -11,8 +11,9 @@ Method | HTTP request | Description
 [**updateTagByID**](TagApi.md#updateTagByID) | **PATCH** /tags/{id} | Update tag by id
 
 
-<a name="createTag"></a>
-# **createTag**
+
+## createTag
+
 > PostSuccess createTag(data)
 
 Create tag.
@@ -20,20 +21,18 @@ Create tag.
 Create tag.
 
 ### Example
+
 ```javascript
 var radiomanager = require('radiomanager');
 var defaultClient = radiomanager.ApiClient.instance;
-
-// Configure API key authorization: API Key
-var API Key = defaultClient.authentications['API Key'];
-API Key.apiKey = 'YOUR API KEY';
+// Configure API key authorization: API-Key
+var API-Key = defaultClient.authentications['API-Key'];
+API-Key.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//API Key.apiKeyPrefix = 'Token';
+//API-Key.apiKeyPrefix = 'Token';
 
 var apiInstance = new radiomanager.TagApi();
-
 var data = new radiomanager.TagDataInput(); // TagDataInput | Data **(Required)**
-
 apiInstance.createTag(data).then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
 }, function(error) {
@@ -43,6 +42,8 @@ apiInstance.createTag(data).then(function(data) {
 ```
 
 ### Parameters
+
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -54,15 +55,16 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[API Key](../README.md#API Key)
+[API-Key](../README.md#API-Key)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: application/json
+- **Accept**: application/json
 
-<a name="deleteTagById"></a>
-# **deleteTagById**
+
+## deleteTagById
+
 > Success deleteTagById(id)
 
 Delete tag by id
@@ -70,20 +72,18 @@ Delete tag by id
 Delete tag by id
 
 ### Example
+
 ```javascript
 var radiomanager = require('radiomanager');
 var defaultClient = radiomanager.ApiClient.instance;
-
-// Configure API key authorization: API Key
-var API Key = defaultClient.authentications['API Key'];
-API Key.apiKey = 'YOUR API KEY';
+// Configure API key authorization: API-Key
+var API-Key = defaultClient.authentications['API-Key'];
+API-Key.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//API Key.apiKeyPrefix = 'Token';
+//API-Key.apiKeyPrefix = 'Token';
 
 var apiInstance = new radiomanager.TagApi();
-
-var id = 789; // Number | ID of Tag **(Required)**
-
+var id = 0; // Number | ID of Tag **(Required)**
 apiInstance.deleteTagById(id).then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
 }, function(error) {
@@ -94,9 +94,11 @@ apiInstance.deleteTagById(id).then(function(data) {
 
 ### Parameters
 
+
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **Number**| ID of Tag **(Required)** | 
+ **id** | **Number**| ID of Tag **(Required)** | [default to 0]
 
 ### Return type
 
@@ -104,15 +106,16 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[API Key](../README.md#API Key)
+[API-Key](../README.md#API-Key)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
-<a name="getTagById"></a>
-# **getTagById**
+
+## getTagById
+
 > TagResult getTagById(id, opts)
 
 Get tags by id
@@ -120,21 +123,19 @@ Get tags by id
 Get tags by id
 
 ### Example
+
 ```javascript
 var radiomanager = require('radiomanager');
 var defaultClient = radiomanager.ApiClient.instance;
-
-// Configure API key authorization: API Key
-var API Key = defaultClient.authentications['API Key'];
-API Key.apiKey = 'YOUR API KEY';
+// Configure API key authorization: API-Key
+var API-Key = defaultClient.authentications['API-Key'];
+API-Key.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//API Key.apiKeyPrefix = 'Token';
+//API-Key.apiKeyPrefix = 'Token';
 
 var apiInstance = new radiomanager.TagApi();
-
-var id = 789; // Number | ID of Tag **(Required)**
-
-var opts = { 
+var id = 0; // Number | ID of Tag **(Required)**
+var opts = {
   'externalStationId': 789 // Number | Query on a different (content providing) station *(Optional)*
 };
 apiInstance.getTagById(id, opts).then(function(data) {
@@ -147,9 +148,11 @@ apiInstance.getTagById(id, opts).then(function(data) {
 
 ### Parameters
 
+
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **Number**| ID of Tag **(Required)** | 
+ **id** | **Number**| ID of Tag **(Required)** | [default to 0]
  **externalStationId** | **Number**| Query on a different (content providing) station *(Optional)* | [optional] 
 
 ### Return type
@@ -158,15 +161,16 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[API Key](../README.md#API Key)
+[API-Key](../README.md#API-Key)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
-<a name="listTags"></a>
-# **listTags**
+
+## listTags
+
 > TagResults listTags(opts)
 
 Get a list of all the tags currently in your station.
@@ -174,19 +178,18 @@ Get a list of all the tags currently in your station.
 Get a list of all the tags currently in your station. This feature supports pagination and will give a maximum results of 50 tags back.
 
 ### Example
+
 ```javascript
 var radiomanager = require('radiomanager');
 var defaultClient = radiomanager.ApiClient.instance;
-
-// Configure API key authorization: API Key
-var API Key = defaultClient.authentications['API Key'];
-API Key.apiKey = 'YOUR API KEY';
+// Configure API key authorization: API-Key
+var API-Key = defaultClient.authentications['API-Key'];
+API-Key.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//API Key.apiKeyPrefix = 'Token';
+//API-Key.apiKeyPrefix = 'Token';
 
 var apiInstance = new radiomanager.TagApi();
-
-var opts = { 
+var opts = {
   'page': 789, // Number | Current page *(Optional)*
   'programId': 789, // Number | Search on Program ID *(Optional)* `(Relation)`
   'itemId': 789, // Number | Search on Item ID *(Optional)* `(Relation)`
@@ -207,6 +210,8 @@ apiInstance.listTags(opts).then(function(data) {
 
 ### Parameters
 
+
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **page** | **Number**| Current page *(Optional)* | [optional] 
@@ -225,15 +230,16 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[API Key](../README.md#API Key)
+[API-Key](../README.md#API-Key)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
-<a name="updateTagByID"></a>
-# **updateTagByID**
+
+## updateTagByID
+
 > Success updateTagByID(id, opts)
 
 Update tag by id
@@ -241,21 +247,19 @@ Update tag by id
 Update tag by id
 
 ### Example
+
 ```javascript
 var radiomanager = require('radiomanager');
 var defaultClient = radiomanager.ApiClient.instance;
-
-// Configure API key authorization: API Key
-var API Key = defaultClient.authentications['API Key'];
-API Key.apiKey = 'YOUR API KEY';
+// Configure API key authorization: API-Key
+var API-Key = defaultClient.authentications['API-Key'];
+API-Key.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//API Key.apiKeyPrefix = 'Token';
+//API-Key.apiKeyPrefix = 'Token';
 
 var apiInstance = new radiomanager.TagApi();
-
-var id = 789; // Number | ID of Tag **(Required)**
-
-var opts = { 
+var id = 0; // Number | ID of Tag **(Required)**
+var opts = {
   'data': new radiomanager.TagDataInput() // TagDataInput | Data *(Optional)*
 };
 apiInstance.updateTagByID(id, opts).then(function(data) {
@@ -268,9 +272,11 @@ apiInstance.updateTagByID(id, opts).then(function(data) {
 
 ### Parameters
 
+
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **Number**| ID of Tag **(Required)** | 
+ **id** | **Number**| ID of Tag **(Required)** | [default to 0]
  **data** | [**TagDataInput**](TagDataInput.md)| Data *(Optional)* | [optional] 
 
 ### Return type
@@ -279,10 +285,10 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[API Key](../README.md#API Key)
+[API-Key](../README.md#API-Key)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: application/json
+- **Accept**: application/json
 

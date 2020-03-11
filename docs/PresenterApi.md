@@ -1,6 +1,6 @@
 # radiomanager.PresenterApi
 
-All URIs are relative to *https://staging.radiomanager.io/api/v2*
+All URIs are relative to *https://radiomanager.io/api/v2*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -11,8 +11,9 @@ Method | HTTP request | Description
 [**updatePresenterByID**](PresenterApi.md#updatePresenterByID) | **PATCH** /presenters/{id} | Update presenter by id
 
 
-<a name="createPresenter"></a>
-# **createPresenter**
+
+## createPresenter
+
 > PostSuccess createPresenter(data)
 
 Create presenter.
@@ -20,20 +21,18 @@ Create presenter.
 Create presenter.
 
 ### Example
+
 ```javascript
 var radiomanager = require('radiomanager');
 var defaultClient = radiomanager.ApiClient.instance;
-
-// Configure API key authorization: API Key
-var API Key = defaultClient.authentications['API Key'];
-API Key.apiKey = 'YOUR API KEY';
+// Configure API key authorization: API-Key
+var API-Key = defaultClient.authentications['API-Key'];
+API-Key.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//API Key.apiKeyPrefix = 'Token';
+//API-Key.apiKeyPrefix = 'Token';
 
 var apiInstance = new radiomanager.PresenterApi();
-
 var data = new radiomanager.PresenterDataInput(); // PresenterDataInput | Data **(Required)**
-
 apiInstance.createPresenter(data).then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
 }, function(error) {
@@ -43,6 +42,8 @@ apiInstance.createPresenter(data).then(function(data) {
 ```
 
 ### Parameters
+
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -54,15 +55,16 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[API Key](../README.md#API Key)
+[API-Key](../README.md#API-Key)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: application/json
+- **Accept**: application/json
 
-<a name="deletePresenterById"></a>
-# **deletePresenterById**
+
+## deletePresenterById
+
 > Success deletePresenterById(id)
 
 Delete presenter by id
@@ -70,20 +72,18 @@ Delete presenter by id
 Delete presenter by id
 
 ### Example
+
 ```javascript
 var radiomanager = require('radiomanager');
 var defaultClient = radiomanager.ApiClient.instance;
-
-// Configure API key authorization: API Key
-var API Key = defaultClient.authentications['API Key'];
-API Key.apiKey = 'YOUR API KEY';
+// Configure API key authorization: API-Key
+var API-Key = defaultClient.authentications['API-Key'];
+API-Key.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//API Key.apiKeyPrefix = 'Token';
+//API-Key.apiKeyPrefix = 'Token';
 
 var apiInstance = new radiomanager.PresenterApi();
-
-var id = 789; // Number | id of presenter
-
+var id = 0; // Number | id of presenter
 apiInstance.deletePresenterById(id).then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
 }, function(error) {
@@ -94,9 +94,11 @@ apiInstance.deletePresenterById(id).then(function(data) {
 
 ### Parameters
 
+
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **Number**| id of presenter | 
+ **id** | **Number**| id of presenter | [default to 0]
 
 ### Return type
 
@@ -104,15 +106,16 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[API Key](../README.md#API Key)
+[API-Key](../README.md#API-Key)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
-<a name="getPresenterById"></a>
-# **getPresenterById**
+
+## getPresenterById
+
 > PresenterResult getPresenterById(id, opts)
 
 Get presenter by id
@@ -120,21 +123,19 @@ Get presenter by id
 Get presenter by id
 
 ### Example
+
 ```javascript
 var radiomanager = require('radiomanager');
 var defaultClient = radiomanager.ApiClient.instance;
-
-// Configure API key authorization: API Key
-var API Key = defaultClient.authentications['API Key'];
-API Key.apiKey = 'YOUR API KEY';
+// Configure API key authorization: API-Key
+var API-Key = defaultClient.authentications['API-Key'];
+API-Key.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//API Key.apiKeyPrefix = 'Token';
+//API-Key.apiKeyPrefix = 'Token';
 
 var apiInstance = new radiomanager.PresenterApi();
-
-var id = 789; // Number | id of Presenter
-
-var opts = { 
+var id = 0; // Number | id of Presenter
+var opts = {
   'externalStationId': 789 // Number | Query on a different (content providing) station *(Optional)*
 };
 apiInstance.getPresenterById(id, opts).then(function(data) {
@@ -147,9 +148,11 @@ apiInstance.getPresenterById(id, opts).then(function(data) {
 
 ### Parameters
 
+
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **Number**| id of Presenter | 
+ **id** | **Number**| id of Presenter | [default to 0]
  **externalStationId** | **Number**| Query on a different (content providing) station *(Optional)* | [optional] 
 
 ### Return type
@@ -158,15 +161,16 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[API Key](../README.md#API Key)
+[API-Key](../README.md#API-Key)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
-<a name="listPresenters"></a>
-# **listPresenters**
+
+## listPresenters
+
 > PresenterResults listPresenters(opts)
 
 Get all presenters.
@@ -174,19 +178,18 @@ Get all presenters.
 List all presenters.
 
 ### Example
+
 ```javascript
 var radiomanager = require('radiomanager');
 var defaultClient = radiomanager.ApiClient.instance;
-
-// Configure API key authorization: API Key
-var API Key = defaultClient.authentications['API Key'];
-API Key.apiKey = 'YOUR API KEY';
+// Configure API key authorization: API-Key
+var API-Key = defaultClient.authentications['API-Key'];
+API-Key.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//API Key.apiKeyPrefix = 'Token';
+//API-Key.apiKeyPrefix = 'Token';
 
 var apiInstance = new radiomanager.PresenterApi();
-
-var opts = { 
+var opts = {
   'page': 789, // Number | Current page *(Optional)*
   'programId': 789, // Number | Search on Program ID *(Optional)* `(Relation)`
   'broadcastId': 789, // Number | Search on Broadcast ID *(Optional)* `(Relation)`
@@ -206,6 +209,8 @@ apiInstance.listPresenters(opts).then(function(data) {
 
 ### Parameters
 
+
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **page** | **Number**| Current page *(Optional)* | [optional] 
@@ -223,15 +228,16 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[API Key](../README.md#API Key)
+[API-Key](../README.md#API-Key)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
-<a name="updatePresenterByID"></a>
-# **updatePresenterByID**
+
+## updatePresenterByID
+
 > Success updatePresenterByID(id, opts)
 
 Update presenter by id
@@ -239,21 +245,19 @@ Update presenter by id
 Update presenter by id
 
 ### Example
+
 ```javascript
 var radiomanager = require('radiomanager');
 var defaultClient = radiomanager.ApiClient.instance;
-
-// Configure API key authorization: API Key
-var API Key = defaultClient.authentications['API Key'];
-API Key.apiKey = 'YOUR API KEY';
+// Configure API key authorization: API-Key
+var API-Key = defaultClient.authentications['API-Key'];
+API-Key.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//API Key.apiKeyPrefix = 'Token';
+//API-Key.apiKeyPrefix = 'Token';
 
 var apiInstance = new radiomanager.PresenterApi();
-
-var id = 789; // Number | id of Presenter
-
-var opts = { 
+var id = 0; // Number | id of Presenter
+var opts = {
   'data': new radiomanager.PresenterDataInput() // PresenterDataInput | Data *(Optional)*
 };
 apiInstance.updatePresenterByID(id, opts).then(function(data) {
@@ -266,9 +270,11 @@ apiInstance.updatePresenterByID(id, opts).then(function(data) {
 
 ### Parameters
 
+
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **Number**| id of Presenter | 
+ **id** | **Number**| id of Presenter | [default to 0]
  **data** | [**PresenterDataInput**](PresenterDataInput.md)| Data *(Optional)* | [optional] 
 
 ### Return type
@@ -277,10 +283,10 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[API Key](../README.md#API Key)
+[API-Key](../README.md#API-Key)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: application/json
+- **Accept**: application/json
 

@@ -1,12 +1,13 @@
 # radiomanager.Broadcast
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **programId** | **Number** |  | [optional] 
 **modelTypeId** | **Number** |  | [optional] 
 **stationId** | **Number** |  | [optional] 
-**fieldValues** | **Object** |  | [optional] 
+**fieldValues** | [**Object**](.md) |  | [optional] 
 **title** | **String** |  | [optional] 
 **start** | **Date** |  | [optional] 
 **stop** | **Date** |  | [optional] 
@@ -27,15 +28,15 @@ Name | Type | Description | Notes
 **ptyCodeId** | **Number** |  | [optional] 
 
 
-<a name="RepetitionTypeEnum"></a>
+
 ## Enum: RepetitionTypeEnum
 
 
 * `1 week` (value: `"1 week"`)
 
-* `2 weeks` (value: `"2 weeks"`)
+* `2 week` (value: `"2 week"`)
 
-* `4 weeks` (value: `"4 weeks"`)
+* `4 week` (value: `"4 week"`)
 
 * `1 month` (value: `"1 month"`)
 

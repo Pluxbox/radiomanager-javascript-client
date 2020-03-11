@@ -1,6 +1,6 @@
 # radiomanager.UserApi
 
-All URIs are relative to *https://staging.radiomanager.io/api/v2*
+All URIs are relative to *https://radiomanager.io/api/v2*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -10,8 +10,9 @@ Method | HTTP request | Description
 [**listUsers**](UserApi.md#listUsers) | **GET** /users | Get all users.
 
 
-<a name="deleteUserById"></a>
-# **deleteUserById**
+
+## deleteUserById
+
 > Success deleteUserById(id)
 
 Remove user from station by Id
@@ -19,20 +20,18 @@ Remove user from station by Id
 Remove user from station by Id
 
 ### Example
+
 ```javascript
 var radiomanager = require('radiomanager');
 var defaultClient = radiomanager.ApiClient.instance;
-
-// Configure API key authorization: API Key
-var API Key = defaultClient.authentications['API Key'];
-API Key.apiKey = 'YOUR API KEY';
+// Configure API key authorization: API-Key
+var API-Key = defaultClient.authentications['API-Key'];
+API-Key.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//API Key.apiKeyPrefix = 'Token';
+//API-Key.apiKeyPrefix = 'Token';
 
 var apiInstance = new radiomanager.UserApi();
-
-var id = 789; // Number | id of User
-
+var id = 0; // Number | id of User
 apiInstance.deleteUserById(id).then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
 }, function(error) {
@@ -43,9 +42,11 @@ apiInstance.deleteUserById(id).then(function(data) {
 
 ### Parameters
 
+
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **Number**| id of User | 
+ **id** | **Number**| id of User | [default to 0]
 
 ### Return type
 
@@ -53,15 +54,16 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[API Key](../README.md#API Key)
+[API-Key](../README.md#API-Key)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
-<a name="getUserById"></a>
-# **getUserById**
+
+## getUserById
+
 > UserResult getUserById(id)
 
 Get user by id
@@ -69,20 +71,18 @@ Get user by id
 Get user by id
 
 ### Example
+
 ```javascript
 var radiomanager = require('radiomanager');
 var defaultClient = radiomanager.ApiClient.instance;
-
-// Configure API key authorization: API Key
-var API Key = defaultClient.authentications['API Key'];
-API Key.apiKey = 'YOUR API KEY';
+// Configure API key authorization: API-Key
+var API-Key = defaultClient.authentications['API-Key'];
+API-Key.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//API Key.apiKeyPrefix = 'Token';
+//API-Key.apiKeyPrefix = 'Token';
 
 var apiInstance = new radiomanager.UserApi();
-
-var id = 789; // Number | id of User
-
+var id = 0; // Number | id of User
 apiInstance.getUserById(id).then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
 }, function(error) {
@@ -93,9 +93,11 @@ apiInstance.getUserById(id).then(function(data) {
 
 ### Parameters
 
+
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **Number**| id of User | 
+ **id** | **Number**| id of User | [default to 0]
 
 ### Return type
 
@@ -103,36 +105,35 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[API Key](../README.md#API Key)
+[API-Key](../README.md#API-Key)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
-<a name="inviteUserByMail"></a>
-# **inviteUserByMail**
-> InviteUserSuccess inviteUserByMail(data)
+
+## inviteUserByMail
+
+> Object inviteUserByMail(data)
 
 Invite user by mail
 
 Invite user by mail
 
 ### Example
+
 ```javascript
 var radiomanager = require('radiomanager');
 var defaultClient = radiomanager.ApiClient.instance;
-
-// Configure API key authorization: API Key
-var API Key = defaultClient.authentications['API Key'];
-API Key.apiKey = 'YOUR API KEY';
+// Configure API key authorization: API-Key
+var API-Key = defaultClient.authentications['API-Key'];
+API-Key.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//API Key.apiKeyPrefix = 'Token';
+//API-Key.apiKeyPrefix = 'Token';
 
 var apiInstance = new radiomanager.UserApi();
-
 var data = new radiomanager.InviteUserData(); // InviteUserData | Data **(Required)**
-
 apiInstance.inviteUserByMail(data).then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
 }, function(error) {
@@ -143,25 +144,28 @@ apiInstance.inviteUserByMail(data).then(function(data) {
 
 ### Parameters
 
+
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **data** | [**InviteUserData**](InviteUserData.md)| Data **(Required)** | 
 
 ### Return type
 
-[**InviteUserSuccess**](InviteUserSuccess.md)
+**Object**
 
 ### Authorization
 
-[API Key](../README.md#API Key)
+[API-Key](../README.md#API-Key)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: application/json
+- **Accept**: application/json
 
-<a name="listUsers"></a>
-# **listUsers**
+
+## listUsers
+
 > UserResults listUsers(opts)
 
 Get all users.
@@ -169,19 +173,18 @@ Get all users.
 List all users.
 
 ### Example
+
 ```javascript
 var radiomanager = require('radiomanager');
 var defaultClient = radiomanager.ApiClient.instance;
-
-// Configure API key authorization: API Key
-var API Key = defaultClient.authentications['API Key'];
-API Key.apiKey = 'YOUR API KEY';
+// Configure API key authorization: API-Key
+var API-Key = defaultClient.authentications['API-Key'];
+API-Key.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//API Key.apiKeyPrefix = 'Token';
+//API-Key.apiKeyPrefix = 'Token';
 
 var apiInstance = new radiomanager.UserApi();
-
-var opts = { 
+var opts = {
   'page': 1, // Number | Current page *(Optional)*
   'roleId': 789, // Number | Search on Role ID *(Optional)*
   'limit': 789, // Number | Results per page *(Optional)*
@@ -198,6 +201,8 @@ apiInstance.listUsers(opts).then(function(data) {
 
 ### Parameters
 
+
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **page** | **Number**| Current page *(Optional)* | [optional] [default to 1]
@@ -212,10 +217,10 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[API Key](../README.md#API Key)
+[API-Key](../README.md#API-Key)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 

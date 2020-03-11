@@ -1,6 +1,7 @@
 # radiomanager.ModelTypeResults
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **currentPage** | **Number** |  | [optional] 

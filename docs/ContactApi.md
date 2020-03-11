@@ -1,6 +1,6 @@
 # radiomanager.ContactApi
 
-All URIs are relative to *https://staging.radiomanager.io/api/v2*
+All URIs are relative to *https://radiomanager.io/api/v2*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -11,8 +11,9 @@ Method | HTTP request | Description
 [**updateContactByID**](ContactApi.md#updateContactByID) | **PATCH** /contacts/{id} | Update contact by id
 
 
-<a name="createContact"></a>
-# **createContact**
+
+## createContact
+
 > PostSuccess createContact(data)
 
 Create contact.
@@ -20,20 +21,18 @@ Create contact.
 Create contact.
 
 ### Example
+
 ```javascript
 var radiomanager = require('radiomanager');
 var defaultClient = radiomanager.ApiClient.instance;
-
-// Configure API key authorization: API Key
-var API Key = defaultClient.authentications['API Key'];
-API Key.apiKey = 'YOUR API KEY';
+// Configure API key authorization: API-Key
+var API-Key = defaultClient.authentications['API-Key'];
+API-Key.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//API Key.apiKeyPrefix = 'Token';
+//API-Key.apiKeyPrefix = 'Token';
 
 var apiInstance = new radiomanager.ContactApi();
-
 var data = new radiomanager.ContactDataInput(); // ContactDataInput | Data **(Required)**
-
 apiInstance.createContact(data).then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
 }, function(error) {
@@ -43,6 +42,8 @@ apiInstance.createContact(data).then(function(data) {
 ```
 
 ### Parameters
+
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -54,15 +55,16 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[API Key](../README.md#API Key)
+[API-Key](../README.md#API-Key)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: application/json
+- **Accept**: application/json
 
-<a name="deleteContactById"></a>
-# **deleteContactById**
+
+## deleteContactById
+
 > Success deleteContactById(id)
 
 Delete contact by id
@@ -70,20 +72,18 @@ Delete contact by id
 Delete contact by id
 
 ### Example
+
 ```javascript
 var radiomanager = require('radiomanager');
 var defaultClient = radiomanager.ApiClient.instance;
-
-// Configure API key authorization: API Key
-var API Key = defaultClient.authentications['API Key'];
-API Key.apiKey = 'YOUR API KEY';
+// Configure API key authorization: API-Key
+var API-Key = defaultClient.authentications['API-Key'];
+API-Key.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//API Key.apiKeyPrefix = 'Token';
+//API-Key.apiKeyPrefix = 'Token';
 
 var apiInstance = new radiomanager.ContactApi();
-
-var id = 789; // Number | ID of Contact **(Required)**
-
+var id = 0; // Number | ID of Contact **(Required)**
 apiInstance.deleteContactById(id).then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
 }, function(error) {
@@ -94,9 +94,11 @@ apiInstance.deleteContactById(id).then(function(data) {
 
 ### Parameters
 
+
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **Number**| ID of Contact **(Required)** | 
+ **id** | **Number**| ID of Contact **(Required)** | [default to 0]
 
 ### Return type
 
@@ -104,15 +106,16 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[API Key](../README.md#API Key)
+[API-Key](../README.md#API-Key)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
-<a name="getContactById"></a>
-# **getContactById**
+
+## getContactById
+
 > ContactResult getContactById(id, opts)
 
 Get contact by id
@@ -120,21 +123,19 @@ Get contact by id
 Get contact by id
 
 ### Example
+
 ```javascript
 var radiomanager = require('radiomanager');
 var defaultClient = radiomanager.ApiClient.instance;
-
-// Configure API key authorization: API Key
-var API Key = defaultClient.authentications['API Key'];
-API Key.apiKey = 'YOUR API KEY';
+// Configure API key authorization: API-Key
+var API-Key = defaultClient.authentications['API-Key'];
+API-Key.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//API Key.apiKeyPrefix = 'Token';
+//API-Key.apiKeyPrefix = 'Token';
 
 var apiInstance = new radiomanager.ContactApi();
-
-var id = 789; // Number | ID of Contact **(Required)**
-
-var opts = { 
+var id = 0; // Number | ID of Contact **(Required)**
+var opts = {
   'externalStationId': 789 // Number | Query on a different (content providing) station *(Optional)*
 };
 apiInstance.getContactById(id, opts).then(function(data) {
@@ -147,9 +148,11 @@ apiInstance.getContactById(id, opts).then(function(data) {
 
 ### Parameters
 
+
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **Number**| ID of Contact **(Required)** | 
+ **id** | **Number**| ID of Contact **(Required)** | [default to 0]
  **externalStationId** | **Number**| Query on a different (content providing) station *(Optional)* | [optional] 
 
 ### Return type
@@ -158,15 +161,16 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[API Key](../README.md#API Key)
+[API-Key](../README.md#API-Key)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
-<a name="listContacts"></a>
-# **listContacts**
+
+## listContacts
+
 > ContactResults listContacts(opts)
 
 Get all contacts.
@@ -174,19 +178,18 @@ Get all contacts.
 List all contacts.
 
 ### Example
+
 ```javascript
 var radiomanager = require('radiomanager');
 var defaultClient = radiomanager.ApiClient.instance;
-
-// Configure API key authorization: API Key
-var API Key = defaultClient.authentications['API Key'];
-API Key.apiKey = 'YOUR API KEY';
+// Configure API key authorization: API-Key
+var API-Key = defaultClient.authentications['API-Key'];
+API-Key.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//API Key.apiKeyPrefix = 'Token';
+//API-Key.apiKeyPrefix = 'Token';
 
 var apiInstance = new radiomanager.ContactApi();
-
-var opts = { 
+var opts = {
   'page': 1, // Number | Current page *(Optional)*
   'itemId': 789, // Number | Search on Item ID *(Optional)* `(Relation)`
   'modelTypeId': 789, // Number | Search on ModelType ID *(Optional)* `(Relation)`
@@ -206,6 +209,8 @@ apiInstance.listContacts(opts).then(function(data) {
 
 ### Parameters
 
+
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **page** | **Number**| Current page *(Optional)* | [optional] [default to 1]
@@ -223,15 +228,16 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[API Key](../README.md#API Key)
+[API-Key](../README.md#API-Key)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
-<a name="updateContactByID"></a>
-# **updateContactByID**
+
+## updateContactByID
+
 > Success updateContactByID(id, opts)
 
 Update contact by id
@@ -239,21 +245,19 @@ Update contact by id
 Update contact by id
 
 ### Example
+
 ```javascript
 var radiomanager = require('radiomanager');
 var defaultClient = radiomanager.ApiClient.instance;
-
-// Configure API key authorization: API Key
-var API Key = defaultClient.authentications['API Key'];
-API Key.apiKey = 'YOUR API KEY';
+// Configure API key authorization: API-Key
+var API-Key = defaultClient.authentications['API-Key'];
+API-Key.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//API Key.apiKeyPrefix = 'Token';
+//API-Key.apiKeyPrefix = 'Token';
 
 var apiInstance = new radiomanager.ContactApi();
-
-var id = 789; // Number | ID of Contact **(Required)**
-
-var opts = { 
+var id = 0; // Number | ID of Contact **(Required)**
+var opts = {
   'data': new radiomanager.ContactDataInput() // ContactDataInput | Data *(Optional)*
 };
 apiInstance.updateContactByID(id, opts).then(function(data) {
@@ -266,9 +270,11 @@ apiInstance.updateContactByID(id, opts).then(function(data) {
 
 ### Parameters
 
+
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **Number**| ID of Contact **(Required)** | 
+ **id** | **Number**| ID of Contact **(Required)** | [default to 0]
  **data** | [**ContactDataInput**](ContactDataInput.md)| Data *(Optional)* | [optional] 
 
 ### Return type
@@ -277,10 +283,10 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[API Key](../README.md#API Key)
+[API-Key](../README.md#API-Key)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: application/json
+- **Accept**: application/json
 

@@ -1,10 +1,11 @@
 # radiomanager.Program
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **modelTypeId** | **Number** |  | 
-**fieldValues** | **Object** |  | [optional] 
+**fieldValues** | [**Object**](.md) |  | [optional] 
 **title** | **String** |  | 
 **disabled** | **Boolean** |  | [optional] 
 **genreId** | **Number** |  | [optional] 

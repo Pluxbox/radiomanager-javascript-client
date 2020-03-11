@@ -1,6 +1,7 @@
 # radiomanager.PresenterRelations
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **programs** | [**PresenterRelationsPrograms**](PresenterRelationsPrograms.md) |  | [optional] 

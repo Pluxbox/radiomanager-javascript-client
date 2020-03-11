@@ -1,6 +1,7 @@
 # radiomanager.BroadcastRelations
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **genre** | [**BroadcastRelationsGenre**](BroadcastRelationsGenre.md) |  | [optional] 

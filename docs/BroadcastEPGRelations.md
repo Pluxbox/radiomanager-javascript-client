@@ -1,6 +1,7 @@
 # radiomanager.BroadcastEPGRelations
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **items** | [**BroadcastRelationsItems**](BroadcastRelationsItems.md) |  | [optional] 

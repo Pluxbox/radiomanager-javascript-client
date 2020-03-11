@@ -1,6 +1,6 @@
 # radiomanager.CampaignApi
 
-All URIs are relative to *https://staging.radiomanager.io/api/v2*
+All URIs are relative to *https://radiomanager.io/api/v2*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -11,8 +11,9 @@ Method | HTTP request | Description
 [**updateCampaignByID**](CampaignApi.md#updateCampaignByID) | **PATCH** /campaigns/{id} | Update campaign by id
 
 
-<a name="createCampaign"></a>
-# **createCampaign**
+
+## createCampaign
+
 > PostSuccess createCampaign(data)
 
 Create campaign.
@@ -20,20 +21,18 @@ Create campaign.
 Create campaign.
 
 ### Example
+
 ```javascript
 var radiomanager = require('radiomanager');
 var defaultClient = radiomanager.ApiClient.instance;
-
-// Configure API key authorization: API Key
-var API Key = defaultClient.authentications['API Key'];
-API Key.apiKey = 'YOUR API KEY';
+// Configure API key authorization: API-Key
+var API-Key = defaultClient.authentications['API-Key'];
+API-Key.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//API Key.apiKeyPrefix = 'Token';
+//API-Key.apiKeyPrefix = 'Token';
 
 var apiInstance = new radiomanager.CampaignApi();
-
 var data = new radiomanager.CampaignDataInput(); // CampaignDataInput | Data **(Required)**
-
 apiInstance.createCampaign(data).then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
 }, function(error) {
@@ -43,6 +42,8 @@ apiInstance.createCampaign(data).then(function(data) {
 ```
 
 ### Parameters
+
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -54,15 +55,16 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[API Key](../README.md#API Key)
+[API-Key](../README.md#API-Key)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: application/json
+- **Accept**: application/json
 
-<a name="deleteCampaignById"></a>
-# **deleteCampaignById**
+
+## deleteCampaignById
+
 > Success deleteCampaignById(id)
 
 Delete campaign by id
@@ -70,20 +72,18 @@ Delete campaign by id
 Delete campaign by id
 
 ### Example
+
 ```javascript
 var radiomanager = require('radiomanager');
 var defaultClient = radiomanager.ApiClient.instance;
-
-// Configure API key authorization: API Key
-var API Key = defaultClient.authentications['API Key'];
-API Key.apiKey = 'YOUR API KEY';
+// Configure API key authorization: API-Key
+var API-Key = defaultClient.authentications['API-Key'];
+API-Key.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//API Key.apiKeyPrefix = 'Token';
+//API-Key.apiKeyPrefix = 'Token';
 
 var apiInstance = new radiomanager.CampaignApi();
-
-var id = 789; // Number | ID of Campaign **(Required)**
-
+var id = 0; // Number | ID of Campaign **(Required)**
 apiInstance.deleteCampaignById(id).then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
 }, function(error) {
@@ -94,9 +94,11 @@ apiInstance.deleteCampaignById(id).then(function(data) {
 
 ### Parameters
 
+
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **Number**| ID of Campaign **(Required)** | 
+ **id** | **Number**| ID of Campaign **(Required)** | [default to 0]
 
 ### Return type
 
@@ -104,15 +106,16 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[API Key](../README.md#API Key)
+[API-Key](../README.md#API-Key)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
-<a name="getCampaignById"></a>
-# **getCampaignById**
+
+## getCampaignById
+
 > CampaignResult getCampaignById(id, opts)
 
 Get campaign by id
@@ -120,21 +123,19 @@ Get campaign by id
 Get campaign by id
 
 ### Example
+
 ```javascript
 var radiomanager = require('radiomanager');
 var defaultClient = radiomanager.ApiClient.instance;
-
-// Configure API key authorization: API Key
-var API Key = defaultClient.authentications['API Key'];
-API Key.apiKey = 'YOUR API KEY';
+// Configure API key authorization: API-Key
+var API-Key = defaultClient.authentications['API-Key'];
+API-Key.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//API Key.apiKeyPrefix = 'Token';
+//API-Key.apiKeyPrefix = 'Token';
 
 var apiInstance = new radiomanager.CampaignApi();
-
-var id = 789; // Number | ID of Campaign **(Required)**
-
-var opts = { 
+var id = 0; // Number | ID of Campaign **(Required)**
+var opts = {
   'externalStationId': 789 // Number | Query on a different (content providing) station *(Optional)*
 };
 apiInstance.getCampaignById(id, opts).then(function(data) {
@@ -147,9 +148,11 @@ apiInstance.getCampaignById(id, opts).then(function(data) {
 
 ### Parameters
 
+
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **Number**| ID of Campaign **(Required)** | 
+ **id** | **Number**| ID of Campaign **(Required)** | [default to 0]
  **externalStationId** | **Number**| Query on a different (content providing) station *(Optional)* | [optional] 
 
 ### Return type
@@ -158,15 +161,16 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[API Key](../README.md#API Key)
+[API-Key](../README.md#API-Key)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
-<a name="listCampaigns"></a>
-# **listCampaigns**
+
+## listCampaigns
+
 > CampaignResults listCampaigns(opts)
 
 Get all campaigns.
@@ -174,19 +178,18 @@ Get all campaigns.
 List all campaigns.
 
 ### Example
+
 ```javascript
 var radiomanager = require('radiomanager');
 var defaultClient = radiomanager.ApiClient.instance;
-
-// Configure API key authorization: API Key
-var API Key = defaultClient.authentications['API Key'];
-API Key.apiKey = 'YOUR API KEY';
+// Configure API key authorization: API-Key
+var API-Key = defaultClient.authentications['API-Key'];
+API-Key.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//API Key.apiKeyPrefix = 'Token';
+//API-Key.apiKeyPrefix = 'Token';
 
 var apiInstance = new radiomanager.CampaignApi();
-
-var opts = { 
+var opts = {
   'page': 789, // Number | Current page *(Optional)*
   'itemId': 789, // Number | Search on Item ID *(Optional)* `(Relation)`
   'modelTypeId': 789, // Number | Search on ModelType ID *(Optional)* `(Relation)`
@@ -207,6 +210,8 @@ apiInstance.listCampaigns(opts).then(function(data) {
 
 ### Parameters
 
+
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **page** | **Number**| Current page *(Optional)* | [optional] 
@@ -225,15 +230,16 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[API Key](../README.md#API Key)
+[API-Key](../README.md#API-Key)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
-<a name="updateCampaignByID"></a>
-# **updateCampaignByID**
+
+## updateCampaignByID
+
 > Success updateCampaignByID(id, opts)
 
 Update campaign by id
@@ -241,21 +247,19 @@ Update campaign by id
 Update campaign by id
 
 ### Example
+
 ```javascript
 var radiomanager = require('radiomanager');
 var defaultClient = radiomanager.ApiClient.instance;
-
-// Configure API key authorization: API Key
-var API Key = defaultClient.authentications['API Key'];
-API Key.apiKey = 'YOUR API KEY';
+// Configure API key authorization: API-Key
+var API-Key = defaultClient.authentications['API-Key'];
+API-Key.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//API Key.apiKeyPrefix = 'Token';
+//API-Key.apiKeyPrefix = 'Token';
 
 var apiInstance = new radiomanager.CampaignApi();
-
-var id = 789; // Number | ID of Campaign **(Required)**
-
-var opts = { 
+var id = 0; // Number | ID of Campaign **(Required)**
+var opts = {
   'data': new radiomanager.CampaignDataInput() // CampaignDataInput | Data *(Optional)*
 };
 apiInstance.updateCampaignByID(id, opts).then(function(data) {
@@ -268,9 +272,11 @@ apiInstance.updateCampaignByID(id, opts).then(function(data) {
 
 ### Parameters
 
+
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **Number**| ID of Campaign **(Required)** | 
+ **id** | **Number**| ID of Campaign **(Required)** | [default to 0]
  **data** | [**CampaignDataInput**](CampaignDataInput.md)| Data *(Optional)* | [optional] 
 
 ### Return type
@@ -279,10 +285,10 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[API Key](../README.md#API Key)
+[API-Key](../README.md#API-Key)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: application/json
+- **Accept**: application/json
 

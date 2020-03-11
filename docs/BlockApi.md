@@ -1,6 +1,6 @@
 # radiomanager.BlockApi
 
-All URIs are relative to *https://staging.radiomanager.io/api/v2*
+All URIs are relative to *https://radiomanager.io/api/v2*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -10,8 +10,9 @@ Method | HTTP request | Description
 [**listBlocks**](BlockApi.md#listBlocks) | **GET** /blocks | Get a list of all blocks currently in your station.
 
 
-<a name="getBlockById"></a>
-# **getBlockById**
+
+## getBlockById
+
 > BlockResult getBlockById(id, opts)
 
 Get block by id
@@ -19,21 +20,19 @@ Get block by id
 Get block by id
 
 ### Example
+
 ```javascript
 var radiomanager = require('radiomanager');
 var defaultClient = radiomanager.ApiClient.instance;
-
-// Configure API key authorization: API Key
-var API Key = defaultClient.authentications['API Key'];
-API Key.apiKey = 'YOUR API KEY';
+// Configure API key authorization: API-Key
+var API-Key = defaultClient.authentications['API-Key'];
+API-Key.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//API Key.apiKeyPrefix = 'Token';
+//API-Key.apiKeyPrefix = 'Token';
 
 var apiInstance = new radiomanager.BlockApi();
-
-var id = 789; // Number | ID of Block **(Required)**
-
-var opts = { 
+var id = 0; // Number | ID of Block **(Required)**
+var opts = {
   'externalStationId': 789 // Number | Query on a different (content providing) station *(Optional)*
 };
 apiInstance.getBlockById(id, opts).then(function(data) {
@@ -46,9 +45,11 @@ apiInstance.getBlockById(id, opts).then(function(data) {
 
 ### Parameters
 
+
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **Number**| ID of Block **(Required)** | 
+ **id** | **Number**| ID of Block **(Required)** | [default to 0]
  **externalStationId** | **Number**| Query on a different (content providing) station *(Optional)* | [optional] 
 
 ### Return type
@@ -57,15 +58,16 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[API Key](../README.md#API Key)
+[API-Key](../README.md#API-Key)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
-<a name="getCurrentBlock"></a>
-# **getCurrentBlock**
+
+## getCurrentBlock
+
 > BlockResult getCurrentBlock()
 
 Get current Block
@@ -73,15 +75,15 @@ Get current Block
 Get current Block
 
 ### Example
+
 ```javascript
 var radiomanager = require('radiomanager');
 var defaultClient = radiomanager.ApiClient.instance;
-
-// Configure API key authorization: API Key
-var API Key = defaultClient.authentications['API Key'];
-API Key.apiKey = 'YOUR API KEY';
+// Configure API key authorization: API-Key
+var API-Key = defaultClient.authentications['API-Key'];
+API-Key.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//API Key.apiKeyPrefix = 'Token';
+//API-Key.apiKeyPrefix = 'Token';
 
 var apiInstance = new radiomanager.BlockApi();
 apiInstance.getCurrentBlock().then(function(data) {
@@ -93,6 +95,7 @@ apiInstance.getCurrentBlock().then(function(data) {
 ```
 
 ### Parameters
+
 This endpoint does not need any parameter.
 
 ### Return type
@@ -101,15 +104,16 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-[API Key](../README.md#API Key)
+[API-Key](../README.md#API-Key)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
-<a name="getNextBlock"></a>
-# **getNextBlock**
+
+## getNextBlock
+
 > BlockResult getNextBlock()
 
 Get upcoming Block
@@ -117,15 +121,15 @@ Get upcoming Block
 Get upcoming Block
 
 ### Example
+
 ```javascript
 var radiomanager = require('radiomanager');
 var defaultClient = radiomanager.ApiClient.instance;
-
-// Configure API key authorization: API Key
-var API Key = defaultClient.authentications['API Key'];
-API Key.apiKey = 'YOUR API KEY';
+// Configure API key authorization: API-Key
+var API-Key = defaultClient.authentications['API-Key'];
+API-Key.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//API Key.apiKeyPrefix = 'Token';
+//API-Key.apiKeyPrefix = 'Token';
 
 var apiInstance = new radiomanager.BlockApi();
 apiInstance.getNextBlock().then(function(data) {
@@ -137,6 +141,7 @@ apiInstance.getNextBlock().then(function(data) {
 ```
 
 ### Parameters
+
 This endpoint does not need any parameter.
 
 ### Return type
@@ -145,15 +150,16 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-[API Key](../README.md#API Key)
+[API-Key](../README.md#API-Key)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
-<a name="listBlocks"></a>
-# **listBlocks**
+
+## listBlocks
+
 > BlockResults listBlocks(opts)
 
 Get a list of all blocks currently in your station.
@@ -161,19 +167,18 @@ Get a list of all blocks currently in your station.
 Get a list of all blocks currently in your station. This feature supports pagination and will give a maximum of 50 blocks back.
 
 ### Example
+
 ```javascript
 var radiomanager = require('radiomanager');
 var defaultClient = radiomanager.ApiClient.instance;
-
-// Configure API key authorization: API Key
-var API Key = defaultClient.authentications['API Key'];
-API Key.apiKey = 'YOUR API KEY';
+// Configure API key authorization: API-Key
+var API-Key = defaultClient.authentications['API-Key'];
+API-Key.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//API Key.apiKeyPrefix = 'Token';
+//API-Key.apiKeyPrefix = 'Token';
 
 var apiInstance = new radiomanager.BlockApi();
-
-var opts = { 
+var opts = {
   'page': 1, // Number | Current page *(Optional)*
   'broadcastId': 789, // Number | Search on Broadcast ID *(Optional)* `(Relation)`
   'itemId': 789, // Number | Search on Item ID *(Optional)* `(Relation)`
@@ -195,6 +200,8 @@ apiInstance.listBlocks(opts).then(function(data) {
 
 ### Parameters
 
+
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **page** | **Number**| Current page *(Optional)* | [optional] [default to 1]
@@ -214,10 +221,10 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[API Key](../README.md#API Key)
+[API-Key](../README.md#API-Key)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 

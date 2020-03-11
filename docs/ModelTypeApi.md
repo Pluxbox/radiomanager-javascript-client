@@ -1,6 +1,6 @@
 # radiomanager.ModelTypeApi
 
-All URIs are relative to *https://staging.radiomanager.io/api/v2*
+All URIs are relative to *https://radiomanager.io/api/v2*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -8,8 +8,9 @@ Method | HTTP request | Description
 [**listModelTypes**](ModelTypeApi.md#listModelTypes) | **GET** /model_types | Get all modelTypes.
 
 
-<a name="getModelTypeById"></a>
-# **getModelTypeById**
+
+## getModelTypeById
+
 > ModelTypeResult getModelTypeById(id, opts)
 
 Get modelType by id
@@ -17,21 +18,19 @@ Get modelType by id
 Get modelType by id
 
 ### Example
+
 ```javascript
 var radiomanager = require('radiomanager');
 var defaultClient = radiomanager.ApiClient.instance;
-
-// Configure API key authorization: API Key
-var API Key = defaultClient.authentications['API Key'];
-API Key.apiKey = 'YOUR API KEY';
+// Configure API key authorization: API-Key
+var API-Key = defaultClient.authentications['API-Key'];
+API-Key.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//API Key.apiKeyPrefix = 'Token';
+//API-Key.apiKeyPrefix = 'Token';
 
 var apiInstance = new radiomanager.ModelTypeApi();
-
-var id = 789; // Number | ID of ModelType **(Required)**
-
-var opts = { 
+var id = 0; // Number | ID of ModelType **(Required)**
+var opts = {
   'externalStationId': 789 // Number | Query on a different (content providing) station *(Optional)*
 };
 apiInstance.getModelTypeById(id, opts).then(function(data) {
@@ -44,9 +43,11 @@ apiInstance.getModelTypeById(id, opts).then(function(data) {
 
 ### Parameters
 
+
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **Number**| ID of ModelType **(Required)** | 
+ **id** | **Number**| ID of ModelType **(Required)** | [default to 0]
  **externalStationId** | **Number**| Query on a different (content providing) station *(Optional)* | [optional] 
 
 ### Return type
@@ -55,15 +56,16 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[API Key](../README.md#API Key)
+[API-Key](../README.md#API-Key)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
-<a name="listModelTypes"></a>
-# **listModelTypes**
+
+## listModelTypes
+
 > ModelTypeResults listModelTypes(opts)
 
 Get all modelTypes.
@@ -71,19 +73,18 @@ Get all modelTypes.
 List all modelTypes.
 
 ### Example
+
 ```javascript
 var radiomanager = require('radiomanager');
 var defaultClient = radiomanager.ApiClient.instance;
-
-// Configure API key authorization: API Key
-var API Key = defaultClient.authentications['API Key'];
-API Key.apiKey = 'YOUR API KEY';
+// Configure API key authorization: API-Key
+var API-Key = defaultClient.authentications['API-Key'];
+API-Key.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//API Key.apiKeyPrefix = 'Token';
+//API-Key.apiKeyPrefix = 'Token';
 
 var apiInstance = new radiomanager.ModelTypeApi();
-
-var opts = { 
+var opts = {
   'page': 789, // Number | Current page *(Optional)*
   'programId': 789, // Number | Search on Program ID *(Optional)*
   'broadcastId': 789, // Number | Search on Broadcast ID *(Optional)*
@@ -107,6 +108,8 @@ apiInstance.listModelTypes(opts).then(function(data) {
 
 ### Parameters
 
+
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **page** | **Number**| Current page *(Optional)* | [optional] 
@@ -128,10 +131,10 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[API Key](../README.md#API Key)
+[API-Key](../README.md#API-Key)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 

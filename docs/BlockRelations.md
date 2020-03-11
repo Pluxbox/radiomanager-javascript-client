@@ -1,6 +1,7 @@
 # radiomanager.BlockRelations
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **items** | [**BlockRelationsItems**](BlockRelationsItems.md) |  | [optional] 

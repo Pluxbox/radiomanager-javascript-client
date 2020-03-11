@@ -1,10 +1,11 @@
 # radiomanager.Campaign
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **modelTypeId** | **Number** |  | 
-**fieldValues** | **Object** |  | [optional] 
+**fieldValues** | [**Object**](.md) |  | [optional] 
 **title** | **String** |  | [optional] 
 **start** | **Date** |  | 
 **stop** | **Date** |  | 

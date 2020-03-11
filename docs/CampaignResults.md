@@ -1,6 +1,7 @@
 # radiomanager.CampaignResults
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **currentPage** | **Number** |  | [optional] 

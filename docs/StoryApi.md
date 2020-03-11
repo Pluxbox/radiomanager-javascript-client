@@ -1,6 +1,6 @@
 # radiomanager.StoryApi
 
-All URIs are relative to *https://staging.radiomanager.io/api/v2*
+All URIs are relative to *https://radiomanager.io/api/v2*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -11,8 +11,9 @@ Method | HTTP request | Description
 [**updateStoryByID**](StoryApi.md#updateStoryByID) | **PATCH** /stories/{id} | Update story by id
 
 
-<a name="createStory"></a>
-# **createStory**
+
+## createStory
+
 > PostSuccess createStory(data)
 
 Create story.
@@ -20,20 +21,18 @@ Create story.
 Create story.
 
 ### Example
+
 ```javascript
 var radiomanager = require('radiomanager');
 var defaultClient = radiomanager.ApiClient.instance;
-
-// Configure API key authorization: API Key
-var API Key = defaultClient.authentications['API Key'];
-API Key.apiKey = 'YOUR API KEY';
+// Configure API key authorization: API-Key
+var API-Key = defaultClient.authentications['API-Key'];
+API-Key.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//API Key.apiKeyPrefix = 'Token';
+//API-Key.apiKeyPrefix = 'Token';
 
 var apiInstance = new radiomanager.StoryApi();
-
 var data = new radiomanager.StoryDataInput(); // StoryDataInput | Data **(Required)**
-
 apiInstance.createStory(data).then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
 }, function(error) {
@@ -43,6 +42,8 @@ apiInstance.createStory(data).then(function(data) {
 ```
 
 ### Parameters
+
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -54,15 +55,16 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[API Key](../README.md#API Key)
+[API-Key](../README.md#API-Key)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: application/json
+- **Accept**: application/json
 
-<a name="deleteStoryById"></a>
-# **deleteStoryById**
+
+## deleteStoryById
+
 > Success deleteStoryById(id)
 
 Delete story by id
@@ -70,20 +72,18 @@ Delete story by id
 Delete story by id
 
 ### Example
+
 ```javascript
 var radiomanager = require('radiomanager');
 var defaultClient = radiomanager.ApiClient.instance;
-
-// Configure API key authorization: API Key
-var API Key = defaultClient.authentications['API Key'];
-API Key.apiKey = 'YOUR API KEY';
+// Configure API key authorization: API-Key
+var API-Key = defaultClient.authentications['API-Key'];
+API-Key.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//API Key.apiKeyPrefix = 'Token';
+//API-Key.apiKeyPrefix = 'Token';
 
 var apiInstance = new radiomanager.StoryApi();
-
-var id = 789; // Number | ID of Story **(Required)**
-
+var id = 0; // Number | ID of Story **(Required)**
 apiInstance.deleteStoryById(id).then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
 }, function(error) {
@@ -94,9 +94,11 @@ apiInstance.deleteStoryById(id).then(function(data) {
 
 ### Parameters
 
+
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **Number**| ID of Story **(Required)** | 
+ **id** | **Number**| ID of Story **(Required)** | [default to 0]
 
 ### Return type
 
@@ -104,15 +106,16 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[API Key](../README.md#API Key)
+[API-Key](../README.md#API-Key)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
-<a name="getStoryById"></a>
-# **getStoryById**
+
+## getStoryById
+
 > StoryResult getStoryById(id, opts)
 
 Get story by id
@@ -120,21 +123,19 @@ Get story by id
 Get story by id
 
 ### Example
+
 ```javascript
 var radiomanager = require('radiomanager');
 var defaultClient = radiomanager.ApiClient.instance;
-
-// Configure API key authorization: API Key
-var API Key = defaultClient.authentications['API Key'];
-API Key.apiKey = 'YOUR API KEY';
+// Configure API key authorization: API-Key
+var API-Key = defaultClient.authentications['API-Key'];
+API-Key.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//API Key.apiKeyPrefix = 'Token';
+//API-Key.apiKeyPrefix = 'Token';
 
 var apiInstance = new radiomanager.StoryApi();
-
-var id = 789; // Number | ID of Story **(Required)**
-
-var opts = { 
+var id = 0; // Number | ID of Story **(Required)**
+var opts = {
   'externalStationId': 789 // Number | Query on a different (content providing) station *(Optional)*
 };
 apiInstance.getStoryById(id, opts).then(function(data) {
@@ -147,9 +148,11 @@ apiInstance.getStoryById(id, opts).then(function(data) {
 
 ### Parameters
 
+
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **Number**| ID of Story **(Required)** | 
+ **id** | **Number**| ID of Story **(Required)** | [default to 0]
  **externalStationId** | **Number**| Query on a different (content providing) station *(Optional)* | [optional] 
 
 ### Return type
@@ -158,15 +161,16 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[API Key](../README.md#API Key)
+[API-Key](../README.md#API-Key)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
-<a name="listStories"></a>
-# **listStories**
+
+## listStories
+
 > StoryResults listStories(opts)
 
 Get all stories.
@@ -174,19 +178,18 @@ Get all stories.
 List all stories.
 
 ### Example
+
 ```javascript
 var radiomanager = require('radiomanager');
 var defaultClient = radiomanager.ApiClient.instance;
-
-// Configure API key authorization: API Key
-var API Key = defaultClient.authentications['API Key'];
-API Key.apiKey = 'YOUR API KEY';
+// Configure API key authorization: API-Key
+var API-Key = defaultClient.authentications['API-Key'];
+API-Key.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//API Key.apiKeyPrefix = 'Token';
+//API-Key.apiKeyPrefix = 'Token';
 
 var apiInstance = new radiomanager.StoryApi();
-
-var opts = { 
+var opts = {
   'page': 1, // Number | Current page *(Optional)*
   'itemId': 789, // Number | Search on Item ID *(Optional)* `(Relation)`
   'modelTypeId': 789, // Number | Search on ModelType ID *(Optional)* `(Relation)`
@@ -206,6 +209,8 @@ apiInstance.listStories(opts).then(function(data) {
 
 ### Parameters
 
+
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **page** | **Number**| Current page *(Optional)* | [optional] [default to 1]
@@ -223,15 +228,16 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[API Key](../README.md#API Key)
+[API-Key](../README.md#API-Key)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
-<a name="updateStoryByID"></a>
-# **updateStoryByID**
+
+## updateStoryByID
+
 > Success updateStoryByID(id, opts)
 
 Update story by id
@@ -239,21 +245,19 @@ Update story by id
 Update story by id
 
 ### Example
+
 ```javascript
 var radiomanager = require('radiomanager');
 var defaultClient = radiomanager.ApiClient.instance;
-
-// Configure API key authorization: API Key
-var API Key = defaultClient.authentications['API Key'];
-API Key.apiKey = 'YOUR API KEY';
+// Configure API key authorization: API-Key
+var API-Key = defaultClient.authentications['API-Key'];
+API-Key.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//API Key.apiKeyPrefix = 'Token';
+//API-Key.apiKeyPrefix = 'Token';
 
 var apiInstance = new radiomanager.StoryApi();
-
-var id = 789; // Number | ID of Story **(Required)**
-
-var opts = { 
+var id = 0; // Number | ID of Story **(Required)**
+var opts = {
   'data': new radiomanager.StoryDataInput() // StoryDataInput | Data *(Optional)*
 };
 apiInstance.updateStoryByID(id, opts).then(function(data) {
@@ -266,9 +270,11 @@ apiInstance.updateStoryByID(id, opts).then(function(data) {
 
 ### Parameters
 
+
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **Number**| ID of Story **(Required)** | 
+ **id** | **Number**| ID of Story **(Required)** | [default to 0]
  **data** | [**StoryDataInput**](StoryDataInput.md)| Data *(Optional)* | [optional] 
 
 ### Return type
@@ -277,10 +283,10 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[API Key](../README.md#API Key)
+[API-Key](../README.md#API-Key)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: application/json
+- **Accept**: application/json
 

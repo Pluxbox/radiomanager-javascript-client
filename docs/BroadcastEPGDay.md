@@ -1,6 +1,7 @@
 # radiomanager.BroadcastEPGDay
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **day** | **Date** |  | [optional] 
