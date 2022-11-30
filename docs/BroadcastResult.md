@@ -5,14 +5,14 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **Number** |  | 
-**updatedAt** | **Date** |  | 
-**createdAt** | **Date** |  | 
-**deletedAt** | **Date** |  | 
+**updatedAt** | **Date** |  | [optional] 
+**createdAt** | **Date** |  | [optional] 
+**deletedAt** | **Date** |  | [optional] 
 **externalStationId** | **Number** |  | [optional] 
 **programId** | **Number** |  | [optional] 
 **modelTypeId** | **Number** |  | [optional] 
 **stationId** | **Number** |  | [optional] 
-**fieldValues** | [**Object**](.md) |  | [optional] 
+**fieldValues** | **Object** |  | [optional] 
 **title** | **String** |  | [optional] 
 **start** | **Date** |  | [optional] 
 **stop** | **Date** |  | [optional] 
@@ -31,6 +31,8 @@ Name | Type | Description | Notes
 **repetitionStart** | **Date** |  | [optional] 
 **repetitionDays** | **String** |  | [optional] 
 **ptyCodeId** | **Number** |  | [optional] 
+**plannedInEpg** | **Number** |  | [optional] 
+**groupId** | **Number** |  | [optional] 
 **genre** | [**BroadcastRelationsGenre**](BroadcastRelationsGenre.md) |  | [optional] 
 **items** | [**BroadcastRelationsItems**](BroadcastRelationsItems.md) |  | [optional] 
 **blocks** | [**BroadcastRelationsBlocks**](BroadcastRelationsBlocks.md) |  | [optional] 
@@ -38,6 +40,7 @@ Name | Type | Description | Notes
 **tags** | [**BroadcastRelationsTags**](BroadcastRelationsTags.md) |  | [optional] 
 **presenters** | [**BroadcastRelationsPresenters**](BroadcastRelationsPresenters.md) |  | [optional] 
 **modelType** | [**BroadcastRelationsModelType**](BroadcastRelationsModelType.md) |  | [optional] 
+**group** | [**BroadcastRelationsGroup**](BroadcastRelationsGroup.md) |  | [optional] 
 
 
 

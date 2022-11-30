@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **modelTypeId** | **Number** |  | 
-**fieldValues** | [**Object**](.md) |  | [optional] 
+**fieldValues** | **Object** |  | [optional] 
 **email** | **String** |  | [optional] 
 **firstname** | **String** |  | 
 **lastname** | **String** |  | 

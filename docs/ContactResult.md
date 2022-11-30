@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 **deletedAt** | **Date** |  | [optional] 
 **externalStationId** | **Number** |  | [optional] 
 **modelTypeId** | **Number** |  | 
-**fieldValues** | [**Object**](.md) |  | [optional] 
+**fieldValues** | **Object** |  | [optional] 
 **email** | **String** |  | [optional] 
 **firstname** | **String** |  | 
 **lastname** | **String** |  | 

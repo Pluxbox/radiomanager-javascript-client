@@ -19,18 +19,18 @@ Get own station only
 ### Example
 
 ```javascript
-var radiomanager = require('radiomanager');
-var defaultClient = radiomanager.ApiClient.instance;
+import radiomanager from 'radiomanager';
+let defaultClient = radiomanager.ApiClient.instance;
 // Configure API key authorization: API-Key
-var API-Key = defaultClient.authentications['API-Key'];
+let API-Key = defaultClient.authentications['API-Key'];
 API-Key.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //API-Key.apiKeyPrefix = 'Token';
 
-var apiInstance = new radiomanager.StationApi();
-apiInstance.getStation().then(function(data) {
+let apiInstance = new radiomanager.StationApi();
+apiInstance.getStation().then((data) => {
   console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 

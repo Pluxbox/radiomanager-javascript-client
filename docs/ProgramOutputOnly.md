@@ -5,9 +5,9 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **Number** |  | 
-**updatedAt** | **Date** |  | 
-**createdAt** | **Date** |  | 
-**deletedAt** | **Date** |  | 
+**updatedAt** | **Date** |  | [optional] 
+**createdAt** | **Date** |  | [optional] 
+**deletedAt** | **Date** |  | [optional] 
 **externalStationId** | **Number** |  | [optional] 
 
 

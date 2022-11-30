@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 **modelTypeId** | **Number** |  | 
 **blockId** | **Number** |  | [optional] 
 **externalId** | **String** |  | [optional] 
-**fieldValues** | [**Object**](.md) |  | [optional] 
+**fieldValues** | **Object** |  | [optional] 
 **title** | **String** |  | [optional] 
 **duration** | **Number** |  | [optional] 
 **start** | **Date** |  | [optional] 

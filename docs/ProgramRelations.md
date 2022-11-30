@@ -11,5 +11,6 @@ Name | Type | Description | Notes
 **presenters** | [**ProgramRelationsPresenters**](ProgramRelationsPresenters.md) |  | [optional] 
 **tags** | [**ProgramRelationsTags**](ProgramRelationsTags.md) |  | [optional] 
 **modelType** | [**BroadcastRelationsModelType**](BroadcastRelationsModelType.md) |  | [optional] 
+**group** | [**BroadcastRelationsGroup**](BroadcastRelationsGroup.md) |  | [optional] 
 
 

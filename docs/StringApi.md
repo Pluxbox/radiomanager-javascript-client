@@ -10,29 +10,31 @@ Method | HTTP request | Description
 
 ## getStringsByName
 
-> TextString getStringsByName(name, fullModel)
+> TextString getStringsByName(name, opts)
 
 Get Strings (formatted)
 
-Get Strings (formatted)
+Get RadioText/DAB String for publication based on String Templates
 
 ### Example
 
 ```javascript
-var radiomanager = require('radiomanager');
-var defaultClient = radiomanager.ApiClient.instance;
+import radiomanager from 'radiomanager';
+let defaultClient = radiomanager.ApiClient.instance;
 // Configure API key authorization: API-Key
-var API-Key = defaultClient.authentications['API-Key'];
+let API-Key = defaultClient.authentications['API-Key'];
 API-Key.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //API-Key.apiKeyPrefix = 'Token';
 
-var apiInstance = new radiomanager.StringApi();
-var name = "name_example"; // String | Name of Strings **(Required)**
-var fullModel = true; // Boolean | Full model or content only **(Required)**
-apiInstance.getStringsByName(name, fullModel).then(function(data) {
+let apiInstance = new radiomanager.StringApi();
+let name = "name_example"; // String | Name of String Template **(Required)**
+let opts = {
+  'fullModel': true // Boolean | Full model or content only **(Optional)**
+};
+apiInstance.getStringsByName(name, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
@@ -41,11 +43,10 @@ apiInstance.getStringsByName(name, fullModel).then(function(data) {
 ### Parameters
 
 
-
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **name** | **String**| Name of Strings **(Required)** | 
- **fullModel** | **Boolean**| Full model or content only **(Required)** | [default to true]
+ **name** | **String**| Name of String Template **(Required)** | 
+ **fullModel** | **Boolean**| Full model or content only **(Optional)** | [optional] 
 
 ### Return type
 

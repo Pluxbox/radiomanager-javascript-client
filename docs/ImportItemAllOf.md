@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **modelTypeId** | **Number** |  | 
 **externalId** | **String** |  | 
-**fieldValues** | [**Object**](.md) |  | [optional] 
+**fieldValues** | **Object** |  | [optional] 
 **title** | **String** |  | [optional] 
 **duration** | **Number** |  | [optional] 
 **start** | **Date** |  | [optional] 
@@ -15,5 +15,6 @@ Name | Type | Description | Notes
 **details** | **String** |  | [optional] 
 **contacts** | **[Number]** |  | [optional] 
 **tags** | **[Number]** |  | [optional] 
+**broadcastId** | **Number** |  | [optional] 
 
 

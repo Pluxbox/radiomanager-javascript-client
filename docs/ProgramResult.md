@@ -5,15 +5,16 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **Number** |  | 
-**updatedAt** | **Date** |  | 
-**createdAt** | **Date** |  | 
-**deletedAt** | **Date** |  | 
+**updatedAt** | **Date** |  | [optional] 
+**createdAt** | **Date** |  | [optional] 
+**deletedAt** | **Date** |  | [optional] 
 **externalStationId** | **Number** |  | [optional] 
 **modelTypeId** | **Number** |  | 
-**fieldValues** | [**Object**](.md) |  | [optional] 
+**fieldValues** | **Object** |  | [optional] 
 **title** | **String** |  | 
 **disabled** | **Boolean** |  | [optional] 
 **genreId** | **Number** |  | [optional] 
+**groupId** | **Number** |  | [optional] 
 **description** | **String** |  | [optional] 
 **shortName** | **String** |  | [optional] 
 **mediumName** | **String** |  | [optional] 
@@ -29,5 +30,6 @@ Name | Type | Description | Notes
 **presenters** | [**ProgramRelationsPresenters**](ProgramRelationsPresenters.md) |  | [optional] 
 **tags** | [**ProgramRelationsTags**](ProgramRelationsTags.md) |  | [optional] 
 **modelType** | [**BroadcastRelationsModelType**](BroadcastRelationsModelType.md) |  | [optional] 
+**group** | [**BroadcastRelationsGroup**](BroadcastRelationsGroup.md) |  | [optional] 
 
 

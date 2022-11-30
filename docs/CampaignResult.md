@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 **item** | [**CampaignTemplateItem**](CampaignTemplateItem.md) |  | [optional] 
 **externalStationId** | **Number** |  | [optional] 
 **modelTypeId** | **Number** |  | 
-**fieldValues** | [**Object**](.md) |  | [optional] 
+**fieldValues** | **Object** |  | [optional] 
 **title** | **String** |  | [optional] 
 **start** | **Date** |  | 
 **stop** | **Date** |  | 

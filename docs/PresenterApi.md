@@ -14,7 +14,7 @@ Method | HTTP request | Description
 
 ## createPresenter
 
-> PostSuccess createPresenter(data)
+> InlineResponse2002 createPresenter(presenterDataInput)
 
 Create presenter.
 
@@ -23,19 +23,19 @@ Create presenter.
 ### Example
 
 ```javascript
-var radiomanager = require('radiomanager');
-var defaultClient = radiomanager.ApiClient.instance;
+import radiomanager from 'radiomanager';
+let defaultClient = radiomanager.ApiClient.instance;
 // Configure API key authorization: API-Key
-var API-Key = defaultClient.authentications['API-Key'];
+let API-Key = defaultClient.authentications['API-Key'];
 API-Key.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //API-Key.apiKeyPrefix = 'Token';
 
-var apiInstance = new radiomanager.PresenterApi();
-var data = new radiomanager.PresenterDataInput(); // PresenterDataInput | Data **(Required)**
-apiInstance.createPresenter(data).then(function(data) {
+let apiInstance = new radiomanager.PresenterApi();
+let presenterDataInput = new radiomanager.PresenterDataInput(); // PresenterDataInput | Data **(Required)**
+apiInstance.createPresenter(presenterDataInput).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
@@ -44,14 +44,13 @@ apiInstance.createPresenter(data).then(function(data) {
 ### Parameters
 
 
-
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **data** | [**PresenterDataInput**](PresenterDataInput.md)| Data **(Required)** | 
+ **presenterDataInput** | [**PresenterDataInput**](PresenterDataInput.md)| Data **(Required)** | 
 
 ### Return type
 
-[**PostSuccess**](PostSuccess.md)
+[**InlineResponse2002**](InlineResponse2002.md)
 
 ### Authorization
 
@@ -65,7 +64,7 @@ Name | Type | Description  | Notes
 
 ## deletePresenterById
 
-> Success deletePresenterById(id)
+> InlineResponse202 deletePresenterById(id)
 
 Delete presenter by id
 
@@ -74,19 +73,19 @@ Delete presenter by id
 ### Example
 
 ```javascript
-var radiomanager = require('radiomanager');
-var defaultClient = radiomanager.ApiClient.instance;
+import radiomanager from 'radiomanager';
+let defaultClient = radiomanager.ApiClient.instance;
 // Configure API key authorization: API-Key
-var API-Key = defaultClient.authentications['API-Key'];
+let API-Key = defaultClient.authentications['API-Key'];
 API-Key.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //API-Key.apiKeyPrefix = 'Token';
 
-var apiInstance = new radiomanager.PresenterApi();
-var id = 0; // Number | id of presenter
-apiInstance.deletePresenterById(id).then(function(data) {
+let apiInstance = new radiomanager.PresenterApi();
+let id = 789; // Number | id of presenter
+apiInstance.deletePresenterById(id).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
@@ -95,14 +94,13 @@ apiInstance.deletePresenterById(id).then(function(data) {
 ### Parameters
 
 
-
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **Number**| id of presenter | [default to 0]
+ **id** | **Number**| id of presenter | 
 
 ### Return type
 
-[**Success**](Success.md)
+[**InlineResponse202**](InlineResponse202.md)
 
 ### Authorization
 
@@ -116,7 +114,7 @@ Name | Type | Description  | Notes
 
 ## getPresenterById
 
-> PresenterResult getPresenterById(id, opts)
+> PresenterResult getPresenterById(id)
 
 Get presenter by id
 
@@ -125,22 +123,19 @@ Get presenter by id
 ### Example
 
 ```javascript
-var radiomanager = require('radiomanager');
-var defaultClient = radiomanager.ApiClient.instance;
+import radiomanager from 'radiomanager';
+let defaultClient = radiomanager.ApiClient.instance;
 // Configure API key authorization: API-Key
-var API-Key = defaultClient.authentications['API-Key'];
+let API-Key = defaultClient.authentications['API-Key'];
 API-Key.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //API-Key.apiKeyPrefix = 'Token';
 
-var apiInstance = new radiomanager.PresenterApi();
-var id = 0; // Number | id of Presenter
-var opts = {
-  'externalStationId': 789 // Number | Query on a different (content providing) station *(Optional)*
-};
-apiInstance.getPresenterById(id, opts).then(function(data) {
+let apiInstance = new radiomanager.PresenterApi();
+let id = 789; // Number | id of Presenter
+apiInstance.getPresenterById(id).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
@@ -149,11 +144,9 @@ apiInstance.getPresenterById(id, opts).then(function(data) {
 ### Parameters
 
 
-
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **Number**| id of Presenter | [default to 0]
- **externalStationId** | **Number**| Query on a different (content providing) station *(Optional)* | [optional] 
+ **id** | **Number**| id of Presenter | 
 
 ### Return type
 
@@ -171,7 +164,7 @@ Name | Type | Description  | Notes
 
 ## listPresenters
 
-> PresenterResults listPresenters(opts)
+> InlineResponse20010 listPresenters(opts)
 
 Get all presenters.
 
@@ -180,28 +173,28 @@ List all presenters.
 ### Example
 
 ```javascript
-var radiomanager = require('radiomanager');
-var defaultClient = radiomanager.ApiClient.instance;
+import radiomanager from 'radiomanager';
+let defaultClient = radiomanager.ApiClient.instance;
 // Configure API key authorization: API-Key
-var API-Key = defaultClient.authentications['API-Key'];
+let API-Key = defaultClient.authentications['API-Key'];
 API-Key.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //API-Key.apiKeyPrefix = 'Token';
 
-var apiInstance = new radiomanager.PresenterApi();
-var opts = {
-  'page': 789, // Number | Current page *(Optional)*
+let apiInstance = new radiomanager.PresenterApi();
+let opts = {
   'programId': 789, // Number | Search on Program ID *(Optional)* `(Relation)`
   'broadcastId': 789, // Number | Search on Broadcast ID *(Optional)* `(Relation)`
   'modelTypeId': 789, // Number | Search on ModelType ID (Optional)
+  'page': 1, // Number | Current page *(Optional)*
   'limit': 789, // Number | Results per page *(Optional)*
   'orderBy': "orderBy_example", // String | Field to order the results *(Optional)*
   'orderDirection': "orderDirection_example", // String | Direction of ordering *(Optional)*
   'externalStationId': 789 // Number | Query on a different (content providing) station *(Optional)*
 };
-apiInstance.listPresenters(opts).then(function(data) {
+apiInstance.listPresenters(opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
@@ -210,13 +203,12 @@ apiInstance.listPresenters(opts).then(function(data) {
 ### Parameters
 
 
-
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **page** | **Number**| Current page *(Optional)* | [optional] 
  **programId** | **Number**| Search on Program ID *(Optional)* &#x60;(Relation)&#x60; | [optional] 
  **broadcastId** | **Number**| Search on Broadcast ID *(Optional)* &#x60;(Relation)&#x60; | [optional] 
  **modelTypeId** | **Number**| Search on ModelType ID (Optional) | [optional] 
+ **page** | **Number**| Current page *(Optional)* | [optional] [default to 1]
  **limit** | **Number**| Results per page *(Optional)* | [optional] 
  **orderBy** | **String**| Field to order the results *(Optional)* | [optional] 
  **orderDirection** | **String**| Direction of ordering *(Optional)* | [optional] 
@@ -224,7 +216,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**PresenterResults**](PresenterResults.md)
+[**InlineResponse20010**](InlineResponse20010.md)
 
 ### Authorization
 
@@ -238,7 +230,7 @@ Name | Type | Description  | Notes
 
 ## updatePresenterByID
 
-> Success updatePresenterByID(id, opts)
+> InlineResponse202 updatePresenterByID(id, presenterDataInput)
 
 Update presenter by id
 
@@ -247,22 +239,20 @@ Update presenter by id
 ### Example
 
 ```javascript
-var radiomanager = require('radiomanager');
-var defaultClient = radiomanager.ApiClient.instance;
+import radiomanager from 'radiomanager';
+let defaultClient = radiomanager.ApiClient.instance;
 // Configure API key authorization: API-Key
-var API-Key = defaultClient.authentications['API-Key'];
+let API-Key = defaultClient.authentications['API-Key'];
 API-Key.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //API-Key.apiKeyPrefix = 'Token';
 
-var apiInstance = new radiomanager.PresenterApi();
-var id = 0; // Number | id of Presenter
-var opts = {
-  'data': new radiomanager.PresenterDataInput() // PresenterDataInput | Data *(Optional)*
-};
-apiInstance.updatePresenterByID(id, opts).then(function(data) {
+let apiInstance = new radiomanager.PresenterApi();
+let id = 789; // Number | id of Presenter
+let presenterDataInput = new radiomanager.PresenterDataInput(); // PresenterDataInput | Data *(Optional)*
+apiInstance.updatePresenterByID(id, presenterDataInput).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
@@ -271,15 +261,14 @@ apiInstance.updatePresenterByID(id, opts).then(function(data) {
 ### Parameters
 
 
-
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **Number**| id of Presenter | [default to 0]
- **data** | [**PresenterDataInput**](PresenterDataInput.md)| Data *(Optional)* | [optional] 
+ **id** | **Number**| id of Presenter | 
+ **presenterDataInput** | [**PresenterDataInput**](PresenterDataInput.md)| Data *(Optional)* | 
 
 ### Return type
 
-[**Success**](Success.md)
+[**InlineResponse202**](InlineResponse202.md)
 
 ### Authorization
 

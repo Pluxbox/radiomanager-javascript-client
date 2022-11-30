@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 **programId** | **Number** |  | [optional] 
 **modelTypeId** | **Number** |  | [optional] 
 **stationId** | **Number** |  | [optional] 
-**fieldValues** | [**Object**](.md) |  | [optional] 
+**fieldValues** | **Object** |  | [optional] 
 **title** | **String** |  | [optional] 
 **start** | **Date** |  | [optional] 
 **stop** | **Date** |  | [optional] 
@@ -26,6 +26,8 @@ Name | Type | Description | Notes
 **repetitionStart** | **Date** |  | [optional] 
 **repetitionDays** | **String** |  | [optional] 
 **ptyCodeId** | **Number** |  | [optional] 
+**plannedInEpg** | **Number** |  | [optional] 
+**groupId** | **Number** |  | [optional] 
 
 
 

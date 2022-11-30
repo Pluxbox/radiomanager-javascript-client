@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 ## getGenreById
 
-> GenreResult getGenreById(id, opts)
+> GenreResult getGenreById(id)
 
 Get genre by id
 
@@ -20,22 +20,19 @@ Get genre by id
 ### Example
 
 ```javascript
-var radiomanager = require('radiomanager');
-var defaultClient = radiomanager.ApiClient.instance;
+import radiomanager from 'radiomanager';
+let defaultClient = radiomanager.ApiClient.instance;
 // Configure API key authorization: API-Key
-var API-Key = defaultClient.authentications['API-Key'];
+let API-Key = defaultClient.authentications['API-Key'];
 API-Key.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //API-Key.apiKeyPrefix = 'Token';
 
-var apiInstance = new radiomanager.GenreApi();
-var id = 0; // Number | ID of Genre **(Required)**
-var opts = {
-  'externalStationId': 789 // Number | Query on a different (content providing) station *(Optional)*
-};
-apiInstance.getGenreById(id, opts).then(function(data) {
+let apiInstance = new radiomanager.GenreApi();
+let id = 789; // Number | 
+apiInstance.getGenreById(id).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
@@ -44,11 +41,9 @@ apiInstance.getGenreById(id, opts).then(function(data) {
 ### Parameters
 
 
-
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **Number**| ID of Genre **(Required)** | [default to 0]
- **externalStationId** | **Number**| Query on a different (content providing) station *(Optional)* | [optional] 
+ **id** | **Number**|  | 
 
 ### Return type
 
@@ -66,7 +61,7 @@ Name | Type | Description  | Notes
 
 ## listGenres
 
-> GenreResults listGenres(opts)
+> InlineResponse2006 listGenres(opts)
 
 List all genres.
 
@@ -75,28 +70,24 @@ List all genres.
 ### Example
 
 ```javascript
-var radiomanager = require('radiomanager');
-var defaultClient = radiomanager.ApiClient.instance;
+import radiomanager from 'radiomanager';
+let defaultClient = radiomanager.ApiClient.instance;
 // Configure API key authorization: API-Key
-var API-Key = defaultClient.authentications['API-Key'];
+let API-Key = defaultClient.authentications['API-Key'];
 API-Key.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //API-Key.apiKeyPrefix = 'Token';
 
-var apiInstance = new radiomanager.GenreApi();
-var opts = {
-  'page': 789, // Number | Current page *(Optional)*
-  'parentId': 789, // Number | Search on Parent ID of Genre *(Optional)*
-  'programId': 789, // Number | Search on Program ID *(Optional)* `(Relation)`
-  'broadcastId': 789, // Number | Search on Broadcast ID *(Optional)* `(Relation)`
+let apiInstance = new radiomanager.GenreApi();
+let opts = {
+  'page': 1, // Number | Current page *(Optional)*
   'limit': 789, // Number | Results per page *(Optional)*
   'orderBy': "orderBy_example", // String | Field to order the results *(Optional)*
-  'orderDirection': "orderDirection_example", // String | Direction of ordering *(Optional)*
-  'externalStationId': 789 // Number | Query on a different (content providing) station *(Optional)*
+  'orderDirection': "orderDirection_example" // String | Direction of ordering *(Optional)*
 };
-apiInstance.listGenres(opts).then(function(data) {
+apiInstance.listGenres(opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
@@ -105,21 +96,16 @@ apiInstance.listGenres(opts).then(function(data) {
 ### Parameters
 
 
-
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **page** | **Number**| Current page *(Optional)* | [optional] 
- **parentId** | **Number**| Search on Parent ID of Genre *(Optional)* | [optional] 
- **programId** | **Number**| Search on Program ID *(Optional)* &#x60;(Relation)&#x60; | [optional] 
- **broadcastId** | **Number**| Search on Broadcast ID *(Optional)* &#x60;(Relation)&#x60; | [optional] 
+ **page** | **Number**| Current page *(Optional)* | [optional] [default to 1]
  **limit** | **Number**| Results per page *(Optional)* | [optional] 
  **orderBy** | **String**| Field to order the results *(Optional)* | [optional] 
  **orderDirection** | **String**| Direction of ordering *(Optional)* | [optional] 
- **externalStationId** | **Number**| Query on a different (content providing) station *(Optional)* | [optional] 
 
 ### Return type
 
-[**GenreResults**](GenreResults.md)
+[**InlineResponse2006**](InlineResponse2006.md)
 
 ### Authorization
 

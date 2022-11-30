@@ -14,7 +14,7 @@ Method | HTTP request | Description
 
 ## createContact
 
-> PostSuccess createContact(data)
+> InlineResponse2002 createContact(contactDataInput)
 
 Create contact.
 
@@ -23,19 +23,19 @@ Create contact.
 ### Example
 
 ```javascript
-var radiomanager = require('radiomanager');
-var defaultClient = radiomanager.ApiClient.instance;
+import radiomanager from 'radiomanager';
+let defaultClient = radiomanager.ApiClient.instance;
 // Configure API key authorization: API-Key
-var API-Key = defaultClient.authentications['API-Key'];
+let API-Key = defaultClient.authentications['API-Key'];
 API-Key.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //API-Key.apiKeyPrefix = 'Token';
 
-var apiInstance = new radiomanager.ContactApi();
-var data = new radiomanager.ContactDataInput(); // ContactDataInput | Data **(Required)**
-apiInstance.createContact(data).then(function(data) {
+let apiInstance = new radiomanager.ContactApi();
+let contactDataInput = new radiomanager.ContactDataInput(); // ContactDataInput | Data **(Required)**
+apiInstance.createContact(contactDataInput).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
@@ -44,14 +44,13 @@ apiInstance.createContact(data).then(function(data) {
 ### Parameters
 
 
-
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **data** | [**ContactDataInput**](ContactDataInput.md)| Data **(Required)** | 
+ **contactDataInput** | [**ContactDataInput**](ContactDataInput.md)| Data **(Required)** | 
 
 ### Return type
 
-[**PostSuccess**](PostSuccess.md)
+[**InlineResponse2002**](InlineResponse2002.md)
 
 ### Authorization
 
@@ -65,7 +64,7 @@ Name | Type | Description  | Notes
 
 ## deleteContactById
 
-> Success deleteContactById(id)
+> InlineResponse202 deleteContactById(id)
 
 Delete contact by id
 
@@ -74,19 +73,19 @@ Delete contact by id
 ### Example
 
 ```javascript
-var radiomanager = require('radiomanager');
-var defaultClient = radiomanager.ApiClient.instance;
+import radiomanager from 'radiomanager';
+let defaultClient = radiomanager.ApiClient.instance;
 // Configure API key authorization: API-Key
-var API-Key = defaultClient.authentications['API-Key'];
+let API-Key = defaultClient.authentications['API-Key'];
 API-Key.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //API-Key.apiKeyPrefix = 'Token';
 
-var apiInstance = new radiomanager.ContactApi();
-var id = 0; // Number | ID of Contact **(Required)**
-apiInstance.deleteContactById(id).then(function(data) {
+let apiInstance = new radiomanager.ContactApi();
+let id = 789; // Number | ID of Contact **(Required)**
+apiInstance.deleteContactById(id).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
@@ -95,14 +94,13 @@ apiInstance.deleteContactById(id).then(function(data) {
 ### Parameters
 
 
-
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **Number**| ID of Contact **(Required)** | [default to 0]
+ **id** | **Number**| ID of Contact **(Required)** | 
 
 ### Return type
 
-[**Success**](Success.md)
+[**InlineResponse202**](InlineResponse202.md)
 
 ### Authorization
 
@@ -125,22 +123,22 @@ Get contact by id
 ### Example
 
 ```javascript
-var radiomanager = require('radiomanager');
-var defaultClient = radiomanager.ApiClient.instance;
+import radiomanager from 'radiomanager';
+let defaultClient = radiomanager.ApiClient.instance;
 // Configure API key authorization: API-Key
-var API-Key = defaultClient.authentications['API-Key'];
+let API-Key = defaultClient.authentications['API-Key'];
 API-Key.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //API-Key.apiKeyPrefix = 'Token';
 
-var apiInstance = new radiomanager.ContactApi();
-var id = 0; // Number | ID of Contact **(Required)**
-var opts = {
+let apiInstance = new radiomanager.ContactApi();
+let id = 789; // Number | ID of Contact **(Required)**
+let opts = {
   'externalStationId': 789 // Number | Query on a different (content providing) station *(Optional)*
 };
-apiInstance.getContactById(id, opts).then(function(data) {
+apiInstance.getContactById(id, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
@@ -149,10 +147,9 @@ apiInstance.getContactById(id, opts).then(function(data) {
 ### Parameters
 
 
-
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **Number**| ID of Contact **(Required)** | [default to 0]
+ **id** | **Number**| ID of Contact **(Required)** | 
  **externalStationId** | **Number**| Query on a different (content providing) station *(Optional)* | [optional] 
 
 ### Return type
@@ -171,7 +168,7 @@ Name | Type | Description  | Notes
 
 ## listContacts
 
-> ContactResults listContacts(opts)
+> InlineResponse2005 listContacts(opts)
 
 Get all contacts.
 
@@ -180,28 +177,28 @@ List all contacts.
 ### Example
 
 ```javascript
-var radiomanager = require('radiomanager');
-var defaultClient = radiomanager.ApiClient.instance;
+import radiomanager from 'radiomanager';
+let defaultClient = radiomanager.ApiClient.instance;
 // Configure API key authorization: API-Key
-var API-Key = defaultClient.authentications['API-Key'];
+let API-Key = defaultClient.authentications['API-Key'];
 API-Key.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //API-Key.apiKeyPrefix = 'Token';
 
-var apiInstance = new radiomanager.ContactApi();
-var opts = {
-  'page': 1, // Number | Current page *(Optional)*
+let apiInstance = new radiomanager.ContactApi();
+let opts = {
   'itemId': 789, // Number | Search on Item ID *(Optional)* `(Relation)`
   'modelTypeId': 789, // Number | Search on ModelType ID *(Optional)* `(Relation)`
   'tagId': 789, // Number | Search on Tag ID *(Optional)* `(Relation)`
+  'page': 1, // Number | Current page *(Optional)*
   'limit': 789, // Number | Results per page *(Optional)*
   'orderBy': "orderBy_example", // String | Field to order the results *(Optional)*
   'orderDirection': "orderDirection_example", // String | Direction of ordering *(Optional)*
   'externalStationId': 789 // Number | Query on a different (content providing) station *(Optional)*
 };
-apiInstance.listContacts(opts).then(function(data) {
+apiInstance.listContacts(opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
@@ -210,13 +207,12 @@ apiInstance.listContacts(opts).then(function(data) {
 ### Parameters
 
 
-
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **page** | **Number**| Current page *(Optional)* | [optional] [default to 1]
  **itemId** | **Number**| Search on Item ID *(Optional)* &#x60;(Relation)&#x60; | [optional] 
  **modelTypeId** | **Number**| Search on ModelType ID *(Optional)* &#x60;(Relation)&#x60; | [optional] 
  **tagId** | **Number**| Search on Tag ID *(Optional)* &#x60;(Relation)&#x60; | [optional] 
+ **page** | **Number**| Current page *(Optional)* | [optional] [default to 1]
  **limit** | **Number**| Results per page *(Optional)* | [optional] 
  **orderBy** | **String**| Field to order the results *(Optional)* | [optional] 
  **orderDirection** | **String**| Direction of ordering *(Optional)* | [optional] 
@@ -224,7 +220,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ContactResults**](ContactResults.md)
+[**InlineResponse2005**](InlineResponse2005.md)
 
 ### Authorization
 
@@ -238,7 +234,7 @@ Name | Type | Description  | Notes
 
 ## updateContactByID
 
-> Success updateContactByID(id, opts)
+> InlineResponse202 updateContactByID(id, contactDataInput)
 
 Update contact by id
 
@@ -247,22 +243,20 @@ Update contact by id
 ### Example
 
 ```javascript
-var radiomanager = require('radiomanager');
-var defaultClient = radiomanager.ApiClient.instance;
+import radiomanager from 'radiomanager';
+let defaultClient = radiomanager.ApiClient.instance;
 // Configure API key authorization: API-Key
-var API-Key = defaultClient.authentications['API-Key'];
+let API-Key = defaultClient.authentications['API-Key'];
 API-Key.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //API-Key.apiKeyPrefix = 'Token';
 
-var apiInstance = new radiomanager.ContactApi();
-var id = 0; // Number | ID of Contact **(Required)**
-var opts = {
-  'data': new radiomanager.ContactDataInput() // ContactDataInput | Data *(Optional)*
-};
-apiInstance.updateContactByID(id, opts).then(function(data) {
+let apiInstance = new radiomanager.ContactApi();
+let id = 789; // Number | ID of Contact **(Required)**
+let contactDataInput = new radiomanager.ContactDataInput(); // ContactDataInput | Data *(Optional)*
+apiInstance.updateContactByID(id, contactDataInput).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
@@ -271,15 +265,14 @@ apiInstance.updateContactByID(id, opts).then(function(data) {
 ### Parameters
 
 
-
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **Number**| ID of Contact **(Required)** | [default to 0]
- **data** | [**ContactDataInput**](ContactDataInput.md)| Data *(Optional)* | [optional] 
+ **id** | **Number**| ID of Contact **(Required)** | 
+ **contactDataInput** | [**ContactDataInput**](ContactDataInput.md)| Data *(Optional)* | 
 
 ### Return type
 
-[**Success**](Success.md)
+[**InlineResponse202**](InlineResponse202.md)
 
 ### Authorization
 

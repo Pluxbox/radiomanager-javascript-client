@@ -4,7 +4,7 @@ All URIs are relative to *https://radiomanager.io/api/v2*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**deleteUserById**](UserApi.md#deleteUserById) | **DELETE** /users/{id} | Remove user from station by Id
+[**deleteUserById**](UserApi.md#deleteUserById) | **DELETE** /users/{id} | Remove User from station by Id
 [**getUserById**](UserApi.md#getUserById) | **GET** /users/{id} | Get user by id
 [**inviteUserByMail**](UserApi.md#inviteUserByMail) | **POST** /users/invite | Invite user by mail
 [**listUsers**](UserApi.md#listUsers) | **GET** /users | Get all users.
@@ -13,28 +13,28 @@ Method | HTTP request | Description
 
 ## deleteUserById
 
-> Success deleteUserById(id)
+> InlineResponse202 deleteUserById(id)
 
-Remove user from station by Id
+Remove User from station by Id
 
-Remove user from station by Id
+Remove User from station by Id, will not actually delete a User record
 
 ### Example
 
 ```javascript
-var radiomanager = require('radiomanager');
-var defaultClient = radiomanager.ApiClient.instance;
+import radiomanager from 'radiomanager';
+let defaultClient = radiomanager.ApiClient.instance;
 // Configure API key authorization: API-Key
-var API-Key = defaultClient.authentications['API-Key'];
+let API-Key = defaultClient.authentications['API-Key'];
 API-Key.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //API-Key.apiKeyPrefix = 'Token';
 
-var apiInstance = new radiomanager.UserApi();
-var id = 0; // Number | id of User
-apiInstance.deleteUserById(id).then(function(data) {
+let apiInstance = new radiomanager.UserApi();
+let id = 789; // Number | ID of User **(Required)**
+apiInstance.deleteUserById(id).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
@@ -43,14 +43,13 @@ apiInstance.deleteUserById(id).then(function(data) {
 ### Parameters
 
 
-
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **Number**| id of User | [default to 0]
+ **id** | **Number**| ID of User **(Required)** | 
 
 ### Return type
 
-[**Success**](Success.md)
+[**InlineResponse202**](InlineResponse202.md)
 
 ### Authorization
 
@@ -73,19 +72,19 @@ Get user by id
 ### Example
 
 ```javascript
-var radiomanager = require('radiomanager');
-var defaultClient = radiomanager.ApiClient.instance;
+import radiomanager from 'radiomanager';
+let defaultClient = radiomanager.ApiClient.instance;
 // Configure API key authorization: API-Key
-var API-Key = defaultClient.authentications['API-Key'];
+let API-Key = defaultClient.authentications['API-Key'];
 API-Key.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //API-Key.apiKeyPrefix = 'Token';
 
-var apiInstance = new radiomanager.UserApi();
-var id = 0; // Number | id of User
-apiInstance.getUserById(id).then(function(data) {
+let apiInstance = new radiomanager.UserApi();
+let id = 789; // Number | id of User
+apiInstance.getUserById(id).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
@@ -94,10 +93,9 @@ apiInstance.getUserById(id).then(function(data) {
 ### Parameters
 
 
-
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **Number**| id of User | [default to 0]
+ **id** | **Number**| id of User | 
 
 ### Return type
 
@@ -115,7 +113,7 @@ Name | Type | Description  | Notes
 
 ## inviteUserByMail
 
-> Object inviteUserByMail(data)
+> InlineResponse202 inviteUserByMail(inviteUserData)
 
 Invite user by mail
 
@@ -124,19 +122,19 @@ Invite user by mail
 ### Example
 
 ```javascript
-var radiomanager = require('radiomanager');
-var defaultClient = radiomanager.ApiClient.instance;
+import radiomanager from 'radiomanager';
+let defaultClient = radiomanager.ApiClient.instance;
 // Configure API key authorization: API-Key
-var API-Key = defaultClient.authentications['API-Key'];
+let API-Key = defaultClient.authentications['API-Key'];
 API-Key.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //API-Key.apiKeyPrefix = 'Token';
 
-var apiInstance = new radiomanager.UserApi();
-var data = new radiomanager.InviteUserData(); // InviteUserData | Data **(Required)**
-apiInstance.inviteUserByMail(data).then(function(data) {
+let apiInstance = new radiomanager.UserApi();
+let inviteUserData = new radiomanager.InviteUserData(); // InviteUserData | Data *(Required)*
+apiInstance.inviteUserByMail(inviteUserData).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
@@ -145,14 +143,13 @@ apiInstance.inviteUserByMail(data).then(function(data) {
 ### Parameters
 
 
-
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **data** | [**InviteUserData**](InviteUserData.md)| Data **(Required)** | 
+ **inviteUserData** | [**InviteUserData**](InviteUserData.md)| Data *(Required)* | 
 
 ### Return type
 
-**Object**
+[**InlineResponse202**](InlineResponse202.md)
 
 ### Authorization
 
@@ -166,7 +163,7 @@ Name | Type | Description  | Notes
 
 ## listUsers
 
-> UserResults listUsers(opts)
+> InlineResponse20013 listUsers(opts)
 
 Get all users.
 
@@ -175,25 +172,26 @@ List all users.
 ### Example
 
 ```javascript
-var radiomanager = require('radiomanager');
-var defaultClient = radiomanager.ApiClient.instance;
+import radiomanager from 'radiomanager';
+let defaultClient = radiomanager.ApiClient.instance;
 // Configure API key authorization: API-Key
-var API-Key = defaultClient.authentications['API-Key'];
+let API-Key = defaultClient.authentications['API-Key'];
 API-Key.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //API-Key.apiKeyPrefix = 'Token';
 
-var apiInstance = new radiomanager.UserApi();
-var opts = {
-  'page': 1, // Number | Current page *(Optional)*
+let apiInstance = new radiomanager.UserApi();
+let opts = {
   'roleId': 789, // Number | Search on Role ID *(Optional)*
+  'groupId': 789, // Number | Search on Group ID *(Optional)*
+  'page': 1, // Number | Current page *(Optional)*
   'limit': 789, // Number | Results per page *(Optional)*
   'orderBy': "orderBy_example", // String | Field to order the results *(Optional)*
   'orderDirection': "orderDirection_example" // String | Direction of ordering *(Optional)*
 };
-apiInstance.listUsers(opts).then(function(data) {
+apiInstance.listUsers(opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
@@ -202,18 +200,18 @@ apiInstance.listUsers(opts).then(function(data) {
 ### Parameters
 
 
-
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **page** | **Number**| Current page *(Optional)* | [optional] [default to 1]
  **roleId** | **Number**| Search on Role ID *(Optional)* | [optional] 
+ **groupId** | **Number**| Search on Group ID *(Optional)* | [optional] 
+ **page** | **Number**| Current page *(Optional)* | [optional] [default to 1]
  **limit** | **Number**| Results per page *(Optional)* | [optional] 
  **orderBy** | **String**| Field to order the results *(Optional)* | [optional] 
  **orderDirection** | **String**| Direction of ordering *(Optional)* | [optional] 
 
 ### Return type
 
-[**UserResults**](UserResults.md)
+[**InlineResponse20013**](InlineResponse20013.md)
 
 ### Authorization
 
