@@ -33,11 +33,11 @@ class ApiClient {
      * Overrides the default value set in spec file if present
      * @param {String} basePath
      */
-    constructor(basePath = 'https://radiomanager.io/api/v2') {
+    constructor(basePath = 'https://staging.radiomanager.io/api/v2') {
         /**
          * The base URL against which to resolve every API call's (relative) path.
          * @type {String}
-         * @default https://radiomanager.io/api/v2
+         * @default https://staging.radiomanager.io/api/v2
          */
         this.basePath = basePath.replace(/\/+$/, '');
 
@@ -594,7 +594,7 @@ class ApiClient {
     hostSettings() {
         return [
             {
-              'url': "https://radiomanager.io/api/v2",
+              'url': "https://staging.radiomanager.io/api/v2",
               'description': "No description provided",
             },
             {
