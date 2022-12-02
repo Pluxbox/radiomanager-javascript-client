@@ -1,6 +1,7 @@
 # radiomanager.ModelType
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **Number** |  | 
@@ -13,7 +14,7 @@ Name | Type | Description | Notes
 **deletedAt** | **Date** |  | [optional] 
 
 
-<a name="ModelEnum"></a>
+
 ## Enum: ModelEnum
 
 

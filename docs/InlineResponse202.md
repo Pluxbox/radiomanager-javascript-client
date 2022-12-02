@@ -1,8 +1,9 @@
 # radiomanager.InlineResponse202
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**success** | **Boolean** |  | [optional] 
+**success** | **String** | Describes whatever has succeeded | [optional] 
 
 

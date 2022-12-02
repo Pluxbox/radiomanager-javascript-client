@@ -6,7 +6,7 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**createItem**](ItemApi.md#createItem) | **POST** /items | Create an new item.
 [**currentItemPostStructure**](ItemApi.md#currentItemPostStructure) | **POST** /items/current/structure | Post a current playing item, keep structure
-[**currentItemPostTiming**](ItemApi.md#currentItemPostTiming) | **POST** /items/current/timing | Post a current playing item
+[**currentItemPostTiming**](ItemApi.md#currentItemPostTiming) | **POST** /items/current/timing | Post current playing Item
 [**deleteItemById**](ItemApi.md#deleteItemById) | **DELETE** /items/{id} | Delete item by ID.
 [**getCurrentItem**](ItemApi.md#getCurrentItem) | **GET** /items/current | Get current Item
 [**getItemById**](ItemApi.md#getItemById) | **GET** /items/{id} | Get extended item details by ID.
@@ -18,33 +18,31 @@ Method | HTTP request | Description
 [**updateItemById**](ItemApi.md#updateItemById) | **PATCH** /items/{id} | Update extended item details by ID.
 
 
-<a name="createItem"></a>
-# **createItem**
-> PostSuccess createItem(opts)
+
+## createItem
+
+> InlineResponse2002 createItem(itemDataInput)
 
 Create an new item.
 
 Create item.
 
 ### Example
+
 ```javascript
-var radiomanager = require('radiomanager');
-var defaultClient = radiomanager.ApiClient.instance;
-
-// Configure API key authorization: API Key
-var API Key = defaultClient.authentications['API Key'];
-API Key.apiKey = 'YOUR API KEY';
+import radiomanager from 'radiomanager';
+let defaultClient = radiomanager.ApiClient.instance;
+// Configure API key authorization: API-Key
+let API-Key = defaultClient.authentications['API-Key'];
+API-Key.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//API Key.apiKeyPrefix = 'Token';
+//API-Key.apiKeyPrefix = 'Token';
 
-var apiInstance = new radiomanager.ItemApi();
-
-var opts = { 
-  'data': new radiomanager.ItemDataInput() // ItemDataInput | Data *(Optional)*
-};
-apiInstance.createItem(opts).then(function(data) {
+let apiInstance = new radiomanager.ItemApi();
+let itemDataInput = new radiomanager.ItemDataInput(); // ItemDataInput | Data **(Required)**
+apiInstance.createItem(itemDataInput).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
@@ -52,50 +50,49 @@ apiInstance.createItem(opts).then(function(data) {
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **data** | [**ItemDataInput**](ItemDataInput.md)| Data *(Optional)* | [optional] 
+ **itemDataInput** | [**ItemDataInput**](ItemDataInput.md)| Data **(Required)** | 
 
 ### Return type
 
-[**PostSuccess**](PostSuccess.md)
+[**InlineResponse2002**](InlineResponse2002.md)
 
 ### Authorization
 
-[API Key](../README.md#API Key)
+[API-Key](../README.md#API-Key)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: application/json
+- **Accept**: application/json
 
-<a name="currentItemPostStructure"></a>
-# **currentItemPostStructure**
-> Success currentItemPostStructure(opts)
+
+## currentItemPostStructure
+
+> ItemResult currentItemPostStructure(importItem)
 
 Post a current playing item, keep structure
 
-Post a current playing item, keep structure
+Post current playing Item. Can be existing Item referenced by external_id. When Items are moved, this function **will attempt to** keep Items&#39; ModelType structure in rundown.
 
 ### Example
+
 ```javascript
-var radiomanager = require('radiomanager');
-var defaultClient = radiomanager.ApiClient.instance;
-
-// Configure API key authorization: API Key
-var API Key = defaultClient.authentications['API Key'];
-API Key.apiKey = 'YOUR API KEY';
+import radiomanager from 'radiomanager';
+let defaultClient = radiomanager.ApiClient.instance;
+// Configure API key authorization: API-Key
+let API-Key = defaultClient.authentications['API-Key'];
+API-Key.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//API Key.apiKeyPrefix = 'Token';
+//API-Key.apiKeyPrefix = 'Token';
 
-var apiInstance = new radiomanager.ItemApi();
-
-var opts = { 
-  'data': new radiomanager.ImportItem() // ImportItem | Data *(Optional)*
-};
-apiInstance.currentItemPostStructure(opts).then(function(data) {
+let apiInstance = new radiomanager.ItemApi();
+let importItem = new radiomanager.ImportItem(); // ImportItem | Data **(Required)**
+apiInstance.currentItemPostStructure(importItem).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
@@ -103,50 +100,49 @@ apiInstance.currentItemPostStructure(opts).then(function(data) {
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **data** | [**ImportItem**](ImportItem.md)| Data *(Optional)* | [optional] 
+ **importItem** | [**ImportItem**](ImportItem.md)| Data **(Required)** | 
 
 ### Return type
 
-[**Success**](Success.md)
+[**ItemResult**](ItemResult.md)
 
 ### Authorization
 
-[API Key](../README.md#API Key)
+[API-Key](../README.md#API-Key)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: application/json
+- **Accept**: application/json
 
-<a name="currentItemPostTiming"></a>
-# **currentItemPostTiming**
-> Success currentItemPostTiming(opts)
 
-Post a current playing item
+## currentItemPostTiming
 
-Post a current playing item
+> ItemResult currentItemPostTiming(importItem)
+
+Post current playing Item
+
+Post current playing Item. Can be existing Item referenced by external_id. When Items are moved, this function **will not keep** Items&#39; ModelType structure in rundown.
 
 ### Example
+
 ```javascript
-var radiomanager = require('radiomanager');
-var defaultClient = radiomanager.ApiClient.instance;
-
-// Configure API key authorization: API Key
-var API Key = defaultClient.authentications['API Key'];
-API Key.apiKey = 'YOUR API KEY';
+import radiomanager from 'radiomanager';
+let defaultClient = radiomanager.ApiClient.instance;
+// Configure API key authorization: API-Key
+let API-Key = defaultClient.authentications['API-Key'];
+API-Key.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//API Key.apiKeyPrefix = 'Token';
+//API-Key.apiKeyPrefix = 'Token';
 
-var apiInstance = new radiomanager.ItemApi();
-
-var opts = { 
-  'data': new radiomanager.ImportItem() // ImportItem | Data *(Optional)*
-};
-apiInstance.currentItemPostTiming(opts).then(function(data) {
+let apiInstance = new radiomanager.ItemApi();
+let importItem = new radiomanager.ImportItem(); // ImportItem | Data **(Required)**
+apiInstance.currentItemPostTiming(importItem).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
@@ -154,55 +150,56 @@ apiInstance.currentItemPostTiming(opts).then(function(data) {
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **data** | [**ImportItem**](ImportItem.md)| Data *(Optional)* | [optional] 
+ **importItem** | [**ImportItem**](ImportItem.md)| Data **(Required)** | 
 
 ### Return type
 
-[**Success**](Success.md)
+[**ItemResult**](ItemResult.md)
 
 ### Authorization
 
-[API Key](../README.md#API Key)
+[API-Key](../README.md#API-Key)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: application/json
+- **Accept**: application/json
 
-<a name="deleteItemById"></a>
-# **deleteItemById**
-> Success deleteItemById(id)
+
+## deleteItemById
+
+> deleteItemById(id)
 
 Delete item by ID.
 
 Delete item by id.
 
 ### Example
+
 ```javascript
-var radiomanager = require('radiomanager');
-var defaultClient = radiomanager.ApiClient.instance;
-
-// Configure API key authorization: API Key
-var API Key = defaultClient.authentications['API Key'];
-API Key.apiKey = 'YOUR API KEY';
+import radiomanager from 'radiomanager';
+let defaultClient = radiomanager.ApiClient.instance;
+// Configure API key authorization: API-Key
+let API-Key = defaultClient.authentications['API-Key'];
+API-Key.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//API Key.apiKeyPrefix = 'Token';
+//API-Key.apiKeyPrefix = 'Token';
 
-var apiInstance = new radiomanager.ItemApi();
-
-var id = 789; // Number | ID of Item **(Required)**
-
-apiInstance.deleteItemById(id).then(function(data) {
-  console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
+let apiInstance = new radiomanager.ItemApi();
+let id = 789; // Number | ID of Item **(Required)**
+apiInstance.deleteItemById(id).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
   console.error(error);
 });
 
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -210,19 +207,20 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Success**](Success.md)
+null (empty response body)
 
 ### Authorization
 
-[API Key](../README.md#API Key)
+[API-Key](../README.md#API-Key)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
-<a name="getCurrentItem"></a>
-# **getCurrentItem**
+
+## getCurrentItem
+
 > ItemResult getCurrentItem(opts)
 
 Get current Item
@@ -230,30 +228,30 @@ Get current Item
 Get current Item
 
 ### Example
+
 ```javascript
-var radiomanager = require('radiomanager');
-var defaultClient = radiomanager.ApiClient.instance;
-
-// Configure API key authorization: API Key
-var API Key = defaultClient.authentications['API Key'];
-API Key.apiKey = 'YOUR API KEY';
+import radiomanager from 'radiomanager';
+let defaultClient = radiomanager.ApiClient.instance;
+// Configure API key authorization: API-Key
+let API-Key = defaultClient.authentications['API-Key'];
+API-Key.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//API Key.apiKeyPrefix = 'Token';
+//API-Key.apiKeyPrefix = 'Token';
 
-var apiInstance = new radiomanager.ItemApi();
-
-var opts = { 
+let apiInstance = new radiomanager.ItemApi();
+let opts = {
   'lastplayed': true // Boolean | Show last played item if there is no current item*(Optional)*
 };
-apiInstance.getCurrentItem(opts).then(function(data) {
+apiInstance.getCurrentItem(opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -265,15 +263,16 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[API Key](../README.md#API Key)
+[API-Key](../README.md#API-Key)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
-<a name="getItemById"></a>
-# **getItemById**
+
+## getItemById
+
 > ItemResult getItemById(id, opts)
 
 Get extended item details by ID.
@@ -281,32 +280,31 @@ Get extended item details by ID.
 Read item by id.
 
 ### Example
+
 ```javascript
-var radiomanager = require('radiomanager');
-var defaultClient = radiomanager.ApiClient.instance;
-
-// Configure API key authorization: API Key
-var API Key = defaultClient.authentications['API Key'];
-API Key.apiKey = 'YOUR API KEY';
+import radiomanager from 'radiomanager';
+let defaultClient = radiomanager.ApiClient.instance;
+// Configure API key authorization: API-Key
+let API-Key = defaultClient.authentications['API-Key'];
+API-Key.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//API Key.apiKeyPrefix = 'Token';
+//API-Key.apiKeyPrefix = 'Token';
 
-var apiInstance = new radiomanager.ItemApi();
-
-var id = 789; // Number | ID of Item **(Required)**
-
-var opts = { 
+let apiInstance = new radiomanager.ItemApi();
+let id = 789; // Number | ID of Item **(Required)**
+let opts = {
   'externalStationId': 789 // Number | Query on a different (content providing) station *(Optional)*
 };
-apiInstance.getItemById(id, opts).then(function(data) {
+apiInstance.getItemById(id, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -319,36 +317,35 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[API Key](../README.md#API Key)
+[API-Key](../README.md#API-Key)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
-<a name="listItems"></a>
-# **listItems**
-> ItemResults listItems(opts)
+
+## listItems
+
+> InlineResponse2008 listItems(opts)
 
 Get a list of all the items currently in your station.
 
 Get a list of all the items currently in your station. This feature supports pagination and will give a maximum results of 50 items back.
 
 ### Example
+
 ```javascript
-var radiomanager = require('radiomanager');
-var defaultClient = radiomanager.ApiClient.instance;
-
-// Configure API key authorization: API Key
-var API Key = defaultClient.authentications['API Key'];
-API Key.apiKey = 'YOUR API KEY';
+import radiomanager from 'radiomanager';
+let defaultClient = radiomanager.ApiClient.instance;
+// Configure API key authorization: API-Key
+let API-Key = defaultClient.authentications['API-Key'];
+API-Key.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//API Key.apiKeyPrefix = 'Token';
+//API-Key.apiKeyPrefix = 'Token';
 
-var apiInstance = new radiomanager.ItemApi();
-
-var opts = { 
-  'page': 789, // Number | Current page *(Optional)*
+let apiInstance = new radiomanager.ItemApi();
+let opts = {
   'blockId': 789, // Number | Search on Block ID *(Optional)* `(Relation)`
   'broadcastId': 789, // Number | Search on Broadcast ID *(Optional)* `(Relation)`
   'modelTypeId': 789, // Number | Search on ModelType ID *(Optional)* `(Relation)`
@@ -360,19 +357,20 @@ var opts = {
   'stationDraftId': 789, // Number | Search on Station Draft ID *(Optional)*
   'programId': 789, // Number | Search on Program ID *(Optional)* `(Relation)`
   'externalId': "externalId_example", // String | Search on External ID *(Optional)*
-  'startMin': new Date("2013-10-20T19:20:30+01:00"), // Date | Minimum start date *(Optional)*
-  'startMax': new Date("2013-10-20T19:20:30+01:00"), // Date | Maximum start date *(Optional)*
   'durationMin': 56, // Number | Minimum duration (seconds) *(Optional)*
   'durationMax': 56, // Number | Maximum duration (seconds) *(Optional)*
   'status': "status_example", // String | Play Status of item *(Optional)*
+  'startMin': new Date("2013-10-20T19:20:30+01:00"), // Date | Minimum start date *(Optional)*
+  'startMax': new Date("2013-10-20T19:20:30+01:00"), // Date | Maximum start date *(Optional)*
+  'page': 1, // Number | Current page *(Optional)*
   'limit': 789, // Number | Results per page *(Optional)*
   'orderBy': "orderBy_example", // String | Field to order the results *(Optional)*
   'orderDirection': "orderDirection_example", // String | Direction of ordering *(Optional)*
   'externalStationId': 789 // Number | Query on a different (content providing) station *(Optional)*
 };
-apiInstance.listItems(opts).then(function(data) {
+apiInstance.listItems(opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
@@ -380,9 +378,9 @@ apiInstance.listItems(opts).then(function(data) {
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **page** | **Number**| Current page *(Optional)* | [optional] 
  **blockId** | **Number**| Search on Block ID *(Optional)* &#x60;(Relation)&#x60; | [optional] 
  **broadcastId** | **Number**| Search on Broadcast ID *(Optional)* &#x60;(Relation)&#x60; | [optional] 
  **modelTypeId** | **Number**| Search on ModelType ID *(Optional)* &#x60;(Relation)&#x60; | [optional] 
@@ -394,11 +392,12 @@ Name | Type | Description  | Notes
  **stationDraftId** | **Number**| Search on Station Draft ID *(Optional)* | [optional] 
  **programId** | **Number**| Search on Program ID *(Optional)* &#x60;(Relation)&#x60; | [optional] 
  **externalId** | **String**| Search on External ID *(Optional)* | [optional] 
- **startMin** | **Date**| Minimum start date *(Optional)* | [optional] 
- **startMax** | **Date**| Maximum start date *(Optional)* | [optional] 
  **durationMin** | **Number**| Minimum duration (seconds) *(Optional)* | [optional] 
  **durationMax** | **Number**| Maximum duration (seconds) *(Optional)* | [optional] 
  **status** | **String**| Play Status of item *(Optional)* | [optional] 
+ **startMin** | **Date**| Minimum start date *(Optional)* | [optional] 
+ **startMax** | **Date**| Maximum start date *(Optional)* | [optional] 
+ **page** | **Number**| Current page *(Optional)* | [optional] [default to 1]
  **limit** | **Number**| Results per page *(Optional)* | [optional] 
  **orderBy** | **String**| Field to order the results *(Optional)* | [optional] 
  **orderDirection** | **String**| Direction of ordering *(Optional)* | [optional] 
@@ -406,44 +405,42 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ItemResults**](ItemResults.md)
+[**InlineResponse2008**](InlineResponse2008.md)
 
 ### Authorization
 
-[API Key](../README.md#API Key)
+[API-Key](../README.md#API-Key)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
-<a name="playlistPostMerge"></a>
-# **playlistPostMerge**
-> InlineResponse202 playlistPostMerge(opts)
+
+## playlistPostMerge
+
+> InlineResponse2021 playlistPostMerge(playlistMergeBody)
 
 Post a playlist, do not remove previously imported items
 
-Post a playlist, do not remove previously imported items
+Post a playlist with &#39;keep structure&#39; method, but do not remove previously imported items
 
 ### Example
+
 ```javascript
-var radiomanager = require('radiomanager');
-var defaultClient = radiomanager.ApiClient.instance;
-
-// Configure API key authorization: API Key
-var API Key = defaultClient.authentications['API Key'];
-API Key.apiKey = 'YOUR API KEY';
+import radiomanager from 'radiomanager';
+let defaultClient = radiomanager.ApiClient.instance;
+// Configure API key authorization: API-Key
+let API-Key = defaultClient.authentications['API-Key'];
+API-Key.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//API Key.apiKeyPrefix = 'Token';
+//API-Key.apiKeyPrefix = 'Token';
 
-var apiInstance = new radiomanager.ItemApi();
-
-var opts = { 
-  'data': new radiomanager.Data2() // Data2 | Data *(Optional)*
-};
-apiInstance.playlistPostMerge(opts).then(function(data) {
+let apiInstance = new radiomanager.ItemApi();
+let playlistMergeBody = new radiomanager.PlaylistMergeBody(); // PlaylistMergeBody | Data *(Required)*
+apiInstance.playlistPostMerge(playlistMergeBody).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
@@ -451,50 +448,49 @@ apiInstance.playlistPostMerge(opts).then(function(data) {
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **data** | [**Data2**](Data2.md)| Data *(Optional)* | [optional] 
+ **playlistMergeBody** | [**PlaylistMergeBody**](PlaylistMergeBody.md)| Data *(Required)* | 
 
 ### Return type
 
-[**InlineResponse202**](InlineResponse202.md)
+[**InlineResponse2021**](InlineResponse2021.md)
 
 ### Authorization
 
-[API Key](../README.md#API Key)
+[API-Key](../README.md#API-Key)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: application/json
+- **Accept**: application/json
 
-<a name="playlistPostStructure"></a>
-# **playlistPostStructure**
-> InlineResponse202 playlistPostStructure(opts)
+
+## playlistPostStructure
+
+> InlineResponse2021 playlistPostStructure(playlistStructureBody)
 
 Post a playlist, keep current structure
 
-Post a playlist, keep current structure
+Post a playlist for a block. Existing Items can referenced by external_id. When Items are moved, this function **will attempt to** keep Items&#39; ModelType structure in rundown.
 
 ### Example
+
 ```javascript
-var radiomanager = require('radiomanager');
-var defaultClient = radiomanager.ApiClient.instance;
-
-// Configure API key authorization: API Key
-var API Key = defaultClient.authentications['API Key'];
-API Key.apiKey = 'YOUR API KEY';
+import radiomanager from 'radiomanager';
+let defaultClient = radiomanager.ApiClient.instance;
+// Configure API key authorization: API-Key
+let API-Key = defaultClient.authentications['API-Key'];
+API-Key.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//API Key.apiKeyPrefix = 'Token';
+//API-Key.apiKeyPrefix = 'Token';
 
-var apiInstance = new radiomanager.ItemApi();
-
-var opts = { 
-  'data': new radiomanager.Data1() // Data1 | Data *(Optional)*
-};
-apiInstance.playlistPostStructure(opts).then(function(data) {
+let apiInstance = new radiomanager.ItemApi();
+let playlistStructureBody = new radiomanager.PlaylistStructureBody(); // PlaylistStructureBody | Data *(Required)*
+apiInstance.playlistPostStructure(playlistStructureBody).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
@@ -502,50 +498,49 @@ apiInstance.playlistPostStructure(opts).then(function(data) {
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **data** | [**Data1**](Data1.md)| Data *(Optional)* | [optional] 
+ **playlistStructureBody** | [**PlaylistStructureBody**](PlaylistStructureBody.md)| Data *(Required)* | 
 
 ### Return type
 
-[**InlineResponse202**](InlineResponse202.md)
+[**InlineResponse2021**](InlineResponse2021.md)
 
 ### Authorization
 
-[API Key](../README.md#API Key)
+[API-Key](../README.md#API-Key)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: application/json
+- **Accept**: application/json
 
-<a name="playlistPostTiming"></a>
-# **playlistPostTiming**
-> InlineResponse202 playlistPostTiming(opts)
+
+## playlistPostTiming
+
+> InlineResponse2021 playlistPostTiming(playlistTimingBody)
 
 Post a playlist
 
-Post a playlist
+Post a playlist for a block. Existing Items can referenced by external_id. When Items are moved, this function **will not** keep Items&#39; ModelType structure in rundown.
 
 ### Example
+
 ```javascript
-var radiomanager = require('radiomanager');
-var defaultClient = radiomanager.ApiClient.instance;
-
-// Configure API key authorization: API Key
-var API Key = defaultClient.authentications['API Key'];
-API Key.apiKey = 'YOUR API KEY';
+import radiomanager from 'radiomanager';
+let defaultClient = radiomanager.ApiClient.instance;
+// Configure API key authorization: API-Key
+let API-Key = defaultClient.authentications['API-Key'];
+API-Key.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//API Key.apiKeyPrefix = 'Token';
+//API-Key.apiKeyPrefix = 'Token';
 
-var apiInstance = new radiomanager.ItemApi();
-
-var opts = { 
-  'data': new radiomanager.Data() // Data | Data *(Optional)*
-};
-apiInstance.playlistPostTiming(opts).then(function(data) {
+let apiInstance = new radiomanager.ItemApi();
+let playlistTimingBody = new radiomanager.PlaylistTimingBody(); // PlaylistTimingBody | Data *(Required)*
+apiInstance.playlistPostTiming(playlistTimingBody).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
@@ -553,50 +548,51 @@ apiInstance.playlistPostTiming(opts).then(function(data) {
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **data** | [**Data**](Data.md)| Data *(Optional)* | [optional] 
+ **playlistTimingBody** | [**PlaylistTimingBody**](PlaylistTimingBody.md)| Data *(Required)* | 
 
 ### Return type
 
-[**InlineResponse202**](InlineResponse202.md)
+[**InlineResponse2021**](InlineResponse2021.md)
 
 ### Authorization
 
-[API Key](../README.md#API Key)
+[API-Key](../README.md#API-Key)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: application/json
+- **Accept**: application/json
 
-<a name="stopCurrentItem"></a>
-# **stopCurrentItem**
-> Success stopCurrentItem(opts)
+
+## stopCurrentItem
+
+> InlineResponse202 stopCurrentItem(opts)
 
 Stop an Item
 
 Set a current playing or specific item on played
 
 ### Example
+
 ```javascript
-var radiomanager = require('radiomanager');
-var defaultClient = radiomanager.ApiClient.instance;
-
-// Configure API key authorization: API Key
-var API Key = defaultClient.authentications['API Key'];
-API Key.apiKey = 'YOUR API KEY';
+import radiomanager from 'radiomanager';
+let defaultClient = radiomanager.ApiClient.instance;
+// Configure API key authorization: API-Key
+let API-Key = defaultClient.authentications['API-Key'];
+API-Key.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//API Key.apiKeyPrefix = 'Token';
+//API-Key.apiKeyPrefix = 'Token';
 
-var apiInstance = new radiomanager.ItemApi();
-
-var opts = { 
-  'data': new radiomanager.Data3() // Data3 | Data *(Optional)*
+let apiInstance = new radiomanager.ItemApi();
+let opts = {
+  'itemsStopcurrentBody': new radiomanager.ItemsStopcurrentBody() // ItemsStopcurrentBody | Data *(Optional)*
 };
-apiInstance.stopCurrentItem(opts).then(function(data) {
+apiInstance.stopCurrentItem(opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
@@ -604,52 +600,50 @@ apiInstance.stopCurrentItem(opts).then(function(data) {
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **data** | [**Data3**](Data3.md)| Data *(Optional)* | [optional] 
+ **itemsStopcurrentBody** | [**ItemsStopcurrentBody**](ItemsStopcurrentBody.md)| Data *(Optional)* | [optional] 
 
 ### Return type
 
-[**Success**](Success.md)
+[**InlineResponse202**](InlineResponse202.md)
 
 ### Authorization
 
-[API Key](../README.md#API Key)
+[API-Key](../README.md#API-Key)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: application/json
+- **Accept**: application/json
 
-<a name="updateItemById"></a>
-# **updateItemById**
-> Success updateItemById(id, opts)
+
+## updateItemById
+
+> InlineResponse202 updateItemById(id, itemDataInput)
 
 Update extended item details by ID.
 
 Update item by id.
 
 ### Example
+
 ```javascript
-var radiomanager = require('radiomanager');
-var defaultClient = radiomanager.ApiClient.instance;
-
-// Configure API key authorization: API Key
-var API Key = defaultClient.authentications['API Key'];
-API Key.apiKey = 'YOUR API KEY';
+import radiomanager from 'radiomanager';
+let defaultClient = radiomanager.ApiClient.instance;
+// Configure API key authorization: API-Key
+let API-Key = defaultClient.authentications['API-Key'];
+API-Key.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//API Key.apiKeyPrefix = 'Token';
+//API-Key.apiKeyPrefix = 'Token';
 
-var apiInstance = new radiomanager.ItemApi();
-
-var id = 789; // Number | ID of Item **(Required)**
-
-var opts = { 
-  'data': new radiomanager.ItemDataInput() // ItemDataInput | Data *(Optional)*
-};
-apiInstance.updateItemById(id, opts).then(function(data) {
+let apiInstance = new radiomanager.ItemApi();
+let id = 789; // Number | ID of Item **(Required)**
+let itemDataInput = new radiomanager.ItemDataInput(); // ItemDataInput | Data *(Optional)*
+apiInstance.updateItemById(id, itemDataInput).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
@@ -657,21 +651,22 @@ apiInstance.updateItemById(id, opts).then(function(data) {
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Number**| ID of Item **(Required)** | 
- **data** | [**ItemDataInput**](ItemDataInput.md)| Data *(Optional)* | [optional] 
+ **itemDataInput** | [**ItemDataInput**](ItemDataInput.md)| Data *(Optional)* | 
 
 ### Return type
 
-[**Success**](Success.md)
+[**InlineResponse202**](InlineResponse202.md)
 
 ### Authorization
 
-[API Key](../README.md#API Key)
+[API-Key](../README.md#API-Key)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: application/json
+- **Accept**: application/json
 

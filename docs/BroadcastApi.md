@@ -17,88 +17,88 @@ Method | HTTP request | Description
 [**updateBroadcastByID**](BroadcastApi.md#updateBroadcastByID) | **PATCH** /broadcasts/{id} | Update broadcast by id
 
 
-<a name="createBroadcast"></a>
-# **createBroadcast**
-> PostSuccess createBroadcast(data)
+
+## createBroadcast
+
+> InlineResponse2002 createBroadcast(broadcastDataInput)
 
 Create broadcast.
 
 Create broadcast.
 
 ### Example
+
 ```javascript
-var radiomanager = require('radiomanager');
-var defaultClient = radiomanager.ApiClient.instance;
-
-// Configure API key authorization: API Key
-var API Key = defaultClient.authentications['API Key'];
-API Key.apiKey = 'YOUR API KEY';
+import radiomanager from 'radiomanager';
+let defaultClient = radiomanager.ApiClient.instance;
+// Configure API key authorization: API-Key
+let API-Key = defaultClient.authentications['API-Key'];
+API-Key.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//API Key.apiKeyPrefix = 'Token';
+//API-Key.apiKeyPrefix = 'Token';
 
-var apiInstance = new radiomanager.BroadcastApi();
-
-var data = new radiomanager.BroadcastDataInput(); // BroadcastDataInput | Data **(Required)**
-
-apiInstance.createBroadcast(data).then(function(data) {
+let apiInstance = new radiomanager.BroadcastApi();
+let broadcastDataInput = new radiomanager.BroadcastDataInput(); // BroadcastDataInput | Data **(Required)**
+apiInstance.createBroadcast(broadcastDataInput).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **data** | [**BroadcastDataInput**](BroadcastDataInput.md)| Data **(Required)** | 
+ **broadcastDataInput** | [**BroadcastDataInput**](BroadcastDataInput.md)| Data **(Required)** | 
 
 ### Return type
 
-[**PostSuccess**](PostSuccess.md)
+[**InlineResponse2002**](InlineResponse2002.md)
 
 ### Authorization
 
-[API Key](../README.md#API Key)
+[API-Key](../README.md#API-Key)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: application/json
+- **Accept**: application/json
 
-<a name="deleteBroadcastById"></a>
-# **deleteBroadcastById**
-> Success deleteBroadcastById(id)
+
+## deleteBroadcastById
+
+> InlineResponse202 deleteBroadcastById(id)
 
 Delete broadcast by id
 
 Delete broadcast by id
 
 ### Example
+
 ```javascript
-var radiomanager = require('radiomanager');
-var defaultClient = radiomanager.ApiClient.instance;
-
-// Configure API key authorization: API Key
-var API Key = defaultClient.authentications['API Key'];
-API Key.apiKey = 'YOUR API KEY';
+import radiomanager from 'radiomanager';
+let defaultClient = radiomanager.ApiClient.instance;
+// Configure API key authorization: API-Key
+let API-Key = defaultClient.authentications['API-Key'];
+API-Key.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//API Key.apiKeyPrefix = 'Token';
+//API-Key.apiKeyPrefix = 'Token';
 
-var apiInstance = new radiomanager.BroadcastApi();
-
-var id = 789; // Number | ID of Broadcast **(Required)**
-
-apiInstance.deleteBroadcastById(id).then(function(data) {
+let apiInstance = new radiomanager.BroadcastApi();
+let id = 789; // Number | ID of Broadcast **(Required)**
+apiInstance.deleteBroadcastById(id).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -106,19 +106,20 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Success**](Success.md)
+[**InlineResponse202**](InlineResponse202.md)
 
 ### Authorization
 
-[API Key](../README.md#API Key)
+[API-Key](../README.md#API-Key)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
-<a name="getBroadcastById"></a>
-# **getBroadcastById**
+
+## getBroadcastById
+
 > BroadcastResult getBroadcastById(id, opts)
 
 Get broadcast by id
@@ -126,32 +127,31 @@ Get broadcast by id
 Get broadcast by id
 
 ### Example
+
 ```javascript
-var radiomanager = require('radiomanager');
-var defaultClient = radiomanager.ApiClient.instance;
-
-// Configure API key authorization: API Key
-var API Key = defaultClient.authentications['API Key'];
-API Key.apiKey = 'YOUR API KEY';
+import radiomanager from 'radiomanager';
+let defaultClient = radiomanager.ApiClient.instance;
+// Configure API key authorization: API-Key
+let API-Key = defaultClient.authentications['API-Key'];
+API-Key.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//API Key.apiKeyPrefix = 'Token';
+//API-Key.apiKeyPrefix = 'Token';
 
-var apiInstance = new radiomanager.BroadcastApi();
-
-var id = 789; // Number | ID of Broadcast **(Required)**
-
-var opts = { 
+let apiInstance = new radiomanager.BroadcastApi();
+let id = 789; // Number | ID of Broadcast **(Required)**
+let opts = {
   'externalStationId': 789 // Number | Query on a different (content providing) station *(Optional)*
 };
-apiInstance.getBroadcastById(id, opts).then(function(data) {
+apiInstance.getBroadcastById(id, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -164,46 +164,47 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[API Key](../README.md#API Key)
+[API-Key](../README.md#API-Key)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
-<a name="getCurrentBroadcast"></a>
-# **getCurrentBroadcast**
+
+## getCurrentBroadcast
+
 > BroadcastResult getCurrentBroadcast(opts)
 
 Get current Broadcast
 
-Get current Broadcast
+Get currently playing Broadcast
 
 ### Example
+
 ```javascript
-var radiomanager = require('radiomanager');
-var defaultClient = radiomanager.ApiClient.instance;
-
-// Configure API key authorization: API Key
-var API Key = defaultClient.authentications['API Key'];
-API Key.apiKey = 'YOUR API KEY';
+import radiomanager from 'radiomanager';
+let defaultClient = radiomanager.ApiClient.instance;
+// Configure API key authorization: API-Key
+let API-Key = defaultClient.authentications['API-Key'];
+API-Key.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//API Key.apiKeyPrefix = 'Token';
+//API-Key.apiKeyPrefix = 'Token';
 
-var apiInstance = new radiomanager.BroadcastApi();
-
-var opts = { 
+let apiInstance = new radiomanager.BroadcastApi();
+let opts = {
   'withunpublished': true // Boolean | Show Unpublished *(Optional)*
 };
-apiInstance.getCurrentBroadcast(opts).then(function(data) {
+apiInstance.getCurrentBroadcast(opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -215,41 +216,41 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[API Key](../README.md#API Key)
+[API-Key](../README.md#API-Key)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
-<a name="getDailyEPG"></a>
-# **getDailyEPG**
+
+## getDailyEPG
+
 > EPGResults getDailyEPG(opts)
 
 Get daily EPG
 
-Get current Broadcast
+Get a list of broadcasts as Programming guide for 1 day
 
 ### Example
+
 ```javascript
-var radiomanager = require('radiomanager');
-var defaultClient = radiomanager.ApiClient.instance;
-
-// Configure API key authorization: API Key
-var API Key = defaultClient.authentications['API Key'];
-API Key.apiKey = 'YOUR API KEY';
+import radiomanager from 'radiomanager';
+let defaultClient = radiomanager.ApiClient.instance;
+// Configure API key authorization: API-Key
+let API-Key = defaultClient.authentications['API-Key'];
+API-Key.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//API Key.apiKeyPrefix = 'Token';
+//API-Key.apiKeyPrefix = 'Token';
 
-var apiInstance = new radiomanager.BroadcastApi();
-
-var opts = { 
-  '_date': new Date("2013-10-20T19:20:30+01:00"), // Date | Date *(Optional)*
+let apiInstance = new radiomanager.BroadcastApi();
+let opts = {
+  'date': new Date("2013-10-20T19:20:30+01:00"), // Date | Date *(Optional)*
   'withunpublished': true // Boolean | Show Unpublished *(Optional)*
 };
-apiInstance.getDailyEPG(opts).then(function(data) {
+apiInstance.getDailyEPG(opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
@@ -257,9 +258,10 @@ apiInstance.getDailyEPG(opts).then(function(data) {
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **_date** | **Date**| Date *(Optional)* | [optional] 
+ **date** | **Date**| Date *(Optional)* | [optional] 
  **withunpublished** | **Boolean**| Show Unpublished *(Optional)* | [optional] 
 
 ### Return type
@@ -268,41 +270,41 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[API Key](../README.md#API Key)
+[API-Key](../README.md#API-Key)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
-<a name="getEPGByDate"></a>
-# **getEPGByDate**
+
+## getEPGByDate
+
 > EPGResults getEPGByDate(opts)
 
 Get EPG by date
 
-Get EPG by date
+Get a list of broadcasts as Programming guide, seperated per day
 
 ### Example
+
 ```javascript
-var radiomanager = require('radiomanager');
-var defaultClient = radiomanager.ApiClient.instance;
-
-// Configure API key authorization: API Key
-var API Key = defaultClient.authentications['API Key'];
-API Key.apiKey = 'YOUR API KEY';
+import radiomanager from 'radiomanager';
+let defaultClient = radiomanager.ApiClient.instance;
+// Configure API key authorization: API-Key
+let API-Key = defaultClient.authentications['API-Key'];
+API-Key.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//API Key.apiKeyPrefix = 'Token';
+//API-Key.apiKeyPrefix = 'Token';
 
-var apiInstance = new radiomanager.BroadcastApi();
-
-var opts = { 
-  '_date': new Date("2013-10-20T19:20:30+01:00"), // Date | Date *(Optional)*
+let apiInstance = new radiomanager.BroadcastApi();
+let opts = {
+  'date': new Date("2013-10-20T19:20:30+01:00"), // Date | Date *(Optional)*
   'withunpublished': true // Boolean | Show Unpublished *(Optional)*
 };
-apiInstance.getEPGByDate(opts).then(function(data) {
+apiInstance.getEPGByDate(opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
@@ -310,9 +312,10 @@ apiInstance.getEPGByDate(opts).then(function(data) {
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **_date** | **Date**| Date *(Optional)* | [optional] 
+ **date** | **Date**| Date *(Optional)* | [optional] 
  **withunpublished** | **Boolean**| Show Unpublished *(Optional)* | [optional] 
 
 ### Return type
@@ -321,46 +324,47 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[API Key](../README.md#API Key)
+[API-Key](../README.md#API-Key)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
-<a name="getNextBroadcast"></a>
-# **getNextBroadcast**
+
+## getNextBroadcast
+
 > BroadcastResult getNextBroadcast(opts)
 
 Get next Broadcast
 
-Get next Broadcast
+Get currently upcoming Broadcast
 
 ### Example
+
 ```javascript
-var radiomanager = require('radiomanager');
-var defaultClient = radiomanager.ApiClient.instance;
-
-// Configure API key authorization: API Key
-var API Key = defaultClient.authentications['API Key'];
-API Key.apiKey = 'YOUR API KEY';
+import radiomanager from 'radiomanager';
+let defaultClient = radiomanager.ApiClient.instance;
+// Configure API key authorization: API-Key
+let API-Key = defaultClient.authentications['API-Key'];
+API-Key.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//API Key.apiKeyPrefix = 'Token';
+//API-Key.apiKeyPrefix = 'Token';
 
-var apiInstance = new radiomanager.BroadcastApi();
-
-var opts = { 
+let apiInstance = new radiomanager.BroadcastApi();
+let opts = {
   'withunpublished': true // Boolean | Show Unpublished *(Optional)*
 };
-apiInstance.getNextBroadcast(opts).then(function(data) {
+apiInstance.getNextBroadcast(opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -372,41 +376,41 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[API Key](../README.md#API Key)
+[API-Key](../README.md#API-Key)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
-<a name="getWeeklyEPG"></a>
-# **getWeeklyEPG**
+
+## getWeeklyEPG
+
 > EPGResults getWeeklyEPG(opts)
 
 Get weekly EPG
 
-Get weekly EPG
+Get a list of broadcasts as Programming guide for 7 days, seperated per day
 
 ### Example
+
 ```javascript
-var radiomanager = require('radiomanager');
-var defaultClient = radiomanager.ApiClient.instance;
-
-// Configure API key authorization: API Key
-var API Key = defaultClient.authentications['API Key'];
-API Key.apiKey = 'YOUR API KEY';
+import radiomanager from 'radiomanager';
+let defaultClient = radiomanager.ApiClient.instance;
+// Configure API key authorization: API-Key
+let API-Key = defaultClient.authentications['API-Key'];
+API-Key.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//API Key.apiKeyPrefix = 'Token';
+//API-Key.apiKeyPrefix = 'Token';
 
-var apiInstance = new radiomanager.BroadcastApi();
-
-var opts = { 
-  '_date': "_date_example", // String | Date *(Optional)*
+let apiInstance = new radiomanager.BroadcastApi();
+let opts = {
+  'date': new Date("2013-10-20"), // Date | Date *(Optional)*
   'withunpublished': true // Boolean | Show Unpublished *(Optional)*
 };
-apiInstance.getWeeklyEPG(opts).then(function(data) {
+apiInstance.getWeeklyEPG(opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
@@ -414,9 +418,10 @@ apiInstance.getWeeklyEPG(opts).then(function(data) {
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **_date** | **String**| Date *(Optional)* | [optional] 
+ **date** | **Date**| Date *(Optional)* | [optional] 
  **withunpublished** | **Boolean**| Show Unpublished *(Optional)* | [optional] 
 
 ### Return type
@@ -425,53 +430,55 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[API Key](../README.md#API Key)
+[API-Key](../README.md#API-Key)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
-<a name="listBroadcasts"></a>
-# **listBroadcasts**
-> BroadcastResults listBroadcasts(opts)
+
+## listBroadcasts
+
+> InlineResponse2001 listBroadcasts(opts)
 
 Get all broadcasts.
 
 List all broadcasts.
 
 ### Example
+
 ```javascript
-var radiomanager = require('radiomanager');
-var defaultClient = radiomanager.ApiClient.instance;
-
-// Configure API key authorization: API Key
-var API Key = defaultClient.authentications['API Key'];
-API Key.apiKey = 'YOUR API KEY';
+import radiomanager from 'radiomanager';
+let defaultClient = radiomanager.ApiClient.instance;
+// Configure API key authorization: API-Key
+let API-Key = defaultClient.authentications['API-Key'];
+API-Key.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//API Key.apiKeyPrefix = 'Token';
+//API-Key.apiKeyPrefix = 'Token';
 
-var apiInstance = new radiomanager.BroadcastApi();
-
-var opts = { 
-  'page': 1, // Number | Current page *(Optional)*
+let apiInstance = new radiomanager.BroadcastApi();
+let opts = {
   'programId': 789, // Number | Search on Program ID *(Optional)* `(Relation)`
   'blockId': 789, // Number | Search on Block ID *(Optional)* `(Relation)`
   'modelTypeId': 789, // Number | Search on ModelType ID *(Optional)* `(Relation)`
   'tagId': 789, // Number | Search on Tag ID *(Optional)* `(Relation)`
   'presenterId': 789, // Number | Search on Presenter ID *(Optional)* `(Relation)`
   'genreId': 789, // Number | Search on Genre ID *(Optional)* `(Relation)`
+  'groupId': 789, // Number | Search on Group ID *(Optional)* `(Relation)`
   'itemId': 789, // Number | Search on Item ID *(Optional)* `(Relation)`
+  'plannedInEpg': 789, // Number | Checks if item is in EPG *(Optional)*
   'startMin': new Date("2013-10-20T19:20:30+01:00"), // Date | Minimum start date *(Optional)*
   'startMax': new Date("2013-10-20T19:20:30+01:00"), // Date | Maximum start date *(Optional)*
+  'page': 1, // Number | Current page *(Optional)*
   'limit': 789, // Number | Results per page *(Optional)*
   'orderBy': "orderBy_example", // String | Field to order the results *(Optional)*
   'orderDirection': "orderDirection_example", // String | Direction of ordering *(Optional)*
   'externalStationId': 789 // Number | Query on a different (content providing) station *(Optional)*
 };
-apiInstance.listBroadcasts(opts).then(function(data) {
+apiInstance.listBroadcasts(opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
@@ -479,18 +486,21 @@ apiInstance.listBroadcasts(opts).then(function(data) {
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **page** | **Number**| Current page *(Optional)* | [optional] [default to 1]
  **programId** | **Number**| Search on Program ID *(Optional)* &#x60;(Relation)&#x60; | [optional] 
  **blockId** | **Number**| Search on Block ID *(Optional)* &#x60;(Relation)&#x60; | [optional] 
  **modelTypeId** | **Number**| Search on ModelType ID *(Optional)* &#x60;(Relation)&#x60; | [optional] 
  **tagId** | **Number**| Search on Tag ID *(Optional)* &#x60;(Relation)&#x60; | [optional] 
  **presenterId** | **Number**| Search on Presenter ID *(Optional)* &#x60;(Relation)&#x60; | [optional] 
  **genreId** | **Number**| Search on Genre ID *(Optional)* &#x60;(Relation)&#x60; | [optional] 
+ **groupId** | **Number**| Search on Group ID *(Optional)* &#x60;(Relation)&#x60; | [optional] 
  **itemId** | **Number**| Search on Item ID *(Optional)* &#x60;(Relation)&#x60; | [optional] 
+ **plannedInEpg** | **Number**| Checks if item is in EPG *(Optional)* | [optional] 
  **startMin** | **Date**| Minimum start date *(Optional)* | [optional] 
  **startMax** | **Date**| Maximum start date *(Optional)* | [optional] 
+ **page** | **Number**| Current page *(Optional)* | [optional] [default to 1]
  **limit** | **Number**| Results per page *(Optional)* | [optional] 
  **orderBy** | **String**| Field to order the results *(Optional)* | [optional] 
  **orderDirection** | **String**| Direction of ordering *(Optional)* | [optional] 
@@ -498,46 +508,45 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**BroadcastResults**](BroadcastResults.md)
+[**InlineResponse2001**](InlineResponse2001.md)
 
 ### Authorization
 
-[API Key](../README.md#API Key)
+[API-Key](../README.md#API-Key)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
-<a name="printBroadcastById"></a>
-# **printBroadcastById**
-> &#39;String&#39; printBroadcastById(id, opts)
+
+## printBroadcastById
+
+> InlineResponse2003 printBroadcastById(id, opts)
 
 Print broadcast by id with template
 
-Print broadcast by id with template
+Download a rundown in printable format as HTML inside the JSON repsonse
 
 ### Example
+
 ```javascript
-var radiomanager = require('radiomanager');
-var defaultClient = radiomanager.ApiClient.instance;
-
-// Configure API key authorization: API Key
-var API Key = defaultClient.authentications['API Key'];
-API Key.apiKey = 'YOUR API KEY';
+import radiomanager from 'radiomanager';
+let defaultClient = radiomanager.ApiClient.instance;
+// Configure API key authorization: API-Key
+let API-Key = defaultClient.authentications['API-Key'];
+API-Key.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//API Key.apiKeyPrefix = 'Token';
+//API-Key.apiKeyPrefix = 'Token';
 
-var apiInstance = new radiomanager.BroadcastApi();
-
-var id = 789; // Number | ID of Broadcast **(Required)**
-
-var opts = { 
-  'templateId': 789 // Number | Search on template ID *(Optional)*
+let apiInstance = new radiomanager.BroadcastApi();
+let id = 789; // Number | ID of Broadcast **(Required)**
+let opts = {
+  'templateId': 789 // Number | The print template to be used *(Optional)*
 };
-apiInstance.printBroadcastById(id, opts).then(function(data) {
+apiInstance.printBroadcastById(id, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
@@ -545,53 +554,53 @@ apiInstance.printBroadcastById(id, opts).then(function(data) {
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Number**| ID of Broadcast **(Required)** | 
- **templateId** | **Number**| Search on template ID *(Optional)* | [optional] 
+ **templateId** | **Number**| The print template to be used *(Optional)* | [optional] 
 
 ### Return type
 
-**&#39;String&#39;**
+[**InlineResponse2003**](InlineResponse2003.md)
 
 ### Authorization
 
-[API Key](../README.md#API Key)
+[API-Key](../README.md#API-Key)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
-<a name="updateBroadcastByID"></a>
-# **updateBroadcastByID**
-> Success updateBroadcastByID(id, opts)
+
+## updateBroadcastByID
+
+> InlineResponse202 updateBroadcastByID(id, opts)
 
 Update broadcast by id
 
 Update broadcast by id
 
 ### Example
+
 ```javascript
-var radiomanager = require('radiomanager');
-var defaultClient = radiomanager.ApiClient.instance;
-
-// Configure API key authorization: API Key
-var API Key = defaultClient.authentications['API Key'];
-API Key.apiKey = 'YOUR API KEY';
+import radiomanager from 'radiomanager';
+let defaultClient = radiomanager.ApiClient.instance;
+// Configure API key authorization: API-Key
+let API-Key = defaultClient.authentications['API-Key'];
+API-Key.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//API Key.apiKeyPrefix = 'Token';
+//API-Key.apiKeyPrefix = 'Token';
 
-var apiInstance = new radiomanager.BroadcastApi();
-
-var id = 789; // Number | ID of Broadcast **(Required)**
-
-var opts = { 
-  'data': new radiomanager.BroadcastDataInput() // BroadcastDataInput | Data *(Optional)*
+let apiInstance = new radiomanager.BroadcastApi();
+let id = 789; // Number | ID of Broadcast **(Required)**
+let opts = {
+  'broadcastDataInput': new radiomanager.BroadcastDataInput() // BroadcastDataInput | Data *(Optional)*
 };
-apiInstance.updateBroadcastByID(id, opts).then(function(data) {
+apiInstance.updateBroadcastByID(id, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
@@ -599,21 +608,22 @@ apiInstance.updateBroadcastByID(id, opts).then(function(data) {
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Number**| ID of Broadcast **(Required)** | 
- **data** | [**BroadcastDataInput**](BroadcastDataInput.md)| Data *(Optional)* | [optional] 
+ **broadcastDataInput** | [**BroadcastDataInput**](BroadcastDataInput.md)| Data *(Optional)* | [optional] 
 
 ### Return type
 
-[**Success**](Success.md)
+[**InlineResponse202**](InlineResponse202.md)
 
 ### Authorization
 
-[API Key](../README.md#API Key)
+[API-Key](../README.md#API-Key)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: application/json
+- **Accept**: application/json
 

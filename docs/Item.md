@@ -1,6 +1,7 @@
 # radiomanager.Item
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **modelTypeId** | **Number** |  | 
@@ -21,7 +22,7 @@ Name | Type | Description | Notes
 **details** | **String** |  | [optional] 
 
 
-<a name="StatusEnum"></a>
+
 ## Enum: StatusEnum
 
 

@@ -1,6 +1,7 @@
 # radiomanager.ImportItem
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **modelTypeId** | **Number** |  | 
@@ -14,5 +15,6 @@ Name | Type | Description | Notes
 **details** | **String** |  | [optional] 
 **contacts** | **[Number]** |  | [optional] 
 **tags** | **[Number]** |  | [optional] 
+**broadcastId** | **Number** |  | [optional] 
 
 

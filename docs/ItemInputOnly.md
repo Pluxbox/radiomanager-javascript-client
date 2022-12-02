@@ -1,6 +1,7 @@
 # radiomanager.ItemInputOnly
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **previousId** | **Number** |  | [optional] 

@@ -1,6 +1,7 @@
 # radiomanager.CampaignRelations
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **items** | [**CampaignRelationsItems**](CampaignRelationsItems.md) |  | [optional] 

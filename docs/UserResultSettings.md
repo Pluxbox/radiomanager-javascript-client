@@ -1,6 +1,7 @@
 # radiomanager.UserResultSettings
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **showSideBar** | **Boolean** |  | [optional] 

@@ -11,88 +11,88 @@ Method | HTTP request | Description
 [**updateCampaignByID**](CampaignApi.md#updateCampaignByID) | **PATCH** /campaigns/{id} | Update campaign by id
 
 
-<a name="createCampaign"></a>
-# **createCampaign**
-> PostSuccess createCampaign(data)
+
+## createCampaign
+
+> InlineResponse2002 createCampaign(campaignDataInput)
 
 Create campaign.
 
 Create campaign.
 
 ### Example
+
 ```javascript
-var radiomanager = require('radiomanager');
-var defaultClient = radiomanager.ApiClient.instance;
-
-// Configure API key authorization: API Key
-var API Key = defaultClient.authentications['API Key'];
-API Key.apiKey = 'YOUR API KEY';
+import radiomanager from 'radiomanager';
+let defaultClient = radiomanager.ApiClient.instance;
+// Configure API key authorization: API-Key
+let API-Key = defaultClient.authentications['API-Key'];
+API-Key.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//API Key.apiKeyPrefix = 'Token';
+//API-Key.apiKeyPrefix = 'Token';
 
-var apiInstance = new radiomanager.CampaignApi();
-
-var data = new radiomanager.CampaignDataInput(); // CampaignDataInput | Data **(Required)**
-
-apiInstance.createCampaign(data).then(function(data) {
+let apiInstance = new radiomanager.CampaignApi();
+let campaignDataInput = new radiomanager.CampaignDataInput(); // CampaignDataInput | Data **(Required)**
+apiInstance.createCampaign(campaignDataInput).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **data** | [**CampaignDataInput**](CampaignDataInput.md)| Data **(Required)** | 
+ **campaignDataInput** | [**CampaignDataInput**](CampaignDataInput.md)| Data **(Required)** | 
 
 ### Return type
 
-[**PostSuccess**](PostSuccess.md)
+[**InlineResponse2002**](InlineResponse2002.md)
 
 ### Authorization
 
-[API Key](../README.md#API Key)
+[API-Key](../README.md#API-Key)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: application/json
+- **Accept**: application/json
 
-<a name="deleteCampaignById"></a>
-# **deleteCampaignById**
-> Success deleteCampaignById(id)
+
+## deleteCampaignById
+
+> InlineResponse202 deleteCampaignById(id)
 
 Delete campaign by id
 
 Delete campaign by id
 
 ### Example
+
 ```javascript
-var radiomanager = require('radiomanager');
-var defaultClient = radiomanager.ApiClient.instance;
-
-// Configure API key authorization: API Key
-var API Key = defaultClient.authentications['API Key'];
-API Key.apiKey = 'YOUR API KEY';
+import radiomanager from 'radiomanager';
+let defaultClient = radiomanager.ApiClient.instance;
+// Configure API key authorization: API-Key
+let API-Key = defaultClient.authentications['API-Key'];
+API-Key.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//API Key.apiKeyPrefix = 'Token';
+//API-Key.apiKeyPrefix = 'Token';
 
-var apiInstance = new radiomanager.CampaignApi();
-
-var id = 789; // Number | ID of Campaign **(Required)**
-
-apiInstance.deleteCampaignById(id).then(function(data) {
+let apiInstance = new radiomanager.CampaignApi();
+let id = 789; // Number | ID of Campaign **(Required)**
+apiInstance.deleteCampaignById(id).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -100,46 +100,42 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Success**](Success.md)
+[**InlineResponse202**](InlineResponse202.md)
 
 ### Authorization
 
-[API Key](../README.md#API Key)
+[API-Key](../README.md#API-Key)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
-<a name="getCampaignById"></a>
-# **getCampaignById**
-> CampaignResult getCampaignById(id, opts)
+
+## getCampaignById
+
+> CampaignResult getCampaignById(id)
 
 Get campaign by id
 
 Get campaign by id
 
 ### Example
+
 ```javascript
-var radiomanager = require('radiomanager');
-var defaultClient = radiomanager.ApiClient.instance;
-
-// Configure API key authorization: API Key
-var API Key = defaultClient.authentications['API Key'];
-API Key.apiKey = 'YOUR API KEY';
+import radiomanager from 'radiomanager';
+let defaultClient = radiomanager.ApiClient.instance;
+// Configure API key authorization: API-Key
+let API-Key = defaultClient.authentications['API-Key'];
+API-Key.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//API Key.apiKeyPrefix = 'Token';
+//API-Key.apiKeyPrefix = 'Token';
 
-var apiInstance = new radiomanager.CampaignApi();
-
-var id = 789; // Number | ID of Campaign **(Required)**
-
-var opts = { 
-  'externalStationId': 789 // Number | Query on a different (content providing) station *(Optional)*
-};
-apiInstance.getCampaignById(id, opts).then(function(data) {
+let apiInstance = new radiomanager.CampaignApi();
+let id = 789; // Number | ID of Campaign **(Required)**
+apiInstance.getCampaignById(id).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
@@ -147,10 +143,10 @@ apiInstance.getCampaignById(id, opts).then(function(data) {
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Number**| ID of Campaign **(Required)** | 
- **externalStationId** | **Number**| Query on a different (content providing) station *(Optional)* | [optional] 
 
 ### Return type
 
@@ -158,48 +154,48 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[API Key](../README.md#API Key)
+[API-Key](../README.md#API-Key)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
-<a name="listCampaigns"></a>
-# **listCampaigns**
-> CampaignResults listCampaigns(opts)
+
+## listCampaigns
+
+> InlineResponse2004 listCampaigns(opts)
 
 Get all campaigns.
 
 List all campaigns.
 
 ### Example
+
 ```javascript
-var radiomanager = require('radiomanager');
-var defaultClient = radiomanager.ApiClient.instance;
-
-// Configure API key authorization: API Key
-var API Key = defaultClient.authentications['API Key'];
-API Key.apiKey = 'YOUR API KEY';
+import radiomanager from 'radiomanager';
+let defaultClient = radiomanager.ApiClient.instance;
+// Configure API key authorization: API-Key
+let API-Key = defaultClient.authentications['API-Key'];
+API-Key.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//API Key.apiKeyPrefix = 'Token';
+//API-Key.apiKeyPrefix = 'Token';
 
-var apiInstance = new radiomanager.CampaignApi();
-
-var opts = { 
-  'page': 789, // Number | Current page *(Optional)*
+let apiInstance = new radiomanager.CampaignApi();
+let opts = {
   'itemId': 789, // Number | Search on Item ID *(Optional)* `(Relation)`
   'modelTypeId': 789, // Number | Search on ModelType ID *(Optional)* `(Relation)`
   'startMin': new Date("2013-10-20T19:20:30+01:00"), // Date | Minimum start date *(Optional)*
   'startMax': new Date("2013-10-20T19:20:30+01:00"), // Date | Maximum start date *(Optional)*
+  'page': 1, // Number | Current page *(Optional)*
   'limit': 789, // Number | Results per page *(Optional)*
   'orderBy': "orderBy_example", // String | Field to order the results *(Optional)*
   'orderDirection': "orderDirection_example", // String | Direction of ordering *(Optional)*
   'externalStationId': 789 // Number | Query on a different (content providing) station *(Optional)*
 };
-apiInstance.listCampaigns(opts).then(function(data) {
+apiInstance.listCampaigns(opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
@@ -207,13 +203,14 @@ apiInstance.listCampaigns(opts).then(function(data) {
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **page** | **Number**| Current page *(Optional)* | [optional] 
  **itemId** | **Number**| Search on Item ID *(Optional)* &#x60;(Relation)&#x60; | [optional] 
  **modelTypeId** | **Number**| Search on ModelType ID *(Optional)* &#x60;(Relation)&#x60; | [optional] 
  **startMin** | **Date**| Minimum start date *(Optional)* | [optional] 
  **startMax** | **Date**| Maximum start date *(Optional)* | [optional] 
+ **page** | **Number**| Current page *(Optional)* | [optional] [default to 1]
  **limit** | **Number**| Results per page *(Optional)* | [optional] 
  **orderBy** | **String**| Field to order the results *(Optional)* | [optional] 
  **orderDirection** | **String**| Direction of ordering *(Optional)* | [optional] 
@@ -221,46 +218,43 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CampaignResults**](CampaignResults.md)
+[**InlineResponse2004**](InlineResponse2004.md)
 
 ### Authorization
 
-[API Key](../README.md#API Key)
+[API-Key](../README.md#API-Key)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
-<a name="updateCampaignByID"></a>
-# **updateCampaignByID**
-> Success updateCampaignByID(id, opts)
+
+## updateCampaignByID
+
+> InlineResponse202 updateCampaignByID(id, campaignDataInput)
 
 Update campaign by id
 
 Update campaign by id
 
 ### Example
+
 ```javascript
-var radiomanager = require('radiomanager');
-var defaultClient = radiomanager.ApiClient.instance;
-
-// Configure API key authorization: API Key
-var API Key = defaultClient.authentications['API Key'];
-API Key.apiKey = 'YOUR API KEY';
+import radiomanager from 'radiomanager';
+let defaultClient = radiomanager.ApiClient.instance;
+// Configure API key authorization: API-Key
+let API-Key = defaultClient.authentications['API-Key'];
+API-Key.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//API Key.apiKeyPrefix = 'Token';
+//API-Key.apiKeyPrefix = 'Token';
 
-var apiInstance = new radiomanager.CampaignApi();
-
-var id = 789; // Number | ID of Campaign **(Required)**
-
-var opts = { 
-  'data': new radiomanager.CampaignDataInput() // CampaignDataInput | Data *(Optional)*
-};
-apiInstance.updateCampaignByID(id, opts).then(function(data) {
+let apiInstance = new radiomanager.CampaignApi();
+let id = 789; // Number | ID of Campaign **(Required)**
+let campaignDataInput = new radiomanager.CampaignDataInput(); // CampaignDataInput | Data **(Optional)**
+apiInstance.updateCampaignByID(id, campaignDataInput).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
@@ -268,21 +262,22 @@ apiInstance.updateCampaignByID(id, opts).then(function(data) {
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Number**| ID of Campaign **(Required)** | 
- **data** | [**CampaignDataInput**](CampaignDataInput.md)| Data *(Optional)* | [optional] 
+ **campaignDataInput** | [**CampaignDataInput**](CampaignDataInput.md)| Data **(Optional)** | 
 
 ### Return type
 
-[**Success**](Success.md)
+[**InlineResponse202**](InlineResponse202.md)
 
 ### Authorization
 
-[API Key](../README.md#API Key)
+[API-Key](../README.md#API-Key)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: application/json
+- **Accept**: application/json
 

@@ -1,6 +1,7 @@
 # radiomanager.Broadcast
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **programId** | **Number** |  | [optional] 
@@ -25,9 +26,11 @@ Name | Type | Description | Notes
 **repetitionStart** | **Date** |  | [optional] 
 **repetitionDays** | **String** |  | [optional] 
 **ptyCodeId** | **Number** |  | [optional] 
+**plannedInEpg** | **Number** |  | [optional] 
+**groupId** | **Number** |  | [optional] 
 
 
-<a name="RepetitionTypeEnum"></a>
+
 ## Enum: RepetitionTypeEnum
 
 

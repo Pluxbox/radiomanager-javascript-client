@@ -4,38 +4,40 @@ All URIs are relative to *https://radiomanager.io/api/v2*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**getVisualSlide**](VisualSlideApi.md#getVisualSlide) | **GET** /visual | Get Visual Slide Image as Base64
+[**getVisualSlide**](VisualSlideApi.md#getVisualSlide) | **GET** /visual | Get Visual Slide Image
 
 
-<a name="getVisualSlide"></a>
-# **getVisualSlide**
+
+## getVisualSlide
+
 > VisualResult getVisualSlide()
 
-Get Visual Slide Image as Base64
+Get Visual Slide Image
 
-Get Visual Slide Image as Base64
+Get VisualRadio Image as PNG for publication Base64 encoded inside a JSON object
 
 ### Example
+
 ```javascript
-var radiomanager = require('radiomanager');
-var defaultClient = radiomanager.ApiClient.instance;
-
-// Configure API key authorization: API Key
-var API Key = defaultClient.authentications['API Key'];
-API Key.apiKey = 'YOUR API KEY';
+import radiomanager from 'radiomanager';
+let defaultClient = radiomanager.ApiClient.instance;
+// Configure API key authorization: API-Key
+let API-Key = defaultClient.authentications['API-Key'];
+API-Key.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//API Key.apiKeyPrefix = 'Token';
+//API-Key.apiKeyPrefix = 'Token';
 
-var apiInstance = new radiomanager.VisualSlideApi();
-apiInstance.getVisualSlide().then(function(data) {
+let apiInstance = new radiomanager.VisualSlideApi();
+apiInstance.getVisualSlide().then((data) => {
   console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
 ```
 
 ### Parameters
+
 This endpoint does not need any parameter.
 
 ### Return type
@@ -44,10 +46,10 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-[API Key](../README.md#API Key)
+[API-Key](../README.md#API-Key)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 

@@ -1,6 +1,7 @@
 # radiomanager.UserResult
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **Number** |  | 
@@ -15,5 +16,6 @@ Name | Type | Description | Notes
 **language** | **Boolean** |  | [optional] 
 **activeExternalStationId** | **Number** |  | [optional] 
 **roles** | [**[UserResultRoles]**](UserResultRoles.md) |  | [optional] 
+**groups** | [**[UserResultGroups]**](UserResultGroups.md) |  | [optional] 
 
 

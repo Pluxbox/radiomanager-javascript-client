@@ -1,6 +1,7 @@
 # radiomanager.StationResultStationStartDays
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **monday** | **String** |  | [optional] 

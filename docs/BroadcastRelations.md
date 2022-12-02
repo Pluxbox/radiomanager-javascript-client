@@ -1,6 +1,7 @@
 # radiomanager.BroadcastRelations
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **genre** | [**BroadcastRelationsGenre**](BroadcastRelationsGenre.md) |  | [optional] 
@@ -10,5 +11,6 @@ Name | Type | Description | Notes
 **tags** | [**BroadcastRelationsTags**](BroadcastRelationsTags.md) |  | [optional] 
 **presenters** | [**BroadcastRelationsPresenters**](BroadcastRelationsPresenters.md) |  | [optional] 
 **modelType** | [**BroadcastRelationsModelType**](BroadcastRelationsModelType.md) |  | [optional] 
+**group** | [**BroadcastRelationsGroup**](BroadcastRelationsGroup.md) |  | [optional] 
 
 

@@ -1,6 +1,7 @@
 # radiomanager.Program
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **modelTypeId** | **Number** |  | 
@@ -8,6 +9,7 @@ Name | Type | Description | Notes
 **title** | **String** |  | 
 **disabled** | **Boolean** |  | [optional] 
 **genreId** | **Number** |  | [optional] 
+**groupId** | **Number** |  | [optional] 
 **description** | **String** |  | [optional] 
 **shortName** | **String** |  | [optional] 
 **mediumName** | **String** |  | [optional] 
